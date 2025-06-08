@@ -6,16 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-=======
     path: Assets/Scenes/MainMenu.unity
     guid: b138aded0f9c6dc498a48dde17b4a252
   - enabled: 1
     path: Assets/Scenes/GameMenu.unity
     guid: 9be40a3be8694ce43a3017b138b61212
->>>>>>> d0baea10b36c7d1ba49ae2056aa439d09af7c59a
-  m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  - enabled: 1
+    path: Assets/Scenes/OutsideMenu.unity
+    guid: 98d07474e36fe204394c29e1248ea320
+  m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
