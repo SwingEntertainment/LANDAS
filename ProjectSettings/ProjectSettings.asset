@@ -769,11 +769,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 001920ab-418f-4262-a4a9-46610e036a51
+  cloudProjectId: e8881ec3-6f46-41c2-80d5-9d4b6b2c9b9e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: LANDAS 2025-06-07_22-12-04
-  organizationId: justineraymundo18
+  projectName: LANDAS
+  organizationId: regioroland011
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
