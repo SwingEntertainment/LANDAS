@@ -1,29 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class OutsideMenu : MonoBehaviour
 {
-    public void PlayGame()
-    {
-        SceneManager.LoadSceneAsync(1);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
     [Header("---------AUDIO SOURCE--------")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
 
     [Header("---------AUDIO CLIP--------")]
-    public AudioClip mainMenuBGM;
+    public AudioClip outsideMenuBGM;
     public AudioClip buttonClick;
 
     private void Start()
     {
-        musicSource.clip = mainMenuBGM;
+        musicSource.clip = outsideMenuBGM;
         musicSource.loop = true;
         musicSource.Play();
     }
@@ -31,4 +21,10 @@ public class MainMenu : MonoBehaviour
     {
         sfxSource.PlayOneShot(clip);
     }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadSceneAsync(1);
+    }
+    
 }
