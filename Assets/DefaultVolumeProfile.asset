@@ -476,7 +476,11 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0.05
 =======
+<<<<<<< HEAD
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
+=======
+>>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
+>>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,4 +803,8 @@ MonoBehaviour:
     m_Value: 1
 =======
   components: []
+<<<<<<< HEAD
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
+=======
+>>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
+>>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78

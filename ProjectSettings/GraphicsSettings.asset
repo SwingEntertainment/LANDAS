@@ -62,7 +62,11 @@ GraphicsSettings:
     UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: 93b439a37f63240aca3dd4e01d978a9f, type: 2}
 =======
     UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: db2ee8b2a78932b42955cb12e31159b9, type: 2}
+<<<<<<< HEAD
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
+=======
+>>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
+>>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
   m_LightsUseLinearIntensity: 1
   m_LightsUseColorTemperature: 1
   m_LogWhenShaderIsCompiled: 0
