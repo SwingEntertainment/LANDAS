@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
+<<<<<<< HEAD
   productGUID: 82d7795a571a97c41ade89587034e10e
+=======
+  productGUID: c19681418bc4e1945afa68459adc2106
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,10 +17,17 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: My project
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+=======
+  productName: LANDAS
+  defaultCursor: {fileID: 0}
+  cursorHotspot: {x: 0, y: 0}
+  m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -47,7 +58,11 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
+<<<<<<< HEAD
   m_ActiveColorSpace: 1
+=======
+  m_ActiveColorSpace: 0
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   unsupportedMSAAFallback: 0
   m_SpriteBatchMaxVertexCount: 65535
   m_SpriteBatchVertexThreshold: 300
@@ -78,7 +93,11 @@ PlayerSettings:
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
   androidAutoRotationBehavior: 1
+<<<<<<< HEAD
   androidPredictiveBackSupport: 0
+=======
+  androidPredictiveBackSupport: 1
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   androidApplicationEntry: 2
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
@@ -162,14 +181,22 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
+<<<<<<< HEAD
   applicationIdentifier:
     Standalone: com.DefaultCompany.2D-URP
+=======
+  applicationIdentifier: {}
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   buildNumber:
     Standalone: 0
     VisionOS: 0
     iPhone: 0
     tvOS: 0
+<<<<<<< HEAD
   overrideDefaultApplicationIdentifier: 1
+=======
+  overrideDefaultApplicationIdentifier: 0
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
@@ -250,9 +277,15 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
+<<<<<<< HEAD
   clonedFromGUID: c19f32bac17ee4170b3bf8a6a0333fb9
   templatePackageId: com.unity.template.universal-2d@6.1.1
   templateDefaultScene: Assets/Scenes/SampleScene.unity
+=======
+  clonedFromGUID: 00000000000000000000000000000000
+  templatePackageId: 
+  templateDefaultScene: 
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
   useCustomMainGradleTemplate: 0
@@ -283,7 +316,11 @@ PlayerSettings:
   AndroidMinifyRelease: 0
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
+<<<<<<< HEAD
   AndroidAppBundleSizeToValidate: 150
+=======
+  AndroidAppBundleSizeToValidate: 200
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   AndroidReportGooglePlayAppDependencies: 1
   androidSymbolsSizeThreshold: 800
   m_BuildTargetIcons: []
@@ -394,6 +431,10 @@ PlayerSettings:
   m_TemplateCustomTags: {}
   mobileMTRendering:
     Android: 1
+<<<<<<< HEAD
+=======
+    VisionOS: 1
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
     iPhone: 1
     tvOS: 1
   m_BuildTargetGroupLightmapEncodingQuality: []
@@ -538,7 +579,11 @@ PlayerSettings:
   switchSystemResourceMemory: 16777216
   switchSupportedNpadStyles: 22
   switchNativeFsCacheSize: 32
+<<<<<<< HEAD
   switchIsHoldTypeHorizontal: 0
+=======
+  switchIsHoldTypeHorizontal: 1
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   switchSupportedNpadCount: 8
   switchEnableTouchScreen: 1
   switchSocketConfigEnabled: 0
@@ -552,7 +597,11 @@ PlayerSettings:
   switchSocketInitializeEnabled: 1
   switchNetworkInterfaceManagerInitializeEnabled: 1
   switchDisableHTCSPlayerConnection: 0
+<<<<<<< HEAD
   switchUseNewStyleFilepaths: 0
+=======
+  switchUseNewStyleFilepaths: 1
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   switchUseLegacyFmodPriorities: 0
   switchUseMicroSleepForYield: 1
   switchEnableRamDiskSupport: 0
@@ -650,7 +699,11 @@ PlayerSettings:
   webGLTemplate: APPLICATION:Default
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
+<<<<<<< HEAD
   webGLCompressionFormat: 0
+=======
+  webGLCompressionFormat: 1
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
@@ -670,8 +723,12 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
+<<<<<<< HEAD
   scriptingBackend:
     Android: 1
+=======
+  scriptingBackend: {}
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   il2cppStacktraceInformation: {}
@@ -688,14 +745,22 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD
   metroPackageName: My project
+=======
+  metroPackageName: LANDAS
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD
   metroApplicationDescription: My project
+=======
+  metroApplicationDescription: LANDAS
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -757,13 +822,18 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   hmiPlayerDataPath: 
+<<<<<<< HEAD
   hmiForceSRGBBlit: 1
+=======
+  hmiForceSRGBBlit: 0
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   embeddedLinuxEnableGamepadInput: 0
   hmiCpuConfiguration: 
   hmiLogStartupTiming: 0
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
+<<<<<<< HEAD
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: 0605dbd6-181c-40e7-a3eb-98653b2a203c
@@ -771,6 +841,15 @@ PlayerSettings:
   qualitySettingsNames: []
   projectName: My project 2025-06-27_00-07-05
   organizationId: veaavygail
+=======
+  activeInputHandler: 2
+  windowsGamepadBackendHint: 0
+  cloudProjectId: 
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: 
+  organizationId: 
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
