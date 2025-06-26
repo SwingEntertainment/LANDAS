@@ -66,5 +66,9 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
     },
+<<<<<<< HEAD
     "dotnet.defaultSolution": "My project.sln"
+=======
+    "dotnet.defaultSolution": "LANDAS.sln"
+>>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
 }
