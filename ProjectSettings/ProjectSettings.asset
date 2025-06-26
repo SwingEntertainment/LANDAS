@@ -4,22 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  productGUID: 841cfedcda78c6f4b852ae03e146c6b4
-=======
-  productGUID: daf3b05e97d483c46b1781851c9be654
->>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
-=======
-  productGUID: e0d3cd76b9deeeb42b7b7624256f0f9f
-=======
-  productGUID: daf3b05e97d483c46b1781851c9be654
->>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
->>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
-=======
-  productGUID: c19681418bc4e1945afa68459adc2106
->>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
+  productGUID: 9add252c9e32c2f4e92cc6a0f35f079d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -76,17 +61,6 @@ PlayerSettings:
   iosUseCustomAppBackgroundBehavior: 0
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
-<<<<<<< HEAD
-=======
-  allowedAutorotateToPortrait: 0
-  allowedAutorotateToPortraitUpsideDown: 0
-<<<<<<< HEAD
->>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
-=======
->>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
->>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
-=======
->>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   allowedAutorotateToLandscapeRight: 1
   allowedAutorotateToLandscapeLeft: 1
   useOSAutorotation: 1
@@ -405,22 +379,7 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 0
       m_SubKind: 
-<<<<<<< HEAD
-<<<<<<< HEAD
   m_BuildTargetBatching: []
-=======
-  m_BuildTargetBatching:
-  - m_BuildTarget: Android
-    m_StaticBatching: 1
-    m_DynamicBatching: 0
-<<<<<<< HEAD
->>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
-=======
->>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
->>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
-=======
-  m_BuildTargetBatching: []
->>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -806,39 +765,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  cloudProjectId: 3148de73-449f-4eb3-b23e-e8fd30929753
-  framebufferDepthMemorylessMode: 0
-  qualitySettingsNames: []
-  projectName: LANDAS
-  organizationId: dinleycano
-=======
-  cloudProjectId: 430a5ff5-407f-48b4-a857-d016ffeaa355
-  framebufferDepthMemorylessMode: 0
-  qualitySettingsNames: []
-  projectName: My project 2025-06-26_11-51-06
-  organizationId: josephmaliza55
->>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
-=======
-  cloudProjectId: e8881ec3-6f46-41c2-80d5-9d4b6b2c9b9e
-  framebufferDepthMemorylessMode: 0
-  qualitySettingsNames: []
-  projectName: LANDAS
-  organizationId: regioroland011
-<<<<<<< HEAD
->>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
-=======
->>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
->>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
-=======
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: 
   organizationId: 
->>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

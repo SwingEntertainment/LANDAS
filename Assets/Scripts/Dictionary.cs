@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BackButton : MonoBehaviour
+public class Dictionary : MonoBehaviour
 {
     public void OnBackButtonPressed()
     {
