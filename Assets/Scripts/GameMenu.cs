@@ -32,6 +32,16 @@ public class GameMenu : MonoBehaviour
         SceneManager.LoadSceneAsync(3);
     }
 
+    public void GoToLolaMenu()
+    {
+        SceneManager.LoadSceneAsync(4);
+    }
+
+    public void GoToDictionaryMenu()
+    {
+        SceneManager.LoadSceneAsync(5);
+    }
+
     public void QuitGame()
     {
         Application.Quit();
