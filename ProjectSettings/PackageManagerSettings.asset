@@ -34,6 +34,7 @@ MonoBehaviour:
     m_ErrorMessage: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_UserModificationsInstanceId: -898
     m_OriginalInstanceId: -900
 =======
@@ -48,4 +49,8 @@ MonoBehaviour:
     m_OriginalInstanceId: -882
 >>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
+=======
+    m_UserModificationsInstanceId: -884
+    m_OriginalInstanceId: -886
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
   m_LoadAssets: 0

@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: a1283c160adfdb1438cd7562279d7489
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8778247630137513079
+    second: Intro6_0
+  - first:
+      213: -3422194564267458109
+    second: Intro6_1
+  - first:
+      213: -2418935479211567662
+    second: Intro6_2
+  - first:
+      213: -3094296712102748682
+    second: Intro6_3
+  - first:
+      213: -5006652226350046898
+    second: Intro6_4
+  - first:
+      213: 8019980442535838990
+    second: Intro6_5
+  - first:
+      213: 3484213574618684816
+    second: Intro6_6
+  - first:
+      213: -8505307635756701631
+    second: Intro6_7
+  - first:
+      213: -6929846832727402679
+    second: Intro6_8
+  - first:
+      213: -2475019220781361589
+    second: Intro6_9
+  - first:
+      213: 4069119897709432483
+    second: Intro6_10
+  - first:
+      213: 6305503166709483075
+    second: Intro6_11
+  - first:
+      213: -596033594726614745
+    second: Intro6_12
+  - first:
+      213: -3760927331478994905
+    second: Intro6_13
+  - first:
+      213: 7599000500348119297
+    second: Intro6_14
+  - first:
+      213: 4822065147916389963
+    second: Intro6_15
+  - first:
+      213: 5909580266849977525
+    second: Intro6_16
+  - first:
+      213: -4140106114931024013
+    second: Intro6_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Intro6_0
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 226
+        width: 365
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774d2c0e5b992d970800000000000000
+      internalID: 8778247630137513079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_1
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 226
+        width: 365
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1c094ec2ce180d0800000000000000
+      internalID: -3422194564267458109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_2
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 226
+        width: 315
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5510b6ff63e6ed0800000000000000
+      internalID: -2418935479211567662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_3
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 226
+        width: 365
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdd47dd889de05d0800000000000000
+      internalID: -3094296712102748682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_4
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 226
+        width: 365
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e41ac76935cc48ab0800000000000000
+      internalID: -5006652226350046898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 149
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05cde688b1bc4f60800000000000000
+      internalID: 8019980442535838990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 150
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d9db439c96a5030800000000000000
+      internalID: 3484213574618684816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_7
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 0
+        width: 127
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148ed41b4c317f980800000000000000
+      internalID: -8505307635756701631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_8
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 0
+        width: 150
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947da63850d34df90800000000000000
+      internalID: -6929846832727402679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_9
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 0
+        width: 155
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b461015c127f6add0800000000000000
+      internalID: -2475019220781361589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_10
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 133
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aec173ecfa687830800000000000000
+      internalID: 4069119897709432483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_11
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 0
+        width: 156
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346c1ddd8b5a18750800000000000000
+      internalID: 6305503166709483075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_12
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 0
+        width: 128
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729fe108a967ab7f0800000000000000
+      internalID: -596033594726614745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_13
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 0
+        width: 150
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720032da4808ecbc0800000000000000
+      internalID: -3760927331478994905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_14
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 0
+        width: 150
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109e34f91b2157960800000000000000
+      internalID: 7599000500348119297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_15
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 0
+        width: 150
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e095124ba6be240800000000000000
+      internalID: 4822065147916389963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_16
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 0
+        width: 150
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4404141fb030250800000000000000
+      internalID: 5909580266849977525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Intro6_17
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 0
+        width: 132
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f1d177c636b86c0800000000000000
+      internalID: -4140106114931024013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Intro6_0: 8778247630137513079
+      Intro6_1: -3422194564267458109
+      Intro6_10: 4069119897709432483
+      Intro6_11: 6305503166709483075
+      Intro6_12: -596033594726614745
+      Intro6_13: -3760927331478994905
+      Intro6_14: 7599000500348119297
+      Intro6_15: 4822065147916389963
+      Intro6_16: 5909580266849977525
+      Intro6_17: -4140106114931024013
+      Intro6_2: -2418935479211567662
+      Intro6_3: -3094296712102748682
+      Intro6_4: -5006652226350046898
+      Intro6_5: 8019980442535838990
+      Intro6_6: 3484213574618684816
+      Intro6_7: -8505307635756701631
+      Intro6_8: -6929846832727402679
+      Intro6_9: -2475019220781361589
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
