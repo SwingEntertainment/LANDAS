@@ -59,11 +59,25 @@ MonoBehaviour:
       - rid: 3114554777721110529
       - rid: 3114554777721110530
 <<<<<<< HEAD
+<<<<<<< HEAD
       - rid: 4096512633066749952
       - rid: 4096512633066749953
       - rid: 4096512633066749954
       - rid: 4096512633066749955
 =======
+=======
+      - rid: 3574850456664408064
+      - rid: 3574850456664408065
+      - rid: 3574850456664408066
+      - rid: 3574850456664408067
+    m_RuntimeSettings:
+      m_List: []
+=======
+<<<<<<< HEAD
+      - rid: 3114554777721110528
+      - rid: 3114554777721110529
+      - rid: 3114554777721110530
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
       - rid: 1476754660178788352
       - rid: 1476754660178788353
       - rid: 1476754660178788354
@@ -110,7 +124,11 @@ MonoBehaviour:
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
 =======
 >>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
+<<<<<<< HEAD
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
+=======
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
   m_AssetVersion: 8
   m_ObsoleteDefaultVolumeProfile: {fileID: 0}
   m_RenderingLayerNames:
@@ -136,6 +154,7 @@ MonoBehaviour:
     RefIds:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
@@ -144,6 +163,14 @@ MonoBehaviour:
 =======
 <<<<<<< HEAD
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
+=======
+=======
+<<<<<<< HEAD
+    - rid: 1476754660178788352
+=======
+<<<<<<< HEAD
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
     - rid: 3114554777721110528
       type: {class: UniversalRenderPipelineEditorAssets, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
@@ -181,7 +208,11 @@ MonoBehaviour:
           - {r: 0.5, g: 0.5, b: 0.5, a: 1}
           - {r: 0, g: 0, b: 1, a: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - rid: 4096512633066749952
+=======
+    - rid: 3574850456664408064
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
 =======
     - rid: 5712043342724333568
 =======
@@ -195,7 +226,11 @@ MonoBehaviour:
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
 =======
 >>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
+<<<<<<< HEAD
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
+=======
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
       type: {class: PostProcessData/ShaderResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         stopNanPS: {fileID: 4800000, guid: 1121bb4e615ca3c48b214e79e841e823, type: 3}
@@ -217,8 +252,14 @@ MonoBehaviour:
         m_ShaderResourcesVersion: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - rid: 4096512633066749953
 =======
+=======
+    - rid: 3574850456664408065
+=======
+<<<<<<< HEAD
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
     - rid: 1476754660178788353
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
 =======
@@ -231,15 +272,25 @@ MonoBehaviour:
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
 =======
 >>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
+<<<<<<< HEAD
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
+=======
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
       type: {class: ScreenSpaceAmbientOcclusionPersistentResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         m_Shader: {fileID: 4800000, guid: 0849e84e3d62649e8882e9d6f056a017, type: 3}
         m_Version: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - rid: 4096512633066749954
 =======
+=======
+    - rid: 3574850456664408066
+=======
+<<<<<<< HEAD
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
     - rid: 1476754660178788354
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
 =======
@@ -252,7 +303,11 @@ MonoBehaviour:
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
 =======
 >>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
+<<<<<<< HEAD
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
+=======
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
       type: {class: ScreenSpaceAmbientOcclusionDynamicResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         m_BlueNoise256Textures:
@@ -266,8 +321,14 @@ MonoBehaviour:
         m_Version: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - rid: 4096512633066749955
 =======
+=======
+    - rid: 3574850456664408067
+=======
+<<<<<<< HEAD
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
     - rid: 1476754660178788355
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
 =======
@@ -280,7 +341,11 @@ MonoBehaviour:
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
 =======
 >>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
+<<<<<<< HEAD
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
+=======
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
       type: {class: PostProcessData/TextureResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         blueNoise16LTex:
@@ -330,6 +395,8 @@ MonoBehaviour:
         smaaAreaTex: {fileID: 2800000, guid: d1f1048909d55cd4fa1126ab998f617e, type: 3}
         smaaSearchTex: {fileID: 2800000, guid: 51eee22c2a633ef4aada830eed57c3fd, type: 3}
         m_TexturesResourcesVersion: 0
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     - rid: 3114554777721110528
       type: {class: UniversalRenderPipelineEditorAssets, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
@@ -385,7 +452,11 @@ MonoBehaviour:
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
 =======
 >>>>>>> 54db63ef7771def81db5f2164525c9bdce226cfc
+<<<<<<< HEAD
 >>>>>>> b41d4a16f3fea1b836a28c4d204ff4a30dff2f78
+=======
+>>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
+>>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
     - rid: 7752762179098771456
       type: {class: UniversalRenderPipelineRuntimeTextures, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
