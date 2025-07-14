@@ -26,5 +26,4 @@ public class DictionaryMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(2);
     }
-    
 }
