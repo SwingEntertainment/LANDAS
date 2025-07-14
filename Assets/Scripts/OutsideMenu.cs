@@ -27,4 +27,8 @@ public class OutsideMenu : MonoBehaviour
         SceneManager.LoadSceneAsync(2);
     }
     
+    public void GoToSipaGame()
+    {
+        SceneManager.LoadSceneAsync(6);
+    }
 }

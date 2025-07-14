@@ -6,18 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/Dictionary/Dictionary.unity
-    guid: c5f0f2f5e6b4ee24d933cd2c003742c9
+    path: Assets/Scenes/IntroSequence.unity
+    guid: 91f4f83305ae86041987a8a8104f6003
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: b138aded0f9c6dc498a48dde17b4a252
   - enabled: 1
     path: Assets/Scenes/GameMenu.unity
     guid: 9be40a3be8694ce43a3017b138b61212
-=======
-    path: Assets/Scenes/SipaGame.unity
-    guid: 7e02e49d15a3c32458eb9ad8a94d71f8
   - enabled: 1
     path: Assets/Scenes/OutsideMenu.unity
     guid: 98d07474e36fe204394c29e1248ea320
->>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
+  - enabled: 1
+    path: Assets/Scenes/LolaMenu.unity
+    guid: 1a8f44b5adf9d8244b41d7cfa737f62f
+  - enabled: 1
+    path: Assets/Scenes/DictionaryMenu.unity
+    guid: d0af036bec1231049853aeddd55778eb
+  - enabled: 1
+    path: Assets/Scenes/SipaGame.unity
+    guid: 7e02e49d15a3c32458eb9ad8a94d71f8
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
