@@ -98,7 +98,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
+<<<<<<< HEAD
       "version": "2.9.3",
+=======
+      "version": "2.8.2",
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -166,11 +170,35 @@
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
+<<<<<<< HEAD
       "depth": 2,
+=======
+      "depth": 1,
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
+=======
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.project-auditor": {
+      "version": "1.0.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.nuget.mono-cecil": "1.10.1",
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "url": "https://packages.unity.com"
+    },
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
     "com.unity.render-pipelines.core": {
       "version": "17.1.0",
       "depth": 1,

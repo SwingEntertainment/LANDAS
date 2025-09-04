@@ -57,7 +57,13 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
+<<<<<<< HEAD
     excludedTargetPlatforms: []
+=======
+    excludedTargetPlatforms:
+    - Android
+    - Standalone
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
   - serializedVersion: 4
     name: Low
     pixelLightCount: 0
@@ -109,7 +115,13 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
+<<<<<<< HEAD
     excludedTargetPlatforms: []
+=======
+    excludedTargetPlatforms:
+    - Standalone
+    - Android
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
   - serializedVersion: 4
     name: Medium
     pixelLightCount: 1
@@ -161,7 +173,12 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
+<<<<<<< HEAD
     excludedTargetPlatforms: []
+=======
+    excludedTargetPlatforms:
+    - Standalone
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
   - serializedVersion: 4
     name: High
     pixelLightCount: 2
@@ -213,7 +230,13 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
+<<<<<<< HEAD
     excludedTargetPlatforms: []
+=======
+    excludedTargetPlatforms:
+    - Android
+    - Standalone
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
   - serializedVersion: 4
     name: Very High
     pixelLightCount: 3
@@ -265,7 +288,13 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
+<<<<<<< HEAD
     excludedTargetPlatforms: []
+=======
+    excludedTargetPlatforms:
+    - Android
+    - Standalone
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
   - serializedVersion: 4
     name: Ultra
     pixelLightCount: 4
@@ -317,7 +346,12 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
+<<<<<<< HEAD
     excludedTargetPlatforms: []
+=======
+    excludedTargetPlatforms:
+    - Android
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
   m_TextureMipmapLimitGroupNames: []
   m_PerPlatformDefaultQuality:
     Android: 2
