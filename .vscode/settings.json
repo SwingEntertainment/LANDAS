@@ -60,6 +60,15 @@
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.prefab": "yaml",
+<<<<<<< HEAD
+        "*.unity": "yaml",
+    },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.sln": "*.csproj",
+    },
+    "dotnet.defaultSolution": "LANDAS - HOTS 2D.sln"
+=======
         "*.unity": "yaml"
     },
     "explorer.fileNesting.enabled": true,
@@ -67,5 +76,10 @@
         "*.sln": "*.csproj"
     },
     "My project.sln=======dotnet.defaultSolution": "LANDAS.sln>>>>>>>54db63ef7771def81db5f2164525c9bdce226cfc",
+<<<<<<< HEAD
     "dotnet.defaultSolution": "LANDAS - HOTS 2D.sln"
+=======
+    "dotnet.defaultSolution": "LANDAS.sln"
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
+>>>>>>> a6efb4f0f629d2e8c5c4cdbcbe84cdbfbdfda24a
 }

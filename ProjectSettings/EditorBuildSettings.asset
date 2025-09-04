@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+=======
     path: Assets/Scenes/Menus/IntroSequence.unity
     guid: 91f4f83305ae86041987a8a8104f6003
   - enabled: 1
@@ -69,4 +75,5 @@ EditorBuildSettings:
     path: Assets/Scenes/OutsideMenu/PaloSebo.unity
     guid: 09b87a40b1ce72e4db84c26cd8ba6c44
   m_configObjects: {}
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
   m_UseUCBPForAssetBundles: 0
