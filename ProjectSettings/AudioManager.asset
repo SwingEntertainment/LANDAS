@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!11 &1
+AudioManager:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Volume: 1
+  Rolloff Scale: 1
+  Doppler Factor: 1
+<<<<<<< HEAD
+  Default Speaker Mode: 2
+=======
+  Default Speaker Mode: 1
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
+  m_SampleRate: 0
+  m_DSPBufferSize: 1024
+  m_VirtualVoiceCount: 512
+  m_RealVoiceCount: 32
+<<<<<<< HEAD
+=======
+  m_EnableOutputSuspension: 1
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
+  m_SpatializerPlugin: 
+  m_AmbisonicDecoderPlugin: 
+  m_DisableAudio: 0
+  m_VirtualizeEffects: 1
+  m_RequestedDSPBufferSize: 0
