@@ -2,9 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
+<<<<<<< HEAD
+  serializedVersion: 2
+  tags: []
+=======
   serializedVersion: 3
   tags:
   - Foot
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
   layers:
   - Default
   - TransparentFX
@@ -42,5 +47,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
+=======
   m_RenderingLayers:
   - Default
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6

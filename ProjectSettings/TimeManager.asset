@@ -3,6 +3,12 @@
 --- !u!5 &1
 TimeManager:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
+  Fixed Timestep: 0.02
+  Maximum Allowed Timestep: 0.33333334
+  m_TimeScale: 1
+  Maximum Particle Timestep: 0.03
+=======
   serializedVersion: 2
   Fixed Timestep:
     m_Count: 5644799
@@ -12,3 +18,4 @@ TimeManager:
   Maximum Allowed Timestep: 0.33333334
   m_TimeScale: 1
   Maximum Particle Timestep: 0.03999999
+>>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
