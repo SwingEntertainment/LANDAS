@@ -31,4 +31,10 @@ public class MainMenu : MonoBehaviour
     {
         sfxSource.PlayOneShot(clip);
     }
+
+    public void CheckForUpdates()
+    {
+        Application.OpenURL("https://rzregio.github.io");
+    }
+
 }

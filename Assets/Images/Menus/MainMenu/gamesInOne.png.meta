@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 2bd140c043202e2499de5bb83f990492
+guid: b86d79013ce7c3746a29481d04129518
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1763014460331064234
-    second: board_0
+      213: -4856476684660162404
+    second: gamesInOne_0
+  - first:
+      213: -1822654427989648429
+    second: gamesInOne_1
+  - first:
+      213: -8236820738078653222
+    second: gamesInOne_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: board_0
+      name: gamesInOne_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3668
-        height: 1647
+        width: 594
+        height: 868
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aabf8e19f4c777810800000000000000
-      internalID: 1763014460331064234
+      spriteID: c904dde9f245a9cb0800000000000000
+      internalID: -4856476684660162404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamesInOne_1
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 5
+        width: 174
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db526f5471a4b6e0800000000000000
+      internalID: -1822654427989648429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamesInOne_2
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 0
+        width: 193
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad44044ed2fe0bd80800000000000000
+      internalID: -8236820738078653222
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      board_0: 1763014460331064234
+      gamesInOne_0: -4856476684660162404
+      gamesInOne_1: -1822654427989648429
+      gamesInOne_2: -8236820738078653222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
