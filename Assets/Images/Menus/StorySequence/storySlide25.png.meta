@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ba1db5ea5d8f73e4993dc6100420f417
+guid: bec06fce7ef9cc54881ec79b63633559
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4968748947326456035
-    second: flag1_0
+      213: 9084299338094650936
+    second: storySlide25_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flag1_0
+      name: storySlide25_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 586
-        height: 320
+        width: 3668
+        height: 1649
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e05d7f87da84f440800000000000000
-      internalID: 4968748947326456035
+      spriteID: 836a2780e1ae11e70800000000000000
+      internalID: 9084299338094650936
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      flag1_0: 4968748947326456035
+      storySlide25_0: 9084299338094650936
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

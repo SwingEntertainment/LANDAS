@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba10ab0ec2a1a784e8db0989410e7a10
+guid: 039f14a9a5265154bb3b5012107844ca
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,10 +116,10 @@ TextureImporter:
       name: flag7_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 81
+        y: 21
         width: 586
-        height: 320
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
