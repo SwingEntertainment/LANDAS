@@ -4,7 +4,11 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
+<<<<<<< HEAD
   m_CurrentQuality: 0
+=======
+  m_CurrentQuality: 5
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
   m_QualitySettings:
   - serializedVersion: 4
     name: Very Low
@@ -27,7 +31,11 @@ QualitySettings:
     softVegetation: 0
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
+<<<<<<< HEAD
     useLegacyDetailDistribution: 1
+=======
+    useLegacyDetailDistribution: 0
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     adaptiveVsync: 0
     vSyncCount: 0
     realtimeGICPUUsage: 25
@@ -47,7 +55,11 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
+<<<<<<< HEAD
     customRenderPipeline: {fileID: 11400000, guid: 681886c5eb7344803b6206f758bf0b1c, type: 2}
+=======
+    customRenderPipeline: {fileID: 0}
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -79,7 +91,11 @@ QualitySettings:
     softVegetation: 0
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
+<<<<<<< HEAD
     useLegacyDetailDistribution: 1
+=======
+    useLegacyDetailDistribution: 0
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     adaptiveVsync: 0
     vSyncCount: 0
     realtimeGICPUUsage: 25
@@ -99,7 +115,11 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
+<<<<<<< HEAD
     customRenderPipeline: {fileID: 11400000, guid: 681886c5eb7344803b6206f758bf0b1c, type: 2}
+=======
+    customRenderPipeline: {fileID: 0}
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -131,7 +151,11 @@ QualitySettings:
     softVegetation: 0
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
+<<<<<<< HEAD
     useLegacyDetailDistribution: 1
+=======
+    useLegacyDetailDistribution: 0
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     adaptiveVsync: 0
     vSyncCount: 1
     realtimeGICPUUsage: 25
@@ -151,7 +175,11 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
+<<<<<<< HEAD
     customRenderPipeline: {fileID: 11400000, guid: 681886c5eb7344803b6206f758bf0b1c, type: 2}
+=======
+    customRenderPipeline: {fileID: 0}
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -183,7 +211,11 @@ QualitySettings:
     softVegetation: 1
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
+<<<<<<< HEAD
     useLegacyDetailDistribution: 1
+=======
+    useLegacyDetailDistribution: 0
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     adaptiveVsync: 0
     vSyncCount: 1
     realtimeGICPUUsage: 50
@@ -203,7 +235,11 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
+<<<<<<< HEAD
     customRenderPipeline: {fileID: 11400000, guid: 681886c5eb7344803b6206f758bf0b1c, type: 2}
+=======
+    customRenderPipeline: {fileID: 0}
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -235,7 +271,11 @@ QualitySettings:
     softVegetation: 1
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
+<<<<<<< HEAD
     useLegacyDetailDistribution: 1
+=======
+    useLegacyDetailDistribution: 0
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     adaptiveVsync: 0
     vSyncCount: 1
     realtimeGICPUUsage: 50
@@ -255,7 +295,11 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
+<<<<<<< HEAD
     customRenderPipeline: {fileID: 11400000, guid: 681886c5eb7344803b6206f758bf0b1c, type: 2}
+=======
+    customRenderPipeline: {fileID: 0}
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -282,12 +326,20 @@ QualitySettings:
     globalTextureMipmapLimit: 0
     textureMipmapLimitSettings: []
     anisotropicTextures: 2
+<<<<<<< HEAD
     antiAliasing: 0
+=======
+    antiAliasing: 2
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
+<<<<<<< HEAD
     useLegacyDetailDistribution: 1
+=======
+    useLegacyDetailDistribution: 0
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     adaptiveVsync: 0
     vSyncCount: 1
     realtimeGICPUUsage: 100
@@ -307,7 +359,11 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
+<<<<<<< HEAD
     customRenderPipeline: {fileID: 11400000, guid: 681886c5eb7344803b6206f758bf0b1c, type: 2}
+=======
+    customRenderPipeline: {fileID: 0}
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -321,6 +377,7 @@ QualitySettings:
   m_TextureMipmapLimitGroupNames: []
   m_PerPlatformDefaultQuality:
     Android: 2
+<<<<<<< HEAD
     GameCoreScarlett: 5
     GameCoreXboxOne: 5
     Lumin: 5
@@ -329,6 +386,21 @@ QualitySettings:
     PS5: 5
     Stadia: 5
     Standalone: 5
+=======
+    EmbeddedLinux: 5
+    GameCoreScarlett: 5
+    GameCoreXboxOne: 5
+    Kepler: 5
+    LinuxHeadlessSimulation: 5
+    Nintendo Switch: 5
+    PS4: 5
+    PS5: 5
+    QNX: 5
+    ReservedCFE: 5
+    Server: 5
+    Standalone: 5
+    VisionOS: 5
+>>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     WebGL: 3
     Windows Store Apps: 5
     XboxOne: 5
