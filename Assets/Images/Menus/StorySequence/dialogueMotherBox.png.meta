@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 35edccce64254b146ba141418891864c
+guid: a951e006f8d11ae42aaed33db5f26f9d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6317394946957066787
-    second: flag5_0
+      213: -1120967139178881757
+    second: dialogueMotherBox_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flag5_0
+      name: dialogueMotherBox_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 22
-        width: 593
-        height: 385
+        x: 0
+        y: 0
+        width: 3667
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3224937bb35eba750800000000000000
-      internalID: 6317394946957066787
+      spriteID: 32d5b5873568170f0800000000000000
+      internalID: -1120967139178881757
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      flag5_0: 6317394946957066787
+      dialogueMotherBox_0: -1120967139178881757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

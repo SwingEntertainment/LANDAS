@@ -783,8 +783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000017166, y: 38.44}
-  m_SizeDelta: {x: 756.7328, y: 99.0888}
+  m_AnchoredPosition: {x: -0.000015259, y: 49.544}
+  m_SizeDelta: {x: 860.9885, y: 99.0888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &841833556
 MonoBehaviour:
@@ -806,17 +806,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'LANDAS: Home of the Orient Seas'
+  m_text: 'LANDAS
+
+    Home of the Orient Seas'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ede5bf969c001d489fee1e06c87d107, type: 2}
-  m_sharedMaterial: {fileID: -3632795046487443409, guid: 3ede5bf969c001d489fee1e06c87d107, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
+  m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286821578
+  m_fontColor: {r: 0.7921569, g: 0.7058824, b: 0.5137255, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
