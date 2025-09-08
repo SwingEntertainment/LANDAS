@@ -166,17 +166,11 @@
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
-<<<<<<< HEAD
-      "depth": 2,
-=======
       "depth": 1,
->>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-=======
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
       "depth": 1,
@@ -194,7 +188,6 @@
       },
       "url": "https://packages.unity.com"
     },
->>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
     "com.unity.render-pipelines.core": {
       "version": "17.1.0",
       "depth": 1,

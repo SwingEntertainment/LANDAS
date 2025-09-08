@@ -59,8 +59,6 @@ MonoBehaviour:
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
   m_ReflectionProbeAtlas: 1
 <<<<<<< HEAD
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
@@ -72,7 +70,6 @@ MonoBehaviour:
 >>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
 >>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
 >>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
->>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
   m_ShadowDistance: 50
   m_ShadowCascadeCount: 1
   m_Cascade2Split: 0.25
@@ -104,8 +101,6 @@ MonoBehaviour:
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
   m_AllowPostProcessAlphaOutput: 0
 <<<<<<< HEAD
 >>>>>>> e48f2d4ae8eafae630f3b5b7abf8df7f05af9c34
@@ -117,7 +112,6 @@ MonoBehaviour:
 >>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
 >>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
 >>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
->>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
   m_UseFastSRGBLinearConversion: 0
   m_SupportDataDrivenLensFlare: 1
   m_SupportScreenSpaceLensFlare: 1
@@ -143,11 +137,8 @@ MonoBehaviour:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
 >>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
->>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
   m_PrefilteringModeMainLightShadows: 1
   m_PrefilteringModeAdditionalLight: 4
   m_PrefilteringModeAdditionalLightShadows: 1
@@ -177,8 +168,6 @@ MonoBehaviour:
   m_PrefilterScreenCoord: 0
   m_PrefilterNativeRenderPass: 0
   m_PrefilterUseLegacyLightmaps: 0
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -225,7 +214,6 @@ MonoBehaviour:
 >>>>>>> 6131cec4ec8128d227c601d3d4ed45b69111e425
 >>>>>>> 2ba7213bdbec0ab384e4d05882714554883a6143
 >>>>>>> 5bbfc2112a55d3f0893a59c2bc9817c51cb3a3f6
->>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
   m_ShaderVariantLogLevel: 0
   m_ShadowCascades: 0
   m_Textures:

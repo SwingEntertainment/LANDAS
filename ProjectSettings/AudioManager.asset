@@ -12,10 +12,7 @@ AudioManager:
   m_DSPBufferSize: 1024
   m_VirtualVoiceCount: 512
   m_RealVoiceCount: 32
-<<<<<<< HEAD
-=======
   m_EnableOutputSuspension: 1
->>>>>>> 7d0582520cf083ccd1be8664c69d45705ffa233f
   m_SpatializerPlugin: 
   m_AmbisonicDecoderPlugin: 
   m_DisableAudio: 0
