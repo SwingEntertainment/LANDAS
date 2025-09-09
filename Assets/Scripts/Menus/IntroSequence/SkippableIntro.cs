@@ -29,6 +29,11 @@ public class SkippableIntro : MonoBehaviour
     {
         if (IntroSequence == null) return;
 
+        while (skipIndex < skipTimes.Length && IntroSequence.time >= skipTimes[skipIndex])
+        {
+            skipIndex++;
+        }
+
         if (skipIndex < skipTimes.Length)
         {
             IntroSequence.time = skipTimes[skipIndex];

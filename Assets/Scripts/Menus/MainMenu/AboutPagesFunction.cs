@@ -14,6 +14,12 @@ public class AboutPagesFunction : MonoBehaviour
         ShowPage(0);
     }
 
+    private void OnEnable()
+    {
+        currentPage = 0;
+        ShowPage(currentPage);
+    }
+
     public void NextPage()
     {
         if (currentPage < aboutPages.Length - 1)
