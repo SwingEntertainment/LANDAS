@@ -2370,7 +2370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5358112109232263521, guid: 6c772b4ac0b51e944b8374456000d9ee, type: 3}
+  m_Sprite: {fileID: 3197723558903431704, guid: 04889d398fa164a4f913f0cb9f295822, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3739,13 +3739,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The story follows a struggling student who continually fails his Philippine
+  m_text: 'The story follows a struggling student who continually fails his Philippine
     History subject. Hoping to improve, he spends long hours in the library, where
     silence stirs memories of his childhood in the province under the care of his
-    Lola. As these memories deepen, a transition unfolds\u2014granting him the chance
+    Lola. As these memories deepen, a transition unfolds, granting him the chance
     to return to his hometown. There, his Lola warmly welcomes him, and his journey
     begins: a path of rediscovering his roots, reconnecting with culture, and embracing
-    the stories of the land that shaped him."
+    the stories of the land that shaped him.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
   m_sharedMaterial: {fileID: 8359380927227677158, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
@@ -9799,11 +9799,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Blending nostalgia, cultural immersion, and modern gamification, LANDAS
+  m_text: Blending nostalgia, cultural immersion, and modern gamification, LANDAS
     offers a dynamic learning experience that reconnects young Filipinos with their
     identity and values. It aims to not only help students appreciate their heritage,
-    but also inspire pride in being Filipino\u2014making the past not just a lesson,
-    but a meaningful adventure for the future."
+    but also inspire pride in being Filipino, making the past not just a lesson,
+    but a meaningful adventure for the future.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
   m_sharedMaterial: {fileID: 8359380927227677158, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
