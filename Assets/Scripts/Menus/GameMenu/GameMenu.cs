@@ -1,44 +1,93 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameMenu : MonoBehaviour
 {
-    [Header("---------AUDIO SOURCE--------")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource sfxSource;
+    [Header("UI Panels")]
+    public GameObject tutorialUI;
 
-    [Header("---------AUDIO CLIP--------")]
-    public AudioClip gameMenuBGM;
-    public AudioClip buttonClick;
+    [Header("Interactive Buttons")]
+    public Button kitchenButton;
+    public Button dictionaryButton;
+    public Button outsideButton;
+    public Button lolaButton;
 
-    private void Start()
+    [Header("Audio Clips")]
+    public AudioClip defaultTheme;
+    public AudioClip kitchenTheme;
+    public AudioClip dictionaryTheme;
+    public AudioClip outsideTheme;
+
+    [Header("Scenes")]
+    public string kitchenScene = "KitchenMenu";
+    public string dictionaryScene = "Dictionary";
+    public string outsideScene = "OutsideMenu";
+
+    private const string TutorialPlayedKey = "gameMenuTutorial";
+
+    void Start()
     {
-        musicSource.clip = gameMenuBGM;
-        musicSource.loop = true;
-        musicSource.Play();
+        Time.timeScale = 1f;
+
+        // Play default theme
+        if (AudioManager.Instance != null && defaultTheme != null)
+            AudioManager.Instance.PlayMusic(defaultTheme, loop: true);
+
+        // Show tutorial only if not read before
+        if (PlayerPrefs.GetInt(TutorialPlayedKey, 0) == 0)
+        {
+            if (tutorialUI != null) tutorialUI.SetActive(true);
+            SetInteractiveButtons(false);
+        }
+        else
+        {
+            if (tutorialUI != null) tutorialUI.SetActive(false);
+            SetInteractiveButtons(true);
+        }
     }
-    public void playSFX(AudioClip clip)
+
+    // Called by TutorialUI when last page is reached
+    public void TutorialFinished()
     {
-        sfxSource.PlayOneShot(clip);
+        PlayerPrefs.SetInt(TutorialPlayedKey, 1);
+        PlayerPrefs.Save();
+
+        if (tutorialUI != null) tutorialUI.SetActive(false);
+        SetInteractiveButtons(true);
     }
 
-    public void GoToMainMenu()
+    private void SetInteractiveButtons(bool enable)
     {
-        SceneManager.LoadSceneAsync(1);
+        if (kitchenButton != null) kitchenButton.interactable = enable;
+        if (dictionaryButton != null) dictionaryButton.interactable = enable;
+        if (outsideButton != null) outsideButton.interactable = enable;
+        if (lolaButton != null) lolaButton.interactable = enable;
     }
 
-    public void GoToOutsideMenu()
+    // ===== Navigation =====
+    public void GoToKitchen()
     {
-        SceneManager.LoadSceneAsync(4);
+        ChangeTheme(kitchenTheme);
+        SceneManager.LoadScene(kitchenScene);
     }
 
-    public void GoToDictionaryMenu()
+    public void GoToDictionary()
     {
-        SceneManager.LoadSceneAsync(7);
+        ChangeTheme(dictionaryTheme);
+        SceneManager.LoadScene(dictionaryScene);
     }
 
-    public void QuitGame()
+    public void GoToOutside()
     {
-        Application.Quit();
+        ChangeTheme(outsideTheme);
+        SceneManager.LoadScene(outsideScene);
+    }
+
+    // ===== Audio =====
+    private void ChangeTheme(AudioClip newTheme)
+    {
+        if (AudioManager.Instance != null && newTheme != null)
+            AudioManager.Instance.PlayMusic(newTheme, loop: true);
     }
 }
