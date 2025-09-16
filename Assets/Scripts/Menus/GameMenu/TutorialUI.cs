@@ -39,6 +39,6 @@ public class TutorialUI : MonoBehaviour
 
     void UpdateButtons()
     {
-        nextButton.interactable = currentPage < pages.Length - 1;
+        nextButton.interactable = true;
     }
 }
