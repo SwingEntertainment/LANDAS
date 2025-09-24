@@ -26,9 +26,13 @@ public class OutsideMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(3);
     }
-    
+
     public void GoToSipaGame()
     {
         SceneManager.LoadSceneAsync(19);
+    }
+    public void GoToPaloSeboGame()
+    {
+        SceneManager.LoadSceneAsync(20);
     }
 }
