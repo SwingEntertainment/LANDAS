@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 74c7917207d74064fa2d8c42624a572a
+guid: 7befe314960fdab478868f931f5d3945
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7732477443795763449
-    second: lolaVersion2_0
+      213: -4853547857333063103
+    second: lolaVersion2-3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lolaVersion2_0
+      name: lolaVersion2-3_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 632
-        height: 948
+        width: 633
+        height: 947
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70f35d8bbb8b0b490800000000000000
-      internalID: -7732477443795763449
+      spriteID: 142fd4f50fbb4acb0800000000000000
+      internalID: -4853547857333063103
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lolaVersion2_0: -7732477443795763449
+      lolaVersion2-3_0: -4853547857333063103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
