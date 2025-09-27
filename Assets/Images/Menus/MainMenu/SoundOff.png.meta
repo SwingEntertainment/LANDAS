@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 74c7917207d74064fa2d8c42624a572a
+guid: 217e5885773eab6488831ec44404843c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7732477443795763449
-    second: lolaVersion2_0
+      213: 5660104166885646579
+    second: SoundOff_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lolaVersion2_0
+      name: SoundOff_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 0
-        width: 632
-        height: 948
+        y: 4
+        width: 200
+        height: 189
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70f35d8bbb8b0b490800000000000000
-      internalID: -7732477443795763449
+      spriteID: 3f06de250cabc8e40800000000000000
+      internalID: 5660104166885646579
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lolaVersion2_0: -7732477443795763449
+      SoundOff_0: 5660104166885646579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
