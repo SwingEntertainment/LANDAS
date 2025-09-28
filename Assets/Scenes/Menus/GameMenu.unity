@@ -1664,7 +1664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -327, y: 50}
+  m_AnchoredPosition: {x: -334, y: 32.5}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167975033
@@ -13621,7 +13621,8 @@ MonoBehaviour:
   dictionaryButton: {fileID: 1086211429}
   outsideButton: {fileID: 1566121796}
   lolaButton: {fileID: 830608040}
-  defaultTheme: {fileID: 0}
+  playerButton: {fileID: 1447220470}
+  defaultTheme: {fileID: 8300000, guid: 1ef22c487d003e149839ef4e8d2c7b71, type: 3}
   kitchenTheme: {fileID: 0}
   dictionaryTheme: {fileID: 0}
   outsideTheme: {fileID: 0}

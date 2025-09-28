@@ -1,38 +1,92 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class OutsideMenu : MonoBehaviour
 {
-    [Header("---------AUDIO SOURCE--------")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource sfxSource;
+    [Header("UI Panels")]
+    public GameObject OutsidetutorialUI;
 
-    [Header("---------AUDIO CLIP--------")]
-    public AudioClip outsideMenuBGM;
-    public AudioClip buttonClick;
+    [Header("Interactive Buttons")]
+    public Button PaloSeboButton;
+    public Button SipaButton;
+    public Button JolensButton;
 
-    private void Start()
+    [Header("Audio Clips")]
+    public AudioClip defaultTheme;
+    public AudioClip SipaTheme;
+    public AudioClip GameMenuTheme;
+    public AudioClip PaloSeboTheme;
+
+
+    [Header("Scenes")]
+    public string PaloSeboScene = "PaloSebo";
+    public string SipaScene = "SipaGame";
+    public string GameMenuScene = "GameMenu";
+
+    private const string TutorialPlayedKeyOutside = "outsideMenuTutorial";
+
+    void Start()
     {
-        musicSource.clip = outsideMenuBGM;
-        musicSource.loop = true;
-        musicSource.Play();
-    }
-    public void playSFX(AudioClip clip)
-    {
-        sfxSource.PlayOneShot(clip);
+        Time.timeScale = 1f;
+
+        // Play default theme
+        if (AudioManager.Instance != null && defaultTheme != null)
+            AudioManager.Instance.PlayMusic(defaultTheme, loop: true);
+
+        // Show tutorial only if not read before
+        if (PlayerPrefs.GetInt(TutorialPlayedKeyOutside, 0) == 0)
+        {
+            if (OutsidetutorialUI != null) OutsidetutorialUI.SetActive(true);
+            SetInteractiveButtons(false);
+        }
+        else
+        {
+            if (OutsidetutorialUI != null) OutsidetutorialUI.SetActive(false);
+            SetInteractiveButtons(true);
+        }
     }
 
-    public void PlayGame()
+    // Called by TutorialUI when last page is reached
+    public void TutorialFinished()
     {
-        SceneManager.LoadSceneAsync(3);
+        PlayerPrefs.SetInt(TutorialPlayedKeyOutside, 1);
+        PlayerPrefs.Save();
+
+        if (OutsidetutorialUI != null) OutsidetutorialUI.SetActive(false);
+        SetInteractiveButtons(true);
     }
 
-    public void GoToSipaGame()
+    private void SetInteractiveButtons(bool enable)
     {
-        SceneManager.LoadSceneAsync(19);
+        if (PaloSeboButton != null) PaloSeboButton.interactable = enable;
+        if (SipaButton != null) SipaButton.interactable = enable;
+        if (JolensButton != null) JolensButton.interactable = enable;
     }
-    public void GoToPaloSeboGame()
+
+    // ===== Navigation =====
+    public void GoToGameMenu()
     {
-        SceneManager.LoadSceneAsync(20);
+        ChangeTheme(GameMenuTheme);
+        SceneManager.LoadScene(GameMenuScene);
+    }
+
+    public void GoToPaloSebo()
+    {
+        ChangeTheme(PaloSeboTheme);
+        SceneManager.LoadScene(PaloSeboScene);
+    }
+
+    public void GoToSipa()
+    {
+        ChangeTheme(SipaTheme);
+        SceneManager.LoadScene(SipaScene);
+    }
+
+    // ===== Audio =====
+    private void ChangeTheme(AudioClip newTheme)
+    {
+        if (AudioManager.Instance != null && newTheme != null)
+            AudioManager.Instance.PlayMusic(newTheme, loop: true);
     }
 }
