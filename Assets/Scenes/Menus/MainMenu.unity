@@ -1514,6 +1514,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 589252035}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &139738370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2128,6 +2140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 182250005}
+  - component: {fileID: 182250006}
   m_Layer: 5
   m_Name: page4
   m_TagString: Untagged
@@ -2156,6 +2169,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &182250006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182250004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065965bf4e4289146bc740fb2ea3ca77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 2
+  targetTexts:
+  - {fileID: 1509651528}
+  - {fileID: 1106460641}
 --- !u!1 &216963255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3357,6 +3386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 380337894}
+  - component: {fileID: 380337895}
   m_Layer: 5
   m_Name: page1
   m_TagString: Untagged
@@ -3385,6 +3415,22 @@ RectTransform:
   m_AnchoredPosition: {x: 90.70351, y: 47.041206}
   m_SizeDelta: {x: 695.8624, y: 280.2478}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &380337895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380337893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065965bf4e4289146bc740fb2ea3ca77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 2
+  targetTexts:
+  - {fileID: 3466378}
+  - {fileID: 40888777}
 --- !u!1 &394444149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,6 +4162,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2028118613}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 589252035}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -6745,6 +6803,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 589252035}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &682047835
 MonoBehaviour:
@@ -11134,6 +11204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1278866684}
+  - component: {fileID: 1278866685}
   m_Layer: 5
   m_Name: page2
   m_TagString: Untagged
@@ -11162,6 +11233,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030517578, y: -0.000011444092}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1278866685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278866683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065965bf4e4289146bc740fb2ea3ca77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 2
+  targetTexts:
+  - {fileID: 493178148}
+  - {fileID: 402260023}
 --- !u!1 &1295329747
 GameObject:
   m_ObjectHideFlags: 0
@@ -17861,6 +17948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2134239756}
+  - component: {fileID: 2134239757}
   m_Layer: 5
   m_Name: page3
   m_TagString: Untagged
@@ -17889,6 +17977,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2134239757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134239755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065965bf4e4289146bc740fb2ea3ca77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 2
+  targetTexts:
+  - {fileID: 1522149514}
+  - {fileID: 946182198}
 --- !u!1 &2135468044
 GameObject:
   m_ObjectHideFlags: 0
