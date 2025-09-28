@@ -448,7 +448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7, y: 22.186}
+  m_AnchoredPosition: {x: -0.70000076, y: 22.186}
   m_SizeDelta: {x: 100, y: 78.4279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543772411
@@ -525,8 +525,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369.9, y: 102.3}
-  m_SizeDelta: {x: 102.55072, y: 149.1741}
+  m_AnchoredPosition: {x: -369, y: 99}
+  m_SizeDelta: {x: 141.3175, y: 112.4476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &653707036
 MonoBehaviour:
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 42129eb9df9739c4b908f6815cab3179, type: 3}
+      - m_Target: {fileID: 11500000, guid: e62e2ce671bc32e41a2f7c3565a71e10, type: 3}
         m_TargetAssemblyTypeName: OutsideMenu, Assembly-CSharp
         m_MethodName: 
         m_Mode: 2
