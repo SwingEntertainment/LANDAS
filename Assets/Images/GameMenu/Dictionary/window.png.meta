@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c34150086ef7607439eb99fbe56592ec
+guid: 335afdb08e9cd44499b3c57e93e73644
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7791465719516348565
-    second: Abala_0
+      213: -9051692800306759852
+    second: window_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Abala_0
+      name: window_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 3668
-        height: 1648
+        width: 366
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6f389485372fd390800000000000000
-      internalID: -7791465719516348565
+      spriteID: 45731c52b5de16280800000000000000
+      internalID: -9051692800306759852
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Abala_0: -7791465719516348565
+      window_0: -9051692800306759852
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

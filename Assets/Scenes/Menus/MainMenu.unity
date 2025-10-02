@@ -5517,7 +5517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699b32ef860a52841af804455e1c5955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuBGM: {fileID: 0}
+  mainMenuBGM: {fileID: 8300000, guid: e43fe5d443023ff4393840855a9e1000, type: 3}
   buttonClick: {fileID: 0}
   replayModal: {fileID: 1046657826}
   mainMenuPanel: {fileID: 796641155}

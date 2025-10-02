@@ -11,6 +11,8 @@ public class OutsideMenu : MonoBehaviour
     public Button PaloSeboButton;
     public Button SipaButton;
     public Button JolensButton;
+    public Button BackButton;
+
 
     [Header("Audio Clips")]
     public AudioClip defaultTheme;
@@ -62,6 +64,7 @@ public class OutsideMenu : MonoBehaviour
         if (PaloSeboButton != null) PaloSeboButton.interactable = enable;
         if (SipaButton != null) SipaButton.interactable = enable;
         if (JolensButton != null) JolensButton.interactable = enable;
+        if (BackButton != null) BackButton.interactable = enable;
     }
 
     // ===== Navigation =====
