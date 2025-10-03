@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 466fa9d7154e8e449a832b789bbb87f6
+guid: e68965eba553eab448858fb23b2028a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4204376634364819012
-    second: Exit - Board_0
+      213: 1994770406197283574
+    second: ArrowNext_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Exit - Board_0
+      name: ArrowNext_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 392
-        height: 369
+        y: 6
+        width: 162
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4467441f542f85a30800000000000000
-      internalID: 4204376634364819012
+      spriteID: 6fac9dd9d19deab10800000000000000
+      internalID: 1994770406197283574
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Exit - Board_0: 4204376634364819012
+      ArrowNext_0: 1994770406197283574
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
