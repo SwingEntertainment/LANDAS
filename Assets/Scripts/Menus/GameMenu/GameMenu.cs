@@ -18,11 +18,15 @@ public class GameMenu : MonoBehaviour
     public AudioClip kitchenTheme;
     public AudioClip dictionaryTheme;
     public AudioClip outsideTheme;
+    public AudioClip quizTheme;
+
 
     [Header("Scenes")]
     public string kitchenScene = "KitchenMenu";
     public string dictionaryScene = "Dictionary";
     public string outsideScene = "OutsideMenu";
+    public string quizSpanishScene = "QuizSPanish";
+
 
     private const string TutorialPlayedKey = "gameMenuTutorial";
 
@@ -82,6 +86,12 @@ public class GameMenu : MonoBehaviour
     {
         ChangeTheme(outsideTheme);
         SceneManager.LoadScene(outsideScene);
+    }
+
+      public void GoToSpanishQiuz()
+    {
+        ChangeTheme(quizTheme);
+        SceneManager.LoadScene(quizSpanishScene);
     }
 
     // ===== Audio =====
