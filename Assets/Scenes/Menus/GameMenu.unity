@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2970,7 +2970,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -5374,7 +5374,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -5987,6 +5987,7 @@ GameObject:
   - component: {fileID: 851590479}
   - component: {fileID: 851590481}
   - component: {fileID: 851590480}
+  - component: {fileID: 851590482}
   m_Layer: 0
   m_Name: chapterProgress
   m_TagString: Untagged
@@ -6046,7 +6047,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -6116,6 +6117,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851590478}
   m_CullTransparentMesh: 1
+--- !u!114 &851590482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851590478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403c313ba9306a7458a4c19c127e6abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressText: {fileID: 851590480}
 --- !u!1 &860021336
 GameObject:
   m_ObjectHideFlags: 0
@@ -6399,7 +6413,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -7006,6 +7020,7 @@ GameObject:
   - component: {fileID: 987021181}
   - component: {fileID: 987021183}
   - component: {fileID: 987021182}
+  - component: {fileID: 987021184}
   m_Layer: 0
   m_Name: chapterTitle
   m_TagString: Untagged
@@ -7063,7 +7078,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -7133,6 +7148,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987021180}
   m_CullTransparentMesh: 1
+--- !u!114 &987021184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987021180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aed73fe9a91e6b48a495562a5213f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextChapterButton: {fileID: 1023502815}
 --- !u!1 &1003593443
 GameObject:
   m_ObjectHideFlags: 0
@@ -8820,7 +8848,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -9786,7 +9814,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -10373,7 +10401,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -11076,7 +11104,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -11832,7 +11860,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -12208,7 +12236,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1635566012}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1875173329}
+        m_TargetAssemblyTypeName: GameMenu, Assembly-CSharp
+        m_MethodName: GoToSpanishQiuz
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1649425194
 GameObject:
   m_ObjectHideFlags: 0
@@ -13621,14 +13661,15 @@ MonoBehaviour:
   dictionaryButton: {fileID: 1086211429}
   outsideButton: {fileID: 1566121796}
   lolaButton: {fileID: 830608040}
-  playerButton: {fileID: 1447220470}
   defaultTheme: {fileID: 8300000, guid: 1ef22c487d003e149839ef4e8d2c7b71, type: 3}
   kitchenTheme: {fileID: 0}
   dictionaryTheme: {fileID: 0}
   outsideTheme: {fileID: 0}
+  quizTheme: {fileID: 0}
   kitchenScene: KitchenMenu
   dictionaryScene: Dictionary
   outsideScene: OutsideMenu
+  quizSpanishScene: QuizSPanish
 --- !u!1 &1904006218
 GameObject:
   m_ObjectHideFlags: 0
@@ -14208,7 +14249,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286821578
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
