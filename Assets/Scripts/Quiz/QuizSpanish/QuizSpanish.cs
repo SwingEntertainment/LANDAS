@@ -54,7 +54,7 @@ public class QuizSpanish : MonoBehaviour
     public string gameMenuScene = "GameMenu";
 
     [Header("JSON Settings")]
-    public string jsonFileName = "QuizSpanish";
+    public string jsonFileName = "QuizSpanish.json"; // include extension!
 
     private List<QuizQuestion> questions = new List<QuizQuestion>();
     private List<QuizQuestion> sessionQuestions = new List<QuizQuestion>();
@@ -71,7 +71,8 @@ public class QuizSpanish : MonoBehaviour
             AudioManager.Instance.PlayMusic(quizTheme, loop: true);
         }
 
-        LoadQuizData();
+        StartCoroutine(LoadQuizData());
+
         quizPanel.SetActive(false);
         countdownPanel.SetActive(false);
         feedbackPanel.SetActive(false);
@@ -99,10 +100,8 @@ public class QuizSpanish : MonoBehaviour
 
     private void BuildSessionPool()
     {
-        // Get unanswered first
         var unanswered = questions.Where(q => !q.isAnswered).ToList();
 
-        // Fill with answered if needed
         if (unanswered.Count < SESSION_QUESTION_LIMIT)
         {
             int needed = SESSION_QUESTION_LIMIT - unanswered.Count;
@@ -113,7 +112,6 @@ public class QuizSpanish : MonoBehaviour
             unanswered.AddRange(answered);
         }
 
-        // Shuffle and take exactly 30
         sessionQuestions = unanswered.OrderBy(x => Random.value)
                                      .Take(SESSION_QUESTION_LIMIT)
                                      .ToList();
@@ -139,19 +137,56 @@ public class QuizSpanish : MonoBehaviour
     #endregion
 
     #region Question Logic
-    private void LoadQuizData()
+    private IEnumerator LoadQuizData()
     {
+        string persistentPath = Path.Combine(Application.persistentDataPath, jsonFileName);
+
+        // If a save already exists in persistentDataPath, load that first
+        if (File.Exists(persistentPath))
+        {
+            string savedJson = File.ReadAllText(persistentPath);
+            QuizData data = JsonUtility.FromJson<QuizData>(savedJson);
+            questions = data.questions;
+            yield break;
+        }
+
+        // Otherwise load from StreamingAssets (initial data)
         string path = Path.Combine(Application.streamingAssetsPath, jsonFileName);
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+        using (UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequest.Get(path))
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+            {
+                string jsonString = request.downloadHandler.text;
+                QuizData data = JsonUtility.FromJson<QuizData>(jsonString);
+                questions = data.questions;
+
+                // Save initial copy to persistentDataPath for editing later
+                File.WriteAllText(persistentPath, jsonString);
+            }
+            else
+            {
+                Debug.LogError("Failed to load JSON: " + request.error);
+            }
+        }
+#else
         if (File.Exists(path))
         {
             string jsonString = File.ReadAllText(path);
             QuizData data = JsonUtility.FromJson<QuizData>(jsonString);
             questions = data.questions;
+
+            // Save a copy to persistent path if not present
+            File.WriteAllText(persistentPath, jsonString);
         }
         else
         {
             Debug.LogError("JSON file not found at " + path);
         }
+#endif
     }
 
     private void ShowNextQuestion()
@@ -234,7 +269,6 @@ public class QuizSpanish : MonoBehaviour
 
         UpdateEncounteredProgress();
 
-
         int highscore = PlayerPrefs.GetInt("highscore", 0);
         if (currentScore > highscore)
         {
@@ -273,10 +307,10 @@ public class QuizSpanish : MonoBehaviour
     #region JSON Save
     private void SaveQuizData()
     {
-        string path = Path.Combine(Application.streamingAssetsPath, jsonFileName);
+        string persistentPath = Path.Combine(Application.persistentDataPath, jsonFileName);
         QuizData data = new QuizData { questions = questions };
         string jsonString = JsonUtility.ToJson(data, true);
-        File.WriteAllText(path, jsonString);
+        File.WriteAllText(persistentPath, jsonString);
     }
 
     private void UpdateEncounteredProgress()
