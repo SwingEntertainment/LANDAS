@@ -30,7 +30,7 @@
             "choiceB": "Hacienda system",
             "choiceC": "Encomienda system",
             "choiceD": "Indulto system",
-            "isAnswered": false,
+            "isAnswered": true,
             "isEncountered": true
         },
         {
@@ -74,7 +74,7 @@
             "choiceB": "Diego and Gabriela Silang",
             "choiceC": "Rajah Matanda and Rajah Humabon",
             "choiceD": "Tamblot and Bankaw",
-            "isAnswered": false,
+            "isAnswered": true,
             "isEncountered": true
         },
         {
@@ -96,7 +96,7 @@
             "choiceB": "They focused only on trade",
             "choiceC": "They were rooted in spiritual resistance",
             "choiceD": "They were led by Spanish mestizos",
-            "isAnswered": false,
+            "isAnswered": true,
             "isEncountered": true
         },
         {
@@ -140,7 +140,7 @@
             "choiceB": "Negotiated peace",
             "choiceC": "Took over the revolt",
             "choiceD": "Converted to Christianity",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": true
         },
         {
@@ -151,7 +151,7 @@
             "choiceB": "Bohol",
             "choiceC": "Ilocos",
             "choiceD": "Manila",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": true
         },
         {
@@ -173,7 +173,7 @@
             "choiceB": "It was used to create loyal allies among elites",
             "choiceC": "It focused on engineering and science",
             "choiceD": "It was taught in native dialects",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": true
         },
         {
@@ -237,7 +237,7 @@
             "correctAnswer": "Encomienda",
             "choiceA": "Polo y Servicio",
             "choiceB": "Encomienda",
-            "choiceC": "Alcaldía",
+            "choiceC": "Alcaldia",
             "choiceD": "Barangay",
             "isAnswered": true,
             "isEncountered": true
@@ -272,7 +272,7 @@
             "choiceB": "Tamblot",
             "choiceC": "Bankaw",
             "choiceD": "Diego Silang",
-            "isAnswered": false,
+            "isAnswered": true,
             "isEncountered": true
         },
         {
@@ -305,7 +305,7 @@
             "choiceB": "Malong",
             "choiceC": "Caragay",
             "choiceD": "Lakandula",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": true
         },
         {
@@ -327,7 +327,7 @@
             "choiceB": "Prayers to Spanish saints",
             "choiceC": "Anting-anting (amulets)",
             "choiceD": "Spanish military training",
-            "isAnswered": false,
+            "isAnswered": true,
             "isEncountered": true
         }
     ]
