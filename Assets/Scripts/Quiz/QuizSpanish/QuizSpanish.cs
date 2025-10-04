@@ -54,7 +54,7 @@ public class QuizSpanish : MonoBehaviour
     public string gameMenuScene = "GameMenu";
 
     [Header("JSON Settings")]
-    public string jsonFileName = "QuizSpanish.json";
+    public string jsonFileName = "QuizSpanish";
 
     private List<QuizQuestion> questions = new List<QuizQuestion>();
     private List<QuizQuestion> sessionQuestions = new List<QuizQuestion>();
@@ -72,7 +72,6 @@ public class QuizSpanish : MonoBehaviour
         }
 
         LoadQuizData();
-        UpdateEncounteredProgress();
         quizPanel.SetActive(false);
         countdownPanel.SetActive(false);
         feedbackPanel.SetActive(false);
@@ -219,7 +218,7 @@ public class QuizSpanish : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         feedbackPanel.SetActive(false);
 
-        sessionQuestionIndex++; // go to next question
+        sessionQuestionIndex++; 
         ShowNextQuestion();
     }
     #endregion
@@ -229,7 +228,6 @@ public class QuizSpanish : MonoBehaviour
     {
         quizPanel.SetActive(false);
         gameOverPanel.SetActive(true);
-        UpdateEncounteredProgress();
 
         int encounteredCount = sessionQuestions.Count;
         PlayerPrefs.SetInt("SpanishProgress", encounteredCount);
