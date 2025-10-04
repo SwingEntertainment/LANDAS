@@ -20,7 +20,7 @@
             "choiceC": "Lapu-Lapu",
             "choiceD": "Humabon",
             "isAnswered": true,
-            "isEncountered": true
+            "isEncountered": false
         },
         {
             "questionID": 3,
@@ -30,8 +30,8 @@
             "choiceB": "Hacienda system",
             "choiceC": "Encomienda system",
             "choiceD": "Indulto system",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 4,
@@ -41,8 +41,8 @@
             "choiceB": "The natives surrendered",
             "choiceC": "Magellan was killed",
             "choiceD": "Spain established immediate control",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 5,
@@ -53,7 +53,7 @@
             "choiceC": "Roman Catholicism",
             "choiceD": "Buddhism",
             "isAnswered": true,
-            "isEncountered": true
+            "isEncountered": false
         },
         {
             "questionID": 6,
@@ -63,7 +63,7 @@
             "choiceB": "They lost their farmlands",
             "choiceC": "Tribute demands became excessive",
             "choiceD": "They no longer needed the Spaniards",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": true
         },
         {
@@ -108,7 +108,7 @@
             "choiceC": "Provide wealth",
             "choiceD": "Make warriors invulnerable",
             "isAnswered": true,
-            "isEncountered": true
+            "isEncountered": false
         },
         {
             "questionID": 11,
@@ -118,8 +118,8 @@
             "choiceB": "Francisco Maniago",
             "choiceC": "Bankaw",
             "choiceD": "Palaris",
-            "isAnswered": false,
-            "isEncountered": true
+            "isAnswered": true,
+            "isEncountered": false
         },
         {
             "questionID": 12,
@@ -140,8 +140,8 @@
             "choiceB": "Negotiated peace",
             "choiceC": "Took over the revolt",
             "choiceD": "Converted to Christianity",
-            "isAnswered": false,
-            "isEncountered": true
+            "isAnswered": true,
+            "isEncountered": false
         },
         {
             "questionID": 14,
@@ -151,8 +151,8 @@
             "choiceB": "Bohol",
             "choiceC": "Ilocos",
             "choiceD": "Manila",
-            "isAnswered": false,
-            "isEncountered": true
+            "isAnswered": true,
+            "isEncountered": false
         },
         {
             "questionID": 15,
@@ -162,8 +162,8 @@
             "choiceB": "They became government officials",
             "choiceC": "They were executed publicly",
             "choiceD": "They received pardons",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 16,
@@ -173,7 +173,7 @@
             "choiceB": "It was used to create loyal allies among elites",
             "choiceC": "It focused on engineering and science",
             "choiceD": "It was taught in native dialects",
-            "isAnswered": false,
+            "isAnswered": true,
             "isEncountered": true
         },
         {
@@ -196,7 +196,7 @@
             "choiceC": "Matanda",
             "choiceD": "Caragay",
             "isAnswered": true,
-            "isEncountered": true
+            "isEncountered": false
         },
         {
             "questionID": 19,
@@ -206,8 +206,8 @@
             "choiceB": "Displayed them in plazas",
             "choiceC": "Buried them in secret",
             "choiceD": "Burned them with the body",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 20,
@@ -217,7 +217,7 @@
             "choiceB": "Forgiveness",
             "choiceC": "Anger",
             "choiceD": "Peace",
-            "isAnswered": false,
+            "isAnswered": true,
             "isEncountered": true
         },
         {
@@ -239,8 +239,8 @@
             "choiceB": "Encomienda",
             "choiceC": "Alcaldia",
             "choiceD": "Barangay",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 23,
@@ -251,7 +251,7 @@
             "choiceC": "Maharlika",
             "choiceD": "Datu",
             "isAnswered": true,
-            "isEncountered": true
+            "isEncountered": false
         },
         {
             "questionID": 24,
@@ -272,7 +272,7 @@
             "choiceB": "Tamblot",
             "choiceC": "Bankaw",
             "choiceD": "Diego Silang",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": true
         },
         {
@@ -283,8 +283,8 @@
             "choiceB": "A religious tax",
             "choiceC": "Forced labor system for Filipino males",
             "choiceD": "A method of Spanish education",
-            "isAnswered": false,
-            "isEncountered": true
+            "isAnswered": true,
+            "isEncountered": false
         },
         {
             "questionID": 27,
@@ -306,7 +306,7 @@
             "choiceC": "Caragay",
             "choiceD": "Lakandula",
             "isAnswered": false,
-            "isEncountered": true
+            "isEncountered": false
         },
         {
             "questionID": 29,
@@ -316,7 +316,7 @@
             "choiceB": "Josefa Llanes Escoda",
             "choiceC": "Gabriela Silang",
             "choiceD": "Maria Clara",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": true
         },
         {
@@ -327,8 +327,8 @@
             "choiceB": "Prayers to Spanish saints",
             "choiceC": "Anting-anting (amulets)",
             "choiceD": "Spanish military training",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         }
     ]
 }

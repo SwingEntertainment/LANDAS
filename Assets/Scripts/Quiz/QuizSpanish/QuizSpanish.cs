@@ -203,10 +203,13 @@ public class QuizSpanish : MonoBehaviour
         {
             feedbackText.text = "Correct!";
             currentQuestion.isAnswered = true;
-            currentQuestion.isEncountered = true;
+            if (!currentQuestion.isEncountered)
+            {
+                currentQuestion.isEncountered = true;
+                UpdateEncounteredProgress();
+            }
             currentScore++;
             PlayerPrefs.SetInt("currentscore", currentScore);
-            UpdateEncounteredProgress();
         }
         else
         {
@@ -218,7 +221,7 @@ public class QuizSpanish : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         feedbackPanel.SetActive(false);
 
-        sessionQuestionIndex++; 
+        sessionQuestionIndex++;
         ShowNextQuestion();
     }
     #endregion
@@ -229,8 +232,8 @@ public class QuizSpanish : MonoBehaviour
         quizPanel.SetActive(false);
         gameOverPanel.SetActive(true);
 
-        int encounteredCount = sessionQuestions.Count;
-        PlayerPrefs.SetInt("SpanishProgress", encounteredCount);
+        UpdateEncounteredProgress();
+
 
         int highscore = PlayerPrefs.GetInt("highscore", 0);
         if (currentScore > highscore)

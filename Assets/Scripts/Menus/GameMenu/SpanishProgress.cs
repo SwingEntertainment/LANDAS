@@ -7,8 +7,22 @@ public class SpanishProgress : MonoBehaviour
 
     private void Start()
     {
+        UpdateProgressText();
+    }
+
+    private void OnEnable()
+    {
+        UpdateProgressText();
+    }
+
+    private void UpdateProgressText()
+    {
         int encountered = PlayerPrefs.GetInt("EncounteredCount", 0);
-        int total = PlayerPrefs.GetInt("TotalQuestions", 60);
-        progressText.text = $"{encountered} out of {total}";
+        int total = PlayerPrefs.GetInt("TotalQuestions", 30);
+
+        if (progressText != null)
+        {
+            progressText.text = $"{encountered} out of {total}";
+        }
     }
 }
