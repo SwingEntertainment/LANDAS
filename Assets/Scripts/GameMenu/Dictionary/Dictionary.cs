@@ -40,6 +40,11 @@ public class Dictionary : MonoBehaviour
     private List<WordEntry> dictionaryWords;
     private int selectedWordIndex = -1;
 
+#if UNITY_ANDROID && !UNITY_EDITOR
+    private AndroidJavaObject ttsObject;
+    private bool ttsInitialized = false;
+#endif
+
     void Start()
     {
         Time.timeScale = 1f;
@@ -71,7 +76,7 @@ public class Dictionary : MonoBehaviour
             prevPageButton.onClick.AddListener(() => ShowPage(currentPage - 1));
 
         if (voiceButton != null)
-            voiceButton.onClick.AddListener(PlayVoice);
+            voiceButton.onClick.AddListener(OnVoiceButtonClicked);
 
         if (detailNextButton != null)
             detailNextButton.onClick.AddListener(() => ShowDetail(selectedWordIndex + 1));
@@ -82,6 +87,75 @@ public class Dictionary : MonoBehaviour
         if (detailPanel != null) detailPanel.SetActive(false);
     }
 
+    // ===== Voice Button Click =====
+    private void OnVoiceButtonClicked()
+    {
+#if UNITY_ANDROID && !UNITY_EDITOR
+        if (!ttsInitialized)
+        {
+            InitializeAndroidTTS();
+        }
+        else
+        {
+            PlayVoice();
+        }
+#else
+        PlayVoice();
+#endif
+    }
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+    private void InitializeAndroidTTS()
+    {
+        using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+        {
+            AndroidJavaObject context = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+
+            ttsObject = new AndroidJavaObject("android.speech.tts.TextToSpeech", context, new TTSInitListener(this, context));
+        }
+    }
+
+    private class TTSInitListener : AndroidJavaProxy
+    {
+        private readonly Dictionary parent;
+        private readonly AndroidJavaObject context;
+
+        public TTSInitListener(Dictionary parent, AndroidJavaObject context)
+            : base("android.speech.tts.TextToSpeech$OnInitListener")
+        {
+            this.parent = parent;
+            this.context = context;
+        }
+
+        void onInit(int status)
+        {
+            if (status == 0)
+            {
+                var locale = new AndroidJavaObject("java.util.Locale", "fil", "PH");
+                int result = parent.ttsObject.Call<int>("setLanguage", locale);
+
+                if (result == -1 || result == -2)
+                {
+                    Debug.Log("Tagalog voice data not installed. Opening installer...");
+                    AndroidJavaObject installIntent = new AndroidJavaObject(
+                        "android.content.Intent", "android.speech.tts.engine.INSTALL_TTS_DATA");
+                    context.Call("startActivity", installIntent);
+                }
+                else
+                {
+                    Debug.Log("TTS initialized successfully in Tagalog.");
+                    parent.ttsInitialized = true;
+                    parent.PlayVoice();
+                }
+            }
+            else
+            {
+                Debug.LogWarning("TTS failed to initialize.");
+            }
+        }
+    }
+#endif
+
     // ===== JSON Loading =====
     void LoadDictionary()
     {
@@ -91,7 +165,6 @@ public class Dictionary : MonoBehaviour
             DictionaryData data = JsonUtility.FromJson<DictionaryData>(jsonFile.text);
             dictionaryWords = new List<WordEntry>(data.words);
 
-            // --- FUTURE-PROOF: remove duplicates based on Tagalog word ---
             Dictionary<string, WordEntry> uniqueWords = new Dictionary<string, WordEntry>();
             foreach (WordEntry word in dictionaryWords)
             {
@@ -100,7 +173,6 @@ public class Dictionary : MonoBehaviour
             }
             dictionaryWords = new List<WordEntry>(uniqueWords.Values);
 
-            // --- FUTURE-PROOF: sort alphabetically by Tagalog word ---
             dictionaryWords.Sort((a, b) => string.Compare(a.tagalog, b.tagalog));
         }
         else
@@ -109,8 +181,6 @@ public class Dictionary : MonoBehaviour
             dictionaryWords = new List<WordEntry>();
         }
     }
-
-
 
     // ===== Pagination =====
     void ShowPage(int page)
@@ -160,16 +230,25 @@ public class Dictionary : MonoBehaviour
         detailNextButton.interactable = (index < dictionaryWords.Count - 1);
     }
 
+    // ===== TTS Play Voice =====
     void PlayVoice()
     {
-        if (selectedWordIndex >= 0 && selectedWordIndex < dictionaryWords.Count)
+        if (selectedWordIndex < 0 || selectedWordIndex >= dictionaryWords.Count) return;
+        string wordToSpeak = dictionaryWords[selectedWordIndex].tagalog;
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+        if (ttsObject != null && ttsInitialized)
         {
-            WordEntry word = dictionaryWords[selectedWordIndex];
-            // Placeholder: replace with actual TTS or pre-recorded clip
-            Debug.Log($"Play Tagalog voice for: {word.tagalog}");
-            // Example if pre-recorded audio is linked:
-            // AudioManager.Instance.PlaySFX(word.audioClip);
+            ttsObject.Call<int>("speak", wordToSpeak, 0, null, null);
         }
+        else
+        {
+            Debug.LogWarning("TTS not initialized yet. Initializing now...");
+            InitializeAndroidTTS();
+        }
+#else
+        Debug.Log($"[TTS] Would speak (Tagalog): {wordToSpeak}");
+#endif
     }
 
     // ===== Navigation =====
@@ -199,6 +278,19 @@ public class Dictionary : MonoBehaviour
             if (btn != null) btn.interactable = enable;
         }
     }
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+    private void OnDestroy()
+    {
+        if (ttsObject != null)
+        {
+            ttsObject.Call("stop");
+            ttsObject.Call("shutdown");
+            ttsObject.Dispose();
+            ttsObject = null;
+        }
+    }
+#endif
 }
 
 [System.Serializable]
@@ -209,7 +301,6 @@ public class WordEntry
     public string partOfSpeech;
     public string tagalogMeaning;
     public string englishMeaning;
-    // Optionally add public string audioClipPath;
 }
 
 [System.Serializable]
