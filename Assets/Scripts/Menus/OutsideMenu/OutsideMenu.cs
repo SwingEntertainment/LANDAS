@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -32,11 +33,9 @@ public class OutsideMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        // Play default theme
         if (AudioManager.Instance != null && defaultTheme != null)
             AudioManager.Instance.PlayMusic(defaultTheme, loop: true);
 
-        // Show tutorial only if not read before
         if (PlayerPrefs.GetInt(TutorialPlayedKeyOutside, 0) == 0)
         {
             if (OutsidetutorialUI != null) OutsidetutorialUI.SetActive(true);
@@ -49,7 +48,6 @@ public class OutsideMenu : MonoBehaviour
         }
     }
 
-    // Called by TutorialUI when last page is reached
     public void TutorialFinished()
     {
         PlayerPrefs.SetInt(TutorialPlayedKeyOutside, 1);
@@ -64,7 +62,14 @@ public class OutsideMenu : MonoBehaviour
         if (PaloSeboButton != null) PaloSeboButton.interactable = enable;
         if (SipaButton != null) SipaButton.interactable = enable;
         if (JolensButton != null) JolensButton.interactable = enable;
-        if (BackButton != null) BackButton.interactable = enable;
+        if (BackButton != null)
+        {
+            BackButton.interactable = enable;
+
+            TMP_Text buttonText = BackButton.GetComponentInChildren<TMP_Text>();
+            if (buttonText != null)
+                buttonText.enabled = enable;
+        }
     }
 
     // ===== Navigation =====

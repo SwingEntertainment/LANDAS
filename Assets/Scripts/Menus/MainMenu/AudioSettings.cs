@@ -22,27 +22,35 @@ public class AudioSettings : MonoBehaviour
     public Sprite sfxOffSprite;
 
     [Header("Defaults")]
-    [Range(0.01f, 1f)] public float defaultVolume = 0.1f; 
+    [Range(0.01f, 1f)] public float defaultVolume = 0.5f;
 
-    private float lastMusicVolume = 0.5f; 
+    private float lastMusicVolume = 0.5f;
     private float lastSFXVolume = 0.5f;
 
     void Start()
     {
         if (AudioManager.Instance == null) return;
 
-        lastMusicVolume = Mathf.Max(AudioManager.Instance.musicVolume, defaultVolume);
-        lastSFXVolume = Mathf.Max(AudioManager.Instance.sfxVolume, defaultVolume);
+        float savedMusicVol = PlayerPrefs.GetFloat("MusicVolume", defaultVolume);
+        float savedSFXVol = PlayerPrefs.GetFloat("SFXVolume", defaultVolume);
+        bool musicOn = PlayerPrefs.GetInt("MusicOn", 1) == 1;
+        bool sfxOn = PlayerPrefs.GetInt("SFXOn", 1) == 1;
 
-        UpdateMusicUI();
-        UpdateSFXUI();
+        AudioManager.Instance.musicVolume = savedMusicVol;
+        AudioManager.Instance.sfxVolume = savedSFXVol;
+        AudioManager.Instance.musicOn = musicOn;
+        AudioManager.Instance.sfxOn = sfxOn;
 
+        lastMusicVolume = Mathf.Max(savedMusicVol, defaultVolume);
+        lastSFXVolume = Mathf.Max(savedSFXVol, defaultVolume);
+
+        // Setup sliders
         if (musicSlider != null)
         {
             musicSlider.minValue = 0f;
             musicSlider.maxValue = 1f;
             musicSlider.wholeNumbers = false;
-            musicSlider.value = AudioManager.Instance.musicVolume;
+            musicSlider.value = musicOn ? savedMusicVol : 0f;
             musicSlider.onValueChanged.AddListener(OnMusicSliderChanged);
         }
 
@@ -51,19 +59,22 @@ public class AudioSettings : MonoBehaviour
             sfxSlider.minValue = 0f;
             sfxSlider.maxValue = 1f;
             sfxSlider.wholeNumbers = false;
-            sfxSlider.value = AudioManager.Instance.sfxVolume;
+            sfxSlider.value = sfxOn ? savedSFXVol : 0f;
             sfxSlider.onValueChanged.AddListener(OnSFXSliderChanged);
         }
 
         musicButton.onClick.AddListener(ToggleMusic);
         sfxButton.onClick.AddListener(ToggleSFX);
+
+        UpdateMusicUI();
+        UpdateSFXUI();
     }
 
     void ToggleMusic()
     {
         if (AudioManager.Instance == null) return;
 
-        if (!AudioManager.Instance.musicOn || AudioManager.Instance.musicVolume <= 0f)
+        if (!AudioManager.Instance.musicOn)
         {
             AudioManager.Instance.musicOn = true;
             float restoreVolume = (lastMusicVolume > 0f) ? lastMusicVolume : defaultVolume;
@@ -72,13 +83,13 @@ public class AudioSettings : MonoBehaviour
         }
         else
         {
-            if (AudioManager.Instance.musicVolume > 0f)
-                lastMusicVolume = AudioManager.Instance.musicVolume;
-
+            lastMusicVolume = AudioManager.Instance.musicVolume;
             AudioManager.Instance.SetMusicVolume(0f);
             AudioManager.Instance.musicOn = false;
+            if (musicSlider != null) musicSlider.value = 0f;
         }
 
+        SaveAudioSettings();
         UpdateMusicUI();
     }
 
@@ -86,7 +97,7 @@ public class AudioSettings : MonoBehaviour
     {
         if (AudioManager.Instance == null) return;
 
-        if (!AudioManager.Instance.sfxOn || AudioManager.Instance.sfxVolume <= 0f)
+        if (!AudioManager.Instance.sfxOn)
         {
             AudioManager.Instance.sfxOn = true;
             float restoreVolume = (lastSFXVolume > 0f) ? lastSFXVolume : defaultVolume;
@@ -95,13 +106,13 @@ public class AudioSettings : MonoBehaviour
         }
         else
         {
-            if (AudioManager.Instance.sfxVolume > 0f)
-                lastSFXVolume = AudioManager.Instance.sfxVolume;
-
+            lastSFXVolume = AudioManager.Instance.sfxVolume;
             AudioManager.Instance.SetSFXVolume(0f);
             AudioManager.Instance.sfxOn = false;
+            if (sfxSlider != null) sfxSlider.value = 0f;
         }
 
+        SaveAudioSettings();
         UpdateSFXUI();
     }
 
@@ -110,17 +121,10 @@ public class AudioSettings : MonoBehaviour
         if (AudioManager.Instance == null) return;
 
         AudioManager.Instance.SetMusicVolume(value);
+        AudioManager.Instance.musicOn = value > 0f;
+        lastMusicVolume = Mathf.Max(value, defaultVolume);
 
-        if (value > 0f)
-        {
-            AudioManager.Instance.musicOn = true;
-            lastMusicVolume = value;
-        }
-        else
-        {
-            AudioManager.Instance.musicOn = false;
-        }
-
+        SaveAudioSettings();
         UpdateMusicUI();
     }
 
@@ -129,17 +133,10 @@ public class AudioSettings : MonoBehaviour
         if (AudioManager.Instance == null) return;
 
         AudioManager.Instance.SetSFXVolume(value);
+        AudioManager.Instance.sfxOn = value > 0f;
+        lastSFXVolume = Mathf.Max(value, defaultVolume);
 
-        if (value > 0f)
-        {
-            AudioManager.Instance.sfxOn = true;
-            lastSFXVolume = value;
-        }
-        else
-        {
-            AudioManager.Instance.sfxOn = false;
-        }
-
+        SaveAudioSettings();
         UpdateSFXUI();
     }
 
@@ -147,30 +144,32 @@ public class AudioSettings : MonoBehaviour
     {
         if (AudioManager.Instance == null) return;
 
-        musicLabel.text = AudioManager.Instance.musicOn ? "Music: ON" : "Music: OFF";
+        bool on = AudioManager.Instance.musicOn;
+        musicLabel.text = on ? "Music: ON" : "Music: OFF";
 
-        // Change button sprite
         Image btnImage = musicButton.GetComponent<Image>();
         if (btnImage != null)
-            btnImage.sprite = AudioManager.Instance.musicOn ? musicOnSprite : musicOffSprite;
-
-        // Sliders always interactable now
-        if (musicSlider != null)
-            musicSlider.interactable = true;
+            btnImage.sprite = on ? musicOnSprite : musicOffSprite;
     }
 
     void UpdateSFXUI()
     {
         if (AudioManager.Instance == null) return;
 
-        sfxLabel.text = AudioManager.Instance.sfxOn ? "Sound: ON" : "Sound: OFF";
+        bool on = AudioManager.Instance.sfxOn;
+        sfxLabel.text = on ? "Sound: ON" : "Sound: OFF";
 
-        // Change button sprite
         Image btnImage = sfxButton.GetComponent<Image>();
         if (btnImage != null)
-            btnImage.sprite = AudioManager.Instance.sfxOn ? sfxOnSprite : sfxOffSprite;
+            btnImage.sprite = on ? sfxOnSprite : sfxOffSprite;
+    }
 
-        if (sfxSlider != null)
-            sfxSlider.interactable = true;
+    void SaveAudioSettings()
+    {
+        PlayerPrefs.SetFloat("MusicVolume", AudioManager.Instance.musicVolume);
+        PlayerPrefs.SetFloat("SFXVolume", AudioManager.Instance.sfxVolume);
+        PlayerPrefs.SetInt("MusicOn", AudioManager.Instance.musicOn ? 1 : 0);
+        PlayerPrefs.SetInt("SFXOn", AudioManager.Instance.sfxOn ? 1 : 0);
+        PlayerPrefs.Save();
     }
 }

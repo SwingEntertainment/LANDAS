@@ -8,8 +8,8 @@
             "choiceB": "To find new spices and routes for Spain",
             "choiceC": "To escape Portuguese forces",
             "choiceD": "To search for gold mines",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 2,
@@ -19,7 +19,7 @@
             "choiceB": "Datu Kalantiaw",
             "choiceC": "Lapu-Lapu",
             "choiceD": "Humabon",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": false
         },
         {
@@ -52,7 +52,7 @@
             "choiceB": "Hinduism",
             "choiceC": "Roman Catholicism",
             "choiceD": "Buddhism",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": false
         },
         {
@@ -64,7 +64,7 @@
             "choiceC": "Tribute demands became excessive",
             "choiceD": "They no longer needed the Spaniards",
             "isAnswered": false,
-            "isEncountered": true
+            "isEncountered": false
         },
         {
             "questionID": 7,
@@ -74,8 +74,8 @@
             "choiceB": "Diego and Gabriela Silang",
             "choiceC": "Rajah Matanda and Rajah Humabon",
             "choiceD": "Tamblot and Bankaw",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 8,
@@ -85,8 +85,8 @@
             "choiceB": "Tamblot",
             "choiceC": "Bankaw",
             "choiceD": "Magalat",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 9,
@@ -96,8 +96,8 @@
             "choiceB": "They focused only on trade",
             "choiceC": "They were rooted in spiritual resistance",
             "choiceD": "They were led by Spanish mestizos",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 10,
@@ -107,7 +107,7 @@
             "choiceB": "Summon foreign allies",
             "choiceC": "Provide wealth",
             "choiceD": "Make warriors invulnerable",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": false
         },
         {
@@ -118,7 +118,7 @@
             "choiceB": "Francisco Maniago",
             "choiceC": "Bankaw",
             "choiceD": "Palaris",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": false
         },
         {
@@ -129,8 +129,8 @@
             "choiceB": "Juan de la Cruz",
             "choiceC": "Rajah Lakandula",
             "choiceD": "Juan Caragay",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 13,
@@ -140,7 +140,7 @@
             "choiceB": "Negotiated peace",
             "choiceC": "Took over the revolt",
             "choiceD": "Converted to Christianity",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": false
         },
         {
@@ -151,7 +151,7 @@
             "choiceB": "Bohol",
             "choiceC": "Ilocos",
             "choiceD": "Manila",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": false
         },
         {
@@ -173,8 +173,8 @@
             "choiceB": "It was used to create loyal allies among elites",
             "choiceC": "It focused on engineering and science",
             "choiceD": "It was taught in native dialects",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 17,
@@ -184,8 +184,8 @@
             "choiceB": "The Kapampangans",
             "choiceC": "The Zambals",
             "choiceD": "The Visayans",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 18,
@@ -195,7 +195,7 @@
             "choiceB": "Maniago",
             "choiceC": "Matanda",
             "choiceD": "Caragay",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": false
         },
         {
@@ -217,8 +217,8 @@
             "choiceB": "Forgiveness",
             "choiceC": "Anger",
             "choiceD": "Peace",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 21,
@@ -228,8 +228,8 @@
             "choiceB": "To learn Asian culture",
             "choiceC": "To spread Christianity and expand their empire",
             "choiceD": "To protect native Filipinos from other invaders",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 22,
@@ -250,7 +250,7 @@
             "choiceB": "Timawa",
             "choiceC": "Maharlika",
             "choiceD": "Datu",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": false
         },
         {
@@ -261,8 +261,8 @@
             "choiceB": "The Spaniards violated previous agreements",
             "choiceC": "They wanted more land",
             "choiceD": "They were allies of Chinese pirates",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 25,
@@ -273,7 +273,7 @@
             "choiceC": "Bankaw",
             "choiceD": "Diego Silang",
             "isAnswered": false,
-            "isEncountered": true
+            "isEncountered": false
         },
         {
             "questionID": 26,
@@ -283,7 +283,7 @@
             "choiceB": "A religious tax",
             "choiceC": "Forced labor system for Filipino males",
             "choiceD": "A method of Spanish education",
-            "isAnswered": true,
+            "isAnswered": false,
             "isEncountered": false
         },
         {
@@ -294,8 +294,8 @@
             "choiceB": "He supported pirates",
             "choiceC": "He became disillusioned after initially welcoming them",
             "choiceD": "He sought revenge for his brother",
-            "isAnswered": true,
-            "isEncountered": true
+            "isAnswered": false,
+            "isEncountered": false
         },
         {
             "questionID": 28,
@@ -317,7 +317,7 @@
             "choiceC": "Gabriela Silang",
             "choiceD": "Maria Clara",
             "isAnswered": false,
-            "isEncountered": true
+            "isEncountered": false
         },
         {
             "questionID": 30,

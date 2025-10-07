@@ -35,16 +35,20 @@ public class QuizSpanish : MonoBehaviour
     public GameObject countdownPanel;
     public GameObject feedbackPanel;
     public GameObject gameOverPanel;
+    public GameObject quitModalPanel;
+    public GameObject unlockPopupPanel;
 
     [Header("UI Elements")]
     public TMP_Text countdownText;
     public TMP_Text questionText;
+    public TMP_Text scoreText;
     public Button[] choiceButtons;
     public TMP_Text feedbackText;
     public TMP_Text questionNumberText;
     public TMP_Text finalScoreText;
     public TMP_Text motivationalText;
     public TMP_Text highscoreText;
+    public TMP_Text unlockPopupText;
 
     [Header("Audio")]
     public AudioClip quizTheme;
@@ -54,18 +58,49 @@ public class QuizSpanish : MonoBehaviour
     public string gameMenuScene = "GameMenu";
 
     [Header("JSON Settings")]
-    public string jsonFileName = "QuizSpanish.json"; // include extension!
+    public string jsonFileName = "QuizSpanish.json";
+
+    [Header("Feedback messages (editable in Inspector)")]
+    public List<string> correctResponses = new List<string> {
+        "Correct!", "Nice!", "Great!", "You got it!", "Right answer!"
+    };
+    public List<string> wrongResponses = new List<string> {
+        "Wrong!", "Not quite.", "Oops!", "That's incorrect.", "Try the next one!"
+    };
+
+    [Header("End-of-quiz motivational messages")]
+    public List<string> successMessages = new List<string> {
+        "Fantastic job! You unlocked the QuizAmerica scene!",
+        "Excellent work — new quiz unlocked!",
+        "Bravo! QuizAmerica is now available!"
+    };
+    public List<string> retryMessages = new List<string> {
+        "Keep trying — you'll get it next time!",
+        "Don't give up! Practice makes perfect.",
+        "Good effort! Try again and beat your score."
+    };
+
+    [Header("Gameplay settings")]
+    public int sessionQuestionLimit = 20;
+    public float feedbackDisplaySeconds = 3f;
+    public int unlockScoreThreshold = 15;
 
     private List<QuizQuestion> questions = new List<QuizQuestion>();
     private List<QuizQuestion> sessionQuestions = new List<QuizQuestion>();
     private QuizQuestion currentQuestion;
     private int sessionQuestionIndex = 0;
     private int currentScore = 0;
-    private const int SESSION_QUESTION_LIMIT = 30;
+
+    private const string PREF_CURRENT_SCORE = "currentscore";
+    private const string PREF_HIGH_SCORE = "highscore";
+    private const string PREF_ENCOUNTERED_COUNT = "EncounteredCount";
+    private const string PREF_TOTAL_QUESTIONS = "TotalQuestions";
+    private const string PREF_IS_AMERICA_UNLOCKED = "isAmericaQuizUnlocked";
 
     private void Start()
     {
-        // Play background music
+        EnsureMessageDefaults();
+
         if (AudioManager.Instance != null && quizTheme != null)
         {
             AudioManager.Instance.PlayMusic(quizTheme, loop: true);
@@ -77,6 +112,20 @@ public class QuizSpanish : MonoBehaviour
         countdownPanel.SetActive(false);
         feedbackPanel.SetActive(false);
         gameOverPanel.SetActive(false);
+        quitModalPanel.SetActive(false);
+        if (unlockPopupPanel != null) unlockPopupPanel.SetActive(false);
+    }
+
+    private void EnsureMessageDefaults()
+    {
+        if (correctResponses == null || correctResponses.Count == 0)
+            correctResponses = new List<string> { "Correct!" };
+        if (wrongResponses == null || wrongResponses.Count == 0)
+            wrongResponses = new List<string> { "Wrong!" };
+        if (successMessages == null || successMessages.Count == 0)
+            successMessages = new List<string> { "Great job!" };
+        if (retryMessages == null || retryMessages.Count == 0)
+            retryMessages = new List<string> { "Keep trying!" };
     }
 
     public void GoToDictionary()
@@ -90,7 +139,8 @@ public class QuizSpanish : MonoBehaviour
         foreach (var q in questions) q.isAnswered = false;
 
         currentScore = 0;
-        PlayerPrefs.SetInt("currentscore", 0);
+        PlayerPrefs.SetInt(PREF_CURRENT_SCORE, 0);
+        PlayerPrefs.Save();
 
         BuildSessionPool();
 
@@ -102,9 +152,9 @@ public class QuizSpanish : MonoBehaviour
     {
         var unanswered = questions.Where(q => !q.isAnswered).ToList();
 
-        if (unanswered.Count < SESSION_QUESTION_LIMIT)
+        if (unanswered.Count < sessionQuestionLimit)
         {
-            int needed = SESSION_QUESTION_LIMIT - unanswered.Count;
+            int needed = sessionQuestionLimit - unanswered.Count;
             var answered = questions.Where(q => q.isAnswered)
                                     .OrderBy(x => Random.value)
                                     .Take(needed)
@@ -113,7 +163,7 @@ public class QuizSpanish : MonoBehaviour
         }
 
         sessionQuestions = unanswered.OrderBy(x => Random.value)
-                                     .Take(SESSION_QUESTION_LIMIT)
+                                     .Take(sessionQuestionLimit)
                                      .ToList();
 
         sessionQuestionIndex = 0;
@@ -141,16 +191,22 @@ public class QuizSpanish : MonoBehaviour
     {
         string persistentPath = Path.Combine(Application.persistentDataPath, jsonFileName);
 
-        // If a save already exists in persistentDataPath, load that first
         if (File.Exists(persistentPath))
         {
             string savedJson = File.ReadAllText(persistentPath);
             QuizData data = JsonUtility.FromJson<QuizData>(savedJson);
-            questions = data.questions;
+            questions = data.questions ?? new List<QuizQuestion>();
+
+            if (PlayerPrefs.GetInt(PREF_ENCOUNTERED_COUNT, -1) <= 0)
+            {
+                Debug.Log("PlayerPrefs cleared — resetting question flags (answered + encountered).");
+                ResetAllQuestionFlags();
+            }
+
             yield break;
         }
 
-        // Otherwise load from StreamingAssets (initial data)
+
         string path = Path.Combine(Application.streamingAssetsPath, jsonFileName);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -162,10 +218,11 @@ public class QuizSpanish : MonoBehaviour
             {
                 string jsonString = request.downloadHandler.text;
                 QuizData data = JsonUtility.FromJson<QuizData>(jsonString);
-                questions = data.questions;
+                questions = data.questions ?? new List<QuizQuestion>();
 
-                // Save initial copy to persistentDataPath for editing later
                 File.WriteAllText(persistentPath, jsonString);
+
+                ResetAllQuestionFlags();
             }
             else
             {
@@ -177,10 +234,11 @@ public class QuizSpanish : MonoBehaviour
         {
             string jsonString = File.ReadAllText(path);
             QuizData data = JsonUtility.FromJson<QuizData>(jsonString);
-            questions = data.questions;
+            questions = data.questions ?? new List<QuizQuestion>();
 
-            // Save a copy to persistent path if not present
             File.WriteAllText(persistentPath, jsonString);
+
+            ResetAllQuestionFlags();
         }
         else
         {
@@ -191,7 +249,7 @@ public class QuizSpanish : MonoBehaviour
 
     private void ShowNextQuestion()
     {
-        if (sessionQuestionIndex >= SESSION_QUESTION_LIMIT)
+        if (sessionQuestionIndex >= sessionQuestionLimit)
         {
             EndQuiz();
             return;
@@ -204,7 +262,8 @@ public class QuizSpanish : MonoBehaviour
     private void UpdateQuestionUI()
     {
         questionText.text = currentQuestion.question;
-        questionNumberText.text = $"{sessionQuestionIndex + 1}/{SESSION_QUESTION_LIMIT}";
+        questionNumberText.text = $"{sessionQuestionIndex + 1}/{sessionQuestionLimit}";
+        scoreText.text = $"{currentScore}";
 
         List<string> choices = new List<string>
         {
@@ -218,10 +277,16 @@ public class QuizSpanish : MonoBehaviour
 
         for (int i = 0; i < choiceButtons.Length; i++)
         {
+            if (i >= choices.Count) break;
+
             int index = i;
-            choiceButtons[i].GetComponentInChildren<TMP_Text>().text = choices[i];
-            choiceButtons[i].onClick.RemoveAllListeners();
-            choiceButtons[i].onClick.AddListener(() => OnChoiceSelected(choices[index]));
+            var btn = choiceButtons[i];
+            var label = btn.GetComponentInChildren<TMP_Text>();
+            if (label != null) label.text = choices[i];
+
+            btn.onClick.RemoveAllListeners();
+            btn.onClick.AddListener(() => OnChoiceSelected(choices[index]));
+            btn.interactable = true;
         }
     }
 
@@ -232,32 +297,78 @@ public class QuizSpanish : MonoBehaviour
 
     private IEnumerator HandleFeedback(string selectedChoice)
     {
+        SetChoicesInteractable(false);
+
+        Button selectedButton = null;
+        TMP_Text selectedText = null;
+
+        foreach (var btn in choiceButtons)
+        {
+            TMP_Text label = btn.GetComponentInChildren<TMP_Text>();
+            if (label != null && label.text == selectedChoice)
+            {
+                selectedButton = btn;
+                selectedText = label;
+                break;
+            }
+        }
+
         feedbackPanel.SetActive(true);
 
         if (selectedChoice == currentQuestion.correctAnswer)
         {
-            feedbackText.text = "Correct!";
+            feedbackText.text = correctResponses[Random.Range(0, correctResponses.Count)];
             currentQuestion.isAnswered = true;
+
             if (!currentQuestion.isEncountered)
             {
                 currentQuestion.isEncountered = true;
                 UpdateEncounteredProgress();
             }
+
+            if (selectedText != null)
+                selectedText.color = new Color32(2, 59, 24, 255);
+
             currentScore++;
-            PlayerPrefs.SetInt("currentscore", currentScore);
+            PlayerPrefs.SetInt(PREF_CURRENT_SCORE, currentScore);
+            scoreText.text = $"{currentScore}";
         }
+
         else
         {
-            feedbackText.text = "Wrong!";
+            feedbackText.text = wrongResponses[Random.Range(0, wrongResponses.Count)];
             currentQuestion.isAnswered = true;
+
+            if (selectedText != null)
+                selectedText.color = new Color32(179, 58, 58, 255);
         }
 
         SaveQuizData();
-        yield return new WaitForSeconds(1.5f);
+
+        yield return new WaitForSeconds(feedbackDisplaySeconds);
+
+        foreach (var btn in choiceButtons)
+        {
+            TMP_Text label = btn.GetComponentInChildren<TMP_Text>();
+            if (label != null)
+                label.color = Color.black;
+        }
+
         feedbackPanel.SetActive(false);
 
         sessionQuestionIndex++;
+        SetChoicesInteractable(true);
         ShowNextQuestion();
+    }
+
+    private void SetChoicesInteractable(bool state)
+    {
+        if (choiceButtons == null) return;
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            if (choiceButtons[i] != null)
+                choiceButtons[i].interactable = state;
+        }
     }
     #endregion
 
@@ -269,32 +380,47 @@ public class QuizSpanish : MonoBehaviour
 
         UpdateEncounteredProgress();
 
-        int highscore = PlayerPrefs.GetInt("highscore", 0);
+        int highscore = PlayerPrefs.GetInt(PREF_HIGH_SCORE, 0);
         if (currentScore > highscore)
         {
-            PlayerPrefs.SetInt("highscore", currentScore);
+            PlayerPrefs.SetInt(PREF_HIGH_SCORE, currentScore);
         }
 
-        if (currentScore >= 27)
+        string chosenMessage;
+        if (currentScore >= unlockScoreThreshold && successMessages.Count > 0)
         {
-            PlayerPrefs.SetInt("isAmericaQuizUnlocked", 1);
-            motivationalText.text = "Great job! You unlocked the QuizAmerica scene!";
+            PlayerPrefs.SetInt(PREF_IS_AMERICA_UNLOCKED, 1);
+            chosenMessage = successMessages[Random.Range(0, successMessages.Count)];
+            if (unlockPopupPanel != null && unlockPopupText != null)
+                StartCoroutine(ShowUnlockPopup("Quiz for American Era Unlocked!"));
         }
         else
         {
-            motivationalText.text = "Keep trying! You can do better!";
+            chosenMessage = (retryMessages.Count > 0)
+                ? retryMessages[Random.Range(0, retryMessages.Count)]
+                : "Keep trying!";
         }
 
-        finalScoreText.text = $"Score: {currentScore}/{SESSION_QUESTION_LIMIT}";
-        highscoreText.text = $"Highscore: {PlayerPrefs.GetInt("highscore", 0)}";
+        motivationalText.text = chosenMessage;
+        finalScoreText.text = $"Score: {currentScore}/{sessionQuestionLimit}";
+        highscoreText.text = $"Highscore: {PlayerPrefs.GetInt(PREF_HIGH_SCORE, 0)}";
+
         PlayerPrefs.Save();
+    }
+
+    private IEnumerator ShowUnlockPopup(string message)
+    {
+        unlockPopupText.text = message;
+        unlockPopupPanel.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        unlockPopupPanel.SetActive(false);
     }
 
     public void NewQuizSession()
     {
         foreach (var q in questions) q.isAnswered = false;
         currentScore = 0;
-        PlayerPrefs.SetInt("currentscore", 0);
+        PlayerPrefs.SetInt(PREF_CURRENT_SCORE, 0);
         PlayerPrefs.Save();
 
         BuildSessionPool();
@@ -304,7 +430,36 @@ public class QuizSpanish : MonoBehaviour
     }
     #endregion
 
-    #region JSON Save
+    #region Quit Modal
+    public void OpenQuitModal()
+    {
+        if (quitModalPanel != null) quitModalPanel.SetActive(true);
+    }
+
+    public void ConfirmQuit()
+    {
+        quizPanel.SetActive(false);
+        feedbackPanel.SetActive(false);
+        countdownPanel.SetActive(false);
+        gameOverPanel.SetActive(false);
+        if (unlockPopupPanel != null) unlockPopupPanel.SetActive(false);
+        if (quitModalPanel != null) quitModalPanel.SetActive(false);
+
+        currentScore = 0;
+        sessionQuestionIndex = 0;
+        foreach (var q in questions)
+            q.isAnswered = false;
+
+        startPanel.SetActive(true);
+    }
+
+    public void CancelQuit()
+    {
+        if (quitModalPanel != null) quitModalPanel.SetActive(false);
+    }
+    #endregion
+
+    #region JSON Save / Reset
     private void SaveQuizData()
     {
         string persistentPath = Path.Combine(Application.persistentDataPath, jsonFileName);
@@ -316,9 +471,28 @@ public class QuizSpanish : MonoBehaviour
     private void UpdateEncounteredProgress()
     {
         int encounteredCount = questions.Count(q => q.isEncountered);
-        PlayerPrefs.SetInt("EncounteredCount", encounteredCount);
-        PlayerPrefs.SetInt("TotalQuestions", questions.Count);
+        PlayerPrefs.SetInt(PREF_ENCOUNTERED_COUNT, encounteredCount);
+        PlayerPrefs.SetInt(PREF_TOTAL_QUESTIONS, questions.Count);
         PlayerPrefs.Save();
+    }
+
+    private void ResetAllQuestionFlags()
+    {
+        if (questions == null || questions.Count == 0) return;
+
+        foreach (var q in questions)
+        {
+            q.isEncountered = false;
+            q.isAnswered = false;
+        }
+
+        SaveQuizData();
+
+        PlayerPrefs.SetInt(PREF_ENCOUNTERED_COUNT, 0);
+        PlayerPrefs.SetInt(PREF_CURRENT_SCORE, 0);
+        PlayerPrefs.Save();
+
+        Debug.Log("Cache cleared or missing — all question flags reset.");
     }
     #endregion
 }
