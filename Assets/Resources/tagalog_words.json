@@ -1,0 +1,2811 @@
+{
+  "words": [
+    {
+      "tagalog": "Abala",
+      "english": "Busy",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Maraming ginagawa o pinagkakaabalahan.",
+      "englishMeaning": "Occupied with many tasks or responsibilities."
+    },
+    {
+      "tagalog": "Aga",
+      "english": "Early",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Nauuna sa inaasahang oras o takdang panahon.",
+      "englishMeaning": "Ahead of the expected time or schedule."
+    },
+    {
+      "tagalog": "Akayin",
+      "english": "To Lead",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Gabayan o hawakan ang isang tao patungo sa pupuntahan.",
+      "englishMeaning": "To guide or take someone along to a destination."
+    },
+    {
+      "tagalog": "Akyat",
+      "english": "Climb",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pag-akyat o pagtaas patungong mas mataas na lugar.",
+      "englishMeaning": "Going up or ascending to a higher place."
+    },
+    {
+      "tagalog": "Ako",
+      "english": "I",
+      "partOfSpeech": "Panghalip (Pronoun)",
+      "tagalogMeaning": "Salitang ginagamit bilang pamalit sa pangalan ng nagsasalita.",
+      "englishMeaning": "A word used to refer to oneself."
+    },
+    {
+      "tagalog": "Aklat",
+      "english": "Book",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Nakasulat na koleksyon ng mga kuwento o aralin.",
+      "englishMeaning": "A written collection of stories or lessons."
+    },
+    {
+      "tagalog": "Alaga",
+      "english": "Pet",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Hayop o taong inaalagaan.",
+      "englishMeaning": "An animal or person that is cared for."
+    },
+    {
+      "tagalog": "Alon",
+      "english": "Wave",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagtaas at pagbaba ng tubig sa dagat.",
+      "englishMeaning": "The rise and fall of water in the ocean."
+    },
+    {
+      "tagalog": "Angas",
+      "english": "Arrogance",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pag-uugali na may kayabangan o pangmamaliit sa iba.",
+      "englishMeaning": "An attitude of conceit or looking down on others."
+    },
+    {
+      "tagalog": "Angat",
+      "english": "Lift up",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Itaas o iangat ang isang bagay.",
+      "englishMeaning": "To raise or elevate something."
+    },
+    {
+      "tagalog": "Anino",
+      "english": "Shadow",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Madilim na anyo na nabubuo kapag hinarangan ang liwanag.",
+      "englishMeaning": "A dark shape formed when light is blocked."
+    },
+    {
+      "tagalog": "Apaw",
+      "english": "Overflow",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pag-apaw o labis na pagtaas hanggang lumagpas.",
+      "englishMeaning": "To rise or spill over the edge."
+    },
+    {
+      "tagalog": "Aral",
+      "english": "Lesson",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kaalaman o mahalagang bagay na natutunan.",
+      "englishMeaning": "Knowledge or important thing learned."
+    },
+    {
+      "tagalog": "Asa",
+      "english": "Hope",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Paghahangad o paniniwala na may magandang mangyayari.",
+      "englishMeaning": "To wish or believe that something good will happen."
+    },
+    {
+      "tagalog": "Asin",
+      "english": "Salt",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kristal na pampaalat sa pagkain.",
+      "englishMeaning": "Crystals used to add a salty flavor to food."
+    },
+    {
+      "tagalog": "Atis",
+      "english": "Custard Apple",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Matamis na prutas na maraming buto.",
+      "englishMeaning": "A sweet fruit with many seeds."
+    },
+    {
+      "tagalog": "Awit",
+      "english": "Song",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Musika o komposisyon na may tono at liriko.",
+      "englishMeaning": "Music or composition with melody and lyrics."
+    },
+    {
+      "tagalog": "Aalis",
+      "english": "Will leave",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Lalakad o aalis mula sa isang lugar.",
+      "englishMeaning": "Will go or depart from a place."
+    },
+    {
+      "tagalog": "Anak",
+      "english": "Child",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Sanggol o supling na ipinanganak ng mga magulang.",
+      "englishMeaning": "A baby or offspring born to parents."
+    },
+    {
+      "tagalog": "Araw",
+      "english": "Sun",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Bituing nagbibigay liwanag at init sa ating mundo.",
+      "englishMeaning": "The star that gives light and heat to our world."
+    },
+    {
+      "tagalog": "Bango",
+      "english": "Fragrance",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Katangian ng isang bagay o tao na may kaaya-ayang amoy.",
+      "englishMeaning": "Quality of someone or something having a pleasant scent."
+    },
+    {
+      "tagalog": "Baba",
+      "english": "Lower",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagpapababa o paglapag mula sa mas mataas na posisyon.",
+      "englishMeaning": "To lower or to descend from a higher position."
+    },
+    {
+      "tagalog": "Bahay",
+      "english": "House",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Tirahan o gusaling ginagamit bilang kanlungan ng pamilya.",
+      "englishMeaning": "A structure or residence where a family lives."
+    },
+    {
+      "tagalog": "Balot",
+      "english": "Wrap",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Takpan o ibalot ang isang bagay para protektahan.",
+      "englishMeaning": "To cover or wrap something for protection."
+    },
+    {
+      "tagalog": "Balat",
+      "english": "Skin",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Ang panlabas na bahagi o takip ng katawan o prutas.",
+      "englishMeaning": "The outer layer or cover of the body or a fruit."
+    },
+    {
+      "tagalog": "Basahin",
+      "english": "Read",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Tignan at unawain ang nakasulat na salita o akda.",
+      "englishMeaning": "To look at and comprehend written words or text."
+    },
+    {
+      "tagalog": "Baso",
+      "english": "Glass",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Sisidlan para sa inumin, karaniwan gawa sa salamin.",
+      "englishMeaning": "A container for drinks, usually made of glass."
+    },
+    {
+      "tagalog": "Basa",
+      "english": "Wet",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Nabasa o may tubig, mamasa-masa.",
+      "englishMeaning": "Covered with water or damp."
+    },
+    {
+      "tagalog": "Balik",
+      "english": "Return",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magpunta muli sa pinanggalingan.",
+      "englishMeaning": "To go back to where one came from."
+    },
+    {
+      "tagalog": "Bahaghari",
+      "english": "Rainbow",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Makulay na arko sa langit pagkatapos umulan.",
+      "englishMeaning": "A multicolored arc in the sky after rain."
+    },
+    {
+      "tagalog": "Bantay",
+      "english": "Guard",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Taong nagbabantay o nag-iingat para sa kaligtasan.",
+      "englishMeaning": "A person who watches over or keeps something safe."
+    },
+    {
+      "tagalog": "Bawas",
+      "english": "Decrease",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagbababa o pagbabawas sa dami o halaga.",
+      "englishMeaning": "To reduce the amount or value of something."
+    },
+    {
+      "tagalog": "Bituin",
+      "english": "Star",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Makislap na bagay sa langit tuwing gabi.",
+      "englishMeaning": "A shining object in the night sky."
+    },
+    {
+      "tagalog": "Bihis",
+      "english": "Dress up",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magpalit o magsuot ng damit.",
+      "englishMeaning": "To change or put on clothes."
+    },
+    {
+      "tagalog": "Biyaya",
+      "english": "Blessing",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mabuting bagay o pagpapalang natanggap.",
+      "englishMeaning": "A good thing or blessing one has received."
+    },
+    {
+      "tagalog": "Bihasa",
+      "english": "Skilled",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Mahusay o sanay sa isang gawain.",
+      "englishMeaning": "Proficient or experienced in a certain task."
+    },
+    {
+      "tagalog": "Bilis",
+      "english": "Speed",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Katangian ng mabilis na paggalaw o paggawa.",
+      "englishMeaning": "The quality of moving or working quickly."
+    },
+    {
+      "tagalog": "Bilog",
+      "english": "Round",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hugis na walang sulok, pabilog.",
+      "englishMeaning": "A shape that is circular, with no corners."
+    },
+    {
+      "tagalog": "Bingi",
+      "english": "Deaf",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Walang kakayahang makarinig.",
+      "englishMeaning": "Lacking the ability to hear."
+    },
+    {
+      "tagalog": "Bunga",
+      "english": "Fruit/Result",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Produktong lumalabas mula sa halaman o kinalabasan ng gawain.",
+      "englishMeaning": "A product of a plant or the result of an action."
+    },
+    {
+      "tagalog": "Kanta",
+      "english": "Song",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Komposisyong may himig at liriko na inaawit.",
+      "englishMeaning": "A musical composition with melody and lyrics that is sung."
+    },
+    {
+      "tagalog": "Kahoy",
+      "english": "Wood",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Matigas na bahagi ng puno, madalas ginagamit sa paggawa.",
+      "englishMeaning": "The hard part of a tree, often used for making things."
+    },
+    {
+      "tagalog": "Kaibigan",
+      "english": "Friend",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Taong malapit o kasama sa mabuting samahan.",
+      "englishMeaning": "Someone close or part of a good relationship."
+    },
+    {
+      "tagalog": "Kakain",
+      "english": "Will eat",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Maglalagay ng pagkain sa bibig at lulunok nito.",
+      "englishMeaning": "Will put food into the mouth and swallow it."
+    },
+    {
+      "tagalog": "Kalamidad",
+      "english": "Calamity",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Matinding sakunang nagdudulot ng pinsala o kapahamakan.",
+      "englishMeaning": "A severe disaster that causes damage or harm."
+    },
+    {
+      "tagalog": "Kamay",
+      "english": "Hand",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Bahagi ng katawan na ginagamit sa paghawak o paggawa.",
+      "englishMeaning": "The part of the body used for grasping or working."
+    },
+    {
+      "tagalog": "Kaway",
+      "english": "Wave",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagtataas o paggalaw ng kamay para bumati.",
+      "englishMeaning": "Raising or moving the hand to greet someone."
+    },
+    {
+      "tagalog": "Kalabaw",
+      "english": "Carabao",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Malaking hayop na madalas katulong sa pagsasaka.",
+      "englishMeaning": "A large farm animal often used to help in farming."
+    },
+    {
+      "tagalog": "Kasama",
+      "english": "Companion",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Taong laging kasama o kaagapay.",
+      "englishMeaning": "A person who is always together or supportive."
+    },
+    {
+      "tagalog": "Kahon",
+      "english": "Box",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Lalagyang may apat na gilid at madalas na pantago.",
+      "englishMeaning": "A container with four sides often used for storage."
+    },
+    {
+      "tagalog": "Kakatawa",
+      "english": "Funny",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Nagdudulot ng kasiyahan o halakhak.",
+      "englishMeaning": "Causing joy or laughter."
+    },
+    {
+      "tagalog": "Kakatok",
+      "english": "Knock",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagkatok o pagpukpok sa pinto upang makakuha ng pansin.",
+      "englishMeaning": "Tapping or hitting a door to get attention."
+    },
+    {
+      "tagalog": "Kagubatan",
+      "english": "Forest",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Malawak na lugar na maraming puno at halaman.",
+      "englishMeaning": "A large area filled with trees and plants."
+    },
+    {
+      "tagalog": "Kakampi",
+      "english": "Ally",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Taong sumusuporta o nakikibahagi sa iisang layunin.",
+      "englishMeaning": "A person who supports or shares the same cause."
+    },
+    {
+      "tagalog": "Kakayanin",
+      "english": "Will endure",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magagawang makayanan o mapagtagumpayan ang isang bagay.",
+      "englishMeaning": "Will be able to endure or overcome something."
+    },
+    {
+      "tagalog": "Kabilang",
+      "english": "Included",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Kasama o nakapaloob sa pangkat.",
+      "englishMeaning": "Being part of or included in a group."
+    },
+    {
+      "tagalog": "Kalasag",
+      "english": "Shield",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kagamitang pananggalang laban sa atake.",
+      "englishMeaning": "Equipment used for defense against attacks."
+    },
+    {
+      "tagalog": "Kamukha",
+      "english": "Look-alike",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Magkapareho o may parehong hitsura.",
+      "englishMeaning": "Someone who looks very similar."
+    },
+    {
+      "tagalog": "Kamaynilaan",
+      "english": "Manila",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Ang kabiserang rehiyon ng bansa.",
+      "englishMeaning": "The capital region of the country."
+    },
+    {
+      "tagalog": "Kasaysayan",
+      "english": "History",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Salaysay o talaan ng mga nakaraang pangyayari.",
+      "englishMeaning": "A record or account of past events."
+    },
+    {
+      "tagalog": "Dalaga",
+      "english": "Maiden",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Babaeng nasa hustong gulang ngunit wala pang asawa.",
+      "englishMeaning": "A young adult female who is not yet married."
+    },
+    {
+      "tagalog": "Dalampasigan",
+      "english": "Shore",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Lugar na katabi o hangganan ng dagat.",
+      "englishMeaning": "The area beside or at the edge of the sea."
+    },
+    {
+      "tagalog": "Damhin",
+      "english": "Feel",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Maramdaman o madama ang isang bagay o emosyon.",
+      "englishMeaning": "To feel or sense something, physically or emotionally."
+    },
+    {
+      "tagalog": "Damo",
+      "english": "Grass",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Uri ng halaman na mababa at madalas tumutubo sa lupa.",
+      "englishMeaning": "A type of short plant that grows on the ground."
+    },
+    {
+      "tagalog": "Dala",
+      "english": "Bring",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magbitbit o maghatid ng bagay patungo sa ibang lugar.",
+      "englishMeaning": "To carry or transport something to another place."
+    },
+    {
+      "tagalog": "Daan",
+      "english": "Road",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Landas o kalsadang dinaraanan ng mga tao o sasakyan.",
+      "englishMeaning": "A path or street traveled by people or vehicles."
+    },
+    {
+      "tagalog": "Daloy",
+      "english": "Flow",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Patuloy na agos o galaw ng tubig o iba pang likido.",
+      "englishMeaning": "Continuous movement of water or other liquid."
+    },
+    {
+      "tagalog": "Damit",
+      "english": "Clothes",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kasuotan o bagay na isinusuot sa katawan.",
+      "englishMeaning": "Garments or items worn on the body."
+    },
+    {
+      "tagalog": "Dangal",
+      "english": "Honor",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mataas na pagpapahalaga o respeto.",
+      "englishMeaning": "High esteem or respect."
+    },
+    {
+      "tagalog": "Dalhin",
+      "english": "Bring",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Maghatid o magbitbit patungo sa ibang lugar.",
+      "englishMeaning": "To take or transport to another place."
+    },
+    {
+      "tagalog": "Dami",
+      "english": "Quantity",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Sukat o bilang ng mga bagay.",
+      "englishMeaning": "Measure or number of items."
+    },
+    {
+      "tagalog": "Dahan-dahan",
+      "english": "Slowly",
+      "partOfSpeech": "Pang-abay (Adverb)",
+      "tagalogMeaning": "Sa mabagal o maingat na paraan.",
+      "englishMeaning": "In a slow and careful manner."
+    },
+    {
+      "tagalog": "Dahon",
+      "english": "Leaf",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Patag at berdeng bahagi ng halaman.",
+      "englishMeaning": "The flat green part of a plant."
+    },
+    {
+      "tagalog": "Dakila",
+      "english": "Noble",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "May mataas na katangian o kagalang-galang.",
+      "englishMeaning": "Having high qualities or deserving respect."
+    },
+    {
+      "tagalog": "Dalampasigan",
+      "english": "Beachfront",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Ang bahagi ng lupang katabi ang dagat.",
+      "englishMeaning": "The land area next to the ocean."
+    },
+    {
+      "tagalog": "Dagat",
+      "english": "Sea",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Malawak na anyong tubig-alat.",
+      "englishMeaning": "A vast body of salty water."
+    },
+    {
+      "tagalog": "Dampi",
+      "english": "Touch",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Maingat o bahagyang paghawak.",
+      "englishMeaning": "A light or gentle touch."
+    },
+    {
+      "tagalog": "Damgo",
+      "english": "Dream",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Imahinasyong nagaganap habang natutulog.",
+      "englishMeaning": "Images or thoughts occurring during sleep."
+    },
+    {
+      "tagalog": "Daing",
+      "english": "Complaint",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Paghahayag ng hinaing o reklamo.",
+      "englishMeaning": "Expression of grievances or complaints."
+    },
+    {
+      "tagalog": "Dangal",
+      "english": "Dignity",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Katangian o reputasyon na nagpapataas ng respeto.",
+      "englishMeaning": "A quality or reputation that commands respect."
+    },
+    {
+      "tagalog": "Edukado",
+      "english": "Educated",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Taong may sapat na kaalaman o nakatapos ng pag-aaral.",
+      "englishMeaning": "Someone with enough knowledge or completed education."
+    },
+    {
+      "tagalog": "Ehemplo",
+      "english": "Example",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Modelo o halimbawa na sinusundan.",
+      "englishMeaning": "A model or example to follow."
+    },
+    {
+      "tagalog": "Ehekutibo",
+      "english": "Executive",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mataas na opisyal sa isang kumpanya o gobyerno.",
+      "englishMeaning": "A high-ranking official in a company or government."
+    },
+    {
+      "tagalog": "Eksamen",
+      "english": "Exam",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagsusulit o pagtatasa sa kaalaman.",
+      "englishMeaning": "A test or assessment of knowledge."
+    },
+    {
+      "tagalog": "Eksena",
+      "english": "Scene",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Bahagi ng kwento, pelikula, o dula.",
+      "englishMeaning": "A part of a story, movie, or play."
+    },
+    {
+      "tagalog": "Eksklusibo",
+      "english": "Exclusive",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi bukas para sa lahat; para lamang sa piling iilan.",
+      "englishMeaning": "Not open to all; intended for select few."
+    },
+    {
+      "tagalog": "Eksperimento",
+      "english": "Experiment",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagsubok o pagsusuri para makatuklas.",
+      "englishMeaning": "A trial or study conducted to discover something."
+    },
+    {
+      "tagalog": "Eksperto",
+      "english": "Expert",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Taong may malalim na kaalaman o kasanayan sa isang larangan.",
+      "englishMeaning": "Someone with deep knowledge or skill in a particular field."
+    },
+    {
+      "tagalog": "Ekspresyon",
+      "english": "Expression",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Paraan ng pagpapahayag ng damdamin o kaisipan.",
+      "englishMeaning": "A way of conveying feelings or thoughts."
+    },
+    {
+      "tagalog": "Eksplorasyon",
+      "english": "Exploration",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagtuklas o paghahanap sa hindi pa kilalang lugar o ideya.",
+      "englishMeaning": "The search or discovery of unknown places or ideas."
+    },
+    {
+      "tagalog": "Eksposisyon",
+      "english": "Exposition",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Paglalantad o pagpapaliwanag ng isang paksa.",
+      "englishMeaning": "A clear explanation or presentation of a topic."
+    },
+    {
+      "tagalog": "Ekwador",
+      "english": "Equator",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Likhang-guhit sa gitna ng mundo.",
+      "englishMeaning": "The imaginary line that divides Earth into north and south."
+    },
+    {
+      "tagalog": "Elektrisidad",
+      "english": "Electricity",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Enerhiyang nagpapailaw at nagpapagana sa mga kagamitan.",
+      "englishMeaning": "Energy that powers and lights devices."
+    },
+    {
+      "tagalog": "Eleksyon",
+      "english": "Election",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagboto o pagpili ng pinuno.",
+      "englishMeaning": "The process of voting to choose a leader."
+    },
+    {
+      "tagalog": "Elokuwente",
+      "english": "Eloquent",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Magaling magsalita o mahusay sa pagpapahayag.",
+      "englishMeaning": "Skilled in speech or expression."
+    },
+    {
+      "tagalog": "Empleyado",
+      "english": "Employee",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Taong nagtatrabaho sa isang organisasyon.",
+      "englishMeaning": "Someone who works for an organization."
+    },
+    {
+      "tagalog": "Emosyon",
+      "english": "Emotion",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Damdamin gaya ng saya, lungkot, galit.",
+      "englishMeaning": "Feelings such as joy, sadness, or anger."
+    },
+    {
+      "tagalog": "Empatiya",
+      "english": "Empathy",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kakayahang umunawa sa damdamin ng iba.",
+      "englishMeaning": "Ability to understand the feelings of others."
+    },
+    {
+      "tagalog": "Entablado",
+      "english": "Stage",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Plataporma na pinagtatanghalan.",
+      "englishMeaning": "A platform for performances."
+    },
+    {
+      "tagalog": "Entrega",
+      "english": "Delivery",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Paghahatid o pagbibigay.",
+      "englishMeaning": "The act of delivering or handing something over."
+    },
+    {
+      "tagalog": "Gabi",
+      "english": "Night",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Bahagi ng araw pagkatapos lumubog ang araw.",
+      "englishMeaning": "The part of the day after the sun sets."
+    },
+    {
+      "tagalog": "Gabay",
+      "english": "Guide",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Patnubay o taong nagtuturo ng tamang daan.",
+      "englishMeaning": "A guide or someone who shows the right way."
+    },
+    {
+      "tagalog": "Gabuhok",
+      "english": "Hair-thin",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Napakanipis o sobrang liit.",
+      "englishMeaning": "Extremely thin or very tiny."
+    },
+    {
+      "tagalog": "Gahaman",
+      "english": "Greedy",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Sobrang sakim o makasarili.",
+      "englishMeaning": "Extremely greedy or selfish."
+    },
+    {
+      "tagalog": "Galing",
+      "english": "Skill",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Husay o kahusayan sa paggawa.",
+      "englishMeaning": "Excellence or talent in doing something."
+    },
+    {
+      "tagalog": "Gamit",
+      "english": "Tool/Thing",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Bagay na ginagamit.",
+      "englishMeaning": "Something that is used."
+    },
+    {
+      "tagalog": "Ganado",
+      "english": "Enthusiastic",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Masigla at handang gawin ang isang gawain.",
+      "englishMeaning": "Energetic and eager to do something."
+    },
+    {
+      "tagalog": "Ganti",
+      "english": "Revenge",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Paghihiganti o pagbalik ng ginawa sa iyo.",
+      "englishMeaning": "Retaliation or payback for something done to you."
+    },
+    {
+      "tagalog": "Gapang",
+      "english": "Crawl",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Gumalaw nang dahan-dahan habang nakadikit ang katawan sa lupa.",
+      "englishMeaning": "Move slowly with the body close to the ground."
+    },
+    {
+      "tagalog": "Garalgal",
+      "english": "Hoarse",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Magaspang at paos na boses.",
+      "englishMeaning": "Rough and hoarse-sounding voice."
+    },
+    {
+      "tagalog": "Gatas",
+      "english": "Milk",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Likidong pagkain mula sa hayop o halaman.",
+      "englishMeaning": "Liquid food produced by animals or plants."
+    },
+    {
+      "tagalog": "Gatong",
+      "english": "Fuel",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Panggatong o pangsindihan sa apoy.",
+      "englishMeaning": "Material for starting a fire."
+    },
+    {
+      "tagalog": "Gawa",
+      "english": "Work/Task",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Anumang bagay na ginawa o isinakatuparan.",
+      "englishMeaning": "Any completed task or action."
+    },
+    {
+      "tagalog": "Gaway",
+      "english": "Magic",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Lihim na kapangyarihan o mahika.",
+      "englishMeaning": "Secret power or sorcery."
+    },
+    {
+      "tagalog": "Gawaing-bahay",
+      "english": "Housework",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mga gawaing ginagawa sa loob ng bahay.",
+      "englishMeaning": "Chores or tasks done at home."
+    },
+    {
+      "tagalog": "Gawain",
+      "english": "Activity",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Anumang bagay na kailangang isagawa.",
+      "englishMeaning": "Any task or activity to be done."
+    },
+    {
+      "tagalog": "Gayahin",
+      "english": "Imitate",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Sundin o kopyahin ang ginawa ng iba.",
+      "englishMeaning": "To copy or follow what someone else did."
+    },
+    {
+      "tagalog": "Gayuma",
+      "english": "Love potion",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Inumin o bagay na ginagamit upang mapaibig ang isang tao.",
+      "englishMeaning": "A drink or item used to make someone fall in love."
+    },
+    {
+      "tagalog": "Gapos",
+      "english": "Bind",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Itali ang isang tao o bagay.",
+      "englishMeaning": "To tie up a person or object."
+    },
+    {
+      "tagalog": "Gasa",
+      "english": "Gift",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Regalo o handog.",
+      "englishMeaning": "Present or offering."
+    },
+    {
+      "tagalog": "Habilin",
+      "english": "Entrustment",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Utos o bilin na iniiwan para sundin.",
+      "englishMeaning": "Instruction left to be followed."
+    },
+    {
+      "tagalog": "Habang",
+      "english": "While",
+      "partOfSpeech": "Pang-ugnay (Conjunction)",
+      "tagalogMeaning": "Sa parehong oras o pagkakataon.",
+      "englishMeaning": "At the same time or occasion."
+    },
+    {
+      "tagalog": "Habang-buhay",
+      "english": "Lifelong",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Magtatagal sa buong buhay.",
+      "englishMeaning": "Lasting for a lifetime."
+    },
+    {
+      "tagalog": "Habing",
+      "english": "Weaving",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Paraan ng paggawa ng tela o banig.",
+      "englishMeaning": "The art of weaving mats or fabrics."
+    },
+    {
+      "tagalog": "Habituwal",
+      "english": "Habitual",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Palaging ginagawa o madalas mangyari.",
+      "englishMeaning": "Frequently done or usual."
+    },
+    {
+      "tagalog": "Habla",
+      "english": "Complaint",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pormal na reklamo laban sa isang tao.",
+      "englishMeaning": "Formal complaint against someone."
+    },
+    {
+      "tagalog": "Habog",
+      "english": "Drift",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pag-angat o pagpailanlang sa hangin.",
+      "englishMeaning": "To rise or drift in the air."
+    },
+    {
+      "tagalog": "Habulin",
+      "english": "Chase",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Sundan o takbuhin ang isang tao o bagay.",
+      "englishMeaning": "To pursue or run after someone or something."
+    },
+    {
+      "tagalog": "Habilog",
+      "english": "Oval",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Pahabang bilog o hugis-itlog.",
+      "englishMeaning": "Oval or egg-shaped."
+    },
+    {
+      "tagalog": "Habon",
+      "english": "Scent",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mabango o kaaya-ayang amoy.",
+      "englishMeaning": "Pleasant fragrance or scent."
+    },
+    {
+      "tagalog": "Hahabi",
+      "english": "Will weave",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Gumagawa o bubuo ng tela o disenyo sa pamamagitan ng paghabi.",
+      "englishMeaning": "Will create fabric or design by weaving."
+    },
+    {
+      "tagalog": "Hahamon",
+      "english": "Will challenge",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Mag-uudyok o mag-aanyaya ng laban o paligsahan.",
+      "englishMeaning": "Will provoke or invite to a contest or fight."
+    },
+    {
+      "tagalog": "Hakbang",
+      "english": "Step",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagsulong o galaw ng paa; o sunud-sunod na proseso.",
+      "englishMeaning": "A stride or movement of the foot; or a series of actions."
+    },
+    {
+      "tagalog": "Halakhak",
+      "english": "Laughter",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Malakas at masayang tawa.",
+      "englishMeaning": "Loud and joyful laughter."
+    },
+    {
+      "tagalog": "Halaman",
+      "english": "Plant",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Anumang nabubuhay na may ugat, tangkay, at dahon.",
+      "englishMeaning": "Any living organism with roots, stems, and leaves."
+    },
+    {
+      "tagalog": "Halata",
+      "english": "Obvious",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Kitang-kita o madaling mapansin.",
+      "englishMeaning": "Clearly seen or easily noticed."
+    },
+    {
+      "tagalog": "Haligi",
+      "english": "Pillar",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Matibay na poste na sumusuporta sa isang istruktura.",
+      "englishMeaning": "A sturdy post supporting a structure."
+    },
+    {
+      "tagalog": "Halik",
+      "english": "Kiss",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagdampi ng labi sa pisngi o labi bilang pagpapahayag ng pagmamahal.",
+      "englishMeaning": "Touching someone with lips as a gesture of affection."
+    },
+    {
+      "tagalog": "Hali",
+      "english": "Replace",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pumalit o humalili sa posisyon o lugar.",
+      "englishMeaning": "To take the place of someone or something."
+    },
+    {
+      "tagalog": "Hamog",
+      "english": "Dew",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Patak ng tubig na namumuo sa mga halaman o iba pang ibabaw sa madaling-araw.",
+      "englishMeaning": "Tiny drops of water that accumulate on surfaces at dawn."
+    },
+    {
+      "tagalog": "Ibon",
+      "english": "Bird",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Hayop na may pakpak at madalas lumilipad.",
+      "englishMeaning": "An animal with wings that usually flies."
+    },
+    {
+      "tagalog": "Ideya",
+      "english": "Idea",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kaisipan o planong nabuo sa isip.",
+      "englishMeaning": "A thought or plan formed in the mind."
+    },
+    {
+      "tagalog": "Idolo",
+      "english": "Idol",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Taong hinahangaan o inspirasyon.",
+      "englishMeaning": "A person who is admired or a source of inspiration."
+    },
+    {
+      "tagalog": "Igawad",
+      "english": "Grant",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magbigay o magkaloob.",
+      "englishMeaning": "To give or bestow."
+    },
+    {
+      "tagalog": "Ihip",
+      "english": "Blow",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magbuga o magpadaloy ng hangin.",
+      "englishMeaning": "To blow or emit air."
+    },
+    {
+      "tagalog": "Ihiwalay",
+      "english": "Separate",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagbukod o pagpapahiwalay.",
+      "englishMeaning": "To separate or set apart."
+    },
+    {
+      "tagalog": "Ikahon",
+      "english": "Box",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Ilagay sa kahon.",
+      "englishMeaning": "To put inside a box."
+    },
+    {
+      "tagalog": "Ikatlong",
+      "english": "Third",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Pangatlo sa pagkakasunud-sunod.",
+      "englishMeaning": "Third in order."
+    },
+    {
+      "tagalog": "Ikiling",
+      "english": "Tilt",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagtabingi o pagtagilid.",
+      "englishMeaning": "To slant or lean."
+    },
+    {
+      "tagalog": "Ikinagalak",
+      "english": "Was pleased",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Naging masaya o natuwa.",
+      "englishMeaning": "Became happy or delighted."
+    },
+    {
+      "tagalog": "Ikinahon",
+      "english": "Put into a box",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nailagay o inimbak sa kahon.",
+      "englishMeaning": "Placed or stored inside a box."
+    },
+    {
+      "tagalog": "Ikinalungkot",
+      "english": "Saddened",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nagbigay o nagdulot ng kalungkutan.",
+      "englishMeaning": "Made someone feel sad."
+    },
+    {
+      "tagalog": "Ikot",
+      "english": "Spin",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pag-ikot o paggalaw paikot.",
+      "englishMeaning": "To spin or move in circles."
+    },
+    {
+      "tagalog": "Ilagay",
+      "english": "Place",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Ilipat o isalansan sa isang lugar.",
+      "englishMeaning": "To put or position something in a place."
+    },
+    {
+      "tagalog": "Ilaw",
+      "english": "Light",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pinagmumulan o nagbibigay ng liwanag.",
+      "englishMeaning": "Source of light or illumination."
+    },
+    {
+      "tagalog": "Iligtas",
+      "english": "Save",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Sagipin mula sa panganib o kapahamakan.",
+      "englishMeaning": "To rescue from danger or harm."
+    },
+    {
+      "tagalog": "Iluto",
+      "english": "Cook",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Maghanda o magluto ng pagkain.",
+      "englishMeaning": "To prepare or cook food."
+    },
+    {
+      "tagalog": "Imahinasyon",
+      "english": "Imagination",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kakayahang bumuo ng larawan o ideya sa isipan.",
+      "englishMeaning": "Ability to form images or ideas in the mind."
+    },
+    {
+      "tagalog": "Importante",
+      "english": "Important",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Mahalaga o may malaking halaga.",
+      "englishMeaning": "Valuable or significant."
+    },
+    {
+      "tagalog": "Inaasahan",
+      "english": "Expected",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Inaasam o inaasahang mangyari.",
+      "englishMeaning": "Anticipated or hoped to happen."
+    },
+    {
+      "tagalog": "Laban",
+      "english": "Fight",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagsusumikap laban sa isang kalaban o hamon.",
+      "englishMeaning": "To struggle against an opponent or challenge."
+    },
+    {
+      "tagalog": "Labanan",
+      "english": "Battle",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Isang madalas na marahas na pagtatalo o digmaan.",
+      "englishMeaning": "A violent contest or war."
+    },
+    {
+      "tagalog": "Labas",
+      "english": "Outside",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Ang lugar o bahagi sa labas.",
+      "englishMeaning": "The area or part that is outside."
+    },
+    {
+      "tagalog": "Labanos",
+      "english": "Radish",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Uri ng gulay na madalas isahog sa ulam.",
+      "englishMeaning": "A type of vegetable often used in dishes."
+    },
+    {
+      "tagalog": "Labis",
+      "english": "Excess",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Higit sa kinakailangan o sobra.",
+      "englishMeaning": "More than what is needed."
+    },
+    {
+      "tagalog": "Laga",
+      "english": "Boil",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagpakulo o pagpapainit hanggang kumulo ang tubig o sabaw.",
+      "englishMeaning": "To heat something until it boils."
+    },
+    {
+      "tagalog": "Lagi",
+      "english": "Always",
+      "partOfSpeech": "Pang-abay (Adverb)",
+      "tagalogMeaning": "Patuloy o palaging ginagawa.",
+      "englishMeaning": "Consistently or all the time."
+    },
+    {
+      "tagalog": "Lagnat",
+      "english": "Fever",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mataas na temperatura ng katawan dulot ng sakit.",
+      "englishMeaning": "A high body temperature due to illness."
+    },
+    {
+      "tagalog": "Lahok",
+      "english": "Ingredient",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kasamang sangkap sa isang lutuin.",
+      "englishMeaning": "An ingredient in a recipe."
+    },
+    {
+      "tagalog": "Lahing",
+      "english": "Race/Lineage",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Ang pinagmulan o angkan ng isang tao.",
+      "englishMeaning": "A person’s ancestry or ethnicity."
+    },
+    {
+      "tagalog": "Lakas",
+      "english": "Strength",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kakayahang pisikal o mental na makagawa.",
+      "englishMeaning": "The physical or mental power to do something."
+    },
+    {
+      "tagalog": "Lakbay",
+      "english": "Journey",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mahabang paglalakbay patungo sa isang destinasyon.",
+      "englishMeaning": "A long trip towards a destination."
+    },
+    {
+      "tagalog": "Lakad",
+      "english": "Walk",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pag-alis o pagpapagalaw gamit ang mga paa.",
+      "englishMeaning": "Moving by using the feet."
+    },
+    {
+      "tagalog": "Lalim",
+      "english": "Depth",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Gaano kalayo o kababa ang ilalim.",
+      "englishMeaning": "How far down or deep something is."
+    },
+    {
+      "tagalog": "Laman",
+      "english": "Flesh",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Ang laman o kalamnan ng katawan.",
+      "englishMeaning": "Flesh or muscle of the body."
+    },
+    {
+      "tagalog": "Lamig",
+      "english": "Coldness",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mababa o malamig na temperatura.",
+      "englishMeaning": "Low or chilly temperature."
+    },
+    {
+      "tagalog": "Lansa",
+      "english": "Fishy Smell",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Amoy ng hilaw na isda o lamang-dagat.",
+      "englishMeaning": "The smell of raw fish or seafood."
+    },
+    {
+      "tagalog": "Lantad",
+      "english": "Exposed",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Nakikita o di naitago.",
+      "englishMeaning": "Visible or not hidden."
+    },
+    {
+      "tagalog": "Lao",
+      "english": "Ancient",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Napakaluma o nabuhay noong unang panahon.",
+      "englishMeaning": "Very old or from ancient times."
+    },
+    {
+      "tagalog": "Lapit",
+      "english": "Approach",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Lumapit o pumunta malapit sa isang tao o bagay.",
+      "englishMeaning": "To move closer to someone or something."
+    },
+    {
+      "tagalog": "Maamo",
+      "english": "Gentle",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Maingat at mabait ang ugali.",
+      "englishMeaning": "Calm, kind, and gentle in behavior."
+    },
+    {
+      "tagalog": "Maaga",
+      "english": "Early",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Dumating bago ang itinakdang oras.",
+      "englishMeaning": "Arriving before the set time."
+    },
+    {
+      "tagalog": "Maalam",
+      "english": "Knowledgeable",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Maraming kaalaman o kabatiran.",
+      "englishMeaning": "Possessing much knowledge or information."
+    },
+    {
+      "tagalog": "Maalat",
+      "english": "Salty",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "May maraming asin o lasang alat.",
+      "englishMeaning": "Tasting salty or containing salt."
+    },
+    {
+      "tagalog": "Maaliwalas",
+      "english": "Bright/Clear",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Maganda at maliwanag ang paligid o panahon.",
+      "englishMeaning": "Pleasant and bright surroundings or weather."
+    },
+    {
+      "tagalog": "Maanghang",
+      "english": "Spicy",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "May matapang o nakakapasong lasa.",
+      "englishMeaning": "Hot or burning taste."
+    },
+    {
+      "tagalog": "Maarte",
+      "english": "Fussy",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Maselan o palaging may reklamo.",
+      "englishMeaning": "Fussy or overly particular."
+    },
+    {
+      "tagalog": "Mabagal",
+      "english": "Slow",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi mabilis ang galaw o kilos.",
+      "englishMeaning": "Not moving or working quickly."
+    },
+    {
+      "tagalog": "Mabait",
+      "english": "Kind",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Maganda ang ugali o mabuting makitungo.",
+      "englishMeaning": "Good-natured or kind."
+    },
+    {
+      "tagalog": "Mabango",
+      "english": "Fragrant",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "May magandang amoy o halimuyak.",
+      "englishMeaning": "Having a good or pleasant smell."
+    },
+    {
+      "tagalog": "Mabigat",
+      "english": "Heavy",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Mahirap buhatin o madama ang bigat.",
+      "englishMeaning": "Difficult to lift due to its weight."
+    },
+    {
+      "tagalog": "Mabisa",
+      "english": "Effective",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "May magandang epekto o resulta.",
+      "englishMeaning": "Producing a good or desired result."
+    },
+    {
+      "tagalog": "Mabuhay",
+      "english": "Live/Cheer",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Manatiling may buhay o sumigaw bilang pagpapasigla.",
+      "englishMeaning": "To live or shout in encouragement."
+    },
+    {
+      "tagalog": "Madali",
+      "english": "Easy",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi mahirap gawin o intindihin.",
+      "englishMeaning": "Not difficult to do or understand."
+    },
+    {
+      "tagalog": "Madalas",
+      "english": "Frequently",
+      "partOfSpeech": "Pang-abay (Adverb)",
+      "tagalogMeaning": "Nangyayari o ginagawa nang madalas.",
+      "englishMeaning": "Happening or done often."
+    },
+    {
+      "tagalog": "Madamot",
+      "english": "Stingy",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi mapagbigay o ayaw mamigay.",
+      "englishMeaning": "Unwilling to share or give to others."
+    },
+    {
+      "tagalog": "Maganda",
+      "english": "Beautiful",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "May kaaya-ayang anyo o hitsura.",
+      "englishMeaning": "Pleasing to look at or lovely."
+    },
+    {
+      "tagalog": "Magulo",
+      "english": "Messy",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi maayos o magulo ang paligid.",
+      "englishMeaning": "Not tidy or organized."
+    },
+    {
+      "tagalog": "Mahalaga",
+      "english": "Important",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "May halaga o kahalagahan.",
+      "englishMeaning": "Having value or significance."
+    },
+    {
+      "tagalog": "Mahinahon",
+      "english": "Calm",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Kalmado o mapayapa ang ugali o kilos.",
+      "englishMeaning": "Peaceful or composed in behavior."
+    },
+    {
+      "tagalog": "Nabalisa",
+      "english": "Restless",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi mapalagay o nababahala.",
+      "englishMeaning": "Feeling anxious or uneasy."
+    },
+    {
+      "tagalog": "Nabanggit",
+      "english": "Mentioned",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nasabi o naipahayag.",
+      "englishMeaning": "Spoken about or stated."
+    },
+    {
+      "tagalog": "Nabawasan",
+      "english": "Decreased",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nabungasan o nabawasan ang dami.",
+      "englishMeaning": "Became less or diminished."
+    },
+    {
+      "tagalog": "Nabulok",
+      "english": "Rotted",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Napanis o nasira dahil sa katagalan.",
+      "englishMeaning": "Decayed or spoiled due to time."
+    },
+    {
+      "tagalog": "Nadarama",
+      "english": "Feeling",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nararamdaman ang damdamin o emosyon.",
+      "englishMeaning": "Experiencing a feeling or emotion."
+    },
+    {
+      "tagalog": "Nadarating",
+      "english": "Arriving",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Malapit nang dumating o makarating.",
+      "englishMeaning": "About to arrive or come."
+    },
+    {
+      "tagalog": "Nadarama",
+      "english": "Experienced",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nararanasan o nadarama ang isang damdamin.",
+      "englishMeaning": "Feeling or going through an emotion."
+    },
+    {
+      "tagalog": "Nadurog",
+      "english": "Crumbled",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nawasak o napulbos.",
+      "englishMeaning": "Broken into small pieces or crushed."
+    },
+    {
+      "tagalog": "Nagaalaga",
+      "english": "Caring",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Tumatangkilik o nag-aaruga.",
+      "englishMeaning": "Taking care of or looking after."
+    },
+    {
+      "tagalog": "Nagagalak",
+      "english": "Happy",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Masaya o tuwang-tuwa.",
+      "englishMeaning": "Feeling delighted or joyful."
+    },
+    {
+      "tagalog": "Nagising",
+      "english": "Woke up",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nahinto ang pagtulog.",
+      "englishMeaning": "Stopped sleeping or woke up."
+    },
+    {
+      "tagalog": "Nagmahal",
+      "english": "Loved",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Naging mapagmahal o nag-alay ng pagmamahal.",
+      "englishMeaning": "Cared for or had affection for someone."
+    },
+    {
+      "tagalog": "Nagniningning",
+      "english": "Shining",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Kumikinang o sumisikat nang maliwanag.",
+      "englishMeaning": "Glittering or glowing brightly."
+    },
+    {
+      "tagalog": "Nagtago",
+      "english": "Hid",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nagtago o nagkubli.",
+      "englishMeaning": "Went into hiding."
+    },
+    {
+      "tagalog": "Nagtataka",
+      "english": "Wondering",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nagtataka o nag-iisip nang malalim.",
+      "englishMeaning": "Curious or thinking deeply."
+    },
+    {
+      "tagalog": "Nagtuturo",
+      "english": "Teaching",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nagsasagawa ng pagtuturo o pagbibigay-kaalaman.",
+      "englishMeaning": "Imparting knowledge or educating."
+    },
+    {
+      "tagalog": "Nahulog",
+      "english": "Fell",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nawalan ng balanse at bumagsak.",
+      "englishMeaning": "Lost balance and dropped."
+    },
+    {
+      "tagalog": "Nahuli",
+      "english": "Caught",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nakuha o nadakip.",
+      "englishMeaning": "Captured or apprehended."
+    },
+    {
+      "tagalog": "Nahulaan",
+      "english": "Guessed",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nalaman sa pamamagitan ng panghuhula.",
+      "englishMeaning": "Determined by guessing."
+    },
+    {
+      "tagalog": "Naisip",
+      "english": "Thought",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pumasok o sumagi sa isipan.",
+      "englishMeaning": "Considered or thought of."
+    },
+    {
+      "tagalog": "Ngala-ngala",
+      "english": "Palate",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Itaas na bahagi ng loob ng bibig.",
+      "englishMeaning": "The upper part inside the mouth."
+    },
+    {
+      "tagalog": "Ngalay",
+      "english": "Numbness",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Paninigas o pamamanhid.",
+      "englishMeaning": "Stiffness or numb sensation."
+    },
+    {
+      "tagalog": "Ngamoy",
+      "english": "Smelling",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Umaamoy o sumisinghot.",
+      "englishMeaning": "Sniffing or sensing a scent."
+    },
+    {
+      "tagalog": "Nganak",
+      "english": "Gave birth",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nagsilang o nagluwal.",
+      "englishMeaning": "Brought a baby into the world."
+    },
+    {
+      "tagalog": "Ngangiti",
+      "english": "Smiling",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Bahagyang tumatawa o nagpapakita ng saya.",
+      "englishMeaning": "Smiling softly."
+    },
+    {
+      "tagalog": "Ngangangalay",
+      "english": "Feeling numb",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pamamanhid dulot ng matagal na hindi pagkilos.",
+      "englishMeaning": "Feeling stiff or numb after staying still too long."
+    },
+    {
+      "tagalog": "Ngangatngat",
+      "english": "Gnawing",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Patuloy na kinakagat o kinukuyom.",
+      "englishMeaning": "Repeatedly chewing or biting."
+    },
+    {
+      "tagalog": "Ngangalay",
+      "english": "Numbness",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kawalan ng pakiramdam sa bahagi ng katawan.",
+      "englishMeaning": "Loss of sensation in a part of the body."
+    },
+    {
+      "tagalog": "Nganganga",
+      "english": "Gaping",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Nakabuka ang bibig.",
+      "englishMeaning": "Mouth hanging open."
+    },
+    {
+      "tagalog": "Nganib",
+      "english": "Threat",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Panganib o kapahamakan.",
+      "englishMeaning": "Danger or hazard."
+    },
+    {
+      "tagalog": "Nganipin",
+      "english": "Toothless",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Wala o kulang ang ngipin.",
+      "englishMeaning": "Lacking teeth."
+    },
+    {
+      "tagalog": "Ngangoy",
+      "english": "Munching",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Dahan-dahang ngumunguya.",
+      "englishMeaning": "Slowly chewing food."
+    },
+    {
+      "tagalog": "Ngarat",
+      "english": "Hoarse",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Pamamaos o garalgal ang boses.",
+      "englishMeaning": "Rough or raspy sounding voice."
+    },
+    {
+      "tagalog": "Ngaraw",
+      "english": "Daily",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Nangyayari araw-araw.",
+      "englishMeaning": "Happening every day."
+    },
+    {
+      "tagalog": "Ngaripot",
+      "english": "Thrifty",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Mahilig magtipid.",
+      "englishMeaning": "Inclined to save money."
+    },
+    {
+      "tagalog": "Ngaruyan",
+      "english": "Driftwood",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kahoy na inanod sa tubig.",
+      "englishMeaning": "Wood that has been carried by water."
+    },
+    {
+      "tagalog": "Ngaruyan",
+      "english": "Drift",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magpadala sa agos o hangin.",
+      "englishMeaning": "To float or be carried by water or air."
+    },
+    {
+      "tagalog": "Ngaruwang",
+      "english": "Worn-out",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Sobrang luma o gasgas.",
+      "englishMeaning": "Very old or worn."
+    },
+    {
+      "tagalog": "Ngangisi",
+      "english": "Smirk",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagngisi na may kasamang pilyong tingin.",
+      "englishMeaning": "Smiling smugly."
+    },
+    {
+      "tagalog": "Ngangoso",
+      "english": "Pouting",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagnguso o pag-irap ng labi.",
+      "englishMeaning": "Puckering lips as a sign of sulking."
+    },
+    {
+      "tagalog": "Ospital",
+      "english": "Hospital",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Lugar na pinupuntahan para magpagamot.",
+      "englishMeaning": "Place where people go for treatment."
+    },
+    {
+      "tagalog": "Oras",
+      "english": "Time",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Sukat ng paglipas ng sandali, minuto, o araw.",
+      "englishMeaning": "Measure of passing moments, minutes, or days."
+    },
+    {
+      "tagalog": "Obserba",
+      "english": "Observe",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magmasid o tumingin nang mabuti.",
+      "englishMeaning": "To watch or look carefully."
+    },
+    {
+      "tagalog": "Okasyon",
+      "english": "Occasion",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Espesyal na araw o pangyayari.",
+      "englishMeaning": "Special day or event."
+    },
+    {
+      "tagalog": "Okra",
+      "english": "Okra",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Berdeng gulay na malagkit ang katas.",
+      "englishMeaning": "A green vegetable that is slimy inside."
+    },
+    {
+      "tagalog": "Opinyon",
+      "english": "Opinion",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Saloobin o pananaw.",
+      "englishMeaning": "Personal view or belief."
+    },
+    {
+      "tagalog": "Orkestra",
+      "english": "Orchestra",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pangkat ng musikero na sabay-sabay tumutugtog.",
+      "englishMeaning": "Group of musicians playing together."
+    },
+    {
+      "tagalog": "Orden",
+      "english": "Order",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Utos o kaayusan.",
+      "englishMeaning": "Command or proper arrangement."
+    },
+    {
+      "tagalog": "Organiko",
+      "english": "Organic",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Gawa o nagmula sa likas na proseso.",
+      "englishMeaning": "Produced naturally without chemicals."
+    },
+    {
+      "tagalog": "Otso",
+      "english": "Eight",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Ang bilang na walo.",
+      "englishMeaning": "The number 8."
+    },
+    {
+      "tagalog": "Oso",
+      "english": "Bear",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Malaking mabalahibong hayop.",
+      "englishMeaning": "Large, furry mammal."
+    },
+    {
+      "tagalog": "Oval",
+      "english": "Oval",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hugis biluhaba o patulis.",
+      "englishMeaning": "Elliptical or elongated round shape."
+    },
+    {
+      "tagalog": "Obispo",
+      "english": "Bishop",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mataas na pinuno sa simbahan.",
+      "englishMeaning": "A high-ranking church official."
+    },
+    {
+      "tagalog": "Obra",
+      "english": "Artwork",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Likha o ginawa, madalas ay sining.",
+      "englishMeaning": "A creation, usually an art piece."
+    },
+    {
+      "tagalog": "Obheto",
+      "english": "Object",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Bagay na nakikita o nahahawakan.",
+      "englishMeaning": "A thing that can be seen or touched."
+    },
+    {
+      "tagalog": "Obserbasyon",
+      "english": "Observation",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagmamasid o pagsusuri.",
+      "englishMeaning": "Careful watching or noting something."
+    },
+    {
+      "tagalog": "Obligado",
+      "english": "Obliged",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "May pananagutan o kailangang gawin.",
+      "englishMeaning": "Duty-bound or responsible."
+    },
+    {
+      "tagalog": "Obra-maestra",
+      "english": "Masterpiece",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pinakamahusay na likha ng isang tao.",
+      "englishMeaning": "An artist’s greatest work."
+    },
+    {
+      "tagalog": "Obserbahan",
+      "english": "Observe",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Bigyang-pansin o bantayan.",
+      "englishMeaning": "To look at or monitor carefully."
+    },
+    {
+      "tagalog": "Obligasyon",
+      "english": "Obligation",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pananagutan o tungkulin.",
+      "englishMeaning": "Duty or commitment."
+    },
+    {
+      "tagalog": "Pabango",
+      "english": "Perfume",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Likidong may mabangong amoy na ginagamit sa katawan o damit.",
+      "englishMeaning": "A fragrant liquid used on the body or clothes."
+    },
+    {
+      "tagalog": "Pabigat",
+      "english": "Burden",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Anumang nagpapahirap o nagpapabigat.",
+      "englishMeaning": "Something that causes hardship or heaviness."
+    },
+    {
+      "tagalog": "Paborito",
+      "english": "Favorite",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Pinakapaborito o gustong-gusto.",
+      "englishMeaning": "Most liked or most preferred."
+    },
+    {
+      "tagalog": "Padalos-dalos",
+      "english": "Reckless",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi nag-iisip bago kumilos.",
+      "englishMeaning": "Acting without careful thought."
+    },
+    {
+      "tagalog": "Padalhan",
+      "english": "Send to",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magpadala sa isang tao.",
+      "englishMeaning": "To send something to someone."
+    },
+    {
+      "tagalog": "Pagsisisi",
+      "english": "Regret",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagkadama ng panghihinayang.",
+      "englishMeaning": "Feeling of regret."
+    },
+    {
+      "tagalog": "Pakikinig",
+      "english": "Listening",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagtutuon ng pansin sa naririnig.",
+      "englishMeaning": "Paying attention to sounds or words."
+    },
+    {
+      "tagalog": "Pakiramdam",
+      "english": "Feeling",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pandama o nadarama.",
+      "englishMeaning": "Sensation or what one feels."
+    },
+    {
+      "tagalog": "Palakpakan",
+      "english": "Applause",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagpalakpak o paggawa ng tunog gamit ang mga kamay.",
+      "englishMeaning": "Clapping of hands."
+    },
+    {
+      "tagalog": "Palaruan",
+      "english": "Playground",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pook kung saan naglalaro ang mga bata.",
+      "englishMeaning": "Place where children play."
+    },
+    {
+      "tagalog": "Pambihira",
+      "english": "Extraordinary",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi pangkaraniwan o kapansin-pansin.",
+      "englishMeaning": "Unusual or remarkable."
+    },
+    {
+      "tagalog": "Panaginip",
+      "english": "Dream",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Imahe o karanasan habang natutulog.",
+      "englishMeaning": "Images or experiences during sleep."
+    },
+    {
+      "tagalog": "Panahon",
+      "english": "Time/Weather",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Takdang oras o kalagayan ng klima.",
+      "englishMeaning": "Period of time or condition of the atmosphere."
+    },
+    {
+      "tagalog": "Pangako",
+      "english": "Promise",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pahayag na tutuparin ang isang bagay.",
+      "englishMeaning": "A commitment to do something."
+    },
+    {
+      "tagalog": "Panghihina",
+      "english": "Weakness",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kawalan ng lakas o sigla.",
+      "englishMeaning": "Lack of strength or vitality."
+    },
+    {
+      "tagalog": "Paninindigan",
+      "english": "Stand",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Matibay na paniniwala o prinsipyo.",
+      "englishMeaning": "Strong belief or principle."
+    },
+    {
+      "tagalog": "Panunukso",
+      "english": "Teasing",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagbibiro o pangungutya.",
+      "englishMeaning": "Mocking or making jokes at someone."
+    },
+    {
+      "tagalog": "Paniwala",
+      "english": "Belief",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Paniniwala o akala.",
+      "englishMeaning": "Belief or conviction."
+    },
+    {
+      "tagalog": "Pantalon",
+      "english": "Pants",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kasuotan para sa pang-ibaba.",
+      "englishMeaning": "Clothing worn on the lower body."
+    },
+    {
+      "tagalog": "Pangalawa",
+      "english": "Second",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Pumapangalawa sa hanay.",
+      "englishMeaning": "Coming after first."
+    },
+    {
+      "tagalog": "Radyo",
+      "english": "Radio",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kagamitang tumatanggap at nagpaparinig ng tunog o balita.",
+      "englishMeaning": "A device that receives broadcasts."
+    },
+    {
+      "tagalog": "Rampa",
+      "english": "Runway",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Daang nilalakaran o ginagamit sa fashion show.",
+      "englishMeaning": "A platform for walking, often in a fashion show."
+    },
+    {
+      "tagalog": "Raro",
+      "english": "Plow",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kagamitang pang-araro sa bukid.",
+      "englishMeaning": "A farm implement for plowing."
+    },
+    {
+      "tagalog": "Rasyo",
+      "english": "Ratio",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Paghahambing ng dami o bilang.",
+      "englishMeaning": "The quantitative relation between two amounts."
+    },
+    {
+      "tagalog": "Rason",
+      "english": "Reason",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Dahilan o paliwanag.",
+      "englishMeaning": "An explanation or cause."
+    },
+    {
+      "tagalog": "Ramo",
+      "english": "Ram",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Lalaking tupa.",
+      "englishMeaning": "A male sheep."
+    },
+    {
+      "tagalog": "Ranggo",
+      "english": "Rank",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Katayuan o antas sa lipunan o trabaho.",
+      "englishMeaning": "Status or level in society or work."
+    },
+    {
+      "tagalog": "Rantera",
+      "english": "Moneylender",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Taong nagpapahiram ng pera na may patubo.",
+      "englishMeaning": "A person who lends money with interest."
+    },
+    {
+      "tagalog": "Rapat",
+      "english": "Appropriate",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Tama o angkop para sa sitwasyon.",
+      "englishMeaning": "Suitable or fitting for a situation."
+    },
+    {
+      "tagalog": "Rarampa",
+      "english": "Will Walk",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Maglalakad nang may postura o estilo.",
+      "englishMeaning": "To strut or walk with style."
+    },
+    {
+      "tagalog": "Raspa",
+      "english": "Scraping",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pagkakayod o pagtanggal gamit ang matalas.",
+      "englishMeaning": "Scraping or removing with a sharp tool."
+    },
+    {
+      "tagalog": "Raratsada",
+      "english": "Speeding",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Patuloy na mabilis ang kilos.",
+      "englishMeaning": "Going or moving quickly."
+    },
+    {
+      "tagalog": "Raragasang",
+      "english": "Rushing",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Mabilis at malakas ang daloy.",
+      "englishMeaning": "Flowing rapidly and forcefully."
+    },
+    {
+      "tagalog": "Rarasyon",
+      "english": "Ration",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pantay na paghahati-hati ng pagkain o gamit.",
+      "englishMeaning": "A fixed portion or supply of food."
+    },
+    {
+      "tagalog": "Rarurok",
+      "english": "Summit",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pinakamataas na bahagi o tuktok.",
+      "englishMeaning": "The topmost point."
+    },
+    {
+      "tagalog": "Rarungis",
+      "english": "Messy",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Marungis o madungis ang itsura.",
+      "englishMeaning": "Untidy or dirty in appearance."
+    },
+    {
+      "tagalog": "Rasuhin",
+      "english": "Scrape off",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Alisin o kayurin ang ibabaw.",
+      "englishMeaning": "To scrape or rub off the surface."
+    },
+    {
+      "tagalog": "Rapido",
+      "english": "Rapid",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Mabilis o madalian.",
+      "englishMeaning": "Fast or quick."
+    },
+    {
+      "tagalog": "Rarasyunal",
+      "english": "Rational",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Nakabatay sa katwiran o tamang pangangatwiran.",
+      "englishMeaning": "Based on reason or logic."
+    },
+    {
+      "tagalog": "Raragasang",
+      "english": "Rushing",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Patuloy na dumadaloy nang mabilis.",
+      "englishMeaning": "Continually moving quickly."
+    },
+    {
+      "tagalog": "Sabaw",
+      "english": "Soup",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Likidong ulam o pinakuluang sabaw.",
+      "englishMeaning": "A broth or liquid-based food."
+    },
+    {
+      "tagalog": "Sabihin",
+      "english": "Say",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Bigkasin o ipahayag.",
+      "englishMeaning": "To speak or state."
+    },
+    {
+      "tagalog": "Sabi-sabi",
+      "english": "Rumor",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Balitang hindi pa napatutunayan.",
+      "englishMeaning": "Unverified or unofficial report."
+    },
+    {
+      "tagalog": "Sadyain",
+      "english": "Intend",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Planuhin o gawin nang may layunin.",
+      "englishMeaning": "To do something intentionally."
+    },
+    {
+      "tagalog": "Sagana",
+      "english": "Abundant",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Marami o sagana sa dami.",
+      "englishMeaning": "Plentiful or abundant."
+    },
+    {
+      "tagalog": "Sakay",
+      "english": "Ride",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Sumampa o sumakay sa sasakyan.",
+      "englishMeaning": "To ride or board a vehicle."
+    },
+    {
+      "tagalog": "Sakit",
+      "english": "Pain",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Damdaming pisikal o emosyonal na masakit.",
+      "englishMeaning": "Physical or emotional pain."
+    },
+    {
+      "tagalog": "Sakto",
+      "english": "Exact",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Tamang-tama o akmang-akma.",
+      "englishMeaning": "Precisely right or accurate."
+    },
+    {
+      "tagalog": "Sakuna",
+      "english": "Disaster",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Hindi inaasahang kapahamakan o trahedya.",
+      "englishMeaning": "Unforeseen catastrophe or tragedy."
+    },
+    {
+      "tagalog": "Salamin",
+      "english": "Mirror",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Makinis at makintab na bagay na nagpapakita ng repleksyon.",
+      "englishMeaning": "A reflective surface showing one’s image."
+    },
+    {
+      "tagalog": "Salaysay",
+      "english": "Narrative",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagkukuwento o pagpapahayag ng pangyayari.",
+      "englishMeaning": "A telling or account of events."
+    },
+    {
+      "tagalog": "Saliksik",
+      "english": "Research",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Masusing paghahanap at pagsusuri.",
+      "englishMeaning": "Thorough search or investigation."
+    },
+    {
+      "tagalog": "Salungat",
+      "english": "Opposed",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi sumasang-ayon o kabaliktaran.",
+      "englishMeaning": "Being contrary or in opposition."
+    },
+    {
+      "tagalog": "Sama",
+      "english": "Togetherness",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagsasama-sama o magkakasamang kilos.",
+      "englishMeaning": "Being together."
+    },
+    {
+      "tagalog": "Samahan",
+      "english": "Organization",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Grupo o samahang may layunin.",
+      "englishMeaning": "A group with a purpose or goal."
+    },
+    {
+      "tagalog": "Sandali",
+      "english": "Moment",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Maikling saglit o bahagi ng oras.",
+      "englishMeaning": "A short period of time."
+    },
+    {
+      "tagalog": "Sandigan",
+      "english": "Support",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pinagkukunan ng lakas o tulong.",
+      "englishMeaning": "Source of strength or support."
+    },
+    {
+      "tagalog": "Sangkalan",
+      "english": "Chopping board",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Patag na kahoy o plastik na ginagamit sa paghihiwa.",
+      "englishMeaning": "Flat board for cutting."
+    },
+    {
+      "tagalog": "Sangkatauhan",
+      "english": "Mankind",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Lahat ng tao o sangkatauhan.",
+      "englishMeaning": "All human beings."
+    },
+    {
+      "tagalog": "Sanggalang",
+      "english": "Shield",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Proteksyon laban sa panganib o atake.",
+      "englishMeaning": "Defense against danger or attack."
+    },
+    {
+      "tagalog": "Tadhana",
+      "english": "Destiny",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Nakalaan o itinakdang pangyayari sa buhay.",
+      "englishMeaning": "Something that is destined or fated to happen."
+    },
+    {
+      "tagalog": "Tahimik",
+      "english": "Quiet",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Walang ingay o kaguluhan.",
+      "englishMeaning": "Silent or without noise."
+    },
+    {
+      "tagalog": "Tainga",
+      "english": "Ear",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Bahagi ng katawan na ginagamit sa pandinig.",
+      "englishMeaning": "The body part used for hearing."
+    },
+    {
+      "tagalog": "Talambuhay",
+      "english": "Biography",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kasaysayan o salaysay ng buhay ng isang tao.",
+      "englishMeaning": "A life story or biography."
+    },
+    {
+      "tagalog": "Talon",
+      "english": "Jump",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pag-angat o pag-alsa mula sa kinatatayuan.",
+      "englishMeaning": "To jump or leap up."
+    },
+    {
+      "tagalog": "Talumpati",
+      "english": "Speech",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pormal na pagpapahayag o pagsasalita sa harap ng madla.",
+      "englishMeaning": "A formal speech in front of an audience."
+    },
+    {
+      "tagalog": "Talino",
+      "english": "Intelligence",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kakayahan sa pangangatwiran at pag-unawa.",
+      "englishMeaning": "Capacity for understanding and reasoning."
+    },
+    {
+      "tagalog": "Tanghalian",
+      "english": "Lunch",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Oras o pagkain sa tanghali.",
+      "englishMeaning": "Midday meal."
+    },
+    {
+      "tagalog": "Tangkay",
+      "english": "Stem",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Bahagi ng halaman na nagdudugtong sa mga dahon at ugat.",
+      "englishMeaning": "The part of a plant that supports its leaves and roots."
+    },
+    {
+      "tagalog": "Tanglaw",
+      "english": "Light",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Ilaw o liwanag na nagbibigay direksyon.",
+      "englishMeaning": "A light that provides guidance."
+    },
+    {
+      "tagalog": "Tangis",
+      "english": "Crying",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Malakas at madamdaming pag-iyak.",
+      "englishMeaning": "Loud and emotional crying."
+    },
+    {
+      "tagalog": "Tangke",
+      "english": "Tank",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Malaking lalagyan o sasakyang pandigma.",
+      "englishMeaning": "A large container or an armored vehicle."
+    },
+    {
+      "tagalog": "Tansan",
+      "english": "Bottle cap",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Takip sa bote, madalas gawa sa metal.",
+      "englishMeaning": "A bottle cap, usually metallic."
+    },
+    {
+      "tagalog": "Tanso",
+      "english": "Copper",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Uri ng metal na kulay kayumanggi.",
+      "englishMeaning": "A reddish-brown metallic element."
+    },
+    {
+      "tagalog": "Tapat",
+      "english": "Honest",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Tapat o matuwid ang asal.",
+      "englishMeaning": "Truthful and upright behavior."
+    },
+    {
+      "tagalog": "Tasa",
+      "english": "Cup",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Lalagyang pang-inom.",
+      "englishMeaning": "A drinking vessel or cup."
+    },
+    {
+      "tagalog": "Tasahan",
+      "english": "Pencil sharpener",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kagamitang pantasa sa lapis.",
+      "englishMeaning": "A tool for sharpening pencils."
+    },
+    {
+      "tagalog": "Tatag",
+      "english": "Strong/Stable",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Matibay o hindi madaling masira.",
+      "englishMeaning": "Durable and not easily broken."
+    },
+    {
+      "tagalog": "Tatak",
+      "english": "Mark/Brand",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Palatandaang nagpapakilala o nagmamarka.",
+      "englishMeaning": "A mark or a brand that identifies."
+    },
+    {
+      "tagalog": "Tatlo",
+      "english": "Three",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Bilang na katumbas ng 3.",
+      "englishMeaning": "The number equivalent to 3."
+    },
+    {
+      "tagalog": "Ubas",
+      "english": "Grapes",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Maliit at bilog na prutas na may makatas na laman.",
+      "englishMeaning": "A small round fruit with juicy flesh."
+    },
+    {
+      "tagalog": "Ubos",
+      "english": "Gone",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Naupos o wala nang natira.",
+      "englishMeaning": "Completely consumed or all gone."
+    },
+    {
+      "tagalog": "Uhaw",
+      "english": "Thirst",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pakiramdam na kailangan uminom.",
+      "englishMeaning": "Feeling that you need to drink."
+    },
+    {
+      "tagalog": "Ulam",
+      "english": "Dish",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Anumang pagkaing inihahain kasama ng kanin.",
+      "englishMeaning": "A viand served with rice."
+    },
+    {
+      "tagalog": "Ulan",
+      "english": "Rain",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Patak ng tubig mula sa ulap.",
+      "englishMeaning": "Water droplets from the clouds."
+    },
+    {
+      "tagalog": "Ulo",
+      "english": "Head",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Bahaging pang-itaas ng katawan.",
+      "englishMeaning": "Upper part of the body."
+    },
+    {
+      "tagalog": "Ulap",
+      "english": "Cloud",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Puting masa sa himpapawid.",
+      "englishMeaning": "White formations in the sky."
+    },
+    {
+      "tagalog": "Umalis",
+      "english": "Leave",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Lumisan o umalis sa kinaroroonan.",
+      "englishMeaning": "To go away or depart."
+    },
+    {
+      "tagalog": "Uminom",
+      "english": "Drink",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Lumagok o lumunok ng inumin.",
+      "englishMeaning": "To drink a liquid."
+    },
+    {
+      "tagalog": "Umaga",
+      "english": "Morning",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Simula ng araw; oras pagkatapos sumikat ang araw.",
+      "englishMeaning": "The early part of the day."
+    },
+    {
+      "tagalog": "Umakyat",
+      "english": "Climb",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Pumaitaas o lumipat sa mas mataas na lugar.",
+      "englishMeaning": "To go up or ascend."
+    },
+    {
+      "tagalog": "Umiikot",
+      "english": "Rotating",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Gumagalaw nang paikot.",
+      "englishMeaning": "Moving in a circular motion."
+    },
+    {
+      "tagalog": "Umuulan",
+      "english": "Raining",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Patuloy na bumabagsak ang tubig-ulan.",
+      "englishMeaning": "It is raining."
+    },
+    {
+      "tagalog": "Umpisa",
+      "english": "Start",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Simula o panimula.",
+      "englishMeaning": "The beginning of something."
+    },
+    {
+      "tagalog": "Umunlad",
+      "english": "Progress",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Umasenso o bumuti ang kalagayan.",
+      "englishMeaning": "To improve or advance."
+    },
+    {
+      "tagalog": "Umiyak",
+      "english": "Cry",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Lumuha dahil sa sakit o lungkot.",
+      "englishMeaning": "To shed tears due to pain or sadness."
+    },
+    {
+      "tagalog": "Umabot",
+      "english": "Reach",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Makakuha o makarating sa inaasam.",
+      "englishMeaning": "To attain or arrive at something desired."
+    },
+    {
+      "tagalog": "Umpok",
+      "english": "Pile",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kumpol o bunton.",
+      "englishMeaning": "A heap or pile."
+    },
+    {
+      "tagalog": "Umikot",
+      "english": "Turn around",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Gumalaw nang paikot.",
+      "englishMeaning": "To spin or revolve."
+    },
+    {
+      "tagalog": "Umpog",
+      "english": "Bump",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Tumama o mauntog.",
+      "englishMeaning": "To hit or knock against something."
+    },
+    {
+      "tagalog": "Wakas",
+      "english": "End",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Katapusan o dulo.",
+      "englishMeaning": "End or conclusion."
+    },
+    {
+      "tagalog": "Wala",
+      "english": "Nothing",
+      "partOfSpeech": "Panghalip (Pronoun)",
+      "tagalogMeaning": "Hindi umiiral o walang laman.",
+      "englishMeaning": "Non-existent or empty."
+    },
+    {
+      "tagalog": "Walanghiya",
+      "english": "Shameless",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi nahihiya o bastos ang ugali.",
+      "englishMeaning": "Lacking shame or being rude."
+    },
+    {
+      "tagalog": "Walay",
+      "english": "Absent",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Wala o hindi kasama.",
+      "englishMeaning": "Absent or not present."
+    },
+    {
+      "tagalog": "Walang-hanggan",
+      "english": "Endless",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Hindi nagtatapos o walang katapusan.",
+      "englishMeaning": "Infinite or never-ending."
+    },
+    {
+      "tagalog": "Walastik",
+      "english": "Amazing",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Maganda o kapansin-pansin.",
+      "englishMeaning": "Fantastic or impressive."
+    },
+    {
+      "tagalog": "Walis",
+      "english": "Broom",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kagamitang panglinis na gawa sa tingting o hibla.",
+      "englishMeaning": "A cleaning tool made of twigs or fibers."
+    },
+    {
+      "tagalog": "Walisin",
+      "english": "Sweep",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Linisin ang sahig gamit ang walis.",
+      "englishMeaning": "To clean the floor with a broom."
+    },
+    {
+      "tagalog": "Waling-waling",
+      "english": "Orchid",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Uri ng magandang bulaklak.",
+      "englishMeaning": "A beautiful orchid species."
+    },
+    {
+      "tagalog": "Walong",
+      "english": "Eight",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Bilang na sumunod sa pito.",
+      "englishMeaning": "The number after seven."
+    },
+    {
+      "tagalog": "Wansapanataym",
+      "english": "Fantasy",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Kuwentong may mahika o kababalaghan.",
+      "englishMeaning": "A story with magic or fantasy elements."
+    },
+    {
+      "tagalog": "Waray",
+      "english": "Waray (ethnic group)",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Isa sa mga pangkat-etniko sa Visayas.",
+      "englishMeaning": "An ethnic group in the Visayas."
+    },
+    {
+      "tagalog": "Warak",
+      "english": "Torn",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Napunit o nasira.",
+      "englishMeaning": "Ripped or destroyed."
+    },
+    {
+      "tagalog": "Wasto",
+      "english": "Correct",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Tama o ayon sa patakaran.",
+      "englishMeaning": "Right or according to rules."
+    },
+    {
+      "tagalog": "Watak",
+      "english": "Scattered",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Magkahiwa-hiwalay o hindi sama-sama.",
+      "englishMeaning": "Scattered or separated."
+    },
+    {
+      "tagalog": "Wawalisin",
+      "english": "Will sweep",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Lilinisin gamit ang walis.",
+      "englishMeaning": "Will clean with a broom."
+    },
+    {
+      "tagalog": "Wayway",
+      "english": "Smooth movement",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Magaan o madali ang kilos.",
+      "englishMeaning": "Smooth or effortless movement."
+    },
+    {
+      "tagalog": "Walwal",
+      "english": "Drinking spree",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Patuloy na pag-inom ng alak.",
+      "englishMeaning": "Excessive drinking spree."
+    },
+    {
+      "tagalog": "Watawat",
+      "english": "Flag",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Piraso ng tela na may disenyo, sumasagisag sa bansa o samahan.",
+      "englishMeaning": "A piece of cloth bearing a design, representing a country or organization."
+    },
+    {
+      "tagalog": "Wasto",
+      "english": "Correct",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Tama o ayon sa patakaran.",
+      "englishMeaning": "Right or according to the rules."
+    },
+    {
+      "tagalog": "Yakap",
+      "english": "Hug",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pagyayapos bilang pagpapakita ng pagmamahal o aliw.",
+      "englishMeaning": "An embrace showing affection or comfort."
+    },
+    {
+      "tagalog": "Yaman",
+      "english": "Wealth",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Mahahalagang bagay o kayamanan.",
+      "englishMeaning": "Valuable things or wealth."
+    },
+    {
+      "tagalog": "Yakis",
+      "english": "Sharpen",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Hasain o patalasin.",
+      "englishMeaning": "To sharpen."
+    },
+    {
+      "tagalog": "Yakap-yakap",
+      "english": "Hugging",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Patuloy o madalas yumayakap.",
+      "englishMeaning": "Continuously hugging."
+    },
+    {
+      "tagalog": "Yakagin",
+      "english": "Invite",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Yayain o imbitahin.",
+      "englishMeaning": "To invite someone to go along."
+    },
+    {
+      "tagalog": "Yakis",
+      "english": "Grind or Sharpen",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Hasain ang talim o patalasin.",
+      "englishMeaning": "To sharpen a blade."
+    },
+    {
+      "tagalog": "Yantok",
+      "english": "Rattan",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Uri ng matibay na baging.",
+      "englishMeaning": "A durable vine used for furniture."
+    },
+    {
+      "tagalog": "Yamot",
+      "english": "Annoyance",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Pakiramdam ng pagkainis o pagkabagot.",
+      "englishMeaning": "Feeling of irritation or boredom."
+    },
+    {
+      "tagalog": "Yaon",
+      "english": "That one (far)",
+      "partOfSpeech": "Panghalip (Pronoun)",
+      "tagalogMeaning": "Tinutukoy ang bagay na malayo.",
+      "englishMeaning": "Refers to something that is far away."
+    },
+    {
+      "tagalog": "Yayain",
+      "english": "To invite",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Alukin o sabihan ang iba na sumama.",
+      "englishMeaning": "To ask someone to join or come along."
+    },
+    {
+      "tagalog": "Yayaman",
+      "english": "Will become wealthy",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magkakaroon ng maraming yaman.",
+      "englishMeaning": "To become rich."
+    },
+    {
+      "tagalog": "Yayao",
+      "english": "Will go",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Aalis o pupunta.",
+      "englishMeaning": "Will leave or go."
+    },
+    {
+      "tagalog": "Yayapos",
+      "english": "Will embrace",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magyayakap o yayapos.",
+      "englishMeaning": "Will embrace or hug."
+    },
+    {
+      "tagalog": "Yayat",
+      "english": "Thin",
+      "partOfSpeech": "Pang-uri (Adjective)",
+      "tagalogMeaning": "Payat o manipis ang katawan.",
+      "englishMeaning": "Skinny or slender."
+    },
+    {
+      "tagalog": "Yayain",
+      "english": "Will ask someone along",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Mag-aanyaya o isasama.",
+      "englishMeaning": "To invite someone along."
+    },
+    {
+      "tagalog": "Yayamot",
+      "english": "Will be annoyed",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magkakaroon ng yamot o pagkainis.",
+      "englishMeaning": "Will feel annoyed or irritated."
+    },
+    {
+      "tagalog": "Yayapos",
+      "english": "Will embrace",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Magyayakap o yayapos.",
+      "englishMeaning": "Will hug or embrace."
+    },
+    {
+      "tagalog": "Yayariin",
+      "english": "Will craft",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Gagawin o bubuuin ang isang bagay.",
+      "englishMeaning": "Will create or craft something."
+    },
+    {
+      "tagalog": "Yayari",
+      "english": "Will be punished",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Mapaparusahan o madadali.",
+      "englishMeaning": "Will be punished or caught."
+    },
+    {
+      "tagalog": "Yayabong",
+      "english": "Flourish",
+      "partOfSpeech": "Pandiwa (Verb)",
+      "tagalogMeaning": "Lalago o yayabong.",
+      "englishMeaning": "To grow abundantly or flourish."
+    },
+    {
+      "tagalog": "Kulay",
+      "english": "Color",
+      "partOfSpeech": "Pangngalan (Noun)",
+      "tagalogMeaning": "Katangian ng bagay na nakikita ng mata batay sa liwanag na naipapakita nito.",
+      "englishMeaning": "The property of an object as perceived by the eye based on the light it reflects."
+    }
+  ]
+}
