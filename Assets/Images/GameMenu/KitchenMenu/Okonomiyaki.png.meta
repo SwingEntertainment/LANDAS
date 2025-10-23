@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 024fbbd0359ded845853bb3faef27b7b
+guid: 600bd07a6e8c11f488f38504d21c35aa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6844273900253619251
-    second: thinkingBubble_0
+      213: -318200263722425934
+    second: Okonomiyaki_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: thinkingBubble_0
+      name: Okonomiyaki_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 861
-        height: 448
+        width: 293
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 334281a89debbfe50800000000000000
-      internalID: 6844273900253619251
+      spriteID: 2b1a369cb86859bf0800000000000000
+      internalID: -318200263722425934
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      thinkingBubble_0: 6844273900253619251
+      Okonomiyaki_0: -318200263722425934
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

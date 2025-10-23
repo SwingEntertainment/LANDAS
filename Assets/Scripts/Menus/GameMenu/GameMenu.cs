@@ -16,7 +16,6 @@ public class GameMenu : MonoBehaviour
     public Button lolaButton;
     public Button menuButton;
 
-
     [Header("Audio Clips")]
     public AudioClip defaultTheme;
     public AudioClip kitchenTheme;
@@ -24,15 +23,13 @@ public class GameMenu : MonoBehaviour
     public AudioClip outsideTheme;
     public AudioClip quizTheme;
 
-
     [Header("Scenes")]
     public string kitchenScene = "KitchenMenu";
     public string dictionaryScene = "Dictionary";
     public string outsideScene = "OutsideMenu";
-    public string quizSpanishScene = "QuizSPanish";
+    public string quizSpanishScene = "QuizSpanish";
 
     private const string LolaMenuActiveKey = "LolaMenuActive";
-
     private const string TutorialPlayedKey = "gameMenuTutorial";
 
     void Start()
@@ -42,21 +39,51 @@ public class GameMenu : MonoBehaviour
         if (AudioManager.Instance != null && defaultTheme != null)
             AudioManager.Instance.PlayMusic(defaultTheme, loop: true);
 
-        if (PlayerPrefs.GetInt(TutorialPlayedKey, 0) == 0)
+        bool tutorialPlayed = PlayerPrefs.GetInt(TutorialPlayedKey, 0) == 1;
+
+        if (!tutorialPlayed)
         {
-            if (tutorialUI != null) tutorialUI.SetActive(true);
+            if (tutorialUI != null)
+            {
+                tutorialUI.SetActive(true);
+
+                CanvasGroup cg = tutorialUI.GetComponent<CanvasGroup>();
+                if (cg == null)
+                    cg = tutorialUI.AddComponent<CanvasGroup>();
+                cg.interactable = true;
+                cg.blocksRaycasts = true;
+            }
+
             SetInteractiveButtons(false);
         }
         else
         {
-            if (tutorialUI != null) tutorialUI.SetActive(false);
+            if (tutorialUI != null)
+                tutorialUI.SetActive(false);
+
             SetInteractiveButtons(true);
         }
+
+        bool lolaActive = PlayerPrefs.GetInt(LolaMenuActiveKey, 0) == 1;
         if (lolaMenuPanel != null)
         {
-            bool wasActive = PlayerPrefs.GetInt(LolaMenuActiveKey, 0) == 1;
-            lolaMenuPanel.SetActive(wasActive);
-            SetInteractiveButtons(!wasActive);
+            lolaMenuPanel.SetActive(lolaActive);
+            SetInteractiveButtons(!lolaActive);
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt(LolaMenuActiveKey, 0);
+        PlayerPrefs.Save();
+    }
+
+    private void OnApplicationPause(bool paused)
+    {
+        if (paused)
+        {
+            PlayerPrefs.SetInt(LolaMenuActiveKey, 0);
+            PlayerPrefs.Save();
         }
     }
 
@@ -65,7 +92,11 @@ public class GameMenu : MonoBehaviour
         PlayerPrefs.SetInt(TutorialPlayedKey, 1);
         PlayerPrefs.Save();
 
-        if (tutorialUI != null) tutorialUI.SetActive(false);
+        if (tutorialUI != null)
+        {
+            tutorialUI.SetActive(false);
+        }
+
         SetInteractiveButtons(true);
     }
 
@@ -75,10 +106,10 @@ public class GameMenu : MonoBehaviour
         if (dictionaryButton != null) dictionaryButton.interactable = enable;
         if (outsideButton != null) outsideButton.interactable = enable;
         if (lolaButton != null) lolaButton.interactable = enable;
+
         if (menuButton != null)
         {
             menuButton.interactable = enable;
-
             TMP_Text buttonText = menuButton.GetComponentInChildren<TMP_Text>();
             if (buttonText != null)
                 buttonText.enabled = enable;
@@ -104,13 +135,10 @@ public class GameMenu : MonoBehaviour
         SceneManager.LoadScene(outsideScene);
     }
 
-    public void GoToSpanishQiuz()
+    public void GoToSpanishQuiz()
     {
-        if (lolaMenuPanel != null)
-        {
-            PlayerPrefs.SetInt(LolaMenuActiveKey, lolaMenuPanel.activeSelf ? 1 : 0);
-            PlayerPrefs.Save();
-        }
+        PlayerPrefs.SetInt(LolaMenuActiveKey, 1);
+        PlayerPrefs.Save();
 
         ChangeTheme(quizTheme);
         SceneManager.LoadScene(quizSpanishScene);
@@ -123,16 +151,16 @@ public class GameMenu : MonoBehaviour
             AudioManager.Instance.PlayMusic(newTheme, loop: true);
     }
 
+    // ===== Lola Menu =====
     public void ToggleLolaMenu(bool show)
-{
-    if (lolaMenuPanel != null)
     {
-        lolaMenuPanel.SetActive(show);
-        SetInteractiveButtons(!show); 
+        if (lolaMenuPanel != null)
+        {
+            lolaMenuPanel.SetActive(show);
+            SetInteractiveButtons(!show);
+        }
+
+        PlayerPrefs.SetInt(LolaMenuActiveKey, show ? 1 : 0);
+        PlayerPrefs.Save();
     }
-
-    PlayerPrefs.SetInt(LolaMenuActiveKey, show ? 1 : 0);
-    PlayerPrefs.Save();
-}
-
 }
