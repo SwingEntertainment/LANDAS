@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 024fbbd0359ded845853bb3faef27b7b
+guid: 8d4934923167334459f0c0a0c07bb9ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6844273900253619251
-    second: thinkingBubble_0
+      213: 6313920354182690812
+    second: thinkingBubbleReverse_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: thinkingBubble_0
+      name: thinkingBubbleReverse_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 334281a89debbfe50800000000000000
-      internalID: 6844273900253619251
+      spriteID: cf7fa2b0c1d8f9750800000000000000
+      internalID: 6313920354182690812
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      thinkingBubble_0: 6844273900253619251
+      thinkingBubbleReverse_0: 6313920354182690812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

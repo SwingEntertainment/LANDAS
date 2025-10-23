@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 024fbbd0359ded845853bb3faef27b7b
+guid: 58105ce684bc74a469b4f90224f77c07
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6844273900253619251
-    second: thinkingBubble_0
+      213: 7343513381537862992
+    second: Tsukemono_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: thinkingBubble_0
+      name: Tsukemono_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 861
-        height: 448
+        x: 20
+        y: 21
+        width: 1138
+        height: 552
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 334281a89debbfe50800000000000000
-      internalID: 6844273900253619251
+      spriteID: 05554ed438669e560800000000000000
+      internalID: 7343513381537862992
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      thinkingBubble_0: 6844273900253619251
+      Tsukemono_0: 7343513381537862992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
