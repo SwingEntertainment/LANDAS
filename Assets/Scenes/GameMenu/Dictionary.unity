@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -29, y: -25}
-  m_SizeDelta: {x: 197, y: 50}
+  m_AnchoredPosition: {x: -29, y: 0}
+  m_SizeDelta: {x: 197, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &16704234
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ef1234c5121c14469a242baff1a79fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 658c9d5d63e359f41a4548bee182269c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4146,6 +4146,7 @@ GameObject:
   - component: {fileID: 1286766684}
   - component: {fileID: 1286766686}
   - component: {fileID: 1286766685}
+  - component: {fileID: 1286766687}
   m_Layer: 0
   m_Name: Window
   m_TagString: Untagged
@@ -4169,8 +4170,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -246, y: -35}
-  m_SizeDelta: {x: 90, y: 70}
+  m_AnchoredPosition: {x: -246, y: 0}
+  m_SizeDelta: {x: 90, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1286766685
 MonoBehaviour:
@@ -4192,7 +4193,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9051692800306759852, guid: 335afdb08e9cd44499b3c57e93e73644, type: 3}
+  m_Sprite: {fileID: -9051692800306759852, guid: 2af38d7103fc9b3429f70a601a0e2ff3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4210,6 +4211,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286766683}
   m_CullTransparentMesh: 1
+--- !u!95 &1286766687
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286766683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 161906f543ff59144b33acef2cc8d531, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1369309523
 GameObject:
   m_ObjectHideFlags: 0
