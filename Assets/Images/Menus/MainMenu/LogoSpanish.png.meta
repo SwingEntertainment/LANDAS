@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 024fbbd0359ded845853bb3faef27b7b
+guid: 1194a1b08fdf04e48a19e4107dc0367a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6844273900253619251
-    second: thinkingBubble_0
+      213: 1164323019775502187
+    second: LogoSpanish_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: thinkingBubble_0
+      name: LogoSpanish_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 861
-        height: 448
+        width: 2041
+        height: 2026
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 334281a89debbfe50800000000000000
-      internalID: 6844273900253619251
+      spriteID: b67678d1e91882010800000000000000
+      internalID: 1164323019775502187
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      thinkingBubble_0: 6844273900253619251
+      LogoSpanish_0: 1164323019775502187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,112 @@
+{
+  "dishes": [
+    {
+      "foodID": 1,
+      "isCooked": false,
+      "dishName": "Adobo",
+      "dishImg": "Adobo.png",
+      "recipeList": ["Bay Leaves", "Chicken", "Garlic", "Soy sauce", "Vinegar"],
+      "ingredientIDs": [1, 8, 14, 24, 30],
+      "dishDescription": "Trivia: The word adobo is derived from the Spanish word adobar, which means “marinade” or “pickling sauce.” The existence of the tangy dish was first recorded in 1613 by the Spaniard Pedro de San Buenaventura."
+    },
+    {
+      "foodID": 2,
+      "isCooked": false,
+      "dishName": "Leche Flan",
+      "dishImg": "LecheFlan.png",
+      "recipeList": ["Condensed Milk", "Eggs", "Milk", "Sugar", "Vanilla Extract"],
+      "ingredientIDs": [9, 11, 12, 26, 29],
+      "dishDescription": "The leftover yolks in Leche Flan were from the egg whites used as cement for stone walls when churches were built. This was the theory of many historians on the leche flan’s origins in the Philippines in the 16th century, during the Spanish colonial era."
+    },
+    {
+      "foodID": 3,
+      "isCooked": false,
+      "dishName": "Menudo",
+      "dishImg": "Menudo.png",
+      "recipeList": ["Bell Pepper", "Liver", "Pork", "Potato", "Tomato sauce"],
+      "ingredientIDs": [4, 7, 17, 21, 22, 28],
+      "dishDescription": "A popular Filipino dish, has Spanish origins from the colonial period. It evolved from the Spanish 'cocido' stew. Filipino Menudo features pork, veggies, and liver, becoming a cherished part of Filipino culture and celebrations."
+    },
+    {
+      "foodID": 4,
+      "isCooked": false,
+      "dishName": "Embutido",
+      "dishImg": "Embutido.png",
+      "recipeList": ["Breadcrumbs", "Eggs", "Hotdogs", "Pork", "Raisins"],
+      "ingredientIDs": [5, 11, 15, 21, 23],
+      "dishDescription": "The dish gets its name from the Spanish word embutido (meaning sausage), but the Philippine version is a meatloaf, not a sausage. It became popular during the American occupation (1898–1946), when canned meats like Vienna sausages, corned beef, and Spam were novel and highly valued—leading Filipinos to adapt American meatloaf into a steamed roll."
+    },
+    {
+      "foodID": 5,
+      "isCooked": false,
+      "dishName": "Fried Chicken",
+      "dishImg": "Fried Chicken.png",
+      "recipeList": ["Chicken", "Cooking oil", "Eggs", "Flour"],
+      "ingredientIDs": [8, 10, 11, 13],
+      "dishDescription": "During slavery and into the Jim Crow era, fried chicken became a symbol of resilience and resourcefulness. African-American women, often called 'waiter carriers,' sold fried chicken at train stations and markets as a form of livelihood."
+    },
+    {
+      "foodID": 6,
+      "isCooked": false,
+      "dishName": "Sweet Spaghetti",
+      "dishImg": "Spaghetti.png",
+      "recipeList": ["Beef", "Hotdogs", "Spaghetti Noodles", "Sugar", "Tomato sauce"],
+      "ingredientIDs": [3, 15, 25, 26, 28],
+      "dishDescription": "Across Black American communities, spaghetti represents more than a meal—it’s a symbol of creativity, comfort, and resilience. Many families add extra sugar, take-out sauces, or processed meats to suit personal or communal tastes. Sauce is often richly seasoned and sometimes sweetened to make it more palatable and soul-nourishing."
+    },
+    {
+      "foodID": 7,
+      "isCooked": false,
+      "dishName": "Corned Beef",
+      "dishImg": "CornedBeef.png",
+      "recipeList": ["Beef", "Garlic", "Onion", "Potato"],
+      "ingredientIDs": [3, 14, 19, 22],
+      "dishDescription": "Corned beef is salt-cured beef—most commonly brisket—preserved using large grains of rock salt called 'corns,' which is how it got its name. Brining often includes nitrates, which keep the meat pink and help prevent bacterial growth."
+    },
+    {
+      "foodID": 8,
+      "isCooked": false,
+      "dishName": "Burger Steak (Filipino style)",
+      "dishImg": "BurgerSteak.png",
+      "recipeList": ["Beef", "Eggs", "Mushrooms", "Onion", "Soy sauce"],
+      "ingredientIDs": [3, 11, 18, 19, 24],
+      "dishDescription": "In the early to mid-20th century, Americans in the Philippines helped introduce hamburger patties and cooking techniques. But it wasn’t until the 1970s that the dish became widely known locally in restaurant culture, especially once Jollibee popularized its version—served not in a bun, but with mushroom gravy and rice."
+    },
+    {
+      "foodID": 9,
+      "isCooked": false,
+      "dishName": "Okonomiyaki (Japanese savory pancake)",
+      "dishImg": "Okonomiyaki.png",
+      "recipeList": ["Bean Sprouts", "Eggs", "Flour", "Pork"],
+      "ingredientIDs": [2, 11, 13, 21],
+      "dishDescription": "The name literally means 'yaki what you like'—emphasizing the customizable nature of the dish, with mix-ins ranging from pork and squid to cheese in certain regions."
+    },
+    {
+      "foodID": 10,
+      "isCooked": false,
+      "dishName": "Yakitori (Grilled chicken skewers)",
+      "dishImg": "Yakitori.png",
+      "recipeList": ["Calamansi", "Chicken", "Garlic", "Soy sauce", "Sugar"],
+      "ingredientIDs": [6, 8, 14, 24, 26],
+      "dishDescription": "Yakitori, which means 'grilled chicken,' became popular in Japan during the postwar era when chicken became more accessible and people enjoyed eating skewers with drinks at small roadside bars called izakayas. Traditionally cooked over charcoal and glazed with a sweet-savory tare sauce, yakitori is now enjoyed worldwide and resembles Filipino-style BBQ in its skewered form and flavorful marinade."
+    },
+    {
+      "foodID": 11,
+      "isCooked": false,
+      "dishName": "Tsukemono (Japanese pickled vegetables)",
+      "dishImg": "Tsukemono.png",
+      "recipeList": ["Bell Pepper", "Papaya", "Sugar", "Vinegar"],
+      "ingredientIDs": [4, 20, 26, 30],
+      "dishDescription": "Tsukemono—literally 'pickled things'—originated as a food-preservation method during the Nara period (710–794), made by salting vegetables like daikon and eggplant; over centuries, techniques expanded to include rice-bran, miso, sake lees, vinegar, and soy sauce, resulting in over 600 regional varieties across Japan."
+    },
+    {
+      "foodID": 12,
+      "isCooked": false,
+      "dishName": "Tonkatsu (Breaded pork cutlet)",
+      "dishImg": "Tonkatsu.png",
+      "recipeList": ["Breadcrumbs", "Eggs", "Flour", "Pork"],
+      "ingredientIDs": [5, 11, 13, 21],
+      "dishDescription": "Tonkatsu was created in 1899 at Tokyo’s yōshoku restaurant Rengatei in Ginza by Chef Motokiyo Kida, who transformed the Western cōtelettes de veau into a lighter, Japanese-friendly dish by using tender pork coated in panko breadcrumbs and deep-frying it tempura-style. It quickly became a beloved part of Japanese comfort food, paving the way for popular variations like katsu-sando, katsu curry, and Nagoya’s miso katsu."
+    }
+  ]
+}
