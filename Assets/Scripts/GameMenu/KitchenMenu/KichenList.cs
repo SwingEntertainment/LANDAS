@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Networking;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
@@ -23,53 +25,85 @@ public class RecipeList : MonoBehaviour
     [Header("Scene / File Paths")]
     public string mainSceneName = "GameMenu";
     public string recipeJsonFileName = "RecipeList.json";
-    public string imageFolderPath = "../Images/GameMenu/KitchenMenu";
 
     private List<DishEntry> dishes = new List<DishEntry>();
     private int currentRecipeIndex = 0;
     private string recipeJsonPath;
+    private string persistentRecipePath;
 
     void Start()
     {
         recipeJsonPath = Path.Combine(Application.streamingAssetsPath, recipeJsonFileName);
-        LoadRecipesFromStreamingAssets();
+        persistentRecipePath = Path.Combine(Application.persistentDataPath, recipeJsonFileName);
+
+        StartCoroutine(LoadRecipesCoroutine());
         SetupButtons();
 
         if (detailPanel != null)
             detailPanel.SetActive(false);
     }
 
-    // ===== JSON LOADING =====
-    void LoadRecipesFromStreamingAssets()
+    // ===== LOAD JSON (CROSS-PLATFORM) =====
+    IEnumerator LoadRecipesCoroutine()
     {
-        if (!File.Exists(recipeJsonPath))
+        string jsonData = "";
+
+        if (File.Exists(persistentRecipePath))
         {
-            Debug.LogWarning($"Recipe JSON not found: {recipeJsonPath}");
-            dishes = new List<DishEntry>();
-            return;
+            Debug.Log($"Loading recipes from persistent path: {persistentRecipePath}");
+            jsonData = File.ReadAllText(persistentRecipePath);
+        }
+        else
+        {
+            Debug.Log("No saved recipe file found. Loading default from StreamingAssets...");
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+            UnityWebRequest request = UnityWebRequest.Get(recipeJsonPath);
+            yield return request.SendWebRequest();
+
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogWarning($"Failed to load Recipe JSON from StreamingAssets: {request.error}");
+                yield break;
+            }
+
+            jsonData = request.downloadHandler.text;
+#else
+            if (!File.Exists(recipeJsonPath))
+            {
+                Debug.LogWarning($"Recipe JSON not found in StreamingAssets: {recipeJsonPath}");
+                yield break;
+            }
+
+            jsonData = File.ReadAllText(recipeJsonPath);
+#endif
+
+            File.WriteAllText(persistentRecipePath, jsonData);
+            Debug.Log($"Copied Recipe JSON to: {persistentRecipePath}");
         }
 
-        string jsonData = File.ReadAllText(recipeJsonPath);
         RecipeData data = JsonUtility.FromJson<RecipeData>(jsonData);
 
         if (data == null || data.dishes == null)
         {
             Debug.LogWarning("Recipe JSON parsed but no dishes found.");
             dishes = new List<DishEntry>();
-            return;
+            yield break;
         }
 
         dishes = new List<DishEntry>(data.dishes);
         dishes.Sort((a, b) => a.foodID.CompareTo(b.foodID));
+
+        Debug.Log($"Loaded {dishes.Count} recipes successfully.");
     }
 
-    // ===== JSON SAVE =====
-    void SaveRecipesToStreamingAssets()
+    // ===== SAVE JSON TO PERSISTENT PATH =====
+    void SaveRecipesToPersistentPath()
     {
         RecipeData data = new RecipeData { dishes = dishes.ToArray() };
         string jsonOutput = JsonUtility.ToJson(data, true);
-        File.WriteAllText(recipeJsonPath, jsonOutput);
-        Debug.Log($"Recipe JSON updated and saved to: {recipeJsonPath}");
+        File.WriteAllText(persistentRecipePath, jsonOutput);
+        Debug.Log($"Recipe JSON saved to: {persistentRecipePath}");
     }
 
     // ===== RESET ALL RECIPES =====
@@ -78,7 +112,7 @@ public class RecipeList : MonoBehaviour
         foreach (var dish in dishes)
             dish.isCooked = false;
 
-        SaveRecipesToStreamingAssets();
+        SaveRecipesToPersistentPath();
         Debug.Log("All recipes reset to uncooked.");
         ShowRecipeDetail(currentRecipeIndex);
     }
@@ -106,7 +140,7 @@ public class RecipeList : MonoBehaviour
         if (dish != null && !dish.isCooked)
         {
             dish.isCooked = true;
-            SaveRecipesToStreamingAssets();
+            SaveRecipesToPersistentPath();
             Debug.Log($"Dish '{dish.dishName}' marked as cooked!");
         }
     }
@@ -133,6 +167,7 @@ public class RecipeList : MonoBehaviour
     }
 
     // ===== SHOW RECIPE DETAILS =====
+    // ===== SHOW RECIPE DETAILS =====
     void ShowRecipeDetail(int index)
     {
         if (index < 0 || index >= dishes.Count) return;
@@ -143,17 +178,21 @@ public class RecipeList : MonoBehaviour
         // Title
         dishTitleText.text = dish.isCooked ? dish.dishName : "???";
 
-        // Image path
-        string imgPath = Path.Combine(Path.GetFullPath(Application.streamingAssetsPath), imageFolderPath, dish.dishImg ?? "");
+        // ===== IMAGE (USING RESOURCES) =====
         Sprite spriteToUse = null;
 
-        if (File.Exists(imgPath))
-            spriteToUse = LoadSpriteFromFile(imgPath);
+        if (!string.IsNullOrEmpty(dish.dishImg))
+        {
+            string resourcePath = $"Images/KitchenFood/{Path.GetFileNameWithoutExtension(dish.dishImg)}";
+            spriteToUse = Resources.Load<Sprite>(resourcePath);
+
+            if (spriteToUse == null)
+                Debug.LogWarning($"Image not found in Resources at: {resourcePath}");
+        }
 
         if (dishImage != null)
         {
             dishImage.sprite = spriteToUse;
-
             RectTransform rt = dishImage.GetComponent<RectTransform>();
             if (rt != null)
                 rt.sizeDelta = new Vector2(290f, 110f);
@@ -182,6 +221,7 @@ public class RecipeList : MonoBehaviour
         prevButton.interactable = (currentRecipeIndex > 0);
         nextButton.interactable = (currentRecipeIndex < dishes.Count - 1);
     }
+
 
     // ===== LOAD SPRITE FROM FILE =====
     Sprite LoadSpriteFromFile(string path)
