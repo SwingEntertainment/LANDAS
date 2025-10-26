@@ -1,54 +1,51 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class SipaGame : MonoBehaviour
 {
+    [Header("Restart References")]
+    public GameObject player;           
+    public GameObject gameOverPanel;    
+    public Animator bgAnimator;         
+    public Ball ballManager;           
+    public ScoreManager scoreManager;   
+
     // Button function to go back to main menu
     public void BackToMenu()
     {
         SceneManager.LoadSceneAsync("OutsideMenu");
     }
-}
 
-
-public class Ball : MonoBehaviour
-{
-    private float fallSpeed;
-    private Rigidbody2D rb;
-
-    void Start()
+    // Function to restart the game
+    public void Restart()
     {
-        rb = GetComponent<Rigidbody2D>();
-        SetRandomSpeed();
-    }
+        Debug.Log("Restart function called!"); 
 
-    void FixedUpdate()
-    {
-        // Move ball downward at chosen speed
-        rb.linearVelocity = new Vector2(0, -fallSpeed);
-    }
+        // Reactivate player
+        if (player != null)
+            player.SetActive(true);
 
-    void SetRandomSpeed()
-    {
-        // Pick between 3 speeds
-        int rand = Random.Range(0, 3); // 0, 1, or 2
+        // Hide Game Over panel
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
 
-        if (rand == 0) fallSpeed = 3f;   // slow
-        else if (rand == 1) fallSpeed = 5f; // medium
-        else fallSpeed = 7f; // fast
-    }
+        // Restart background animation
+        if (bgAnimator != null)
+            bgAnimator.enabled = true;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Ground"))
-        {
-            // Respawn ball at top of the screen
-            float topY = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)).y + 1f;
-            float randomX = Random.Range(-7f, 7f);
+        // Reset score
+        if (scoreManager != null)
+            scoreManager.ResetScore();
 
-            transform.position = new Vector2(randomX, topY);
-            SetRandomSpeed();
-        }
+        // Destroy current ball if exists
+        if (ballManager != null && ballManager.currentBall != null)
+            Destroy(ballManager.currentBall);
+
+        // Spawn a new ball
+        if (ballManager != null)
+            ballManager.SpawnBall();
+
+        // Resume the game if it was paused
+        Time.timeScale = 1f;
     }
 }

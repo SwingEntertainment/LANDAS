@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Feet
+  - Ball
+  - 'PlayerFeet '
   layers:
   - Default
   - TransparentFX
@@ -62,6 +65,15 @@ TagManager:
     locked: 0
   - name: cloud4
     uniqueID: 1634653585
+    locked: 0
+  - name: background
+    uniqueID: 3066259119
+    locked: 0
+  - name: New Layer 9
+    uniqueID: 316438993
+    locked: 0
+  - name: New Layer 10
+    uniqueID: 3073788461
     locked: 0
   m_RenderingLayers:
   - Default
