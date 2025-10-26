@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d667950cb6cc6824ea1c3b517bf64052
+guid: 024fbbd0359ded845853bb3faef27b7b
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,10 +116,10 @@ TextureImporter:
       name: thinkingBubble_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 860
-        height: 447
+        width: 861
+        height: 448
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -35,6 +35,9 @@ public class Dictionary : MonoBehaviour
     [Header("Scenes")]
     public string gameMenuScene = "GameMenu";
 
+    [Header("Voice Preparation UI")] // ✅ NEW
+    public GameObject preparingVoicePanel; // Assign a "Preparing Voice..." panel or TMP_Text here in Unity
+
     private const string TutorialPlayedKey = "dictionaryTutorial";
 
     private List<WordEntry> dictionaryWords;
@@ -43,6 +46,7 @@ public class Dictionary : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     private AndroidJavaObject ttsObject;
     private bool ttsInitialized = false;
+    private bool isPreparingVoice = false; // ✅ NEW
 #endif
 
     void Start()
@@ -85,6 +89,7 @@ public class Dictionary : MonoBehaviour
             detailPrevButton.onClick.AddListener(() => ShowDetail(selectedWordIndex - 1));
 
         if (detailPanel != null) detailPanel.SetActive(false);
+        if (preparingVoicePanel != null) preparingVoicePanel.SetActive(false); // ✅ Hide by default
     }
 
     // ===== Voice Button Click =====
@@ -93,7 +98,15 @@ public class Dictionary : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
         if (!ttsInitialized)
         {
-            InitializeAndroidTTS();
+            if (!isPreparingVoice)
+            {
+                ShowPreparingVoiceIndicator(); // ✅ show indicator the first time
+                InitializeAndroidTTS();
+            }
+            else
+            {
+                Debug.Log("Still preparing voice...");
+            }
         }
         else
         {
@@ -107,10 +120,10 @@ public class Dictionary : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     private void InitializeAndroidTTS()
     {
+        isPreparingVoice = true; // ✅ prevent multiple clicks
         using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
         {
             AndroidJavaObject context = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-
             ttsObject = new AndroidJavaObject("android.speech.tts.TextToSpeech", context, new TTSInitListener(this, context));
         }
     }
@@ -129,6 +142,8 @@ public class Dictionary : MonoBehaviour
 
         void onInit(int status)
         {
+            parent.isPreparingVoice = false; // ✅ done preparing
+
             if (status == 0)
             {
                 var locale = new AndroidJavaObject("java.util.Locale", "fil", "PH");
@@ -145,16 +160,37 @@ public class Dictionary : MonoBehaviour
                 {
                     Debug.Log("TTS initialized successfully in Tagalog.");
                     parent.ttsInitialized = true;
+                    parent.HidePreparingVoiceIndicator(); // ✅ hide message
                     parent.PlayVoice();
                 }
             }
             else
             {
                 Debug.LogWarning("TTS failed to initialize.");
+                parent.HidePreparingVoiceIndicator(); // ✅ hide message even on failure
             }
         }
     }
 #endif
+
+    // ===== NEW FUNCTIONS =====
+    private void ShowPreparingVoiceIndicator()
+    {
+        if (preparingVoicePanel != null)
+        {
+            preparingVoicePanel.SetActive(true);
+            Debug.Log("Preparing Tagalog voice... Please wait.");
+        }
+    }
+
+    private void HidePreparingVoiceIndicator()
+    {
+        if (preparingVoicePanel != null)
+        {
+            preparingVoicePanel.SetActive(false);
+            Debug.Log("Tagalog voice ready!");
+        }
+    }
 
     // ===== JSON Loading =====
     void LoadDictionary()
@@ -172,7 +208,6 @@ public class Dictionary : MonoBehaviour
                     uniqueWords.Add(word.tagalog, word);
             }
             dictionaryWords = new List<WordEntry>(uniqueWords.Values);
-
             dictionaryWords.Sort((a, b) => string.Compare(a.tagalog, b.tagalog));
         }
         else

@@ -392,7 +392,7 @@ public class QuizSpanish : MonoBehaviour
             PlayerPrefs.SetInt(PREF_IS_AMERICA_UNLOCKED, 1);
             chosenMessage = successMessages[Random.Range(0, successMessages.Count)];
             if (unlockPopupPanel != null && unlockPopupText != null)
-                StartCoroutine(ShowUnlockPopup("Quiz for American Era Unlocked!"));
+                StartCoroutine(ShowUnlockPopup("Story and Quiz for American Chapter Unlocked!"));
         }
         else
         {
