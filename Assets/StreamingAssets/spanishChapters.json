@@ -2,9 +2,9 @@
   "subchapters": [
     {
       "subchapterID": "ch1-01",
-      "title": "The Battle of Mactan",
+      "title": "1 - The Battle of Mactan",
       "thumbnail": "thumbnails/ch1-01.png",
-      "imageTitle": "The Battle of Mactan",
+      "imageTitle": "1 - The Battle of Mactan",
       "isRead": false,
       "slides": [
         {
@@ -75,7 +75,7 @@
           "slideIndex": 9,
           "slideImg": "slides/ch1-01/slide9.png",
           "slideText": [
-            "In 1565, Miguel López de Legazpi arrived from Mexico.",
+            "In 1565, Miguel Lopez de Legazpi arrived from Mexico.",
             "He brought soldiers, priests, and orders to build a colony."
           ]
         },
@@ -173,21 +173,44 @@
           "triggerAfterSlide": 10,
           "questions": [
             {
-              "q": "Where did they first land?",
-              "choiceA": "Island A",
-              "choiceB": "Island B",
+              "q": "What was the main reason Magellan came to the Philippines?",
+              "choiceA": "To escape Portuguese forces",
+              "choiceB": "To find new spices and routes for Spain",
+              "correct": "B"
+            },
+            {
+              "q": "Who was the local chieftain that resisted Magellan in the Battle of Mactan?",
+              "choiceA": "Lapu-Lapu",
+              "choiceB": "Rajah Sulayman",
               "correct": "A"
             },
             {
-              "q": "What did they bring?",
-              "choiceA": "Tools",
-              "choiceB": "Clothes",
+              "q": "What was the result of the Battle of Mactan?",
+              "choiceA": "Magellan captured Cebu",
+              "choiceB": "Magellan was killed",
+              "correct": "B"
+            }
+          ]
+        },
+        {
+          "triggerAfterSlide": 20,
+          "questions": [
+            {
+              "q": "What was the main reason Magellan came to the Philippines?",
+              "choiceA": "To escape Portuguese forces",
+              "choiceB": "To find new spices and routes for Spain",
+              "correct": "B"
+            },
+            {
+              "q": "Who was the local chieftain that resisted Magellan in the Battle of Mactan?",
+              "choiceA": "Lapu-Lapu",
+              "choiceB": "Rajah Sulayman",
               "correct": "A"
             },
             {
-              "q": "Which animal was domesticated?",
-              "choiceA": "Dog",
-              "choiceB": "Pig",
+              "q": "What was the result of the Battle of Mactan?",
+              "choiceA": "Magellan captured Cebu",
+              "choiceB": "Magellan was killed",
               "correct": "B"
             }
           ]
@@ -196,9 +219,9 @@
     },
     {
       "subchapterID": "ch1-02",
-      "title": "The Encomendia",
+      "title": "2 - The Encomendia",
       "thumbnail": "thumbnails/ch1-02.png",
-      "imageTitle": "The Encomendia",
+      "imageTitle": "2 - The Encomendia",
       "isRead": false,
       "slides": [
         {

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 26dbcecdf7a7bb84fa1fbf651a6df4fc
+guid: ef11f98b8221bbc49a3340985b033175
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2128341045656801153
-    second: Vase 1_0
+      213: 5371412345509669250
+    second: check_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vase 1_0
+      name: check_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 682
-        height: 1315
+        width: 484
+        height: 345
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18fc14397e2698d10800000000000000
-      internalID: 2128341045656801153
+      spriteID: 289604cb1171b8a40800000000000000
+      internalID: 5371412345509669250
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Vase 1_0: 2128341045656801153
+      check_0: 5371412345509669250
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

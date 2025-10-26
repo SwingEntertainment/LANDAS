@@ -9,28 +9,32 @@ using TMPro;
 using UnityEngine.Networking;
 
 [Serializable]
-public class SlideData {
+public class SlideData
+{
     public int slideIndex;
-    public string slideImg; 
-    public string[] slideText; 
+    public string slideImg;
+    public string[] slideText;
 }
 
 [Serializable]
-public class QuizTryQuestion {
+public class QuizTryQuestion
+{
     public string q;
     public string choiceA;
     public string choiceB;
-    public string correct; 
+    public string correct;
 }
 
 [Serializable]
-public class QuizSegment {
-    public int triggerAfterSlide; 
+public class QuizSegment
+{
+    public int triggerAfterSlide;
     public QuizTryQuestion[] questions;
 }
 
 [Serializable]
-public class Subchapter {
+public class Subchapter
+{
     public string subchapterID;
     public string title;
     public string thumbnail;
@@ -41,7 +45,8 @@ public class Subchapter {
 }
 
 [Serializable]
-public class SubchapterCollection {
+public class SubchapterCollection
+{
     public Subchapter[] subchapters;
 }
 
@@ -55,22 +60,22 @@ public class StoryManager : MonoBehaviour
     [Header("Listing UI")]
     public Image listingThumbnail;
     public TMP_Text listingTitle;
-    public Image listingCheckmark; 
+    public Image listingCheckmark;
     public Button prevButton;
     public Button nextButton;
-    public Button readButton; 
+    public Button readButton;
     public Toggle voiceToggle;
-    public GameObject confirmReadModal; 
+    public GameObject confirmReadModal;
 
     // -------- SLIDE UI --------
     [Header("Slide UI")]
-    public GameObject slidePanel; 
+    public GameObject slidePanel;
     public Image slideImage;
-    public TMP_Text slideText; 
-    public CanvasGroup slideTextCanvasGroup; 
-    public Button slideNextButton; 
-    public Button slideCancelButton; 
-
+    public TMP_Text slideText;
+    public CanvasGroup slideTextCanvasGroup;
+    public Button slideNextButton;
+    public Button slideCancelButton;
+    public Button storyBackButton;
     public GameObject exitConfirmModal;
     public GameObject finishPanel;
     public Button finishBackToListButton;
@@ -83,15 +88,14 @@ public class StoryManager : MonoBehaviour
     public Button quizChoiceBButton;
     public TMP_Text quizChoiceAText;
     public TMP_Text quizChoiceBText;
-    public Button quizCancelButton; 
 
     [Header("Editor fallback quiz (if JSON missing)")]
     [Tooltip("If JSON doesn't contain quizSegments, this editor list will be used as a fallback quiz after slide #10.")]
     public QuizTryQuestion[] editorQuiz;
 
     [Header("Misc")]
-    public float textFadeDuration = 0.45f; 
-    public int quizTriggerSlideIndexDefault = 10; 
+    public float textFadeDuration = 0.45f;
+    public int quizTriggerSlideIndexDefault = 10;
 
     // ---------- Internal state ----------
     SubchapterCollection collection;
@@ -100,7 +104,7 @@ public class StoryManager : MonoBehaviour
 
     // slide playback state:
     Subchapter currentSubchapter;
-    int currentSlideZeroIndex = 0; 
+    int currentSlideZeroIndex = 0;
     int currentTextChunkIndex = 0;
     string[] currentTextChunks;
     bool voiceEnabled = true;
@@ -122,7 +126,6 @@ public class StoryManager : MonoBehaviour
         slideNextButton.onClick.AddListener(OnSlideNextClicked);
         slideCancelButton.onClick.AddListener(OnSlideCancelClicked);
         finishBackToListButton.onClick.AddListener(OnFinishBackToList);
-        quizCancelButton.onClick.AddListener(OnQuizCancel);
 
         voiceToggle.onValueChanged.AddListener((v) => voiceEnabled = v);
         voiceEnabled = voiceToggle.isOn;
@@ -224,13 +227,34 @@ public class StoryManager : MonoBehaviour
         listingTitle.text = s.title;
         listingCheckmark.gameObject.SetActive(s.isRead);
 
+        Debug.Log($"[StoryManager] Loading thumbnail: {s.thumbnail}");
+
         if (!string.IsNullOrEmpty(s.thumbnail))
-            StartCoroutine(LoadSpriteFromStreamingAssets(s.thumbnail, (sp) => { if (sp != null) listingThumbnail.sprite = sp; }));
-        else listingThumbnail.sprite = null;
+        {
+            StartCoroutine(LoadSpriteFromStreamingAssets(s.thumbnail, (sp) =>
+            {
+                if (sp != null)
+                {
+                    listingThumbnail.sprite = sp;
+                    listingThumbnail.color = Color.white; // 🔹 ensures it's visible
+                    Debug.Log("[StoryManager] Thumbnail loaded successfully!");
+                }
+                else
+                {
+                    Debug.LogWarning("[StoryManager] Thumbnail sprite was null!");
+                }
+            }));
+        }
+        else
+        {
+            Debug.LogWarning("[StoryManager] No thumbnail path in JSON!");
+            listingThumbnail.sprite = null;
+        }
 
         prevButton.interactable = currentListingIndex > 0;
         nextButton.interactable = currentListingIndex < subchapters.Count - 1;
     }
+
 
     void OnPrevListing()
     {
@@ -295,12 +319,42 @@ public class StoryManager : MonoBehaviour
         currentTextChunks = slide.slideText ?? new string[0];
         currentTextChunkIndex = 0;
         slideText.text = "";
-        if (slideTextCanvasGroup != null) slideTextCanvasGroup.alpha = 0f;
+        if (slideTextCanvasGroup != null)
+            slideTextCanvasGroup.alpha = 0f;
 
-        if (!string.IsNullOrEmpty(slide.slideImg))
-            StartCoroutine(LoadSpriteFromStreamingAssets(slide.slideImg, (sp) => { if (sp != null) slideImage.sprite = sp; }));
-        else slideImage.sprite = null;
+        // ✅ SAFELY LOAD IMAGE
+        if (slideImage != null && !string.IsNullOrEmpty(slide.slideImg))
+        {
+            string slidePath = Path.Combine(Application.streamingAssetsPath, slide.slideImg);
+
+            if (File.Exists(slidePath))
+            {
+                try
+                {
+                    byte[] bytes = File.ReadAllBytes(slidePath);
+                    Texture2D texture = new Texture2D(2, 2);
+                    texture.LoadImage(bytes);
+                    slideImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"Failed to load image at {slidePath}: {e.Message}");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"❌ Slide image not found: {slidePath}");
+                slideImage.sprite = null;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("slideImage is null or slide.slideImg is empty!");
+            if (slideImage != null)
+                slideImage.sprite = null;
+        }
     }
+
 
     void OnSlideNextClicked()
     {
@@ -312,6 +366,24 @@ public class StoryManager : MonoBehaviour
             StartCoroutine(FadeInTextChunk(chunk));
             if (voiceEnabled) Speak(chunk);
             currentTextChunkIndex++;
+            return;
+        }
+
+        if (currentSubchapter == null)
+        {
+            Debug.LogError("Current subchapter is NULL in OnSlideNextClicked!");
+            return;
+        }
+
+        if (currentSubchapter.slides == null || currentSubchapter.slides.Length == 0)
+        {
+            Debug.LogError("Slides array is NULL or EMPTY in currentSubchapter!");
+            return;
+        }
+
+        if (currentSlideZeroIndex < 0 || currentSlideZeroIndex >= currentSubchapter.slides.Length)
+        {
+            Debug.LogError($"Invalid slide index: {currentSlideZeroIndex}. Slides length: {currentSubchapter.slides.Length}");
             return;
         }
 
@@ -408,6 +480,9 @@ public class StoryManager : MonoBehaviour
     {
         if (questions == null || questions.Length == 0) return;
         quizActive = true;
+
+        if (slideTextCanvasGroup != null) slideTextCanvasGroup.gameObject.SetActive(false);
+        if (storyBackButton != null) storyBackButton.gameObject.SetActive(false);
         quizModal.SetActive(true);
         StartCoroutine(RunQuizSequence(questions));
     }
@@ -467,6 +542,8 @@ public class StoryManager : MonoBehaviour
         }
 
         quizModal.SetActive(false);
+        if (slideTextCanvasGroup != null) slideTextCanvasGroup.gameObject.SetActive(true);
+        if (storyBackButton != null) storyBackButton.gameObject.SetActive(true);
         quizActive = false;
         currentSlideZeroIndex++;
         if (currentSlideZeroIndex >= currentSubchapter.slides.Length)
@@ -478,11 +555,6 @@ public class StoryManager : MonoBehaviour
         yield break;
     }
 
-    public void OnQuizCancel()
-    {
-        quizModal.SetActive(false);
-        quizActive = false;
-    }
     #endregion
 
     #region Image Loading Helpers

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 26dbcecdf7a7bb84fa1fbf651a6df4fc
+guid: 61666e9b0be0b684f9fa63e3426d717b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2128341045656801153
-    second: Vase 1_0
+      213: 1530350177971939696
+    second: paintings_0
+  - first:
+      213: -3027290110533211810
+    second: paintings_1
+  - first:
+      213: -2638268231637340411
+    second: paintings_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vase 1_0
+      name: paintings_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 682
-        height: 1315
+        width: 524
+        height: 481
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18fc14397e2698d10800000000000000
-      internalID: 2128341045656801153
+      spriteID: 07929f3f065ec3510800000000000000
+      internalID: 1530350177971939696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paintings_1
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 256
+        width: 254
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e596d990fa7ecf5d0800000000000000
+      internalID: -3027290110533211810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paintings_2
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 14
+        width: 254
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50fee0f750df26bd0800000000000000
+      internalID: -2638268231637340411
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Vase 1_0: 2128341045656801153
+      paintings_0: 1530350177971939696
+      paintings_1: -3027290110533211810
+      paintings_2: -2638268231637340411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
