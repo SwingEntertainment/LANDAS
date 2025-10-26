@@ -62,7 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story/StoryFinale.unity
     guid: db061d1c6bdb837438ae881bea1eb552
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/OutsideMenu/SipaGame.unity
     guid: 5c1d1242acb529f42918d5d6d7d4dfad
   - enabled: 1
