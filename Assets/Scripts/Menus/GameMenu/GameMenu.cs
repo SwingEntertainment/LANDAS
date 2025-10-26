@@ -28,6 +28,7 @@ public class GameMenu : MonoBehaviour
     public string dictionaryScene = "Dictionary";
     public string outsideScene = "OutsideMenu";
     public string quizSpanishScene = "QuizSpanish";
+    public string storySpanishScene = "StorySpanish";
 
     private const string LolaMenuActiveKey = "LolaMenuActive";
     private const string TutorialPlayedKey = "gameMenuTutorial";
@@ -144,6 +145,14 @@ public class GameMenu : MonoBehaviour
         SceneManager.LoadScene(quizSpanishScene);
     }
 
+    public void GoToSpanishStory()
+    {
+        PlayerPrefs.SetInt(LolaMenuActiveKey, 1);
+        PlayerPrefs.Save();
+
+        ChangeTheme(quizTheme);
+        SceneManager.LoadScene(storySpanishScene);
+    }
     // ===== Audio =====
     private void ChangeTheme(AudioClip newTheme)
     {
