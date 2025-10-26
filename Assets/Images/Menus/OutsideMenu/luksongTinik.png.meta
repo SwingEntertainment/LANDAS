@@ -119,10 +119,10 @@ TextureImporter:
       name: luksongTinik_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 90
-        width: 264
-        height: 459
+        x: 16
+        y: 97
+        width: 265
+        height: 460
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: luksongTinik_1
       rect:
         serializedVersion: 2
-        x: 245
-        y: 0
-        width: 281
-        height: 458
+        x: 262
+        y: 5
+        width: 282
+        height: 461
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -35,8 +35,8 @@ public class Dictionary : MonoBehaviour
     [Header("Scenes")]
     public string gameMenuScene = "GameMenu";
 
-    [Header("Voice Preparation UI")] // ✅ NEW
-    public GameObject preparingVoicePanel; // Assign a "Preparing Voice..." panel or TMP_Text here in Unity
+    [Header("Voice Preparation UI")] 
+    public GameObject preparingVoicePanel; 
 
     private const string TutorialPlayedKey = "dictionaryTutorial";
 
@@ -46,7 +46,7 @@ public class Dictionary : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     private AndroidJavaObject ttsObject;
     private bool ttsInitialized = false;
-    private bool isPreparingVoice = false; // ✅ NEW
+    private bool isPreparingVoice = false; 
 #endif
 
     void Start()
@@ -89,7 +89,7 @@ public class Dictionary : MonoBehaviour
             detailPrevButton.onClick.AddListener(() => ShowDetail(selectedWordIndex - 1));
 
         if (detailPanel != null) detailPanel.SetActive(false);
-        if (preparingVoicePanel != null) preparingVoicePanel.SetActive(false); // ✅ Hide by default
+        if (preparingVoicePanel != null) preparingVoicePanel.SetActive(false);
     }
 
     // ===== Voice Button Click =====
@@ -100,7 +100,7 @@ public class Dictionary : MonoBehaviour
         {
             if (!isPreparingVoice)
             {
-                ShowPreparingVoiceIndicator(); // ✅ show indicator the first time
+                ShowPreparingVoiceIndicator();
                 InitializeAndroidTTS();
             }
             else
@@ -120,7 +120,7 @@ public class Dictionary : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     private void InitializeAndroidTTS()
     {
-        isPreparingVoice = true; // ✅ prevent multiple clicks
+        isPreparingVoice = true; 
         using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
         {
             AndroidJavaObject context = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
@@ -142,7 +142,7 @@ public class Dictionary : MonoBehaviour
 
         void onInit(int status)
         {
-            parent.isPreparingVoice = false; // ✅ done preparing
+            parent.isPreparingVoice = false; 
 
             if (status == 0)
             {
@@ -160,14 +160,14 @@ public class Dictionary : MonoBehaviour
                 {
                     Debug.Log("TTS initialized successfully in Tagalog.");
                     parent.ttsInitialized = true;
-                    parent.HidePreparingVoiceIndicator(); // ✅ hide message
+                    parent.HidePreparingVoiceIndicator(); 
                     parent.PlayVoice();
                 }
             }
             else
             {
                 Debug.LogWarning("TTS failed to initialize.");
-                parent.HidePreparingVoiceIndicator(); // ✅ hide message even on failure
+                parent.HidePreparingVoiceIndicator(); 
             }
         }
     }
