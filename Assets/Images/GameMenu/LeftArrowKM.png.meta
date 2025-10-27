@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4c143fb779bfc1b4497be5b773b36688
+guid: 1b6b2620b34ea0e4fbf6e20762fba9b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7751777048443264340
-    second: Flour_0
+      213: 7972937444003909410
+    second: LeftArrow 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flour_0
+      name: LeftArrow 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 680
-        height: 586
+        x: 17
+        y: 28
+        width: 166
+        height: 186
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca2638958d72c6490800000000000000
-      internalID: -7751777048443264340
+      spriteID: 22f8346ec5095ae60800000000000000
+      internalID: 7972937444003909410
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flour_0: -7751777048443264340
+      LeftArrow 1_0: 7972937444003909410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4c143fb779bfc1b4497be5b773b36688
+guid: 3c2e65f594ec97d40af84fe1c49237b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7751777048443264340
-    second: Flour_0
+      213: -8590134447837247995
+    second: Papaya_Container_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flour_0
+      name: Papaya_Container_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 680
-        height: 586
+        width: 463
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca2638958d72c6490800000000000000
-      internalID: -7751777048443264340
+      spriteID: 50680df6b36b9c880800000000000000
+      internalID: -8590134447837247995
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flour_0: -7751777048443264340
+      Papaya_Container_0: -8590134447837247995
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
