@@ -67,6 +67,17 @@ public class StoryManager : MonoBehaviour
     public Toggle voiceToggle;
     public GameObject confirmReadModal;
 
+    [Header("Loading / Transition UI")]
+    public GameObject loadingSpinner;
+
+    [Header("Voice Toggle Extra")]
+    public GameObject voiceSpinner;
+
+    [Header("Pre-Quiz Panel")]
+    public GameObject preQuizPanel;
+    public TMP_Text preQuizText;
+    public Button startQuizButton;
+
     // -------- SLIDE UI --------
     [Header("Slide UI")]
     public GameObject slidePanel;
@@ -229,6 +240,11 @@ public class StoryManager : MonoBehaviour
 
         Debug.Log($"[StoryManager] Loading thumbnail: {s.thumbnail}");
 
+        if (listingThumbnail != null)
+        {
+            listingThumbnail.gameObject.SetActive(false);
+        }
+
         if (!string.IsNullOrEmpty(s.thumbnail))
         {
             StartCoroutine(LoadSpriteFromStreamingAssets(s.thumbnail, (sp) =>
@@ -236,12 +252,15 @@ public class StoryManager : MonoBehaviour
                 if (sp != null)
                 {
                     listingThumbnail.sprite = sp;
-                    listingThumbnail.color = Color.white; // 🔹 ensures it's visible
+                    listingThumbnail.color = Color.white;
+                    listingThumbnail.gameObject.SetActive(true);
                     Debug.Log("[StoryManager] Thumbnail loaded successfully!");
                 }
                 else
                 {
                     Debug.LogWarning("[StoryManager] Thumbnail sprite was null!");
+                    listingThumbnail.sprite = null;
+                    listingThumbnail.gameObject.SetActive(false);
                 }
             }));
         }
@@ -249,11 +268,13 @@ public class StoryManager : MonoBehaviour
         {
             Debug.LogWarning("[StoryManager] No thumbnail path in JSON!");
             listingThumbnail.sprite = null;
+            listingThumbnail.gameObject.SetActive(false);
         }
 
         prevButton.interactable = currentListingIndex > 0;
         nextButton.interactable = currentListingIndex < subchapters.Count - 1;
     }
+
 
 
     void OnPrevListing()
@@ -282,6 +303,17 @@ public class StoryManager : MonoBehaviour
     public void ConfirmReadYes()
     {
         confirmReadModal.SetActive(false);
+        StartCoroutine(ConfirmReadYesRoutine());
+    }
+
+    IEnumerator ConfirmReadYesRoutine()
+    {
+        if (loadingSpinner != null) loadingSpinner.SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+
+        if (loadingSpinner != null) loadingSpinner.SetActive(false);
+
         OpenSlidePanelForIndex(currentListingIndex);
     }
 
@@ -299,12 +331,59 @@ public class StoryManager : MonoBehaviour
         currentSlideZeroIndex = 0;
         currentTextChunkIndex = 0;
         quizActive = false;
-        slidePanel.SetActive(true);
+
+        slidePanel.SetActive(false);
+        if (slideImage != null) slideImage.sprite = null;
+
         exitConfirmModal.SetActive(false);
         finishPanel.SetActive(false);
         quizModal.SetActive(false);
-        ShowSlide(currentSlideZeroIndex);
+
+        if (loadingSpinner != null) loadingSpinner.SetActive(true);
+
+        StartCoroutine(OpenSlideAfterImageReady());
     }
+
+    IEnumerator OpenSlideAfterImageReady()
+    {
+        if (currentSubchapter == null || currentSubchapter.slides == null || currentSubchapter.slides.Length == 0)
+        {
+            Debug.LogError("Subchapter has no slides!");
+            yield break;
+        }
+
+        SlideData firstSlide = currentSubchapter.slides[0];
+        string slidePath = Path.Combine(Application.streamingAssetsPath, firstSlide.slideImg);
+
+        bool loaded = false;
+
+        yield return StartCoroutine(LoadTextureAsSpriteFromPath(slidePath, (sp) =>
+        {
+            if (sp != null && slideImage != null)
+            {
+                slideImage.sprite = sp;
+                slideImage.color = Color.white;
+                loaded = true;
+            }
+            else
+            {
+                Debug.LogWarning("[StoryManager] Failed to load first slide image!");
+                loaded = true;
+            }
+        }));
+
+        while (!loaded)
+            yield return null;
+
+        if (loadingSpinner != null) loadingSpinner.SetActive(false);
+
+        slidePanel.SetActive(true);
+        slideTextCanvasGroup.gameObject.SetActive(true);
+        storyBackButton.gameObject.SetActive(true);
+
+        ShowSlide(0);
+    }
+
 
     void ShowSlide(int zeroBasedIndex)
     {
@@ -322,38 +401,32 @@ public class StoryManager : MonoBehaviour
         if (slideTextCanvasGroup != null)
             slideTextCanvasGroup.alpha = 0f;
 
-        // ✅ SAFELY LOAD IMAGE
         if (slideImage != null && !string.IsNullOrEmpty(slide.slideImg))
         {
             string slidePath = Path.Combine(Application.streamingAssetsPath, slide.slideImg);
 
-            if (File.Exists(slidePath))
+            StartCoroutine(LoadTextureAsSpriteFromPath(slidePath, (sp) =>
             {
-                try
+                if (sp != null)
                 {
-                    byte[] bytes = File.ReadAllBytes(slidePath);
-                    Texture2D texture = new Texture2D(2, 2);
-                    texture.LoadImage(bytes);
-                    slideImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+                    slideImage.sprite = sp;
+                    slideImage.color = Color.white;
+                    Debug.Log("[StoryManager] Slide image loaded successfully: " + slide.slideImg);
                 }
-                catch (Exception e)
+                else
                 {
-                    Debug.LogError($"Failed to load image at {slidePath}: {e.Message}");
+                    slideImage.sprite = null;
+                    Debug.LogWarning("[StoryManager] Failed to load slide image: " + slide.slideImg);
                 }
-            }
-            else
-            {
-                Debug.LogWarning($"❌ Slide image not found: {slidePath}");
-                slideImage.sprite = null;
-            }
+            }));
         }
         else
         {
+            slideImage.sprite = null;
             Debug.LogWarning("slideImage is null or slide.slideImg is empty!");
-            if (slideImage != null)
-                slideImage.sprite = null;
         }
     }
+
 
 
     void OnSlideNextClicked()
@@ -465,6 +538,9 @@ public class StoryManager : MonoBehaviour
         currentSubchapter.isRead = true;
         SaveJson();
         finishPanel.SetActive(true);
+
+        var confetti = FindObjectOfType<ConfettiAnimation>();
+        if (confetti != null) confetti.PlayConfetti();
     }
 
     void OnFinishBackToList()
@@ -483,9 +559,27 @@ public class StoryManager : MonoBehaviour
 
         if (slideTextCanvasGroup != null) slideTextCanvasGroup.gameObject.SetActive(false);
         if (storyBackButton != null) storyBackButton.gameObject.SetActive(false);
-        quizModal.SetActive(true);
-        StartCoroutine(RunQuizSequence(questions));
+
+        if (preQuizPanel != null)
+        {
+            preQuizText.text = "Before we proceed, let's have a recall of what we've learned so far.\n(Mistakes are accepted until the correct answer is chosen.)";
+            preQuizPanel.SetActive(true);
+
+            startQuizButton.onClick.RemoveAllListeners();
+            startQuizButton.onClick.AddListener(() =>
+            {
+                preQuizPanel.SetActive(false);
+                quizModal.SetActive(true);
+                StartCoroutine(RunQuizSequence(questions));
+            });
+        }
+        else
+        {
+            quizModal.SetActive(true);
+            StartCoroutine(RunQuizSequence(questions));
+        }
     }
+
 
     IEnumerator RunQuizSequence(QuizTryQuestion[] questions)
     {
@@ -625,24 +719,42 @@ public class StoryManager : MonoBehaviour
     #region TTS (Android only, offline)
     void InitTTSIfAndroid()
     {
-#if UNITY_ANDROID && !UNITY_EDITOR
-        try
-        {
-            AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-            unityActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-            ttsObj = new AndroidJavaObject("android.speech.tts.TextToSpeech", unityActivity, new TTSListenerProxy());
-            AndroidJavaObject locale = new AndroidJavaObject("java.util.Locale", "en", "US");
-            int result = ttsObj.Call<int>("setLanguage", locale);
-            Debug.Log("TTS init done, setLanguage result: " + result);
-        }
-        catch (Exception e)
-        {
-            Debug.LogWarning("TTS init failed: " + e.Message);
-            ttsObj = null;
-        }
-#else
-#endif
+        StartCoroutine(InitTTSRoutine());
     }
+
+    IEnumerator InitTTSRoutine()
+    {
+        if (voiceSpinner != null) voiceSpinner.SetActive(true);
+        if (voiceToggle != null) voiceToggle.interactable = false;
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+    bool connected = false;
+    try
+    {
+        AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+        unityActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+        ttsObj = new AndroidJavaObject("android.speech.tts.TextToSpeech", unityActivity, new TTSListenerProxy());
+        AndroidJavaObject locale = new AndroidJavaObject("java.util.Locale", "en", "US");
+        int result = ttsObj.Call<int>("setLanguage", locale);
+        connected = true;
+        Debug.Log("TTS init done, setLanguage result: " + result);
+    }
+    catch (Exception e)
+    {
+        Debug.LogWarning("TTS init failed: " + e.Message);
+        ttsObj = null;
+        connected = false;
+    }
+#endif
+
+        yield return new WaitForSeconds(1f);
+
+        if (voiceSpinner != null) voiceSpinner.SetActive(false);
+        if (voiceToggle != null) voiceToggle.interactable = true;
+
+        voiceEnabled = voiceToggle.isOn;
+    }
+
 
     void Speak(string text)
     {
