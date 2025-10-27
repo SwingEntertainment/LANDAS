@@ -1,0 +1,247 @@
+{
+  "subchapters": [
+    {
+      "subchapterID": "ch1-01",
+      "title": "The Battle of Mactan",
+      "thumbnail": "thumbnails/ch1-01.png",
+      "imageTitle": "The Battle of Mactan",
+      "isRead": false,
+      "slides": [
+        {
+          "slideIndex": 1,
+          "slideImg": "slides/ch1-01/slide1.png",
+          "slideText": [
+            "Apo, the peace of our islands changed one day in 1521",
+            "when strangers with sails appeared on our shores. They were Spaniards."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideImg": "slides/ch1-01/slide2.png",
+          "slideText": [
+            "They were led by Ferdinand Magellan, a Portuguese explorer sailing for Spain.",
+            "He was looking for a way to reach the Spice Islands."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideImg": "slides/ch1-01/slide3.png",
+          "slideText": [
+            "When they landed in Cebu, they met Rajah Humabon.",
+            "He welcomed them, curious about the newcomers and their strange religion."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideImg": "slides/ch1-01/slide4.png",
+          "slideText": [
+            "Magellan baptized Rajah Humabon, his wife, and hundreds of others.",
+            "They were promised protection and friendship under one god."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideImg": "slides/ch1-01/slide5.png",
+          "slideText": [
+            "In Mactan, there lived a brave chieftain named Lapu-Lapu.",
+            "He refused to kneel to any foreign king."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideImg": "slides/ch1-01/slide6.png",
+          "slideText": [
+            "Magellan tried to force Lapu-Lapu to submit. But Lapu-Lapu stood his ground.",
+            "They fought fiercely on the beach. Magellan fell that day."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideImg": "slides/ch1-01/slide7.png",
+          "slideText": [
+            "Magellan's men left in defeat. For a time, our islands were free again.",
+            "But Spain did not forget."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideImg": "slides/ch1-01/slide8.png",
+          "slideText": [
+            "Spain kept trying to come back. It took more than 40 years",
+            "before they succeeded in returning and staying for good."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideImg": "slides/ch1-01/slide9.png",
+          "slideText": [
+            "In 1565, Miguel López de Legazpi arrived from Mexico.",
+            "He brought soldiers, priests, and orders to build a colony."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideImg": "slides/ch1-01/slide10.png",
+          "slideText": [
+            "To win trust, Legazpi made a sanduguan, a blood compact, with Datu Sikatuna of Bohol.",
+            "It was a sign of friendship but also a strategy."
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideImg": "slides/ch1-01/slide11.png",
+          "slideText": [
+            "Legazpi then went to Cebu but did not just visit. He fought and took it by force.",
+            "A settlement was built where the old kingdom stood."
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideImg": "slides/ch1-01/slide12.png",
+          "slideText": [
+            "Further north in Manila, Rajah Sulayman resisted. He warned the Spaniards:",
+            "'I will not be a friend to anyone who comes to conquer.'"
+          ]
+        },
+        {
+          "slideIndex": 13,
+          "slideImg": "slides/ch1-01/slide13.png",
+          "slideText": [
+            "There was a battle. Our warriors fought with spears and bravery",
+            "but the Spaniards had guns and cannons. Manila fell."
+          ]
+        },
+        {
+          "slideIndex": 14,
+          "slideImg": "slides/ch1-01/slide14.png",
+          "slideText": [
+            "In 1571, Legazpi made Manila the capital of the Spanish East Indies.",
+            "From here, the Spaniards would rule the islands."
+          ]
+        },
+        {
+          "slideIndex": 15,
+          "slideImg": "slides/ch1-01/slide15.png",
+          "slideText": [
+            "They began building forts and churches, not just with wood, but with rules:",
+            "Spanish rules, Spanish gods, Spanish laws."
+          ]
+        },
+        {
+          "slideIndex": 16,
+          "slideImg": "slides/ch1-01/slide16.png",
+          "slideText": [
+            "Some datus made peace with Spain, hoping to protect their people.",
+            "Others were forced, tricked, or defeated."
+          ]
+        },
+        {
+          "slideIndex": 17,
+          "slideImg": "slides/ch1-01/slide17.png",
+          "slideText": [
+            "Life began to change. Old customs were questioned.",
+            "New ways were taught. Some were accepted, others resisted."
+          ]
+        },
+        {
+          "slideIndex": 18,
+          "slideImg": "slides/ch1-01/slide18.png",
+          "slideText": [
+            "Resistance never fully stopped. In the mountains, forests, and distant islands,",
+            " many refused to bow down."
+          ]
+        },
+        {
+          "slideIndex": 19,
+          "slideImg": "slides/ch1-01/slide19.png",
+          "slideText": [
+            "Never forget those who stood firm, apo. Lapu-Lapu, Sulayman, and many unnamed",
+            "heroes showed us that freedom is worth fighting for."
+          ]
+        },
+        {
+          "slideIndex": 20,
+          "slideImg": "slides/ch1-01/slide20.png",
+          "slideText": [
+            "So began the long chapter of Spanish rule.",
+            "Not by peace alone, but also through war, clever alliances, and resistance."
+          ]
+        }
+      ],
+      "quizSegments": [
+        {
+          "triggerAfterSlide": 10,
+          "questions": [
+            {
+              "q": "Where did they first land?",
+              "choiceA": "Island A",
+              "choiceB": "Island B",
+              "correct": "A"
+            },
+            {
+              "q": "What did they bring?",
+              "choiceA": "Tools",
+              "choiceB": "Clothes",
+              "correct": "A"
+            },
+            {
+              "q": "Which animal was domesticated?",
+              "choiceA": "Dog",
+              "choiceB": "Pig",
+              "correct": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subchapterID": "ch1-02",
+      "title": "The Encomendia",
+      "thumbnail": "thumbnails/ch1-02.png",
+      "imageTitle": "The Encomendia",
+      "isRead": false,
+      "slides": [
+        {
+          "slideIndex": 1,
+          "slideImg": "slides/ch1-02/slide1.png",
+          "slideText": [
+            "Long before recorded history, the islands were inhabited by people who...",
+            "Archaeological evidence suggests..."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideImg": "slides/ch1-02/slide2.png",
+          "slideText": [
+            "Second slide single paragraph."
+          ]
+        }
+      ],
+      "quizSegments": [
+        {
+          "triggerAfterSlide": 10,
+          "questions": [
+            {
+              "q": "Where did they first land?",
+              "choiceA": "Island A",
+              "choiceB": "Island B",
+              "correct": "A"
+            },
+            {
+              "q": "What did they bring?",
+              "choiceA": "Tools",
+              "choiceB": "Clothes",
+              "correct": "A"
+            },
+            {
+              "q": "Which animal was domesticated?",
+              "choiceA": "Dog",
+              "choiceB": "Pig",
+              "correct": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
