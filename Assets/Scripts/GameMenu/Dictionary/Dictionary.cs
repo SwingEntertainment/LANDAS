@@ -177,16 +177,6 @@ public class Dictionary : MonoBehaviour
 
                     parent.PlayVoice();
                 }
-                else
-                {
-                    Debug.LogWarning("TTS failed to initialize.");
-                    parent.HidePreparingVoiceIndicator();
-
-                    if (parent.loadingSpinner != null)
-                        parent.loadingSpinner.SetActive(false);
-                    if (parent.voiceButton != null)
-                        parent.voiceButton.gameObject.SetActive(true);
-                }
             }
             else
             {
