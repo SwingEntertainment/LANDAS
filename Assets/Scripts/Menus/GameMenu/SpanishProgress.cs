@@ -18,7 +18,7 @@ public class SpanishProgress : MonoBehaviour
     private void UpdateProgressText()
     {
         int encountered = PlayerPrefs.GetInt("EncounteredCount", 0);
-        int total = PlayerPrefs.GetInt("TotalQuestions", 30);
+        int total = PlayerPrefs.GetInt("TotalQuestions", 90);
 
         if (progressText != null)
         {
