@@ -53,6 +53,9 @@ public class QuizSpanish : MonoBehaviour
     [Header("Audio")]
     public AudioClip quizTheme;
 
+    [Header("Confetti Effect")]
+    public ConfettiAnimation confettiEffect;
+
     [Header("Navigation")]
     public Button backButton;
     public string gameMenuScene = "GameMenu";
@@ -387,6 +390,7 @@ public class QuizSpanish : MonoBehaviour
         }
 
         string chosenMessage;
+
         if (currentScore >= unlockScoreThreshold && successMessages.Count > 0)
         {
             PlayerPrefs.SetInt(PREF_IS_AMERICA_UNLOCKED, 1);
@@ -399,6 +403,18 @@ public class QuizSpanish : MonoBehaviour
             chosenMessage = (retryMessages.Count > 0)
                 ? retryMessages[Random.Range(0, retryMessages.Count)]
                 : "Keep trying!";
+        }
+
+        if (currentScore >= 17)
+        {
+            if (confettiEffect != null)
+            {
+                confettiEffect.PlayConfetti();
+            }
+            else
+            {
+                Debug.LogWarning("ConfettiAnimation reference missing in Inspector!");
+            }
         }
 
         motivationalText.text = chosenMessage;

@@ -35,8 +35,9 @@ public class Dictionary : MonoBehaviour
     [Header("Scenes")]
     public string gameMenuScene = "GameMenu";
 
-    [Header("Voice Preparation UI")] 
-    public GameObject preparingVoicePanel; 
+    [Header("Voice Preparation UI")]
+    public GameObject preparingVoicePanel;
+    public GameObject loadingSpinner;
 
     private const string TutorialPlayedKey = "dictionaryTutorial";
 
@@ -96,26 +97,32 @@ public class Dictionary : MonoBehaviour
     private void OnVoiceButtonClicked()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-        if (!ttsInitialized)
+    if (!ttsInitialized)
+    {
+        if (!isPreparingVoice)
         {
-            if (!isPreparingVoice)
-            {
-                ShowPreparingVoiceIndicator();
-                InitializeAndroidTTS();
-            }
-            else
-            {
-                Debug.Log("Still preparing voice...");
-            }
+            if (voiceButton != null) voiceButton.gameObject.SetActive(false);
+
+            if (loadingSpinner != null) loadingSpinner.SetActive(true);
+
+            ShowPreparingVoiceIndicator();
+            InitializeAndroidTTS();
         }
         else
         {
-            PlayVoice();
+            Debug.Log("Still preparing voice...");
         }
+    }
+    else
+    {
+        PlayVoice();
+    }
 #else
         PlayVoice();
 #endif
     }
+
+
 
 #if UNITY_ANDROID && !UNITY_EDITOR
     private void InitializeAndroidTTS()
@@ -160,7 +167,14 @@ public class Dictionary : MonoBehaviour
                 {
                     Debug.Log("TTS initialized successfully in Tagalog.");
                     parent.ttsInitialized = true;
-                    parent.HidePreparingVoiceIndicator(); 
+
+                    parent.HidePreparingVoiceIndicator();
+
+                    if (parent.loadingSpinner != null)
+                        parent.loadingSpinner.SetActive(false);
+                    if (parent.voiceButton != null)
+                        parent.voiceButton.gameObject.SetActive(true);
+
                     parent.PlayVoice();
                 }
             }

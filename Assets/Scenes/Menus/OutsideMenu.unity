@@ -3849,7 +3849,7 @@ MonoBehaviour:
     - If we stay too close to that stall, we'll end up buying everything.
     - "Kicking it once is fine\u2026 keeping it up five times is basically sorcery."
     - "Cloudy, breezy\u2026 perfect weather to do absolutely nothing."
-    - "The grass looks comfy. If we lie down, don\u2019t wake us up."
+    - The grass looks comfy. If we lie down, don't wake us up.
     - This is that 'province vibe' city people post about online.
     lastIndex: 0
   - clickableImage: {fileID: 161319606}

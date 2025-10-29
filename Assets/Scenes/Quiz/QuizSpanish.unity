@@ -2361,6 +2361,7 @@ RectTransform:
   - {fileID: 2073027600}
   - {fileID: 1646801740}
   - {fileID: 1701265185}
+  - {fileID: 1652926929}
   m_Father: {fileID: 2063252064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4164,6 +4165,7 @@ MonoBehaviour:
   highscoreText: {fileID: 1506403400}
   unlockPopupText: {fileID: 1764275908}
   quizTheme: {fileID: 0}
+  confettiEffect: {fileID: 1652926930}
   backButton: {fileID: 507569287}
   gameMenuScene: GameMenu
   jsonFileName: QuizSpanish.json
@@ -4558,6 +4560,71 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646801739}
+  m_CullTransparentMesh: 1
+--- !u!1 &1652926928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652926929}
+  - component: {fileID: 1652926931}
+  - component: {fileID: 1652926930}
+  m_Layer: 0
+  m_Name: Confetti
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1652926929
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652926928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99675816, y: 0.99675816, z: 0.99675816}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 679428313}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 917, y: 412}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1652926930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652926928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5067f39fd7a99164aa42308c738c004a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  confettiSprite: {fileID: -8305358921124636501, guid: c80e83d32fa9fba4f8e683afa667dd47, type: 3}
+  confettiCount: 80
+  spawnDuration: 2
+  fallSpeed: 200
+  spreadX: 200
+  lifetimeRange: {x: 1.5, y: 2.5}
+  sizeRange: {x: 20, y: 40}
+  canvasRect: {fileID: 679428313}
+--- !u!222 &1652926931
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652926928}
   m_CullTransparentMesh: 1
 --- !u!1 &1700092786
 GameObject:
