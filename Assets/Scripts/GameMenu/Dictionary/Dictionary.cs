@@ -31,6 +31,8 @@ public class Dictionary : MonoBehaviour
 
     [Header("Audio Clips")]
     public AudioClip dictionaryTheme;
+    public AudioClip[] switchSFXList;
+
 
     [Header("Scenes")]
     public string gameMenuScene = "GameMenu";
@@ -75,19 +77,66 @@ public class Dictionary : MonoBehaviour
             backButton.onClick.AddListener(GoBackToGameMenu);
 
         if (nextPageButton != null)
-            nextPageButton.onClick.AddListener(() => ShowPage(currentPage + 1));
+        {
+            nextPageButton.onClick.AddListener(() =>
+            {
+                ShowPage(currentPage + 1);
+
+                if (AudioManager.Instance != null && switchSFXList != null && switchSFXList.Length > 0)
+                {
+                    int randomIndex = Random.Range(0, switchSFXList.Length);
+                    AudioManager.Instance.PlaySFX(switchSFXList[randomIndex]);
+                }
+            });
+        }
 
         if (prevPageButton != null)
-            prevPageButton.onClick.AddListener(() => ShowPage(currentPage - 1));
+        {
+            prevPageButton.onClick.AddListener(() =>
+            {
+                ShowPage(currentPage - 1);
+
+                if (AudioManager.Instance != null && switchSFXList != null && switchSFXList.Length > 0)
+                {
+                    int randomIndex = Random.Range(0, switchSFXList.Length);
+                    AudioManager.Instance.PlaySFX(switchSFXList[randomIndex]);
+                }
+            });
+        }
+
 
         if (voiceButton != null)
             voiceButton.onClick.AddListener(OnVoiceButtonClicked);
 
         if (detailNextButton != null)
-            detailNextButton.onClick.AddListener(() => ShowDetail(selectedWordIndex + 1));
+        {
+            detailNextButton.onClick.AddListener(() =>
+            {
+                ShowDetail(selectedWordIndex + 1);
+
+                if (AudioManager.Instance != null && switchSFXList != null && switchSFXList.Length > 0)
+                {
+                    int randomIndex = Random.Range(0, switchSFXList.Length);
+                    AudioManager.Instance.PlaySFX(switchSFXList[randomIndex]);
+                }
+            });
+        }
+
 
         if (detailPrevButton != null)
-            detailPrevButton.onClick.AddListener(() => ShowDetail(selectedWordIndex - 1));
+        {
+            detailPrevButton.onClick.AddListener(() =>
+            {
+                ShowDetail(selectedWordIndex - 1);
+
+                if (AudioManager.Instance != null && switchSFXList != null && switchSFXList.Length > 0)
+                {
+                    int randomIndex = Random.Range(0, switchSFXList.Length);
+                    AudioManager.Instance.PlaySFX(switchSFXList[randomIndex]);
+                }
+            });
+        }
+
 
         if (detailPanel != null) detailPanel.SetActive(false);
         if (preparingVoicePanel != null) preparingVoicePanel.SetActive(false);

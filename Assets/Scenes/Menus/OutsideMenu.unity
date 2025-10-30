@@ -3396,7 +3396,7 @@ MonoBehaviour:
   SipaButton: {fileID: 41371300}
   JolensButton: {fileID: 161319605}
   BackButton: {fileID: 388888438}
-  defaultTheme: {fileID: 8300000, guid: e43fe5d443023ff4393840855a9e1000, type: 3}
+  defaultTheme: {fileID: 8300000, guid: 0c5d5c976b7d62e48ab4665d28beef15, type: 3}
   SipaTheme: {fileID: 0}
   GameMenuTheme: {fileID: 0}
   PaloSeboTheme: {fileID: 0}

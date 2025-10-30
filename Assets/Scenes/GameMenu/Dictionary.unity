@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 931d85805b5d71444a518314f1a2a961, type: 3}
+  clickSound: {fileID: 0}
 --- !u!114 &27170755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +860,9 @@ MonoBehaviour:
   detailNextButton: {fileID: 1076359408}
   detailPrevButton: {fileID: 27170755}
   dictionaryTheme: {fileID: 0}
+  switchSFXList:
+  - {fileID: 8300000, guid: cc8ca5dbaee979645a4867625c5139ab, type: 3}
+  - {fileID: 8300000, guid: 6755ab90b1c75764aa2a89b4673069c8, type: 3}
   gameMenuScene: GameMenu
   preparingVoicePanel: {fileID: 1596889321}
   loadingSpinner: {fileID: 156811851}
@@ -1146,8 +1149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 318.1, y: 363.05}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: 320, y: 363.65}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &209292026
 GameObject:
@@ -2879,7 +2882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 931d85805b5d71444a518314f1a2a961, type: 3}
+  clickSound: {fileID: 0}
 --- !u!114 &1012454517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3451,7 +3454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 931d85805b5d71444a518314f1a2a961, type: 3}
+  clickSound: {fileID: 0}
 --- !u!222 &1076359411
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5243,7 +5246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 931d85805b5d71444a518314f1a2a961, type: 3}
+  clickSound: {fileID: 0}
 --- !u!114 &1741125904
 MonoBehaviour:
   m_ObjectHideFlags: 0
