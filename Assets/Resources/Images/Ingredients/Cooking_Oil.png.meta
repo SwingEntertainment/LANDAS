@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4c143fb779bfc1b4497be5b773b36688
+guid: f22ddb5d86d5b4b47b97ae16be9368cb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7751777048443264340
-    second: Flour_0
+      213: -7405984886500936096
+    second: Cooking_Oil_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flour_0
+      name: Cooking_Oil_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 680
-        height: 586
+        x: 51
+        y: 28
+        width: 219
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca2638958d72c6490800000000000000
-      internalID: -7751777048443264340
+      spriteID: 066333cfbf7a83990800000000000000
+      internalID: -7405984886500936096
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flour_0: -7751777048443264340
+      Cooking_Oil_0: -7405984886500936096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

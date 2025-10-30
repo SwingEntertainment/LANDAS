@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4c143fb779bfc1b4497be5b773b36688
+guid: f545c7e707c9d3e47b429f6905c627ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7751777048443264340
-    second: Flour_0
+      213: 5979058639432430815
+    second: Liver_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flour_0
+      name: Liver_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 680
-        height: 586
+        x: 53
+        y: 37
+        width: 212
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca2638958d72c6490800000000000000
-      internalID: -7751777048443264340
+      spriteID: fd4b9967722e9f250800000000000000
+      internalID: 5979058639432430815
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flour_0: -7751777048443264340
+      Liver_0: 5979058639432430815
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
