@@ -53,6 +53,11 @@ public class QuizSpanish : MonoBehaviour
     [Header("Audio")]
     public AudioClip quizTheme;
 
+    [Header("Audio Clips")]
+    public AudioClip correctSFX;
+    public AudioClip wrongSFX;
+
+
     [Header("Confetti Effect")]
     public ConfettiAnimation confettiEffect;
 
@@ -303,7 +308,6 @@ public class QuizSpanish : MonoBehaviour
         SetChoicesInteractable(false);
 
         Button selectedButton = null;
-        TMP_Text selectedText = null;
 
         foreach (var btn in choiceButtons)
         {
@@ -311,14 +315,14 @@ public class QuizSpanish : MonoBehaviour
             if (label != null && label.text == selectedChoice)
             {
                 selectedButton = btn;
-                selectedText = label;
                 break;
             }
         }
 
         feedbackPanel.SetActive(true);
+        bool isCorrect = selectedChoice == currentQuestion.correctAnswer;
 
-        if (selectedChoice == currentQuestion.correctAnswer)
+        if (isCorrect)
         {
             feedbackText.text = correctResponses[Random.Range(0, correctResponses.Count)];
             currentQuestion.isAnswered = true;
@@ -329,32 +333,37 @@ public class QuizSpanish : MonoBehaviour
                 UpdateEncounteredProgress();
             }
 
-            if (selectedText != null)
-                selectedText.color = new Color32(2, 59, 24, 255);
-
+            if (selectedButton != null)
+                selectedButton.image.color = new Color32(50, 207, 56, 255); 
             currentScore++;
             PlayerPrefs.SetInt(PREF_CURRENT_SCORE, currentScore);
             scoreText.text = $"{currentScore}";
-        }
 
+            if (AudioManager.Instance != null && correctSFX != null)
+                AudioManager.Instance.PlaySFX(correctSFX);
+        }
         else
         {
             feedbackText.text = wrongResponses[Random.Range(0, wrongResponses.Count)];
             currentQuestion.isAnswered = true;
 
-            if (selectedText != null)
-                selectedText.color = new Color32(179, 58, 58, 255);
+            if (selectedButton != null)
+                selectedButton.image.color = new Color32(219, 70, 70, 255);
+
+            if (AudioManager.Instance != null && wrongSFX != null)
+                AudioManager.Instance.PlaySFX(wrongSFX);
         }
 
         SaveQuizData();
+
+        StartCoroutine(ShowFloatingIcon(isCorrect));
 
         yield return new WaitForSeconds(feedbackDisplaySeconds);
 
         foreach (var btn in choiceButtons)
         {
-            TMP_Text label = btn.GetComponentInChildren<TMP_Text>();
-            if (label != null)
-                label.color = Color.black;
+            if (btn != null && btn.image != null)
+                btn.image.color = Color.white;
         }
 
         feedbackPanel.SetActive(false);
@@ -363,6 +372,50 @@ public class QuizSpanish : MonoBehaviour
         SetChoicesInteractable(true);
         ShowNextQuestion();
     }
+
+    [SerializeField] private TMP_Text checkIcon;
+    [SerializeField] private TMP_Text xIcon;
+
+    private IEnumerator ShowFloatingIcon(bool isCorrect)
+    {
+        TMP_Text targetIcon = isCorrect ? checkIcon : xIcon;
+        if (targetIcon == null) yield break;
+
+        targetIcon.gameObject.SetActive(true);
+
+        Color startColor = targetIcon.color;
+        startColor.a = 0;
+        targetIcon.color = startColor;
+
+        Vector3 startPos = targetIcon.rectTransform.localPosition;
+        Vector3 endPos = startPos + new Vector3(0, 50f, 0);
+        float duration = 2f;
+        float half = duration / 2f;
+        float elapsed = 0f;
+
+
+        while (elapsed < half)
+        {
+            float t = elapsed / half;
+            targetIcon.color = new Color(targetIcon.color.r, targetIcon.color.g, targetIcon.color.b, t);
+            targetIcon.rectTransform.localPosition = Vector3.Lerp(startPos, endPos, t * 0.5f);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        while (elapsed < duration)
+        {
+            float t = (elapsed - half) / half;
+            targetIcon.color = new Color(targetIcon.color.r, targetIcon.color.g, targetIcon.color.b, 1f - t);
+            targetIcon.rectTransform.localPosition = Vector3.Lerp(startPos + (Vector3.up * 25f), endPos, t);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        targetIcon.gameObject.SetActive(false);
+        targetIcon.rectTransform.localPosition = startPos;
+    }
+
 
     private void SetChoicesInteractable(bool state)
     {
@@ -405,7 +458,7 @@ public class QuizSpanish : MonoBehaviour
                 : "Keep trying!";
         }
 
-        if (currentScore >= 17)
+        if (currentScore >= 15)
         {
             if (confettiEffect != null)
             {

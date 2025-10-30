@@ -104,6 +104,9 @@ public class StoryManager : MonoBehaviour
     [Tooltip("If JSON doesn't contain quizSegments, this editor list will be used as a fallback quiz after slide #10.")]
     public QuizTryQuestion[] editorQuiz;
 
+    [Header("Audio Clips")]
+    public AudioClip switchSFX;
+
     [Header("Misc")]
     public float textFadeDuration = 0.45f;
     public int quizTriggerSlideIndexDefault = 10;
@@ -283,6 +286,8 @@ public class StoryManager : MonoBehaviour
         {
             currentListingIndex--;
             UpdateListingUI();
+            if (AudioManager.Instance != null && switchSFX != null)
+                AudioManager.Instance.PlaySFX(switchSFX);
         }
     }
 
@@ -292,6 +297,8 @@ public class StoryManager : MonoBehaviour
         {
             currentListingIndex++;
             UpdateListingUI();
+            if (AudioManager.Instance != null && switchSFX != null)
+                AudioManager.Instance.PlaySFX(switchSFX);
         }
     }
 
@@ -431,6 +438,7 @@ public class StoryManager : MonoBehaviour
 
     void OnSlideNextClicked()
     {
+        StopSpeak();
         if (quizActive) return;
 
         if (currentTextChunks != null && currentTextChunkIndex < currentTextChunks.Length)
@@ -521,6 +529,7 @@ public class StoryManager : MonoBehaviour
 
     public void ExitConfirmYes()
     {
+        StopSpeak();
         exitConfirmModal.SetActive(false);
         currentSlideZeroIndex = 0;
         currentTextChunkIndex = 0;
@@ -554,6 +563,7 @@ public class StoryManager : MonoBehaviour
     #region Quiz
     void ShowQuiz(QuizTryQuestion[] questions)
     {
+        StopSpeak();
         if (questions == null || questions.Length == 0) return;
         quizActive = true;
 
@@ -780,5 +790,23 @@ public class StoryManager : MonoBehaviour
         public void onInit(int status) { }
     }
 #endif
+
+void StopSpeak()
+{
+#if UNITY_ANDROID && !UNITY_EDITOR
+    if (ttsObj == null) return;
+    try
+    {
+        ttsObj.Call<int>("stop");
+    }
+    catch (Exception e)
+    {
+        Debug.LogWarning("TTS stop error: " + e.Message);
+    }
+#endif
+}
+
     #endregion
 }
+
+
