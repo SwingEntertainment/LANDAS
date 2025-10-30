@@ -24,7 +24,7 @@
       "dishName": "Menudo",
       "dishImg": "Menudo.png",
       "recipeList": ["Bell Pepper", "Liver", "Pork", "Potato", "Tomato sauce"],
-      "ingredientIDs": [4, 7, 17, 21, 22, 28],
+      "ingredientIDs": [4, 17, 21, 22, 28],
       "dishDescription": "A popular Filipino dish, has Spanish origins from the colonial period. It evolved from the Spanish 'cocido' stew. Filipino Menudo features pork, veggies, and liver, becoming a cherished part of Filipino culture and celebrations."
     },
     {
