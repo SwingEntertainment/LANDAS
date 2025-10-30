@@ -6,8 +6,67 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    path: Assets/Scenes/Menus/IntroSequence.unity
+    guid: 91f4f83305ae86041987a8a8104f6003
+  - enabled: 1
+    path: Assets/Scenes/Menus/MainMenu.unity
+    guid: b138aded0f9c6dc498a48dde17b4a252
+  - enabled: 1
+    path: Assets/Scenes/Menus/StorySequence.unity
+    guid: e21b3e66fd110684398784901f96d359
+  - enabled: 1
+    path: Assets/Scenes/Menus/GameMenu.unity
+    guid: 9be40a3be8694ce43a3017b138b61212
+  - enabled: 1
+    path: Assets/Scenes/Menus/OutsideMenu.unity
+    guid: 98d07474e36fe204394c29e1248ea320
+  - enabled: 1
+    path: Assets/Scenes/GameMenu/KitchenMenu.unity
+    guid: 5cd5a5f2fd1ffdf4cb7a97c4f27c9cba
+  - enabled: 1
+    path: Assets/Scenes/GameMenu/RecipeHunt.unity
+    guid: 114865f5ab966d9429717f3d2e014648
+  - enabled: 1
+    path: Assets/Scenes/GameMenu/Dictionary.unity
+    guid: c5f0f2f5e6b4ee24d933cd2c003742c9
+  - enabled: 1
+    path: Assets/Scenes/Quiz/QuizSpanish.unity
+    guid: f536b2f6ecdbddb4c90d4f269d6bbc42
+  - enabled: 1
+    path: Assets/Scenes/Quiz/QuizAmerica.unity
+    guid: 1a818a5744a1f2848853bb2b2b7aa7c0
+  - enabled: 1
+    path: Assets/Scenes/Quiz/QuizJapan.unity
+    guid: b58fba2392c15cc4392272ed4d4c069a
+  - enabled: 1
+    path: Assets/Scenes/Quiz/QuizModern.unity
+    guid: 6fca67c765b9add43b912673a05e6bc6
+  - enabled: 1
+    path: Assets/Scenes/Quiz/QuizTrivia.unity
+    guid: 8e8bd79ea82fef34dab634468df035cb
+  - enabled: 1
+    path: Assets/Scenes/Story/StorySpanish.unity
+    guid: bfc05564bca20e444ad925896bfd5ac4
+  - enabled: 1
+    path: Assets/Scenes/Story/StoryAmerica.unity
+    guid: 80bdc95b028c4e54ba95158d6a614d3d
+  - enabled: 1
+    path: Assets/Scenes/Story/StoryJapan.unity
+    guid: 11f8b6fe74b86ae44bcc84e3313241b9
+  - enabled: 1
+    path: Assets/Scenes/Story/StoryModern.unity
+    guid: 76a67b4f1a1232a4f8713b5457c825a0
+  - enabled: 1
+    path: Assets/Scenes/Story/StoryTrivia.unity
+    guid: b41294230202ac54e96a9e1319423c5d
+  - enabled: 1
+    path: Assets/Scenes/Story/StoryFinale.unity
+    guid: db061d1c6bdb837438ae881bea1eb552
+  - enabled: 1
+    path: Assets/Scenes/OutsideMenu/SipaGame.unity
+    guid: 5c1d1242acb529f42918d5d6d7d4dfad
+  - enabled: 1
+    path: Assets/Scenes/OutsideMenu/PaloSebo.unity
+    guid: 09b87a40b1ce72e4db84c26cd8ba6c44
+  m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -1,0 +1,823 @@
+{
+  "subchapters": [
+    {
+      "subchapterID": "ch1-01",
+      "title": "1 - The Battle of Mactan",
+      "thumbnail": "thumbnails/ch1-01.png",
+      "imageTitle": "1 - The Battle of Mactan",
+      "isRead": false,
+      "slides": [
+        {
+          "slideIndex": 1,
+          "slideImg": "slides/ch1-01/slide1.png",
+          "slideText": [
+            "Apo, the peace of our islands changed one day in 1521",
+            "when strangers with sails appeared on our shores. They were Spaniards."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideImg": "slides/ch1-01/slide2.png",
+          "slideText": [
+            "They were led by Ferdinand Magellan, a Portuguese explorer sailing for Spain.",
+            "He was looking for a way to reach the Spice Islands."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideImg": "slides/ch1-01/slide3.png",
+          "slideText": [
+            "When they landed in Cebu, they met Rajah Humabon.",
+            "He welcomed them, curious about the newcomers and their strange religion."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideImg": "slides/ch1-01/slide4.png",
+          "slideText": [
+            "Magellan baptized Rajah Humabon, his wife, and hundreds of others.",
+            "They were promised protection and friendship under one god."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideImg": "slides/ch1-01/slide5.png",
+          "slideText": [
+            "In Mactan, there lived a brave chieftain named Lapu-Lapu.",
+            "He refused to kneel to any foreign king."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideImg": "slides/ch1-01/slide6.png",
+          "slideText": [
+            "Magellan tried to force Lapu-Lapu to submit. But Lapu-Lapu stood his ground.",
+            "They fought fiercely on the beach. Magellan fell that day."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideImg": "slides/ch1-01/slide7.png",
+          "slideText": [
+            "Magellan's men left in defeat. For a time, our islands were free again.",
+            "But Spain did not forget."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideImg": "slides/ch1-01/slide8.png",
+          "slideText": [
+            "Spain kept trying to come back. It took more than 40 years",
+            "before they succeeded in returning and staying for good."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideImg": "slides/ch1-01/slide9.png",
+          "slideText": [
+            "In 1565, Miguel Lopez de Legazpi arrived from Mexico.",
+            "He brought soldiers, priests, and orders to build a colony."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideImg": "slides/ch1-01/slide10.png",
+          "slideText": [
+            "To win trust, Legazpi made a sanduguan, a blood compact, with Datu Sikatuna of Bohol.",
+            "It was a sign of friendship but also a strategy."
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideImg": "slides/ch1-01/slide11.png",
+          "slideText": [
+            "Legazpi then went to Cebu but did not just visit. He fought and took it by force.",
+            "A settlement was built where the old kingdom stood."
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideImg": "slides/ch1-01/slide12.png",
+          "slideText": [
+            "Further north in Manila, Rajah Sulayman resisted. He warned the Spaniards:",
+            "'I will not be a friend to anyone who comes to conquer.'"
+          ]
+        },
+        {
+          "slideIndex": 13,
+          "slideImg": "slides/ch1-01/slide13.png",
+          "slideText": [
+            "There was a battle. Our warriors fought with spears and bravery",
+            "but the Spaniards had guns and cannons. Manila fell."
+          ]
+        },
+        {
+          "slideIndex": 14,
+          "slideImg": "slides/ch1-01/slide14.png",
+          "slideText": [
+            "In 1571, Legazpi made Manila the capital of the Spanish East Indies.",
+            "From here, the Spaniards would rule the islands."
+          ]
+        },
+        {
+          "slideIndex": 15,
+          "slideImg": "slides/ch1-01/slide15.png",
+          "slideText": [
+            "They began building forts and churches, not just with wood, but with rules:",
+            "Spanish rules, Spanish gods, Spanish laws."
+          ]
+        },
+        {
+          "slideIndex": 16,
+          "slideImg": "slides/ch1-01/slide16.png",
+          "slideText": [
+            "Some datus made peace with Spain, hoping to protect their people.",
+            "Others were forced, tricked, or defeated."
+          ]
+        },
+        {
+          "slideIndex": 17,
+          "slideImg": "slides/ch1-01/slide17.png",
+          "slideText": [
+            "Life began to change. Old customs were questioned.",
+            "New ways were taught. Some were accepted, others resisted."
+          ]
+        },
+        {
+          "slideIndex": 18,
+          "slideImg": "slides/ch1-01/slide18.png",
+          "slideText": [
+            "Resistance never fully stopped. In the mountains, forests, and distant islands,",
+            " many refused to bow down."
+          ]
+        },
+        {
+          "slideIndex": 19,
+          "slideImg": "slides/ch1-01/slide19.png",
+          "slideText": [
+            "Never forget those who stood firm, apo. Lapu-Lapu, Sulayman, and many unnamed",
+            "heroes showed us that freedom is worth fighting for."
+          ]
+        },
+        {
+          "slideIndex": 20,
+          "slideImg": "slides/ch1-01/slide20.png",
+          "slideText": [
+            "So began the long chapter of Spanish rule.",
+            "Not by peace alone, but also through war, clever alliances, and resistance."
+          ]
+        }
+      ],
+      "quizSegments": [
+        {
+          "triggerAfterSlide": 10,
+          "questions": [
+            {
+              "q": "When did the peace of our islands change?",
+              "choiceA": "1521",
+              "choiceB": "1571",
+              "correct": "A"
+            },
+            {
+              "q": "In 1521, Who'se spanish leader led them?",
+              "choiceA": "Ferdinand Magellan",
+              "choiceB": "Miguel Lopez de Legazpi",
+              "correct": "A"
+            },
+            {
+              "q": "What was he looking for?",
+              "choiceA": "gold and silver",
+              "choiceB": "a way to reach the Spice Islands",
+              "correct": "B"
+            },
+            {
+              "q": "Where did they land and meet Rajah Humabon?",
+              "choiceA": "Manila",
+              "choiceB": "Cebu",
+              "correct": "B"
+            },
+            {
+              "q": "What did Magellan do to Rajah Humabon, his wife, and hundreds of others?",
+              "choiceA": "Magellan baptized Rajah Humabon, his wife, and hundreds of others.",
+              "choiceB": "Magellan made treaties with them.",
+              "correct": "A"
+            }
+          ]
+        },
+        {
+          "triggerAfterSlide": 20,
+          "questions": [
+            {
+              "q": "How long did it take before Spain succeeded in returning and staying for good?",
+              "choiceA": "10 years",
+              "choiceB": "more than 40 years",
+              "correct": "B"
+            },
+            {
+              "q": "Who arrived in 1565 from Mexico?",
+              "choiceA": "Miguel Lopez de Legazpi",
+              "choiceB": "Ferdinand Magellan",
+              "correct": "A"
+            },
+            {
+              "q": "Who did Legazpi make a sanduguan with?",
+              "choiceA": "Rajah Sulayman of Manila",
+              "choiceB": "Datu Sikatuna of Bohol",
+              "correct": "B"
+            },
+            {
+              "q": "Who resisted the Spaniards in Manila?",
+              "choiceA": "Rajah Sulayman",
+              "choiceB": "Rajah Humabon",
+              "correct": "A"
+            },
+            {
+              "q": "When did Legazpi make Manila the capital of the Spanish East Indies?",
+              "choiceA": "1565",
+              "choiceB": "1571",
+              "correct": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subchapterID": "ch1-02",
+      "title": "2 - The Encomendia",
+      "thumbnail": "thumbnails/ch1-02.png",
+      "imageTitle": "2 - The Encomendia",
+      "isRead": false,
+      "slides": [
+        {
+          "slideIndex": 1,
+          "slideImg": "slides/ch1-02/slide1.png",
+          "slideText": [
+            "When Spain finally settled on our islands, they didn't just bring swords.",
+            "They brought rulers, priests, and rules."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideImg": "slides/ch1-02/slide2.png",
+          "slideText": [
+            "One of the first systems they set up was called the Encomienda.",
+            "The king gave land to a Spaniard, who became an encomendero."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideImg": "slides/ch1-02/slide3.png",
+          "slideText": [
+            "But it wasn't just land. The encomendero also collected tributes like",
+            "food, gold, or labor from the people living there."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideImg": "slides/ch1-02/slide4.png",
+          "slideText": [
+            "They were supposed to protect the natives and teach them the faith.",
+            "But some became greedy, treating people unfairly."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideImg": "slides/ch1-02/slide5.png",
+          "slideText": [
+            "Then came the Reduccion. Spaniards forced scattered villages",
+            "to move into town centers, to make ruling and converting easier."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideImg": "slides/ch1-02/slide6.png",
+          "slideText": [
+            "These new towns had a central plaza, a church, and government buildings.",
+            "It was the Spanish way of organizing life."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideImg": "slides/ch1-02/slide7.png",
+          "slideText": [
+            "They chose a local leader called the gobernadorcillo to govern the town.",
+            "But he had to follow Spanish orders."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideImg": "slides/ch1-02/slide8.png",
+          "slideText": [
+            "Religion became a powerful tool. Friars taught the people Catholic prayers,",
+            "banned native rituals, and held great power in town."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideImg": "slides/ch1-02/slide9.png",
+          "slideText": [
+            "There were many religious orders like Augustinians, Franciscans, Dominicans,",
+            "Jesuits each with missions in different provinces."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideImg": "slides/ch1-02/slide10.png",
+          "slideText": [
+            "Some friars were kind. But others acted like kings.",
+            "They punished people, interfered in politics, and owned vast lands."
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideImg": "slides/ch1-02/slide11.png",
+          "slideText": [
+            "They built schools too. Boys studied in seminaries, girls in convents."
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideImg": "slides/ch1-02/slide11.2.png",
+          "slideText": [
+            "But most people only learned to read for prayers."
+          ]
+        },
+        {
+          "slideIndex": 13,
+          "slideImg": "slides/ch1-02/slide12.png"
+        },
+        {
+          "slideIndex": 14,
+          "slideImg": "slides/ch1-02/slide12.2.png",
+          "slideText": [
+            "People were also forced to work. They built roads, churches, and ships"
+          ]
+        },
+        {
+          "slideIndex": 15,
+          "slideImg": "slides/ch1-02/slide12.3.png"
+        },
+        {
+          "slideIndex": 16,
+          "slideImg": "slides/ch1-02/slide12.4.png",
+          "slideText": [
+            "under the polo y servicio that forced labor for men."
+          ]
+        },
+        {
+          "slideIndex": 17,
+          "slideImg": "slides/ch1-02/slide13.png",
+          "slideText": [
+            "Every family paid tribute. Those who failed were punished."
+          ]
+        },
+        {
+          "slideIndex": 18,
+          "slideImg": "slides/ch1-02/slide13.2.png"
+        },
+        {
+          "slideIndex": 19,
+          "slideImg": "slides/ch1-02/slide13.3.png"
+        },
+        {
+          "slideIndex": 20,
+          "slideImg": "slides/ch1-02/slide13.4.png",
+          "slideText": [
+            "Some families ran to the mountains to escape."
+          ]
+        },
+        {
+          "slideIndex": 21,
+          "slideImg": "slides/ch1-02/slide14.png",
+          "slideText": [
+            "A few native leaders became part of the Principalia."
+          ]
+        },
+        {
+          "slideIndex": 22,
+          "slideImg": "slides/ch1-02/slide14.2.png",
+          "slideText": [
+            "They gained privileges and helped enforce Spanish control."
+          ]
+        },
+        {
+          "slideIndex": 23,
+          "slideImg": "slides/ch1-02/slide15.png",
+          "slideText": [
+            "Sometimes, friars and government officials clashed."
+          ]
+        },
+        {
+          "slideIndex": 24,
+          "slideImg": "slides/ch1-02/slide15.2.png",
+          "slideText": [
+            "But in the end, they both wanted control."
+          ]
+        },
+        {
+          "slideIndex": 25,
+          "slideImg": "slides/ch1-02/slide16.png"
+        },
+        {
+          "slideIndex": 26,
+          "slideImg": "slides/ch1-02/slide16.2.png",
+          "slideText": [
+            "Over time, mestizos children of mixed Spanish and native blood"
+          ]
+        },
+        {
+          "slideIndex": 27,
+          "slideImg": "slides/ch1-02/slide16.3.png"
+        },
+        {
+          "slideIndex": 28,
+          "slideImg": "slides/ch1-02/slide16.4.png",
+          "slideText": [
+            "became a growing group. Some rose to wealth and power."
+          ]
+        },
+        {
+          "slideIndex": 29,
+          "slideImg": "slides/ch1-02/slide17.png"
+        },
+        {
+          "slideIndex": 30,
+          "slideImg": "slides/ch1-02/slide17.2.png",
+          "slideText": [
+            "Though the friars walked among us, and many people converted, some kept their old"
+          ]
+        },
+        {
+          "slideIndex": 31,
+          "slideImg": "slides/ch1-02/slide17.3.png"
+        },
+        {
+          "slideIndex": 32,
+          "slideImg": "slides/ch1-02/slide17.4.png",
+          "slideText": [
+            "beliefs in secret. The spirit of our ancestors never fully disappeared."
+          ]
+        },
+        {
+          "slideIndex": 33,
+          "slideImg": "slides/ch1-02/slide18.png",
+          "slideText": [
+            "Life under Spain seemed quiet."
+          ]
+        },
+        {
+          "slideIndex": 34,
+          "slideImg": "slides/ch1-02/slide18.2.png",
+          "slideText": [
+            "But under that silence were seeds of anger, waiting to grow."
+          ]
+        },
+        {
+          "slideIndex": 35,
+          "slideImg": "slides/ch1-02/slide19.png",
+          "slideText": [
+            "These were the tools of control like coins, crosses, and records."
+          ]
+        },
+        {
+          "slideIndex": 36,
+          "slideImg": "slides/ch1-02/slide19.2.png"
+        },
+        {
+          "slideIndex": 37,
+          "slideImg": "slides/ch1-02/slide19.3.png",
+          "slideText": [
+            "Spain ruled not just with weapons, but with systems."
+          ]
+        },
+        {
+          "slideIndex": 38,
+          "slideImg": "slides/ch1-02/slide20.png",
+          "slideText": [
+            "Now you know, apo, how they ruled us. Not only through conquest,"
+          ]
+        },
+        {
+          "slideIndex": 39,
+          "slideImg": "slides/ch1-02/slide20.2.png",
+          "slideText": [
+            "but by changing how we lived, prayed, and worked."
+          ]
+        }
+      ],
+      "quizSegments": [
+        {
+          "triggerAfterSlide": 20,
+          "questions": [
+            {
+              "q": "One of the first systems they set up was called what?",
+              "choiceA": "Encomienda",
+              "choiceB": "Reduccion",
+              "correct": "A"
+            },
+            {
+              "q": "Who became an encomendero?",
+              "choiceA": "a Spaniard",
+              "choiceB": "a friar",
+              "correct": "A"
+            },
+            {
+              "q": "What was the Reduccion?",
+              "choiceA": "A new tax system",
+              "choiceB": "Spaniards forced scattered villages to move into town centers",
+              "correct": "B"
+            },
+            {
+              "q": "What local leader did they choose to govern the town?",
+              "choiceA": "gobernadorcillo",
+              "choiceB": "alcalde mayor",
+              "correct": "A"
+            },
+            {
+              "q": "Which of these was listed as a religious order with missions in different provinces?",
+              "choiceA": "Augustinians",
+              "choiceB": "Mendicants",
+              "correct": "A"
+            }
+          ]
+        },
+        {
+          "triggerAfterSlide": 39,
+          "questions": [
+            {
+              "q": "What did most people only learn to read for?",
+              "choiceA": "prayers",
+              "choiceB": "stories",
+              "correct": "A"
+            },
+            {
+              "q": "Under what system were men forced to work building roads, churches, and ships?",
+              "choiceA": "polo y servicio",
+              "choiceB": "Encomienda",
+              "correct": "A"
+            },
+            {
+              "q": "Every family paid what to the Spaniards?",
+              "choiceA": "tax in coins",
+              "choiceB": "tribute",
+              "correct": "B"
+            },
+            {
+              "q": "Where did some families run to in order to escape tribute and labor?",
+              "choiceA": "the rivers",
+              "choiceB": "the mountains",
+              "correct": "B"
+            },
+            {
+              "q": "Who were the mestizos?",
+              "choiceA": "children of mixed Spanish and native blood",
+              "choiceB": "Spanish priests",
+              "correct": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subchapterID": "ch1-03",
+      "title": "3 - The Friarocracy",
+      "thumbnail": "thumbnails/ch1-03.png",
+      "imageTitle": "3 - The Friarocracy",
+      "isRead": false,
+      "slides": [
+        {
+          "slideIndex": 1,
+          "slideImg": "slides/ch1-03/slide1.png",
+          "slideText": [
+            "Every year, they paid more for gold, crops, and labor.",
+            "Eventually, the people said, 'Sobra na.' And they began to resist."
+          ]
+        },
+        {
+          "slideIndex": 2,
+          "slideImg": "slides/ch1-03/slide2.png",
+          "slideText": [
+            "Even in the beginning, there was tension. In 1574,",
+            "Lakandula and Sulayman led a revolt when Spain broke their agreement."
+          ]
+        },
+        {
+          "slideIndex": 3,
+          "slideImg": "slides/ch1-03/slide3.png",
+          "slideText": [
+            "The revolt failed. Like many after it.",
+            "But it showed that the people would not simply bow forever."
+          ]
+        },
+        {
+          "slideIndex": 4,
+          "slideImg": "slides/ch1-03/slide4.png",
+          "slideText": [
+            "In 1587, GABRIELA SILANG wasn't born yet, but brave women already stood up.",
+            "Like Magalat in Cagayan and Tamblot in Bohol."
+          ]
+        },
+        {
+          "slideIndex": 5,
+          "slideImg": "slides/ch1-03/slide5.png",
+          "slideText": [
+            "Tamblot, a babaylan, led a revolt in 1621.",
+            "He wanted to return to native beliefs. Religion was his weapon."
+          ]
+        },
+        {
+          "slideIndex": 6,
+          "slideImg": "slides/ch1-03/slide6.png",
+          "slideText": [
+            "Many revolts were spiritual. People were forced to abandon their gods.",
+            "Some obeyed. Others fought back."
+          ]
+        },
+        {
+          "slideIndex": 7,
+          "slideImg": "slides/ch1-03/slide7.png",
+          "slideText": [
+            "Bankaw had welcomed the Spaniards years before.",
+            "But by 1621, he saw their true colors and revolted too."
+          ]
+        },
+        {
+          "slideIndex": 8,
+          "slideImg": "slides/ch1-03/slide8.png",
+          "slideText": [
+            "In Pangasinan, a man named Malong tried to build his own kingdom in 1660.",
+            "He was once part of the system until he rebelled."
+          ]
+        },
+        {
+          "slideIndex": 9,
+          "slideImg": "slides/ch1-03/slide9.png",
+          "slideText": [
+            "Soon after, Juan Caragay and the Zambals joined.",
+            "The flames of resistance kept spreading."
+          ]
+        },
+        {
+          "slideIndex": 10,
+          "slideImg": "slides/ch1-03/slide10.png",
+          "slideText": [
+            "And finally, in the north, came a woman named Gabriela Silang.",
+            "After her husband Diego was killed, she took up his cause."
+          ]
+        },
+        {
+          "slideIndex": 11,
+          "slideImg": "slides/ch1-03/slide11.png",
+          "slideText": [
+            "She led one of the fiercest uprisings in Ilocos, hoping to build a free land.",
+            "But she was captured and hanged."
+          ]
+        },
+        {
+          "slideIndex": 12,
+          "slideImg": "slides/ch1-03/slide12.png",
+          "slideText": [
+            "Even when revolts failed, some rebels fled to the hills.",
+            "There, they lived free, beyond Spain's reach."
+          ]
+        },
+        {
+          "slideIndex": 13,
+          "slideImg": "slides/ch1-03/slide13.png",
+          "slideText": [
+            "Spanish priests and officials feared these uprisings.",
+            "They wrote about the 'restless' natives in their reports."
+          ]
+        },
+        {
+          "slideIndex": 14,
+          "slideImg": "slides/ch1-03/slide14.png",
+          "slideText": [
+            "To calm things down, Spain started educating some natives.",
+            "But it wasn't out of kindness and it was to create loyal allies."
+          ]
+        },
+        {
+          "slideIndex": 15,
+          "slideImg": "slides/ch1-03/slide15.png",
+          "slideText": [
+            "Many rebels believed in anting-anting charms that would protect them.",
+            "Their revolts were also acts of faith."
+          ]
+        },
+        {
+          "slideIndex": 16,
+          "slideImg": "slides/ch1-03/slide16.png",
+          "slideText": [
+            "Revolt after revolt, the leaders were captured and punished.",
+            "Heads were displayed, to scare the rest."
+          ]
+        },
+        {
+          "slideIndex": 17,
+          "slideImg": "slides/ch1-03/slide17.png",
+          "slideText": [
+            "But the people never forgot. The pain became stories.",
+            "The stories became anger. And the anger never truly died."
+          ]
+        },
+        {
+          "slideIndex": 18,
+          "slideImg": "slides/ch1-03/slide18.png",
+          "slideText": [
+            "Even in silence, the people planned.",
+            "Revolts would continue bigger, stronger, more united."
+          ]
+        },
+        {
+          "slideIndex": 19,
+          "slideImg": "slides/ch1-03/slide19.png",
+          "slideText": [
+            "These are not just places. They are the cradle of our courage.",
+            "Each revolt added to our fight for freedom."
+          ]
+        },
+        {
+          "slideIndex": 20,
+          "slideImg": "slides/ch1-03/slide20.png",
+          "slideText": [
+            "Remember their names, apo. They stood when others bowed.",
+            "Even if they are lost, their spirit lives in us."
+          ]
+        }
+      ],
+      "quizSegments": [
+        {
+          "triggerAfterSlide": 10,
+          "questions": [
+            {
+              "q": "In 1574, who led a revolt when Spain broke their agreement?",
+              "choiceA": "Magalat",
+              "choiceB": "Lakandula and Sulayman",
+              "correct": "B"
+            },
+            {
+              "q": "Who stood up before Gabriela Silang, like Magalat in Cagayan and Tamblot in Bohol?",
+              "choiceA": "Lakandula and Sulayman",
+              "choiceB": "Magalat and Tamblot",
+              "correct": "B"
+            },
+            {
+              "q": "What was Tamblot's weapon?",
+              "choiceA": "Gold",
+              "choiceB": "Religion",
+              "correct": "B"
+            },
+            {
+              "q": "Who had welcomed the Spaniards years before but revolted by 1621?",
+              "choiceA": "Bankaw",
+              "choiceB": "Magalat",
+              "correct": "A"
+            },
+            {
+              "q": "Who joined the flames of resistance soon after Malong?",
+              "choiceA": "Juan Caragay and the Zambals",
+              "choiceB": "Lakandula and Sulayman",
+              "correct": "A"
+            }
+          ]
+        },
+        {
+          "triggerAfterSlide": 20,
+          "questions": [
+            {
+              "q": "Where did some rebels flee when revolts failed?",
+              "choiceA": "To the sea",
+              "choiceB": "To the hills",
+              "correct": "B"
+            },
+            {
+              "q": "Why did Spain start educating some natives?",
+              "choiceA": "To create loyal allies",
+              "choiceB": "To learn native languages",
+              "correct": "A"
+            },
+            {
+              "q": "What did many rebels believe in that would protect them?",
+              "choiceA": "Gold necklaces",
+              "choiceB": "Anting-anting charms",
+              "correct": "B"
+            },
+            {
+              "q": "What was displayed to scare the rest after leaders were punished?",
+              "choiceA": "Their weapons",
+              "choiceB": "Their heads",
+              "correct": "B"
+            },
+            {
+              "q": "Who feared the uprisings and called the natives 'restless'?",
+              "choiceA": "Spanish priests and officials",
+              "choiceB": "Native leaders",
+              "correct": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

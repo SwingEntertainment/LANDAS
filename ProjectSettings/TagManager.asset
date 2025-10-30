@@ -2,8 +2,12 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Ground
+  - Feet
+  - Ball
+  - 'PlayerFeet '
   layers:
   - Default
   - TransparentFX
@@ -41,3 +45,35 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background1
+    uniqueID: 670354683
+    locked: 0
+  - name: bamboo1
+    uniqueID: 3699834573
+    locked: 0
+  - name: noclouds
+    uniqueID: 2474109783
+    locked: 0
+  - name: cloud1
+    uniqueID: 790382641
+    locked: 0
+  - name: cloud2
+    uniqueID: 3935790743
+    locked: 0
+  - name: cloud3
+    uniqueID: 2348851963
+    locked: 0
+  - name: cloud4
+    uniqueID: 1634653585
+    locked: 0
+  - name: background
+    uniqueID: 3066259119
+    locked: 0
+  - name: New Layer 9
+    uniqueID: 316438993
+    locked: 0
+  - name: New Layer 10
+    uniqueID: 3073788461
+    locked: 0
+  m_RenderingLayers:
+  - Default
