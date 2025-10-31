@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 65b3969d41f418d4085b1feef5abe66b
+guid: 4b1213608d2fca04783689c730d89f27
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7751777048443264340
-    second: Flour_0
+      213: -723406303519642812
+    second: Flour 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flour_0
+      name: Flour 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 680
-        height: 586
+        x: 51
+        y: 28
+        width: 219
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca2638958d72c6490800000000000000
-      internalID: -7751777048443264340
+      spriteID: 44bee6abcc1f5f5f0800000000000000
+      internalID: -723406303519642812
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flour_0: -7751777048443264340
+      Flour 1_0: -723406303519642812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
