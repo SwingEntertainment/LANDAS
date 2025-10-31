@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using TMPro; 
+using TMPro;
 
 public class Ball : MonoBehaviour
 {
@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
     public GameObject ballPrefab;
     public RectTransform backgroundPanel;
     public ScoreManager scoreManager;
-    public TMP_Text highScoreText; 
+    public TMP_Text highScoreText;
 
     [Header("Fall Settings")]
     public float minFallSpeed = 10f;
@@ -16,19 +16,19 @@ public class Ball : MonoBehaviour
     public float horizontalMargin = 0.5f;
 
     [Header("Game Over Settings")]
-    public GameObject gameOverPanel;   
-    public Animator bgAnimator;        
+    public GameObject gameOverPanel;
+    public Animator bgAnimator;
 
-    [HideInInspector] public GameObject currentBall; 
+    [HideInInspector] public GameObject currentBall;
+
+    private Camera cam;
 
     private void Start()
     {
+        cam = Camera.main;
+
         if (scoreManager == null)
-        {
             scoreManager = FindObjectOfType<ScoreManager>();
-            if (scoreManager == null)
-                Debug.LogError("ScoreManager not found in scene!");
-        }
 
         if (backgroundPanel == null)
             backgroundPanel = FindObjectOfType<RectTransform>();
@@ -51,7 +51,6 @@ public class Ball : MonoBehaviour
         float fallSpeed = Random.Range(minFallSpeed, maxFallSpeed);
 
         currentBall = Instantiate(ballPrefab, spawnPos, Quaternion.identity);
-
         Rigidbody2D rb = currentBall.GetComponent<Rigidbody2D>();
         if (rb == null) rb = currentBall.AddComponent<Rigidbody2D>();
 
@@ -65,17 +64,24 @@ public class Ball : MonoBehaviour
             col.isTrigger = false;
         }
 
-        StartCoroutine(CheckForGameOver(currentBall));
+        StartCoroutine(CheckForRespawnOrGameOver(currentBall));
     }
 
-    private IEnumerator CheckForGameOver(GameObject ball)
+    private IEnumerator CheckForRespawnOrGameOver(GameObject ball)
     {
-        Camera cam = Camera.main;
         while (ball != null)
         {
-            float bottomY = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
+            Vector3 viewportPos = cam.WorldToViewportPoint(ball.transform.position);
 
-            if (ball.transform.position.y <= bottomY)
+            if (viewportPos.x <= 0f || viewportPos.x >= 1f)
+            {
+                Destroy(ball);
+                yield return new WaitForSeconds(0.3f);
+                SpawnBall();
+                yield break;
+            }
+
+            if (viewportPos.y <= 0f)
             {
                 TriggerGameOver(ball);
                 yield break;
@@ -95,14 +101,16 @@ public class Ball : MonoBehaviour
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(true);
-            gameOverPanel.transform.SetAsLastSibling(); 
+            gameOverPanel.transform.SetAsLastSibling();
         }
+        
+            FeetCollider feet = FindObjectOfType<FeetCollider>();
+            if (feet != null)
+                feet.SetGameOver(true);
 
         GameObject playerObj = GameObject.Find("player");
         if (playerObj != null)
-        {
             playerObj.SetActive(false);
-        }
 
         if (scoreManager != null)
         {
@@ -125,5 +133,16 @@ public class Ball : MonoBehaviour
             Destroy(ball);
 
         Time.timeScale = 0f;
+    }
+
+    public void ResetBall()
+    {
+        StopAllCoroutines();
+
+        if (currentBall != null)
+            Destroy(currentBall);
+
+        Time.timeScale = 1f;
+        SpawnBall();
     }
 }

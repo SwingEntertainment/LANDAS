@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class DragPlayerLeftRight : MonoBehaviour
 {
-    public float screenMargin = 0.5f; // Distance from screen edge
+    public float screenMargin = 0.5f; 
 
     private bool isDragging = false;
     private Vector3 offset;
