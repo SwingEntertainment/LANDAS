@@ -46,4 +46,15 @@ public class PlayerKickAnimation : MonoBehaviour
         playerRenderer.sprite = defaultSprite;
         isKicking = false;
     }
+
+    public void ResetAnimation()
+    {
+        StopAllCoroutines(); 
+        isKicking = false;  
+
+        if (playerRenderer != null && defaultSprite != null)
+            playerRenderer.sprite = defaultSprite;
+
+        Debug.Log("🔄 PlayerKickAnimation: Reset to default sprite.");
+    }
 }

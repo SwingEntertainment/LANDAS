@@ -9,43 +9,60 @@ public class SipaGame : MonoBehaviour
     public Animator bgAnimator;         
     public Ball ballManager;           
     public ScoreManager scoreManager;   
+    public SpriteRenderer playerSprite;   
+    public Sprite defaultPlayerSprite;    
 
-    // Button function to go back to main menu
     public void BackToMenu()
     {
         SceneManager.LoadSceneAsync("OutsideMenu");
     }
 
-    // Function to restart the game
     public void Restart()
     {
-        Debug.Log("Restart function called!"); 
+        Debug.Log("Restart function called!");
 
-        // Reactivate player
         if (player != null)
+        {
             player.SetActive(true);
 
-        // Hide Game Over panel
+            if (playerSprite != null && defaultPlayerSprite != null)
+            {
+                playerSprite.sprite = defaultPlayerSprite;
+            }
+
+            var kickAnim = player.GetComponent<PlayerKickAnimation>();
+            if (kickAnim != null)
+                kickAnim.ResetAnimation();
+
+            Animator playerAnimator = player.GetComponent<Animator>();
+            if (playerAnimator != null)
+            {
+                playerAnimator.Rebind();  
+                playerAnimator.Update(0f); 
+            }
+        }
+
+        FeetCollider feet = FindObjectOfType<FeetCollider>();
+        if (feet != null)
+            feet.SetGameOver(false);
+
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
 
-        // Restart background animation
         if (bgAnimator != null)
             bgAnimator.enabled = true;
 
-        // Reset score
         if (scoreManager != null)
             scoreManager.ResetScore();
 
-        // Destroy current ball if exists
         if (ballManager != null && ballManager.currentBall != null)
             Destroy(ballManager.currentBall);
 
-        // Spawn a new ball
         if (ballManager != null)
             ballManager.SpawnBall();
 
-        // Resume the game if it was paused
         Time.timeScale = 1f;
+
+        Debug.Log("✅ Game restarted successfully!");
     }
 }

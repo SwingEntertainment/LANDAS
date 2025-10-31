@@ -9,14 +9,24 @@ public class FeetCollider : MonoBehaviour
     public ScoreManager scoreManager;
 
     [Header("Bounce Settings")]
-    public float bounceForce = 14f;    // how strong the upward kick is
-    public float topRespawnY = 6f;     // Y position to trigger respawn
-    public float respawnDelay = 0.5f;  // delay before respawn
+    public float bounceForce = 14f;    
+    public float topRespawnY = 6f;     
+    public float respawnDelay = 0.5f;  
+    public float maxWaitTime = 2f;  
 
     private bool hasKicked = false;
+    private bool isGameOver = false;
+
+    private void OnEnable()
+    {
+        hasKicked = false;
+        isGameOver = false;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isGameOver) return;
+
         if (!hasKicked && collision.gameObject.CompareTag("Ball"))
         {
             StartCoroutine(KickBall(collision.gameObject));
@@ -27,27 +37,30 @@ public class FeetCollider : MonoBehaviour
     {
         hasKicked = true;
 
-        // Play kick animation if available
         if (playerKick != null)
             yield return StartCoroutine(playerKick.PlayKickAnimation());
 
-        // Add +1 score
         if (scoreManager != null)
             scoreManager.AddScore(1);
 
         Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
-
         if (rb != null)
         {
-            rb.linearVelocity = Vector2.zero; // reset velocity
-            rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse); // apply upward impulse
+            rb.linearVelocity = Vector2.zero;
+
+            float randomX = Random.Range(-1.5f, 1.5f);
+            rb.AddForce(new Vector2(randomX, bounceForce), ForceMode2D.Impulse);
         }
 
-        // Wait until ball goes above topRespawnY
-        yield return new WaitUntil(() => ball == null || ball.transform.position.y > topRespawnY);
+        float startTime = Time.time;
 
-        // Respawn new ball
-        if (ball != null && ballManager != null)
+        yield return new WaitUntil(() =>
+            ball == null ||
+            ball.transform.position.y > topRespawnY ||
+            (Time.time - startTime > maxWaitTime)
+        );
+
+        if (!isGameOver && ball != null && ballManager != null)
         {
             Destroy(ball);
             yield return new WaitForSeconds(respawnDelay);
@@ -55,5 +68,10 @@ public class FeetCollider : MonoBehaviour
         }
 
         hasKicked = false;
+    }
+
+    public void SetGameOver(bool state)
+    {
+        isGameOver = state;
     }
 }
