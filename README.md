@@ -22,7 +22,7 @@
       1.📙 Dictionary - Browse through a catalog of Filipino words used in our everyday life! Lola will teach you how to use them and speak them proficiently!
       <br>
       <br>
-      2. 📖 Story Telling - Learn more about the Philippine History! Starting from the Spanish Colonization up until the modern times. You will be amazed how our ancestors did not just surrender to their colonizers, they have fought their way to our freedom and brought us independence.
+      2. 📖 Story Telling - Learn more about the Philippine History! Starting from the Spanish colonization up until the modern times. You will be amazed how our ancestors did not just surrender to their colonizers, they have fought their way to our freedom and brought us independence.
       <br>
       <br>
       3. 📝 Quiz - Test your knowledge with Lola's Quiz to see if you have listened carefully to her stories about our history. Don't worry, Lola is not strict about getting a perfect score.
@@ -31,10 +31,10 @@
       4. 🥗 Recipe Hunt - Have you ever wondered how modern Filipino dishes were made? Jump right into the kitchen and experiment with a variety of ingredients to help create the most delicious Filipino dishes!
       <br>
       <br>
-      5. 🌴 Palo Sebo - Climb your way into victory and grab the flag at the top of a bamboo pole. Avoid obstacles as you traverse upwards and reach for the high score!
+      5. 🌴 Palo Sebo - Climb your way into victory and grab the flag at the top of a bamboo pole. Avoid obstacles as you traverse upwards and reach for a high score!
       <br>
       <br>
-      6. 🏐 Sipa - One of the classic pasttime outdoor games played by children. It can also be played as a team sport, and uses your arms, legs, and even your head to pass them around. Try achieving the highest score, and tell your friends that you are a force to be reckoned with!
+      6. 🏐 Sipa - One of the classic pasttime outdoor games played by children. It can also be played as a team sport, and uses your arms, legs, and even your head to pass it around. Try achieving the highest score, and tell your friends that you are a force to be reckoned with!
     </div>
   </div>
 
