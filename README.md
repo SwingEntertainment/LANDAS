@@ -28,7 +28,7 @@
       3. 📝 Quiz - Test your knowledge with Lola's Quiz to see if you have listened carefully to her stories about our history. Don't worry, Lola is not strict about getting a perfect score.
       <br>
       <br>
-      4. 🥗 Recipe Hunt - Have you ever wondered how modern Filipino dishes were made? Jump right into the kitchen and experiment with a variety of ingredients to help create the most delicious Filipino dishes!
+      4. 🥗 Recipe Hunt - Have you ever wondered how Filipino dishes were made and where it originated? Jump right into the kitchen and experiment with a variety of ingredients to help create the most delicious Filipino dishes!
       <br>
       <br>
       5. 🌴 Palo Sebo - Climb your way into victory and grab the flag at the top of a bamboo pole. Avoid obstacles as you traverse upwards and reach for a high score!
