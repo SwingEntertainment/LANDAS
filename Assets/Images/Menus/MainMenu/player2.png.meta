@@ -116,9 +116,9 @@ TextureImporter:
       name: player2_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 457
+        width: 456
         height: 1102
       alignment: 0
       pivot: {x: 0, y: 0}

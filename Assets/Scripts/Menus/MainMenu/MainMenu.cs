@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     public AudioClip buttonClick;
 
     [Header("UI")]
-    public GameObject replayModal; 
+    public GameObject replayModal;
     public GameObject mainMenuPanel;
 
     [Header("Scenes")]
@@ -45,7 +45,7 @@ public class MainMenu : MonoBehaviour
 
         if (PlayerPrefs.GetInt(IsStoryPlayedKey, 0) == 0)
         {
-            SceneManager.LoadScene(storyScene);
+            LoadingScene.LoadSceneWithLoading(storyScene);
         }
         else
         {
@@ -57,14 +57,14 @@ public class MainMenu : MonoBehaviour
     {
         if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX(buttonClick);
         ShowReplayModal(false);
-        SceneManager.LoadScene(storyScene);
+        LoadingScene.LoadSceneWithLoading(storyScene);
     }
 
     public void SkipStory()
     {
         if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX(buttonClick);
         ShowReplayModal(false);
-        SceneManager.LoadScene(gameMenuScene);
+        LoadingScene.LoadSceneWithLoading(gameMenuScene);
     }
 
     private void ShowReplayModal(bool show)

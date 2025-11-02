@@ -8,6 +8,6 @@ public class SkippingLogic : MonoBehaviour
     public void OnStoryFinished()
     {
         MainMenu.SetStoryPlayed();
-        SceneManager.LoadScene(nextScene);
+        LoadingScene.LoadSceneWithLoading(nextScene);
     }
 }

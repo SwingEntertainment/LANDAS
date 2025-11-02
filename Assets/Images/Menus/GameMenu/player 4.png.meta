@@ -116,7 +116,7 @@ TextureImporter:
       name: player 4_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
         width: 351
         height: 1092
