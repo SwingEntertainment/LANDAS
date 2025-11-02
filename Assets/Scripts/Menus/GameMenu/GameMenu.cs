@@ -2,12 +2,17 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
+using System;
+using System.Collections;
+using UnityEngine.Networking;
 
 public class GameMenu : MonoBehaviour
 {
     [Header("UI Panels")]
     public GameObject tutorialUI;
     public GameObject lolaMenuPanel;
+    public GameObject lockedPanel;
 
     [Header("Interactive Buttons")]
     public Button kitchenButton;
@@ -32,6 +37,7 @@ public class GameMenu : MonoBehaviour
 
     private const string LolaMenuActiveKey = "LolaMenuActive";
     private const string TutorialPlayedKey = "gameMenuTutorial";
+    private const string SpanishJsonFile = "spanishChapters.json";
 
     void Start()
     {
@@ -47,21 +53,16 @@ public class GameMenu : MonoBehaviour
             if (tutorialUI != null)
             {
                 tutorialUI.SetActive(true);
-
-                CanvasGroup cg = tutorialUI.GetComponent<CanvasGroup>();
-                if (cg == null)
-                    cg = tutorialUI.AddComponent<CanvasGroup>();
+                CanvasGroup cg = tutorialUI.GetComponent<CanvasGroup>() ?? tutorialUI.AddComponent<CanvasGroup>();
                 cg.interactable = true;
                 cg.blocksRaycasts = true;
             }
-
             SetInteractiveButtons(false);
         }
         else
         {
             if (tutorialUI != null)
                 tutorialUI.SetActive(false);
-
             SetInteractiveButtons(true);
         }
 
@@ -71,6 +72,9 @@ public class GameMenu : MonoBehaviour
             lolaMenuPanel.SetActive(lolaActive);
             SetInteractiveButtons(!lolaActive);
         }
+
+        if (lockedPanel != null)
+            lockedPanel.SetActive(false);
     }
 
     private void OnApplicationQuit()
@@ -94,9 +98,7 @@ public class GameMenu : MonoBehaviour
         PlayerPrefs.Save();
 
         if (tutorialUI != null)
-        {
             tutorialUI.SetActive(false);
-        }
 
         SetInteractiveButtons(true);
     }
@@ -121,28 +123,103 @@ public class GameMenu : MonoBehaviour
     public void GoToKitchen()
     {
         ChangeTheme(kitchenTheme);
-        SceneManager.LoadScene(kitchenScene);
+        LoadingScene.LoadSceneWithLoading(kitchenScene);
     }
 
     public void GoToDictionary()
     {
         ChangeTheme(dictionaryTheme);
-        SceneManager.LoadScene(dictionaryScene);
+        LoadingScene.LoadSceneWithLoading(dictionaryScene);
     }
 
     public void GoToOutside()
     {
         ChangeTheme(outsideTheme);
-        SceneManager.LoadScene(outsideScene);
+        LoadingScene.LoadSceneWithLoading(outsideScene);
     }
 
-    public void GoToSpanishQuiz()
+    public void GoToSpanishQuizIfUnlocked()
     {
-        PlayerPrefs.SetInt(LolaMenuActiveKey, 1);
-        PlayerPrefs.Save();
+        StartCoroutine(CheckSpanishChaptersAndProceed());
+    }
 
-        ChangeTheme(quizTheme);
-        SceneManager.LoadScene(quizSpanishScene);
+    private IEnumerator CheckSpanishChaptersAndProceed()
+    {
+        string persistentPath = Path.Combine(Application.persistentDataPath, SpanishJsonFile);
+        string streamingPath = Path.Combine(Application.streamingAssetsPath, SpanishJsonFile);
+        string json = "";
+
+        if (!File.Exists(persistentPath))
+        {
+#if UNITY_ANDROID && !UNITY_EDITOR
+            UnityWebRequest request = UnityWebRequest.Get(streamingPath);
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                File.WriteAllText(persistentPath, request.downloadHandler.text);
+                Debug.Log("Copied spanishChapters.json to persistentDataPath.");
+            }
+            else
+            {
+                Debug.LogWarning("Failed to copy spanishChapters.json on Android: " + request.error);
+                yield break;
+            }
+#else
+            if (File.Exists(streamingPath))
+            {
+                File.Copy(streamingPath, persistentPath);
+                Debug.Log("Copied spanishChapters.json to persistentDataPath.");
+            }
+            else
+            {
+                Debug.LogWarning("spanishChapters.json not found at " + streamingPath);
+                yield break;
+            }
+#endif
+        }
+
+        try
+        {
+            json = File.ReadAllText(persistentPath);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Failed to read spanishChapters.json: " + e.Message);
+            yield break;
+        }
+
+        SpanishChaptersData_GameMenu data = JsonUtility.FromJson<SpanishChaptersData_GameMenu>(json);
+
+        if (data == null || data.subchapters == null || data.subchapters.Length == 0)
+        {
+            Debug.LogWarning("Invalid or empty spanishChapters.json structure.");
+            yield break;
+        }
+
+        bool anyRead = false;
+        foreach (var sub in data.subchapters)
+        {
+            if (sub.isRead)
+            {
+                anyRead = true;
+                break;
+            }
+        }
+
+        if (anyRead)
+        {
+            PlayerPrefs.SetInt(LolaMenuActiveKey, 1);
+            PlayerPrefs.Save();
+
+            ChangeTheme(quizTheme);
+            LoadingScene.LoadSceneWithLoading(quizSpanishScene);
+        }
+        else
+        {
+            if (lockedPanel != null)
+                lockedPanel.SetActive(true);
+        }
     }
 
     public void GoToSpanishStory()
@@ -151,8 +228,9 @@ public class GameMenu : MonoBehaviour
         PlayerPrefs.Save();
 
         ChangeTheme(quizTheme);
-        SceneManager.LoadScene(storySpanishScene);
+        LoadingScene.LoadSceneWithLoading(storySpanishScene);
     }
+
     // ===== Audio =====
     private void ChangeTheme(AudioClip newTheme)
     {
@@ -172,4 +250,20 @@ public class GameMenu : MonoBehaviour
         PlayerPrefs.SetInt(LolaMenuActiveKey, show ? 1 : 0);
         PlayerPrefs.Save();
     }
+}
+
+[Serializable]
+public class SpanishChaptersData_GameMenu
+{
+    public Subchapter_GameMenu[] subchapters;
+}
+
+[Serializable]
+public class Subchapter_GameMenu
+{
+    public string subchapterID;
+    public string title;
+    public string thumbnail;
+    public string imageTitle;
+    public bool isRead;
 }

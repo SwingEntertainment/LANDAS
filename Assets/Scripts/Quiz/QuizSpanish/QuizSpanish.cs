@@ -104,7 +104,22 @@ public class QuizSpanish : MonoBehaviour
     private const string PREF_ENCOUNTERED_COUNT = "EncounteredCount";
     private const string PREF_TOTAL_QUESTIONS = "TotalQuestions";
     private const string PREF_IS_AMERICA_UNLOCKED = "isAmericaQuizUnlocked";
+    private const string LolaMenuActiveKey = "LolaMenuActive";
 
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt(LolaMenuActiveKey, 0);
+        PlayerPrefs.Save();
+    }
+
+    private void OnApplicationPause(bool paused)
+    {
+        if (paused)
+        {
+            PlayerPrefs.SetInt(LolaMenuActiveKey, 0);
+            PlayerPrefs.Save();
+        }
+    }
     private void Start()
     {
         EnsureMessageDefaults();
@@ -138,7 +153,7 @@ public class QuizSpanish : MonoBehaviour
 
     public void GoToDictionary()
     {
-        SceneManager.LoadScene(gameMenuScene);
+        LoadingScene.LoadSceneWithLoading(gameMenuScene);
     }
 
     #region Start Game
@@ -334,7 +349,7 @@ public class QuizSpanish : MonoBehaviour
             }
 
             if (selectedButton != null)
-                selectedButton.image.color = new Color32(50, 207, 56, 255); 
+                selectedButton.image.color = new Color32(50, 207, 56, 255);
             currentScore++;
             PlayerPrefs.SetInt(PREF_CURRENT_SCORE, currentScore);
             scoreText.text = $"{currentScore}";

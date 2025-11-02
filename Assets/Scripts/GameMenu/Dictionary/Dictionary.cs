@@ -352,7 +352,7 @@ public class Dictionary : MonoBehaviour
     // ===== Navigation =====
     public void GoBackToGameMenu()
     {
-        SceneManager.LoadScene(gameMenuScene);
+        LoadingScene.LoadSceneWithLoading(gameMenuScene);
     }
 
     public void TutorialFinished()
