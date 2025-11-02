@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
     public float minFallSpeed = 10f;
     public float maxFallSpeed = 15f;
     public float horizontalMargin = 0.5f;
+    public float firstBallSpeed = 25f; 
 
     [Header("Game Over Settings")]
     public GameObject gameOverPanel;
@@ -22,6 +23,7 @@ public class Ball : MonoBehaviour
     [HideInInspector] public GameObject currentBall;
 
     private Camera cam;
+    private bool isFirstBall = true;
 
     private void Start()
     {
@@ -36,9 +38,20 @@ public class Ball : MonoBehaviour
         SpawnBall();
     }
 
+    public void ResetFirstBallFlag()
+    {
+        isFirstBall = true;
+    }
+
     public void SpawnBall()
     {
         if (!backgroundPanel || !ballPrefab) return;
+
+        if (currentBall != null)
+        {
+            Destroy(currentBall);
+            currentBall = null;
+        }
 
         Vector3[] corners = new Vector3[4];
         backgroundPanel.GetWorldCorners(corners);
@@ -48,13 +61,16 @@ public class Ball : MonoBehaviour
         float spawnY = corners[1].y + 1f;
 
         Vector3 spawnPos = new Vector3(Random.Range(minX, maxX), spawnY, 0f);
-        float fallSpeed = Random.Range(minFallSpeed, maxFallSpeed);
+
+        float fallSpeed = isFirstBall ? firstBallSpeed : Random.Range(minFallSpeed, maxFallSpeed);
+        isFirstBall = false;
 
         currentBall = Instantiate(ballPrefab, spawnPos, Quaternion.identity);
+
         Rigidbody2D rb = currentBall.GetComponent<Rigidbody2D>();
         if (rb == null) rb = currentBall.AddComponent<Rigidbody2D>();
 
-        rb.gravityScale = 1f;
+        rb.gravityScale = 0f;
         rb.linearVelocity = new Vector2(0f, -fallSpeed);
 
         Collider2D col = currentBall.GetComponent<Collider2D>();
@@ -64,11 +80,14 @@ public class Ball : MonoBehaviour
             col.isTrigger = false;
         }
 
+        Debug.Log($"🟢 Spawned ball with speed: {fallSpeed}");
         StartCoroutine(CheckForRespawnOrGameOver(currentBall));
     }
 
     private IEnumerator CheckForRespawnOrGameOver(GameObject ball)
     {
+        if (cam == null) cam = Camera.main;
+
         while (ball != null)
         {
             Vector3 viewportPos = cam.WorldToViewportPoint(ball.transform.position);
@@ -103,10 +122,10 @@ public class Ball : MonoBehaviour
             gameOverPanel.SetActive(true);
             gameOverPanel.transform.SetAsLastSibling();
         }
-        
-            FeetCollider feet = FindObjectOfType<FeetCollider>();
-            if (feet != null)
-                feet.SetGameOver(true);
+
+        FeetCollider feet = FindObjectOfType<FeetCollider>();
+        if (feet != null)
+            feet.SetGameOver(true);
 
         GameObject playerObj = GameObject.Find("player");
         if (playerObj != null)
@@ -143,6 +162,9 @@ public class Ball : MonoBehaviour
             Destroy(currentBall);
 
         Time.timeScale = 1f;
+
+        isFirstBall = true;
+
         SpawnBall();
     }
 }
