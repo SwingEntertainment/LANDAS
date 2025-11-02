@@ -1663,8 +1663,8 @@ MonoBehaviour:
   foodTrayParent: {fileID: 2048603545}
   cookButton: {fileID: 2071872174}
   cookedDishImage: {fileID: 1689455871}
-  fadeDuration: 1.5
-  fadeOutDuration: 3
+  dishFadeInDuration: 2
+  dishFadeOutDuration: 2
   sizzleAudio: {fileID: 905344222}
   itemsPerPage: 6
 --- !u!1 &967527222
