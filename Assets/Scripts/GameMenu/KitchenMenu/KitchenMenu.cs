@@ -18,11 +18,11 @@ public class KitchenMenu : MonoBehaviour
 
     public void GoToGameMenu()
     {
-        SceneManager.LoadScene(gameMenuScene);
+        LoadingScene.LoadSceneWithLoading(gameMenuScene);
     }
     
      public void GoToRecipeHunt()
     {
-        SceneManager.LoadScene(RecipeHunt);
+        LoadingScene.LoadSceneWithLoading(RecipeHunt);
     }
 }

@@ -106,6 +106,9 @@ public class StoryManager : MonoBehaviour
 
     [Header("Audio Clips")]
     public AudioClip switchSFX;
+    public AudioClip correctSFX;
+    public AudioClip wrongSFX;
+
 
     [Header("Misc")]
     public float textFadeDuration = 0.45f;
@@ -615,10 +618,14 @@ public class StoryManager : MonoBehaviour
                 {
                     answeredCorrect = true;
                     answered = true;
+                    if (AudioManager.Instance != null && correctSFX != null)
+                        AudioManager.Instance.PlaySFX(correctSFX);
                 }
                 else
                 {
                     quizChoiceAButton.gameObject.SetActive(false);
+                    if (AudioManager.Instance != null && wrongSFX != null)
+                        AudioManager.Instance.PlaySFX(wrongSFX);
                 }
             });
 
@@ -628,10 +635,14 @@ public class StoryManager : MonoBehaviour
                 {
                     answeredCorrect = true;
                     answered = true;
+                    if (AudioManager.Instance != null && correctSFX != null)
+                        AudioManager.Instance.PlaySFX(correctSFX);
                 }
                 else
                 {
                     quizChoiceBButton.gameObject.SetActive(false);
+                    if (AudioManager.Instance != null && wrongSFX != null)
+                        AudioManager.Instance.PlaySFX(wrongSFX);
                 }
             });
 
@@ -791,8 +802,8 @@ public class StoryManager : MonoBehaviour
     }
 #endif
 
-void StopSpeak()
-{
+    void StopSpeak()
+    {
 #if UNITY_ANDROID && !UNITY_EDITOR
     if (ttsObj == null) return;
     try
@@ -804,7 +815,7 @@ void StopSpeak()
         Debug.LogWarning("TTS stop error: " + e.Message);
     }
 #endif
-}
+    }
 
     #endregion
 }

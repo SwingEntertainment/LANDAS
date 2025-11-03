@@ -31,7 +31,7 @@ public class StoryPagesFunction : MonoBehaviour
         else
         {
             MainMenu.SetStoryPlayed();
-            SceneManager.LoadScene(nextScene);
+            LoadingScene.LoadSceneWithLoading(nextScene);
         }
     }
 

@@ -31,6 +31,10 @@ public class RecipeList : MonoBehaviour
     private string recipeJsonPath;
     private string persistentRecipePath;
 
+    [Header("Audio Clips")]
+    public AudioClip[] switchSFXList;
+
+
     void Start()
     {
         recipeJsonPath = Path.Combine(Application.streamingAssetsPath, recipeJsonFileName);
@@ -124,11 +128,33 @@ public class RecipeList : MonoBehaviour
             viewRecipeButton.onClick.AddListener(() => ShowRecipeDetail(0));
 
         if (nextButton != null)
-            nextButton.onClick.AddListener(ShowNextRecipe);
+        {
+            nextButton.onClick.AddListener(() =>
+            {
+                ShowNextRecipe();
+
+                if (AudioManager.Instance != null && switchSFXList != null && switchSFXList.Length > 0)
+                {
+                    int randomIndex = Random.Range(0, switchSFXList.Length);
+                    AudioManager.Instance.PlaySFX(switchSFXList[randomIndex]);
+                }
+            });
+        }
 
         if (prevButton != null)
-            prevButton.onClick.AddListener(ShowPreviousRecipe);
+        {
+            prevButton.onClick.AddListener(() =>
+            {
+                ShowPreviousRecipe();
 
+                if (AudioManager.Instance != null && switchSFXList != null && switchSFXList.Length > 0)
+                {
+                    int randomIndex = Random.Range(0, switchSFXList.Length);
+                    AudioManager.Instance.PlaySFX(switchSFXList[randomIndex]);
+                }
+            });
+        }
+        
         if (clearDataButton != null)
             clearDataButton.onClick.AddListener(ResetAllRecipes);
     }

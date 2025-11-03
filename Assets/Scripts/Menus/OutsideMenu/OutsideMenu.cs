@@ -76,19 +76,19 @@ public class OutsideMenu : MonoBehaviour
     public void GoToGameMenu()
     {
         ChangeTheme(GameMenuTheme);
-        SceneManager.LoadScene(GameMenuScene);
+        LoadingScene.LoadSceneWithLoading(GameMenuScene);
     }
 
     public void GoToPaloSebo()
     {
         ChangeTheme(PaloSeboTheme);
-        SceneManager.LoadScene(PaloSeboScene);
+        LoadingScene.LoadSceneWithLoading(PaloSeboScene);
     }
 
     public void GoToSipa()
     {
         ChangeTheme(SipaTheme);
-        SceneManager.LoadScene(SipaScene);
+        LoadingScene.LoadSceneWithLoading(SipaScene);
     }
 
     // ===== Audio =====
