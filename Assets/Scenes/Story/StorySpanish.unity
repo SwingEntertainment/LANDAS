@@ -4205,7 +4205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8516534730433148180, guid: 0409211cdd8ec2f4c95c24014b89cd43, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4641,7 +4641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.63602203, b: 0.3842292, a: 0.58431375}
+  m_Color: {r: 0.8792453, g: 0.6783758, b: 0.389854, a: 0.60784316}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

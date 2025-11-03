@@ -145,19 +145,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40669240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 76632878}
   - {fileID: 1177787182}
   - {fileID: 623957684}
-  m_Father: {fileID: 2018962733}
+  m_Father: {fileID: 735601158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 458.5, y: 206}
-  m_SizeDelta: {x: 917, y: 412}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40669242
 MonoBehaviour:
@@ -1398,19 +1398,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470854989}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 273221984}
   - {fileID: 1122579177}
   - {fileID: 739169271}
-  m_Father: {fileID: 2018962733}
+  m_Father: {fileID: 735601158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 458.5, y: 206}
-  m_SizeDelta: {x: 917, y: 412}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470854991
 MonoBehaviour:
@@ -2381,6 +2381,9 @@ RectTransform:
   m_Children:
   - {fileID: 283130869}
   - {fileID: 1362386468}
+  - {fileID: 1485160492}
+  - {fileID: 470854990}
+  - {fileID: 40669241}
   m_Father: {fileID: 2018962733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4829,19 +4832,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485160491}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 223088871}
   - {fileID: 1975869476}
   - {fileID: 1144594372}
-  m_Father: {fileID: 2018962733}
+  m_Father: {fileID: 735601158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 458.5, y: 206}
-  m_SizeDelta: {x: 917, y: 412}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485160493
 MonoBehaviour:
@@ -5789,8 +5792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 0}
-  m_SizeDelta: {x: 200, y: 122.9287}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
+  m_SizeDelta: {x: 281.1267, y: 122.9287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975869477
 MonoBehaviour:
@@ -5812,7 +5815,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This is a note
+  m_text: "Cooking isn't only about what's before your eyes. \n\nSome clues are tucked
+    into forgotten notes and quiet thoughts scattered through every corner, you just
+    need to take the time to notice them."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -5839,8 +5844,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5987,9 +5992,6 @@ Transform:
   - {fileID: 735601158}
   - {fileID: 954301721}
   - {fileID: 904415920}
-  - {fileID: 1485160492}
-  - {fileID: 470854990}
-  - {fileID: 40669241}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2018962734
