@@ -35,6 +35,8 @@ public class FeetCollider : MonoBehaviour
 
     private IEnumerator KickBall(GameObject ball)
     {
+        if (ball == null) yield break;
+
         hasKicked = true;
 
         if (playerKick != null)
@@ -55,7 +57,8 @@ public class FeetCollider : MonoBehaviour
         float startTime = Time.time;
 
         yield return new WaitUntil(() =>
-            ball == null ||
+            ball == null || 
+            ball.transform == null || 
             ball.transform.position.y > topRespawnY ||
             (Time.time - startTime > maxWaitTime)
         );
@@ -64,7 +67,8 @@ public class FeetCollider : MonoBehaviour
         {
             Destroy(ball);
             yield return new WaitForSeconds(respawnDelay);
-            ballManager.SpawnBall();
+            if (ballManager != null) 
+                ballManager.SpawnBall();
         }
 
         hasKicked = false;
