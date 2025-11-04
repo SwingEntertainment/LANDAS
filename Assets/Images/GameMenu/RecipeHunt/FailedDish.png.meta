@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ead53fd09cbe44429f58bfc50e56a57
+guid: 219bf2d6ed95bd34a9511210dbf7eec5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6763588844514340538
-    second: Spaghetti_Noodles_0
+      213: -4821645401809196568
+    second: FailedDish_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spaghetti_Noodles_0
+      name: FailedDish_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 33
-        width: 269
-        height: 125
+        x: 0
+        y: 67
+        width: 944
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abe621418381ddd50800000000000000
-      internalID: 6763588844514340538
+      spriteID: 8e96440ad03161db0800000000000000
+      internalID: -4821645401809196568
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spaghetti_Noodles_0: 6763588844514340538
+      FailedDish_0: -4821645401809196568
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
