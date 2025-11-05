@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a98d0a7788e437f43bedd2f5c25bf06d
+guid: 2a2bf7a66db11f94d9ce206a18b92728
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8671372094339089552
-    second: kidLeftClimb 1_0
+      213: -233743254270121575
+    second: leftFlag_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kidLeftClimb 1_0
+      name: leftFlag_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 129
-        height: 152
+        width: 60
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07bfea9e50919a780800000000000000
-      internalID: -8671372094339089552
+      spriteID: 999e598afb391ccf0800000000000000
+      internalID: -233743254270121575
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kidLeftClimb 1_0: -8671372094339089552
+      leftFlag_0: -233743254270121575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

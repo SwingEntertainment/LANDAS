@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ClimbRight
+  m_Name: kidLeftIdle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -8465274405310247079, guid: 0a2fa15e7287741488a8e579423f5ce3, type: 3}
+      value: {fileID: 165125823361042519, guid: 9d5ae752a3d19d34d9ed64dfda5656ec, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -8465274405310247079, guid: 0a2fa15e7287741488a8e579423f5ce3, type: 3}
+    - {fileID: 165125823361042519, guid: 9d5ae752a3d19d34d9ed64dfda5656ec, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

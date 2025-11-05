@@ -1,31 +1,31 @@
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class ParallaxCamera : MonoBehaviour
 {
-    public delegate void ParallaxCameraDelegate(float deltaMovement);
-    public ParallaxCameraDelegate onCameraTranslate;
+    public delegate void ParallaxCameraDelegate(float delta);
+    public event ParallaxCameraDelegate onCameraTranslate;
 
-    private float oldYPosition;   // ✅ consistent name
+    [Header("Camera Movement")]
+    public float scrollSpeed = 2f;
+
+    private Vector3 previousPos;
 
     void Start()
     {
-        oldYPosition = transform.position.y;
+        previousPos = transform.position;
     }
 
     void Update()
     {
-        // Temporary auto-scroll upwards
-        transform.position += Vector3.up * 25f * Time.deltaTime;
+        transform.position += Vector3.up * scrollSpeed * Time.deltaTime;
 
-        float newY = transform.position.y;
-        if (!Mathf.Approximately(newY, oldYPosition))
+        float delta = transform.position.y - previousPos.y;
+        if (Mathf.Abs(delta) > Mathf.Epsilon)
         {
-            float delta = oldYPosition - newY;
             if (onCameraTranslate != null)
                 onCameraTranslate(delta);
-
-            oldYPosition = newY;
         }
+
+        previousPos = transform.position;
     }
 }

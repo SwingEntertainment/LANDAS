@@ -8,6 +8,9 @@ TagManager:
   - Feet
   - Ball
   - 'PlayerFeet '
+  - Langgam
+  - Flag
+  - Bamboo
   layers:
   - Default
   - TransparentFX
@@ -74,6 +77,9 @@ TagManager:
     locked: 0
   - name: New Layer 10
     uniqueID: 3073788461
+    locked: 0
+  - name: ants flags
+    uniqueID: 1397802201
     locked: 0
   m_RenderingLayers:
   - Default
