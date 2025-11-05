@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using TMPro;
 
 public class RecipeHuntGame : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class RecipeHuntGame : MonoBehaviour
     public Button rightArrow;
     public Transform slotsParent;
     public Transform foodTrayParent;
+    public float bubbleShowDuration = 2f;
+    public float bubbleFadeDuration = 0.5f;
 
     [Header("Cooking System")]
     public Button cookButton;
@@ -32,6 +35,16 @@ public class RecipeHuntGame : MonoBehaviour
     private List<GameObject> traySlots = new List<GameObject>();
     private List<IngredientData> selectedIngredients = new List<IngredientData>();
 
+    [Header("Cooking Result Panels")]
+    public GameObject successPanel;
+    public GameObject failedPanel;
+    public TMP_Text dishNameText;     // For showing the dish name on success
+    public Image dishImage;           // Dish image on success panel
+    public TMP_Text failHintText;     // Hint message on failed panel
+    public TMP_Text successHeaderText; // “You Have Created!” text
+    public TMP_Text failedHeaderText;
+    public Image failedDishImage;
+
     [System.Serializable]
     public class IngredientData
     {
@@ -40,6 +53,11 @@ public class RecipeHuntGame : MonoBehaviour
         public string ingredientImg;
         public string ingredientContainerImg;
     }
+
+    private Coroutine dishAnimationCoroutine;
+    private Coroutine panelFadeCoroutine;
+    private CanvasGroup successPanelCanvasGroup;
+
 
     [System.Serializable]
     public class IngredientListWrapper
@@ -81,6 +99,15 @@ public class RecipeHuntGame : MonoBehaviour
 
         if (cookedDishImage != null)
             cookedDishImage.gameObject.SetActive(false);
+
+        // ensure successPanel has a CanvasGroup we can control
+        successPanelCanvasGroup = successPanel.GetComponent<CanvasGroup>();
+        if (successPanelCanvasGroup == null)
+            successPanelCanvasGroup = successPanel.AddComponent<CanvasGroup>();
+
+        // start hidden
+        successPanelCanvasGroup.alpha = 0f;
+        successPanel.SetActive(false);
     }
 
     IEnumerator LoadIngredientsFromStreamingAssets()
@@ -173,16 +200,66 @@ public class RecipeHuntGame : MonoBehaviour
 
             var img = slot.GetComponent<Image>();
             string imagePath = $"Images/Ingredients/{Path.GetFileNameWithoutExtension(data.ingredientContainerImg)}";
-            Sprite sprite = Resources.Load<Sprite>(imagePath);
-            img.sprite = sprite;
+            img.sprite = Resources.Load<Sprite>(imagePath);
 
             var addButton = slot.transform.Find("AddButton").GetComponent<Button>();
             addButton.onClick.RemoveAllListeners();
             addButton.onClick.AddListener(() => AddToFoodTray(data));
+
+            var slotButton = slot.GetComponent<Button>();
+            Transform nameBubble = slot.transform.Find("TextBubble");
+            TMP_Text nameText = nameBubble?.GetComponentInChildren<TMP_Text>();
+
+            if (nameBubble != null)
+                nameBubble.gameObject.SetActive(false);
+
+            slotButton.onClick.RemoveAllListeners();
+            slotButton.onClick.AddListener(() =>
+            {
+                if (nameBubble != null && nameText != null)
+                {
+                    nameText.text = data.ingredientName;
+                    StartCoroutine(ShowBubble(nameBubble.gameObject, 2f));
+                }
+            });
         }
 
         leftArrow.gameObject.SetActive(currentPage > 0);
         rightArrow.gameObject.SetActive(currentPage < totalPages - 1);
+    }
+
+    IEnumerator ShowBubble(GameObject bubble, float duration)
+    {
+        // Make sure it’s visible
+        bubble.SetActive(true);
+
+        CanvasGroup cg = bubble.GetComponent<CanvasGroup>();
+        if (cg == null)
+            cg = bubble.AddComponent<CanvasGroup>();
+
+        // Fade In
+        float fadeTime = 0.3f;
+        float t = 0;
+        while (t < fadeTime)
+        {
+            t += Time.deltaTime;
+            cg.alpha = Mathf.Lerp(0f, 1f, t / fadeTime);
+            yield return null;
+        }
+
+        // Stay visible for duration
+        yield return new WaitForSeconds(duration);
+
+        // Fade Out
+        t = 0;
+        while (t < fadeTime)
+        {
+            t += Time.deltaTime;
+            cg.alpha = Mathf.Lerp(1f, 0f, t / fadeTime);
+            yield return null;
+        }
+
+        bubble.SetActive(false);
     }
 
     void AddToFoodTray(IngredientData ingredient)
@@ -291,6 +368,9 @@ public class RecipeHuntGame : MonoBehaviour
             }
         }
 
+        successPanel.SetActive(false);
+        failedPanel.SetActive(false);
+
         if (matchedDish != null)
         {
             matchedDish.isCooked = true;
@@ -304,18 +384,43 @@ public class RecipeHuntGame : MonoBehaviour
                 StartCoroutine(FadeOutSizzle(5f));
             }
 
-            StartCoroutine(DelayedDishDisplay(matchedDish, 3f));
+            // No ShowSuccessPanel() here — the coroutine will handle visibility
+            if (dishAnimationCoroutine != null)
+            {
+                StopCoroutine(dishAnimationCoroutine);
+                dishAnimationCoroutine = null;
+            }
+
+            dishAnimationCoroutine = StartCoroutine(DelayedDishDisplay(matchedDish, 3f));
         }
         else
         {
-            Debug.Log("No matching dish found!");
+            Debug.Log("Cooking failed! No matching dish found!");
+            SetAddButtonsInteractable(false);
+
+            if (sizzleAudio != null)
+            {
+                sizzleAudio.volume = 1f;
+                sizzleAudio.Play();
+                StartCoroutine(FadeOutSizzle(5f));
+            }
+
+            if (dishAnimationCoroutine != null)
+            {
+                StopCoroutine(dishAnimationCoroutine);
+                dishAnimationCoroutine = null;
+            }
+
+            dishAnimationCoroutine = StartCoroutine(DelayedFailedDishDisplay("Lola wrote some recipe notes around so she doesn't forget them. Check the surroundings!", 3f));
         }
+
     }
 
     IEnumerator ShowCookedDish(DishData dish)
     {
         cookButton.interactable = false;
 
+        // Load dish sprite
         string path = $"Images/KitchenFood/{Path.GetFileNameWithoutExtension(dish.dishImg)}";
         Sprite dishSprite = Resources.Load<Sprite>(path);
 
@@ -325,47 +430,251 @@ public class RecipeHuntGame : MonoBehaviour
             yield break;
         }
 
-        cookedDishImage.gameObject.SetActive(true);
-        cookedDishImage.sprite = dishSprite;
+        // --- INITIAL UI SETUP ---
+        successPanel.SetActive(false);
+        yield return null; // ensures one frame passes to prevent flicker
+        successPanel.SetActive(true);
 
-        // FadeIn Animation
-        Color c = cookedDishImage.color;
-        c.a = 0f;
-        cookedDishImage.color = c;
+        CanvasGroup cg = successPanel.GetComponent<CanvasGroup>();
+        if (cg == null) cg = successPanel.AddComponent<CanvasGroup>();
+        cg.alpha = 1f;
 
+        // Ensure all key elements exist and are invisible initially
+        if (successHeaderText != null)
+        {
+            Color headerColor = successHeaderText.color;
+            headerColor.a = 0f;
+            successHeaderText.color = headerColor;
+        }
+
+        if (dishNameText != null)
+        {
+            dishNameText.text = dish.dishName.ToUpper();
+            Color nameColor = dishNameText.color;
+            nameColor.a = 0f;
+            dishNameText.color = nameColor;
+        }
+
+        if (cookedDishImage != null)
+        {
+            cookedDishImage.gameObject.SetActive(true);
+            cookedDishImage.sprite = dishSprite;
+
+            Color imgColor = cookedDishImage.color;
+            imgColor.a = 0f;
+            cookedDishImage.color = imgColor;
+        }
+
+        // Add small scale-in effect
+        float startScale = 0.9f;
+        cookedDishImage.rectTransform.localScale = Vector3.one * startScale;
+        dishNameText.rectTransform.localScale = Vector3.one * startScale;
+
+        Canvas.ForceUpdateCanvases();
+
+        // --- STEP 1: Wait 1.5 seconds before showing header ---
+        yield return new WaitForSeconds(1.5f);
+
+        // Instantly show "You Have Created!"
+        if (successHeaderText != null)
+        {
+            Color headerColor = successHeaderText.color;
+            headerColor.a = 1f;
+            successHeaderText.color = headerColor;
+        }
+
+        // --- STEP 2: Wait another 1.5 seconds before fading in dish image & name ---
+        yield return new WaitForSeconds(1.5f);
+
+        // --- STEP 3: Fade in dish image and name together ---
         float elapsed = 0f;
         while (elapsed < dishFadeInDuration)
         {
             elapsed += Time.deltaTime;
-            if (elapsed > dishFadeInDuration) elapsed = dishFadeInDuration;
-            c.a = Mathf.Lerp(0f, 1f, elapsed / dishFadeInDuration);
-            cookedDishImage.color = c;
+            float t = Mathf.Clamp01(elapsed / dishFadeInDuration);
+
+            float alpha = Mathf.Lerp(0f, 1f, t);
+            float scale = Mathf.Lerp(startScale, 1f, t);
+
+            if (cookedDishImage != null)
+            {
+                Color imgColor = cookedDishImage.color;
+                imgColor.a = alpha;
+                cookedDishImage.color = imgColor;
+                cookedDishImage.rectTransform.localScale = Vector3.one * scale;
+            }
+
+            if (dishNameText != null)
+            {
+                Color nameColor = dishNameText.color;
+                nameColor.a = alpha;
+                dishNameText.color = nameColor;
+                dishNameText.rectTransform.localScale = Vector3.one * scale;
+            }
+
             yield return null;
         }
 
-        c.a = 1f;
-        cookedDishImage.color = c;
-
-        yield return new WaitForSeconds(dishFadeOutDuration);
-
-        // FadeOut Animation
-        elapsed = 0f;
-        while (elapsed < dishFadeOutDuration)
+        // Ensure both are fully visible at end
+        if (cookedDishImage != null)
         {
-            elapsed += Time.deltaTime;
-            if (elapsed > dishFadeOutDuration) elapsed = dishFadeOutDuration;
-            c.a = Mathf.Lerp(1f, 0f, elapsed / dishFadeOutDuration);
-            cookedDishImage.color = c;
-            yield return null;
+            Color imgColor = cookedDishImage.color;
+            imgColor.a = 1f;
+            cookedDishImage.color = imgColor;
         }
 
+        if (dishNameText != null)
+        {
+            Color nameColor = dishNameText.color;
+            nameColor.a = 1f;
+            dishNameText.color = nameColor;
+        }
+
+        // --- STEP 4: Keep visible for 3 seconds ---
+        yield return new WaitForSeconds(3f);
+
+        // --- STEP 5: Fade out entire panel ---
+        yield return StartCoroutine(FadeOutPanel(successPanel, 1.5f));
+
+        successPanel.SetActive(false);
         cookedDishImage.gameObject.SetActive(false);
 
+        // --- RESET ---
         selectedIngredients.Clear();
         UpdateFoodTray();
         SetAddButtonsInteractable(true);
         cookButton.interactable = (selectedIngredients.Count >= 4 && selectedIngredients.Count <= 5);
+        dishAnimationCoroutine = null;
     }
+
+
+    void ShowSuccessPanel(DishData dish)
+    {
+        // Ensure any in-progress panel fade is stopped
+        if (panelFadeCoroutine != null)
+        {
+            StopCoroutine(panelFadeCoroutine);
+            panelFadeCoroutine = null;
+        }
+
+        // Ensure successPanel's CanvasGroup is ready and visible
+        if (successPanelCanvasGroup == null)
+        {
+            successPanelCanvasGroup = successPanel.GetComponent<CanvasGroup>();
+            if (successPanelCanvasGroup == null)
+                successPanelCanvasGroup = successPanel.AddComponent<CanvasGroup>();
+        }
+
+        successPanel.SetActive(true);
+        successPanelCanvasGroup.alpha = 1f; // immediate full visibility
+
+        failedPanel.SetActive(false);
+
+        if (dishNameText != null)
+        {
+            dishNameText.text = dish.dishName.ToUpper();
+
+            // Force the dish name invisible at the start (prevents flash)
+            Color tColor = dishNameText.color;
+            tColor.a = 0f;
+            dishNameText.color = tColor;
+        }
+
+        if (dishImage != null)
+        {
+            string path = $"Images/KitchenFood/{Path.GetFileNameWithoutExtension(dish.dishImg)}";
+            Sprite sprite = Resources.Load<Sprite>(path);
+            dishImage.sprite = sprite;
+        }
+
+        // Also make sure the cookedDishImage is invisible until animation
+        if (cookedDishImage != null)
+        {
+            Color imgColor = cookedDishImage.color;
+            imgColor.a = 0f;
+            cookedDishImage.color = imgColor;
+        }
+    }
+
+    private IEnumerator ShowFailedPanel(string hintMessage)
+    {
+        cookButton.interactable = false;
+
+        // --- INITIAL SETUP ---
+        failedPanel.SetActive(false);
+        yield return null;
+        failedPanel.SetActive(true);
+
+        CanvasGroup cg = failedPanel.GetComponent<CanvasGroup>();
+        if (cg == null) cg = failedPanel.AddComponent<CanvasGroup>();
+        cg.alpha = 1f;
+
+        // Hide all UI elements initially
+        if (failedHeaderText != null)
+        {
+            Color headerColor = failedHeaderText.color;
+            headerColor.a = 0f;
+            failedHeaderText.color = headerColor;
+        }
+
+        if (failHintText != null)
+        {
+            Color hintColor = failHintText.color;
+            hintColor.a = 0f;
+            failHintText.color = hintColor;
+            failHintText.text = hintMessage;
+        }
+
+        if (failedDishImage != null)
+        {
+            Color imgColor = failedDishImage.color;
+            imgColor.a = 0f;
+            failedDishImage.color = imgColor;
+        }
+
+        Canvas.ForceUpdateCanvases();
+
+        // --- STEP 1: Wait 1.5 seconds before showing everything ---
+        yield return new WaitForSeconds(1.5f);
+
+        // Instantly show all UI elements (no fade-in)
+        if (failedHeaderText != null)
+        {
+            Color headerColor = failedHeaderText.color;
+            headerColor.a = 1f;
+            failedHeaderText.color = headerColor;
+        }
+
+        if (failedDishImage != null)
+        {
+            Color imgColor = failedDishImage.color;
+            imgColor.a = 1f;
+            failedDishImage.color = imgColor;
+        }
+
+        if (failHintText != null)
+        {
+            Color hintColor = failHintText.color;
+            hintColor.a = 1f;
+            failHintText.color = hintColor;
+        }
+
+        // --- STEP 2: Keep visible for 3 seconds ---
+        yield return new WaitForSeconds(3f);
+
+        // --- STEP 3: Fade out entire panel ---
+        yield return StartCoroutine(FadeOutPanel(failedPanel, 1.5f));
+
+        failedPanel.SetActive(false);
+
+        // --- RESET ---
+        selectedIngredients.Clear();
+        UpdateFoodTray();
+        SetAddButtonsInteractable(true);
+        cookButton.interactable = (selectedIngredients.Count >= 4 && selectedIngredients.Count <= 5);
+        dishAnimationCoroutine = null;
+    }
+
 
     IEnumerator FadeOutSizzle(float duration)
     {
@@ -391,6 +700,51 @@ public class RecipeHuntGame : MonoBehaviour
         yield return new WaitForSeconds(delay);
         yield return StartCoroutine(ShowCookedDish(dish));
     }
+
+    IEnumerator DelayedFailedDishDisplay(string hintMessage, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        yield return StartCoroutine(ShowFailedPanel(hintMessage));
+    }
+
+    IEnumerator FadeOutPanelCoroutine(GameObject panel, float duration)
+    {
+        if (panel == null) yield break;
+
+        CanvasGroup cg = panel.GetComponent<CanvasGroup>();
+        if (cg == null)
+            cg = panel.AddComponent<CanvasGroup>();
+
+        // start at current alpha (may be 1)
+        float startAlpha = cg.alpha;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            cg.alpha = Mathf.Lerp(startAlpha, 0f, t);
+            yield return null;
+        }
+
+        cg.alpha = 0f;
+    }
+
+    IEnumerator FadeOutPanel(GameObject panel, float duration)
+    {
+        // wrapper so callers can `yield return StartCoroutine(FadeOutPanel(panel,duration));`
+        if (panelFadeCoroutine != null)
+        {
+            StopCoroutine(panelFadeCoroutine);
+            panelFadeCoroutine = null;
+        }
+
+        panelFadeCoroutine = StartCoroutine(FadeOutPanelCoroutine(panel, duration));
+        yield return panelFadeCoroutine;
+
+        panelFadeCoroutine = null;
+    }
+
 
     void NextPage()
     {

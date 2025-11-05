@@ -151,6 +151,11 @@ public class Ball : MonoBehaviour
         if (ball != null)
             Destroy(ball);
 
+        // 🎵 NEW: Tell SipaGame to play Game Over music
+        SipaGame sipaGame = FindObjectOfType<SipaGame>();
+        if (sipaGame != null)
+            sipaGame.OnGameOver();
+
         Time.timeScale = 0f;
     }
 

@@ -116,10 +116,10 @@ TextureImporter:
       name: Spaghetti_Noodles_0
       rect:
         serializedVersion: 2
-        x: 107
-        y: 38
-        width: 107
-        height: 249
+        x: 30
+        y: 33
+        width: 269
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

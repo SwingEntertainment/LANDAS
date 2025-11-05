@@ -139,6 +139,11 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public bool IsMusicPlaying(AudioClip clip)
+    {
+        return musicSource != null && musicSource.clip == clip && musicSource.isPlaying;
+    }
+
     public void ToggleMusic() => SetMusicOn(!musicOn);
     public void ToggleSFX() => SetSFXOn(!sfxOn);
 }

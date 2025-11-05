@@ -8,7 +8,7 @@ public class LoadingScene : MonoBehaviour
     public GameObject loadingScreen;
     public Animator loadingAnimator;
 
-    private Coroutine currentRoutine; 
+    private Coroutine currentRoutine;
 
     private void Awake()
     {
@@ -52,25 +52,24 @@ public class LoadingScene : MonoBehaviour
         if (loadingAnimator != null)
             loadingAnimator.Play("LoadingStartAnimation", 0, 0f);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         operation.allowSceneActivation = false;
 
-        while (!operation.isDone)
+        while (operation.progress < 0.9f)
         {
-            if (operation.progress >= 0.9f)
-            {
-                if (loadingAnimator != null)
-                    loadingAnimator.Play("LoadingEndAnimation", 0, 0f);
-
-                yield return new WaitForSeconds(0.3f);
-                operation.allowSceneActivation = true;
-            }
-
             yield return null;
         }
 
+        if (loadingAnimator != null)
+            loadingAnimator.Play("LoadingEndAnimation", 0, 0f);
+
+        yield return new WaitForSeconds(1f);
+
+        operation.allowSceneActivation = true;
+
+        yield return new WaitForSeconds(0.1f);
         if (loadingScreen != null)
             loadingScreen.SetActive(false);
 
