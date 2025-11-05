@@ -3,12 +3,9 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
     public ButtonHold leftButton;
     public ButtonHold rightButton;
 
-    private bool moveLeft = false;
-    private bool moveRight = false;
     private SpriteRenderer spriteRenderer;
 
     [Header("Player Sprites")]
@@ -18,44 +15,47 @@ public class PlayerMovement : MonoBehaviour
     public Sprite climbLeft;
 
     private bool facingRight = true;
+    private bool isSlowed = false;
+
+    // Fixed positions for left and right
+    private Vector2 leftPosition = new Vector2(510.0657f, 95f);
+    private Vector2 rightPosition = new Vector2(570.188f, 95f);
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Button listeners
         leftButton.onHoldStart.AddListener(OnLeftHoldStart);
-        leftButton.onHoldEnd.AddListener(OnLeftHoldEnd);
+        leftButton.onHoldEnd.AddListener(OnHoldEnd);
         rightButton.onHoldStart.AddListener(OnRightHoldStart);
-        rightButton.onHoldEnd.AddListener(OnRightHoldEnd);
+        rightButton.onHoldEnd.AddListener(OnHoldEnd);
 
-        // Start idle facing right
         spriteRenderer.sprite = idleRight;
     }
 
-    void Update()
+    public void SetSlow(bool value)
     {
-        if (moveLeft)
-        {
-            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-            spriteRenderer.sprite = climbLeft;
-            facingRight = false;
-        }
-        else if (moveRight)
-        {
-            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-            spriteRenderer.sprite = climbRight;
-            facingRight = true;
-        }
-        else
-        {
-            // Idle
-            spriteRenderer.sprite = facingRight ? idleRight : idleLeft;
-        }
+        isSlowed = value;
     }
 
-    void OnLeftHoldStart() => moveLeft = true;
-    void OnLeftHoldEnd() => moveLeft = false;
-    void OnRightHoldStart() => moveRight = true;
-    void OnRightHoldEnd() => moveRight = false;
+    void OnLeftHoldStart()
+    {
+        float offset = isSlowed ? 5f : 0f; // less responsive when slowed
+        transform.position = new Vector3(leftPosition.x - offset, leftPosition.y, transform.position.z);
+        spriteRenderer.sprite = climbLeft;
+        facingRight = false;
+    }
+
+    void OnRightHoldStart()
+    {
+        float offset = isSlowed ? 5f : 0f;
+        transform.position = new Vector3(rightPosition.x + offset, rightPosition.y, transform.position.z);
+        spriteRenderer.sprite = climbRight;
+        facingRight = true;
+    }
+
+    void OnHoldEnd()
+    {
+        spriteRenderer.sprite = facingRight ? idleRight : idleLeft;
+    }
 }
