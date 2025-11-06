@@ -52,12 +52,13 @@ public class RecipeHuntGame : MonoBehaviour
         public string ingredientName;
         public string ingredientImg;
         public string ingredientContainerImg;
-    }
-
-    private Coroutine dishAnimationCoroutine;
+    }    private Coroutine dishAnimationCoroutine;
     private Coroutine panelFadeCoroutine;
     private CanvasGroup successPanelCanvasGroup;
 
+    public string recipeJsonFileName = "RecipeList.json";
+    private string streamingRecipePath;
+    private string persistentRecipePath;
 
     [System.Serializable]
     public class IngredientListWrapper
@@ -85,14 +86,23 @@ public class RecipeHuntGame : MonoBehaviour
 
     void Start()
     {
+
+        streamingRecipePath = Path.Combine(Application.streamingAssetsPath, recipeJsonFileName);
+        persistentRecipePath = Path.Combine(Application.persistentDataPath, recipeJsonFileName);
+
+        // Ensure persistent copy exists before any dish-loading happens
+        StartCoroutine(EnsureRecipeFileExists());
+
         foreach (Transform child in slotsParent)
             slotObjects.Add(child.gameObject);
 
         foreach (Transform child in foodTrayParent)
             traySlots.Add(child.gameObject);
 
+        // load ingredients immediately (ingredients live in StreamingAssets and we read them with platform-safe code)
         StartCoroutine(LoadIngredientsFromStreamingAssets());
-        StartCoroutine(LoadDishesFromStreamingAssets());
+
+        // remove any direct call to LoadDishesFromStreamingAssets() here — EnsureRecipeFileExists will call LoadDishesFromFile()
 
         cookButton.onClick.AddListener(CookDish);
         cookButton.interactable = false;
@@ -108,6 +118,93 @@ public class RecipeHuntGame : MonoBehaviour
         // start hidden
         successPanelCanvasGroup.alpha = 0f;
         successPanel.SetActive(false);
+    }
+
+    IEnumerator EnsureRecipeFileExists()
+    {
+        if (File.Exists(persistentRecipePath))
+        {
+            Debug.Log($"✅ Persistent recipe exists at: {persistentRecipePath}");
+            StartCoroutine(LoadDishesFromFile());
+            yield break;
+        }
+
+        Debug.Log("📦 No persistent RecipeList.json found — creating one from StreamingAssets...");
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+    UnityWebRequest request = UnityWebRequest.Get(streamingRecipePath);
+    yield return request.SendWebRequest();
+
+    if (request.result != UnityWebRequest.Result.Success)
+    {
+        Debug.LogError($"❌ Failed to read StreamingAssets RecipeList.json: {request.error}");
+        yield break;
+    }
+
+    try
+    {
+        File.WriteAllText(persistentRecipePath, request.downloadHandler.text);
+        Debug.Log($"✅ Copied RecipeList.json to persistent path: {persistentRecipePath}");
+    }
+    catch (System.Exception ex)
+    {
+        Debug.LogError($"❌ Failed to write recipe JSON to persistent path: {ex.Message}");
+        yield break;
+    }
+#else
+        if (!File.Exists(streamingRecipePath))
+        {
+            Debug.LogError($"❌ Streaming recipe JSON not found at: {streamingRecipePath}");
+            yield break;
+        }
+
+        string streamingJson = null;
+        try
+        {
+            streamingJson = File.ReadAllText(streamingRecipePath);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"❌ Failed to read streaming recipe JSON: {ex.Message}");
+            yield break;
+        }
+
+        try
+        {
+            File.WriteAllText(persistentRecipePath, streamingJson);
+            Debug.Log($"✅ Copied RecipeList.json to persistent path: {persistentRecipePath}");
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"❌ Failed to write recipe JSON to persistent path: {ex.Message}");
+            yield break;
+        }
+
+        yield return null;
+#endif
+
+        StartCoroutine(LoadDishesFromFile());
+    }
+
+    IEnumerator LoadDishesFromFile()
+    {
+        if (!File.Exists(persistentRecipePath))
+        {
+            Debug.LogError($"❌ Recipe JSON not found at path: {persistentRecipePath}");
+            yield break;
+        }
+
+        string json = File.ReadAllText(persistentRecipePath);
+        DishListWrapper wrapper = JsonUtility.FromJson<DishListWrapper>(json);
+
+        if (wrapper == null || wrapper.dishes == null)
+        {
+            Debug.LogError("⚠ Failed to parse recipe JSON!");
+            yield break;
+        }
+
+        allDishes = wrapper.dishes;
+        Debug.Log($"✅ Loaded {allDishes.Count} dishes successfully!");
     }
 
     IEnumerator LoadIngredientsFromStreamingAssets()
@@ -152,11 +249,21 @@ public class RecipeHuntGame : MonoBehaviour
 
     IEnumerator LoadDishesFromStreamingAssets()
     {
-        string path = Path.Combine(Application.streamingAssetsPath, "RecipeList.json");
+        string persistentPath = Path.Combine(Application.persistentDataPath, "RecipeProgress.json");
         string json = "";
 
+        if (File.Exists(persistentPath))
+        {
+            Debug.Log("📂 Loading dish progress from persistent data path...");
+            json = File.ReadAllText(persistentPath);
+        }
+        else
+        {
+            Debug.Log("📦 No progress found. Loading default RecipeList.json from StreamingAssets...");
+            string streamingPath = Path.Combine(Application.streamingAssetsPath, "RecipeList.json");
+
 #if UNITY_ANDROID && !UNITY_EDITOR
-        UnityWebRequest request = UnityWebRequest.Get(path);
+        UnityWebRequest request = UnityWebRequest.Get(streamingPath);
         yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
         {
@@ -165,13 +272,14 @@ public class RecipeHuntGame : MonoBehaviour
         }
         json = request.downloadHandler.text;
 #else
-        if (!File.Exists(path))
-        {
-            Debug.LogError("Recipe JSON not found at path: " + path);
-            yield break;
-        }
-        json = File.ReadAllText(path);
+            if (!File.Exists(streamingPath))
+            {
+                Debug.LogError("Recipe JSON not found at path: " + streamingPath);
+                yield break;
+            }
+            json = File.ReadAllText(streamingPath);
 #endif
+        }
 
         DishListWrapper wrapper = JsonUtility.FromJson<DishListWrapper>(json);
         if (wrapper == null || wrapper.dishes == null)
@@ -181,8 +289,9 @@ public class RecipeHuntGame : MonoBehaviour
         }
 
         allDishes = wrapper.dishes;
-        Debug.Log($"Loaded {allDishes.Count} dishes from RecipeList.json!");
+        Debug.Log($"Loaded {allDishes.Count} dishes successfully!");
     }
+
 
     void UpdatePage()
     {
@@ -374,6 +483,7 @@ public class RecipeHuntGame : MonoBehaviour
         if (matchedDish != null)
         {
             matchedDish.isCooked = true;
+            SaveDishProgress();
             Debug.Log($"Dish created: {matchedDish.dishName}!");
             SetAddButtonsInteractable(false);
 
@@ -411,7 +521,7 @@ public class RecipeHuntGame : MonoBehaviour
                 dishAnimationCoroutine = null;
             }
 
-            dishAnimationCoroutine = StartCoroutine(DelayedFailedDishDisplay("Lola wrote some recipe notes around so she doesn't forget them. Check the surroundings!", 3f));
+            dishAnimationCoroutine = StartCoroutine(DelayedFailedDishDisplay("Hint: Lola wrote some recipe notes around so she doesn't forget them. Check the surroundings!", 3f));
         }
 
     }
@@ -430,9 +540,9 @@ public class RecipeHuntGame : MonoBehaviour
             yield break;
         }
 
-        // --- INITIAL UI SETUP ---
+        // INITIAL UI SETUP
         successPanel.SetActive(false);
-        yield return null; // ensures one frame passes to prevent flicker
+        yield return null;
         successPanel.SetActive(true);
 
         CanvasGroup cg = successPanel.GetComponent<CanvasGroup>();
@@ -466,13 +576,13 @@ public class RecipeHuntGame : MonoBehaviour
         }
 
         // Add small scale-in effect
-        float startScale = 0.9f;
+        float startScale = 0.8f;
         cookedDishImage.rectTransform.localScale = Vector3.one * startScale;
         dishNameText.rectTransform.localScale = Vector3.one * startScale;
 
         Canvas.ForceUpdateCanvases();
 
-        // --- STEP 1: Wait 1.5 seconds before showing header ---
+        // STEP 1: Wait 1.5 seconds before showing header
         yield return new WaitForSeconds(1.5f);
 
         // Instantly show "You Have Created!"
@@ -483,10 +593,10 @@ public class RecipeHuntGame : MonoBehaviour
             successHeaderText.color = headerColor;
         }
 
-        // --- STEP 2: Wait another 1.5 seconds before fading in dish image & name ---
+        // STEP 2: Wait another 1.5 seconds before fading in dish image & name
         yield return new WaitForSeconds(1.5f);
 
-        // --- STEP 3: Fade in dish image and name together ---
+        // STEP 3: Fade in dish image and name together
         float elapsed = 0f;
         while (elapsed < dishFadeInDuration)
         {
@@ -539,7 +649,7 @@ public class RecipeHuntGame : MonoBehaviour
         successPanel.SetActive(false);
         cookedDishImage.gameObject.SetActive(false);
 
-        // --- RESET ---
+        // RESET UI Elements
         selectedIngredients.Clear();
         UpdateFoodTray();
         SetAddButtonsInteractable(true);
@@ -566,7 +676,7 @@ public class RecipeHuntGame : MonoBehaviour
         }
 
         successPanel.SetActive(true);
-        successPanelCanvasGroup.alpha = 1f; // immediate full visibility
+        successPanelCanvasGroup.alpha = 1f;
 
         failedPanel.SetActive(false);
 
@@ -574,7 +684,6 @@ public class RecipeHuntGame : MonoBehaviour
         {
             dishNameText.text = dish.dishName.ToUpper();
 
-            // Force the dish name invisible at the start (prevents flash)
             Color tColor = dishNameText.color;
             tColor.a = 0f;
             dishNameText.color = tColor;
@@ -587,7 +696,6 @@ public class RecipeHuntGame : MonoBehaviour
             dishImage.sprite = sprite;
         }
 
-        // Also make sure the cookedDishImage is invisible until animation
         if (cookedDishImage != null)
         {
             Color imgColor = cookedDishImage.color;
@@ -600,7 +708,7 @@ public class RecipeHuntGame : MonoBehaviour
     {
         cookButton.interactable = false;
 
-        // --- INITIAL SETUP ---
+        // INITIAL SETUP
         failedPanel.SetActive(false);
         yield return null;
         failedPanel.SetActive(true);
@@ -634,7 +742,7 @@ public class RecipeHuntGame : MonoBehaviour
 
         Canvas.ForceUpdateCanvases();
 
-        // --- STEP 1: Wait 1.5 seconds before showing everything ---
+        // Delay of 1.5 seconds before showing everything
         yield return new WaitForSeconds(1.5f);
 
         // Instantly show all UI elements (no fade-in)
@@ -659,15 +767,15 @@ public class RecipeHuntGame : MonoBehaviour
             failHintText.color = hintColor;
         }
 
-        // --- STEP 2: Keep visible for 3 seconds ---
+        //  Visible for 3 seconds 
         yield return new WaitForSeconds(3f);
 
-        // --- STEP 3: Fade out entire panel ---
+        // Fade out entire panel
         yield return StartCoroutine(FadeOutPanel(failedPanel, 1.5f));
 
         failedPanel.SetActive(false);
 
-        // --- RESET ---
+        // RESET UI Elements
         selectedIngredients.Clear();
         UpdateFoodTray();
         SetAddButtonsInteractable(true);
@@ -715,7 +823,6 @@ public class RecipeHuntGame : MonoBehaviour
         if (cg == null)
             cg = panel.AddComponent<CanvasGroup>();
 
-        // start at current alpha (may be 1)
         float startAlpha = cg.alpha;
         float elapsed = 0f;
 
@@ -732,7 +839,6 @@ public class RecipeHuntGame : MonoBehaviour
 
     IEnumerator FadeOutPanel(GameObject panel, float duration)
     {
-        // wrapper so callers can `yield return StartCoroutine(FadeOutPanel(panel,duration));`
         if (panelFadeCoroutine != null)
         {
             StopCoroutine(panelFadeCoroutine);
@@ -743,6 +849,22 @@ public class RecipeHuntGame : MonoBehaviour
         yield return panelFadeCoroutine;
 
         panelFadeCoroutine = null;
+    }
+
+    void SaveDishProgress()
+    {
+        try
+        {
+            DishListWrapper wrapper = new DishListWrapper { dishes = allDishes };
+            string json = JsonUtility.ToJson(wrapper, true);
+
+            File.WriteAllText(persistentRecipePath, json);
+            Debug.Log($"💾 Recipe progress saved to: {persistentRecipePath}");
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"Failed to save recipe progress: {ex.Message}");
+        }
     }
 
 
@@ -764,3 +886,4 @@ public class RecipeHuntGame : MonoBehaviour
         }
     }
 }
+
