@@ -12,7 +12,7 @@ public class AudioSave : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(PlayClickSound);
     }
 
-    void PlayClickSound()
+    public void PlayClickSound()
     {
         if (AudioManager.Instance != null && clickSound != null)
         {
