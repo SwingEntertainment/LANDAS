@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ConfettiAnimation : MonoBehaviour
 {
     [Header("Confetti Settings")]
-    public Sprite confettiSprite;            
+    public Sprite confettiSprite;
     public int confettiCount = 40;
     public float spawnDuration = 2f;
     public float fallSpeed = 200f;
@@ -16,10 +17,19 @@ public class ConfettiAnimation : MonoBehaviour
     [Header("Parent Canvas")]
     public RectTransform canvasRect;
 
+    private List<GameObject> activeConfetti = new List<GameObject>();
+    private Coroutine confettiRoutine;
+
     public void PlayConfetti()
     {
         if (confettiSprite == null || canvasRect == null) return;
-        StartCoroutine(SpawnConfettiRoutine());
+
+        ClearConfetti();
+
+        if (confettiRoutine != null)
+            StopCoroutine(confettiRoutine);
+
+        confettiRoutine = StartCoroutine(SpawnConfettiRoutine());
     }
 
     IEnumerator SpawnConfettiRoutine()
@@ -43,6 +53,7 @@ public class ConfettiAnimation : MonoBehaviour
     {
         GameObject confettiObj = new GameObject("Confetti", typeof(Image));
         confettiObj.transform.SetParent(canvasRect, false);
+        activeConfetti.Add(confettiObj); // 🔹 Track this
 
         RectTransform rt = confettiObj.GetComponent<RectTransform>();
         rt.anchoredPosition = new Vector2(xPos, yPos);
@@ -74,6 +85,24 @@ public class ConfettiAnimation : MonoBehaviour
             yield return null;
         }
 
-        Destroy(rt.gameObject);
+        if (rt != null)
+        {
+            activeConfetti.Remove(rt.gameObject);
+            Destroy(rt.gameObject);
+        }
+    }
+
+    public void ClearConfetti()
+    {
+        foreach (var c in activeConfetti)
+        {
+            if (c != null) Destroy(c);
+        }
+        activeConfetti.Clear();
+    }
+
+    private void OnDisable()
+    {
+        ClearConfetti();
     }
 }

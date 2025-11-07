@@ -5,6 +5,6 @@ public class IntroAnimation : MonoBehaviour
 {
     public void LoadNextScene()
     {
-        SceneManager.LoadScene("MainMenu");
+        LoadingScene.LoadSceneWithLoading("MainMenu");
     }
 }

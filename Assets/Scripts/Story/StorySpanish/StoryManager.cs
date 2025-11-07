@@ -99,6 +99,11 @@ public class StoryManager : MonoBehaviour
     public Button quizChoiceBButton;
     public TMP_Text quizChoiceAText;
     public TMP_Text quizChoiceBText;
+    private List<Button> dynamicReadButtons = new List<Button>();
+
+    [Header("GameOver UI")]
+    public GameObject gameOverButton;
+
 
     [Header("Editor fallback quiz (if JSON missing)")]
     [Tooltip("If JSON doesn't contain quizSegments, this editor list will be used as a fallback quiz after slide #10.")]
@@ -109,6 +114,9 @@ public class StoryManager : MonoBehaviour
     public AudioClip correctSFX;
     public AudioClip wrongSFX;
 
+    [Header("Locked Overlay")]
+    public GameObject lockOverlayPanel;
+    public TMP_Text lockOverlayText;
 
     [Header("Misc")]
     public float textFadeDuration = 0.45f;
@@ -214,6 +222,8 @@ public class StoryManager : MonoBehaviour
 
         subchapters = new List<Subchapter>(collection.subchapters);
         Debug.Log($"Loaded {subchapters.Count} subchapters.");
+
+        UpdateChapterProgress();
         yield return null;
     }
 
@@ -233,6 +243,67 @@ public class StoryManager : MonoBehaviour
         }
     }
     #endregion
+
+    void RegisterReadButtons(List<Button> buttons)
+    {
+        dynamicReadButtons = buttons;
+        UpdateChapterProgress();
+    }
+
+   void UpdateChapterProgress()
+{
+    if (subchapters == null || subchapters.Count == 0)
+        return;
+
+    if (currentListingIndex == 0)
+    {
+        readButton.interactable = true;
+    }
+    else
+    {
+        bool previousRead = subchapters[currentListingIndex - 1].isRead;
+        readButton.interactable = previousRead;
+    }
+
+    bool allRead = subchapters.All(s => s.isRead);
+
+    if (gameOverButton != null)
+    {
+        TMP_Text btnText = gameOverButton.GetComponentInChildren<TMP_Text>();
+        Button btn = gameOverButton.GetComponent<Button>();
+        btn.onClick.RemoveAllListeners();
+
+        if (allRead)
+        {
+            btnText.text = "Go to Quiz";
+            gameOverButton.SetActive(true);
+
+            btn.onClick.AddListener(() =>
+            {
+                Debug.Log("All chapters read! Showing game over screen.");  
+            });
+        }
+        else
+        {
+            btnText.text = "Read Next Chapter";
+            gameOverButton.SetActive(true);
+
+            btn.onClick.AddListener(() =>
+            {
+                int nextLockedIndex = subchapters.FindIndex(s => !s.isRead);
+                if (nextLockedIndex != -1)
+                {
+                    currentListingIndex = nextLockedIndex;
+                    UpdateListingUI();
+                    confirmReadModal.SetActive(true);
+                    listingThumbnail.enabled = false;
+                }
+            });
+        }
+    }
+}
+
+
 
     #region Listing UI
     void UpdateListingUI()
@@ -279,6 +350,25 @@ public class StoryManager : MonoBehaviour
 
         prevButton.interactable = currentListingIndex > 0;
         nextButton.interactable = currentListingIndex < subchapters.Count - 1;
+
+        UpdateChapterProgress();
+
+        if (lockOverlayPanel != null)
+        {
+            if (currentListingIndex == 0)
+            {
+                lockOverlayPanel.SetActive(false);
+            }
+            else
+            {
+                bool prevRead = subchapters[currentListingIndex - 1].isRead;
+                lockOverlayPanel.SetActive(!prevRead);
+
+                if (lockOverlayText != null)
+                    lockOverlayText.text = "Read the previous chapter first to unlock";
+            }
+        }
+
     }
 
 
@@ -553,13 +643,29 @@ public class StoryManager : MonoBehaviour
 
         var confetti = FindObjectOfType<ConfettiAnimation>();
         if (confetti != null) confetti.PlayConfetti();
+
+        if (slideImage.sprite != null)
+        {
+            Destroy(slideImage.sprite.texture);
+            slideImage.sprite = null;
+        }
+        Resources.UnloadUnusedAssets();
+        UpdateChapterProgress();
     }
 
     void OnFinishBackToList()
     {
+        if (currentSubchapter != null)
+        {
+            currentSubchapter.isRead = true;
+            SaveJson();
+        }
+
         finishPanel.SetActive(false);
         slidePanel.SetActive(false);
+
         UpdateListingUI();
+        UpdateChapterProgress();
     }
     #endregion
 
@@ -681,33 +787,37 @@ public class StoryManager : MonoBehaviour
             yield break;
         }
 
-#if UNITY_ANDROID && !UNITY_EDITOR
-        using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(fullPath))
-        {
-            yield return uwr.SendWebRequest();
-            if (uwr.result == UnityWebRequest.Result.Success)
-            {
-                var tex = DownloadHandlerTexture.GetContent(uwr);
-                var sp = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), Vector2.one * 0.5f);
-                onComplete?.Invoke(sp);
-            }
-            else
-            {
-                Debug.LogWarning("Image load failed: " + uwr.error + " path:" + fullPath);
-                onComplete?.Invoke(null);
-            }
-        }
-#else
         string usePath = fullPath;
+#if !UNITY_ANDROID || UNITY_EDITOR
         if (!usePath.StartsWith("file://")) usePath = "file://" + fullPath;
+#endif
+
         using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(usePath))
         {
             yield return uwr.SendWebRequest();
+
+            if (this == null || !gameObject.activeInHierarchy)
+            {
+                yield break; // Object destroyed or inactive
+            }
+
             if (uwr.result == UnityWebRequest.Result.Success)
             {
-                var tex = DownloadHandlerTexture.GetContent(uwr);
-                var sp = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), Vector2.one * 0.5f);
-                onComplete?.Invoke(sp);
+                try
+                {
+                    var tex = DownloadHandlerTexture.GetContent(uwr);
+                    var sp = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+
+                    // Release old texture to free memory
+                    StartCoroutine(ReleaseTextureWhenDone(tex));
+
+                    onComplete?.Invoke(sp);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning("Failed creating sprite: " + e.Message);
+                    onComplete?.Invoke(null);
+                }
             }
             else
             {
@@ -715,8 +825,15 @@ public class StoryManager : MonoBehaviour
                 onComplete?.Invoke(null);
             }
         }
-#endif
     }
+
+    IEnumerator ReleaseTextureWhenDone(Texture2D tex)
+    {
+        yield return new WaitForSeconds(2f);
+        if (tex != null)
+            Resources.UnloadUnusedAssets();
+    }
+
 
     IEnumerator LoadSpriteFromStreamingAssets(string relativePath, Action<Sprite> onComplete)
     {
