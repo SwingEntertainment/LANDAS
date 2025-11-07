@@ -44,7 +44,7 @@ public class SkippableIntro : MonoBehaviour
         {
             IntroSequence.time = IntroSequence.duration;
             IntroSequence.Evaluate();
-            SceneManager.LoadScene(nextSceneName);
+            LoadingScene.LoadSceneWithLoading(nextSceneName);
         }
     }
 }

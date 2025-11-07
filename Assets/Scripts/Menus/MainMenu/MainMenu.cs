@@ -36,7 +36,7 @@ public class MainMenu : MonoBehaviour
     public void CheckForUpdates()
     {
         if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX(buttonClick);
-        Application.OpenURL("https://rzregio.github.io");
+        Application.OpenURL("https://landas2D.github.io");
     }
 
     public void OnStartButton()

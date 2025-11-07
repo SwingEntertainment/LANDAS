@@ -197,17 +197,17 @@ public class GameMenu : MonoBehaviour
             yield break;
         }
 
-        bool anyRead = false;
+        bool allRead = true;
         foreach (var sub in data.subchapters)
         {
-            if (sub.isRead)
+            if (!sub.isRead)
             {
-                anyRead = true;
+                allRead = false;
                 break;
             }
         }
 
-        if (anyRead)
+        if (allRead)
         {
             PlayerPrefs.SetInt(LolaMenuActiveKey, 1);
             PlayerPrefs.Save();
@@ -219,7 +219,9 @@ public class GameMenu : MonoBehaviour
         {
             if (lockedPanel != null)
                 lockedPanel.SetActive(true);
+            Debug.Log("Quiz locked: Not all subchapters have been read.");
         }
+
     }
 
     public void GoToSpanishStory()

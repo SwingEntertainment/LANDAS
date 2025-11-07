@@ -313,6 +313,8 @@ public class Dictionary : MonoBehaviour
     {
         if (index < 0 || index >= dictionaryWords.Count) return;
 
+        StopVoice();
+
         selectedWordIndex = index;
         WordEntry word = dictionaryWords[index];
 
@@ -377,6 +379,24 @@ public class Dictionary : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        StopVoice();
+    }
+    
+    private void StopVoice()
+    {
+#if UNITY_ANDROID && !UNITY_EDITOR
+    if (ttsObject != null)
+    {
+        ttsObject.Call("stop");
+        Debug.Log("TTS stopped.");
+    }
+#else
+        Debug.Log("[TTS] StopVoice() called (simulation in Editor).");
+#endif
+    }
+
 #if UNITY_ANDROID && !UNITY_EDITOR
     private void OnDestroy()
     {
@@ -392,7 +412,9 @@ public class Dictionary : MonoBehaviour
 }
 
 [System.Serializable]
-public class WordEntry
+public class
+
+WordEntry
 {
     public string tagalog;
     public string english;

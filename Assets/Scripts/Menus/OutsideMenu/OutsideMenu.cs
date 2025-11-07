@@ -82,13 +82,13 @@ public class OutsideMenu : MonoBehaviour
     public void GoToPaloSebo()
     {
         ChangeTheme(PaloSeboTheme);
-        LoadingScene.LoadSceneWithLoading(PaloSeboScene);
+        SceneManager.LoadScene(PaloSeboScene);
     }
 
     public void GoToSipa()
     {
         ChangeTheme(SipaTheme);
-        LoadingScene.LoadSceneWithLoading(SipaScene);
+        SceneManager.LoadScene(SipaScene);
     }
 
     // ===== Audio =====
