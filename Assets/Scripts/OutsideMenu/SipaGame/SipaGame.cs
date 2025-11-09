@@ -39,10 +39,14 @@ public class SipaGame : MonoBehaviour
     [Header("Static Game Background")]
     public GameObject staticGameBG; 
 
+    [Header("UI Sound Effects")]
+    public AudioClip buttonClickClip;
+
     private bool isCountingDown = false;
     private bool isGameOver = false;
     private bool isGameStarted = false;
     private Vector3 playerStartPos;
+    private bool menuMusicPlaying = false;
 
     private void Start()
     {
@@ -65,8 +69,6 @@ public class SipaGame : MonoBehaviour
 
         ShowStaticAndResetBG();
     }
-
-    private bool menuMusicPlaying = false;
 
     private void Update()
     {
@@ -237,6 +239,7 @@ public class SipaGame : MonoBehaviour
         if (gameOverPanel != null)
             gameOverPanel.SetActive(true);
     }
+
     public void PlayMainMenuMusic()
     {
         if (AudioManager.Instance != null && menuMusic != null)
@@ -246,6 +249,7 @@ public class SipaGame : MonoBehaviour
             Debug.Log("Main Menu music started via helper function.");
         }
     }
+
     public void ShowStaticAndResetBG()
     {
         if (staticGameBG != null)
@@ -293,6 +297,15 @@ public class SipaGame : MonoBehaviour
             BgTimeline.Evaluate(); 
             BgTimeline.Play();
             Debug.Log("BG Timeline reset and playing.");
+        }
+    }
+
+    public void PlayButtonClick()
+    {
+        if (sfxSource != null && buttonClickClip != null)
+        {
+            sfxSource.PlayOneShot(buttonClickClip);
+            Debug.Log("Button click sound played.");
         }
     }
 }
