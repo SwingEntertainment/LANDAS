@@ -12,7 +12,6 @@ public class ScoreManager : MonoBehaviour
 
     private int currentScore = 0;
 
-    private const string PREF_CURRENT_SCORE = "SipaCurrentScore";
     private const string PREF_HIGH_SCORE = "SipaHighScore";
 
     private void Awake()
@@ -30,42 +29,32 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
-        LoadScore();
-        UpdateScoreUI();
-        Debug.Log($"[ScoreManager] Initialized | Current Score: {currentScore}");
-    }
-
-    private void LoadScore()
-    {
-        currentScore = PlayerPrefs.GetInt(PREF_CURRENT_SCORE, 0);
+        ResetScore();    
+        UpdateHighScoreUI();
+        Debug.Log($"[ScoreManager] Initialized | Current Score: {currentScore} | High Score: {GetHighScore()}");
     }
 
     public void AddScore(int points)
     {
         currentScore += points;
 
-        PlayerPrefs.SetInt(PREF_CURRENT_SCORE, currentScore);
-
-        int highScore = PlayerPrefs.GetInt(PREF_HIGH_SCORE, 0);
+        int highScore = GetHighScore();
         if (currentScore > highScore)
         {
             PlayerPrefs.SetInt(PREF_HIGH_SCORE, currentScore);
+            PlayerPrefs.Save();
             Debug.Log($"🏆 New High Score: {currentScore}");
         }
 
-        PlayerPrefs.Save();
         UpdateScoreUI();
-
         Debug.Log($"[ScoreManager] +{points} | New Score: {currentScore}");
     }
 
     public void ResetScore()
     {
         currentScore = 0;
-        PlayerPrefs.SetInt(PREF_CURRENT_SCORE, 0);
-        PlayerPrefs.Save();
         UpdateScoreUI();
-        Debug.Log("[ScoreManager] Score reset to 0");
+        Debug.Log("[ScoreManager] Current score reset to 0");
     }
 
     private void UpdateScoreUI()
@@ -76,25 +65,31 @@ public class ScoreManager : MonoBehaviour
         if (finalScoreText != null)
             finalScoreText.text = currentScore.ToString();
 
+        UpdateHighScoreUI();
+    }
+
+    private void UpdateHighScoreUI()
+    {
         if (highScoreText != null)
         {
-            int highScore = PlayerPrefs.GetInt(PREF_HIGH_SCORE, 0);
+            int highScore = GetHighScore();
             highScoreText.text = highScore.ToString();
         }
     }
 
     public int GetCurrentScore() => currentScore;
+
     public int GetHighScore() => PlayerPrefs.GetInt(PREF_HIGH_SCORE, 0);
 
     private void OnEnable()
     {
-        LoadScore();
-        UpdateScoreUI();
+        UpdateHighScoreUI();
     }
 
     private void OnDisable()
     {
-        PlayerPrefs.SetInt(PREF_CURRENT_SCORE, currentScore);
+        int highScore = GetHighScore();
+        PlayerPrefs.SetInt(PREF_HIGH_SCORE, highScore);
         PlayerPrefs.Save();
     }
 }
