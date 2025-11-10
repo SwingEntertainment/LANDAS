@@ -7,7 +7,7 @@
       "dishImg": "Adobo.png",
       "recipeList": ["Dahon ng Laurel", "Manok", "Bawang", "Toyo", "Suka"],
       "ingredientIDs": [1, 8, 13, 24, 30],
-      "dishDescription": "The word adobo is derived from the Spanish word adobar, which means “marinade” or “pickling sauce.” The existence of the tangy dish was first recorded in 1612 by the Spaniard Pedro de San Buenaventura."
+      "dishDescription": "Ang salitang adobo ay galing sa salitang Espanyol na adobar, na ang ibig sabihin ay “marinada” o “sawsawang pampalasa.” Unang naitala ang pagkaing ito noong 1612 ng isang Espanyol na nagngangalang Pedro de San Buenaventura. Ang adobo ay kilala sa maasim at malinamnam nitong lasa dahil sa suka at toyo."
     },
     {
       "foodID": 2,
@@ -16,7 +16,7 @@
       "dishImg": "LecheFlan.png",
       "recipeList": ["Condensed Milk", "Itlog", "Gatas", "Asukal", "Vanilla Extract"],
       "ingredientIDs": [9, 11, 16, 26, 29],
-      "dishDescription": "The leftover yolks in Leche Flan were from the egg whites used as cement for stone walls when churches were built. This was the theory of many historians on the leche flan’s origins in the Philippines in the 16th century, during the Spanish colonial era."
+      "dishDescription": "Sinasabing ang mga natirang itlog na pula sa paggawa ng Leche Flan ay mula sa mga itlog na ginamit bilang “semento” sa mga pader ng simbahan noong panahon ng mga Espanyol. Nagsimula ito sa Pilipinas noong ika-16 na siglo, sa panahon ng pananakop ng Espanya. Ngayon, isa na ito sa mga paboritong panghimagas ng mga Pilipino."
     },
     {
       "foodID": 3,
@@ -25,7 +25,7 @@
       "dishImg": "Menudo.png",
       "recipeList": ["Bell Pepper", "Atay", "Baboy", "Patatas", "Tomato sauce"],
       "ingredientIDs": [4, 15, 20, 21, 28],
-      "dishDescription": "A popular Filipino dish, has Spanish origins from the colonial period. It evolved from the Spanish 'cocido' stew. Filipino Menudo features pork, veggies, and liver, becoming a cherished part of Filipino culture and celebrations."
+      "dishDescription": "Ang Menudo ay isang sikat na pagkaing Pilipino na may halong impluwensiya ng mga Espanyol. Nagsimula ito sa putaheng tinatawag na cocido sa Espanya. Sa Pilipinas, ginawang espesyal ang Menudo gamit ang baboy, atay, at mga gulay, kaya’t madalas itong ihain sa mga handaan at espesyal na okasyon."
     },
     {
       "foodID": 4,
@@ -34,7 +34,7 @@
       "dishImg": "Embutido.png",
       "recipeList": ["Breadcrumbs", "Itlog", "Hotdog", "Baboy", "Pasas"],
       "ingredientIDs": [5, 11, 14, 20, 22],
-      "dishDescription": "The dish gets its name from the Spanish word embutido (meaning sausage), but the Philippine version is a meatloaf, not a sausage. It became popular during the American occupation (1898–1946), when canned meats like Vienna sausages, corned beef, and Spam were novel and highly valued—leading Filipinos to adapt American meatloaf into a steamed roll."
+      "dishDescription": "Ang pangalan na embutido ay galing sa salitang Espanyol na nangangahulugang “sausage.” Pero sa Pilipinas, ito ay parang meatloaf na niluluto sa pamamagitan ng pag-steam. Naging uso ito noong panahon ng mga Amerikano (1898–1946) dahil sa pagdating ng mga de-latang karne tulad ng Vienna sausage at Spam, kaya ginawang lokal na bersyon ng mga Pilipino ang embutido."
     },
     {
       "foodID": 5,
@@ -43,7 +43,7 @@
       "dishImg": "Fried Chicken.png",
       "recipeList": ["Manok", "Mantika", "Itlog", "Harina"],
       "ingredientIDs": [8, 10, 11, 12],
-      "dishDescription": "During slavery and into the Jim Crow era, fried chicken became a symbol of resilience and resourcefulness. African-American women, often called 'waiter carriers,' sold fried chicken at train stations and markets as a form of livelihood."
+      "dishDescription": "Noong panahon ng pagkaalipin sa Amerika, ang pritong manok ay naging simbolo ng tapang at pagtitiyaga. Maraming kababaihang Aprikano-Amerikano ang nagbebenta nito sa mga istasyon ng tren at pamilihan bilang hanapbuhay. Hanggang ngayon, ang pritong manok ay paboritong pagkain sa iba’t ibang panig ng mundo, kabilang na ang Pilipinas."
     },
     {
       "foodID": 6,
@@ -52,7 +52,7 @@
       "dishImg": "Spaghetti.png",
       "recipeList": ["Baka", "Hotdog", "Spaghetti Noodles", "Asukal", "Tomato sauce"],
       "ingredientIDs": [3, 14, 25, 26, 28],
-      "dishDescription": "Across Black American communities, spaghetti represents more than a meal—it’s a symbol of creativity, comfort, and resilience. Many families add extra sugar, take-out sauces, or processed meats to suit personal or communal tastes. Sauce is often richly seasoned and sometimes sweetened to make it more palatable and soul-nourishing."
+      "dishDescription": "Sa mga komunidad ng Aprikano-Amerikano, ang spaghetti ay higit pa sa pagkain—itó ay simbolo ng pagkamalikhain at pagkakaisa. Madalas itong nilalagyan ng konting asukal, processed meat, at iba pang pampalasa para maging mas malasa. Sa Pilipinas, nakilala rin ito bilang sweet-style spaghetti na paborito ng mga bata."
     },
     {
       "foodID": 7,
@@ -61,7 +61,7 @@
       "dishImg": "CornedBeef.png",
       "recipeList": ["Baka", "Bawang", "Sibuyas", "Patatas"],
       "ingredientIDs": [3, 13, 18, 21],
-      "dishDescription": "Corned beef is salt-cured beef—most commonly brisket—preserved using large grains of rock salt called 'corns,' which is how it got its name. Brining often includes nitrates, which keep the meat pink and help prevent bacterial growth."
+      "dishDescription": "Ang corned beef ay karne ng baka na pinatagal ang buhay gamit ang asin. Ang salitang “corned” ay galing sa malalaking butil ng asin na tinatawag na corns. Minsan nilalagyan din ito ng nitrate para mapanatiling kulay pink at ligtas kainin. Karaniwang niluluto ito sa umaga bilang ulam sa kanin o pandesal."
     },
     {
       "foodID": 8,
@@ -70,7 +70,7 @@
       "dishImg": "BurgerSteak.png",
       "recipeList": ["Baka", "Itlog", "Kabute", "Sibuyas", "Toyo"],
       "ingredientIDs": [3, 11, 17, 18, 24],
-      "dishDescription": "In the early to mid-20th century, Americans in the Philippines helped introduce hamburger patties and cooking techniques. But it wasn’t until the 1970s that the dish became widely known locally in restaurant culture, especially once Jollibee popularized its version—served not in a bun, but with mushroom gravy and rice."
+      "dishDescription": "Noong unang bahagi ng ika-20 siglo, ipinakilala ng mga Amerikano sa Pilipinas ang hamburger at mga paraan ng pagluluto nito. Pero noong dekada 1970, sumikat ito nang husto dahil sa Jollibee, na naglunsad ng burger steak — walang tinapay, may kanin, at sinabawan ng masarap na mushroom gravy."
     },
     {
       "foodID": 9,
@@ -79,7 +79,7 @@
       "dishImg": "Okonomiyaki.png",
       "recipeList": ["Toge", "Itlog", "Harina", "Baboy"],
       "ingredientIDs": [2, 11, 12, 20],
-      "dishDescription": "The name literally means 'yaki what you like'—emphasizing the customizable nature of the dish, with mix-ins ranging from pork and squid to cheese in certain regions."
+      "dishDescription": "Ang salitang Okonomiyaki ay nangangahulugang “lutuin ayon sa gusto mo.” Ibig sabihin, puwedeng haluan ito ng kahit anong sangkap tulad ng baboy, pusit, o keso depende sa rehiyon. Para itong Japanese version ng pancake na maalat at masustansiya."
     },
     {
       "foodID": 10,
@@ -88,7 +88,7 @@
       "dishImg": "Yakitori.png",
       "recipeList": ["Kalamansi", "Manok", "Bawang", "Toyo", "Asukal"],
       "ingredientIDs": [7, 8, 13, 24, 26],
-      "dishDescription": "Yakitori, which means 'grilled chicken,' became popular in Japan during the postwar era when chicken became more accessible and people enjoyed eating skewers with drinks at small roadside bars called izakayas. Traditionally cooked over charcoal and glazed with a sweet-savory tare sauce, yakitori is now enjoyed worldwide and resembles Filipino-style BBQ in its skewered form and flavorful marinade."
+      "dishDescription": "Ang Yakitori ay nangangahulugang “grilled chicken” sa wikang Hapon. Naging tanyag ito matapos ang digmaan sa Japan, kung kailan mas naging abot-kaya ang manok. Karaniwang iniihaw sa uling at nilalagyan ng matamis-alat na sarsa. Katulad ito ng Filipino BBQ, pero nasa skewer o tuhog."
     },
     {
       "foodID": 11,
@@ -97,7 +97,7 @@
       "dishImg": "Tsukemono.png",
       "recipeList": ["Bell Pepper", "Papaya", "Asukal", "Suka"],
       "ingredientIDs": [4, 19, 26, 30],
-      "dishDescription": "Tsukemono—literally 'pickled things'—originated as a food-preservation method during the Nara period (710–794), made by salting vegetables like daikon and eggplant; over centuries, techniques expanded to include rice-bran, miso, sake lees, vinegar, and soy sauce, resulting in over 600 regional varieties across Japan."
+      "dishDescription": "Ang Tsukemono ay salitang Hapon na ibig sabihin ay “mga bagay na binuro o nilatsan.” Nagsimula ito noong panahon ng Nara (710–794) bilang paraan ng pagpapanatili ng gulay tulad ng labanos at talong. Sa paglipas ng panahon, ginamit na rin ang suka, toyo, miso, at asin sa paggawa nito. Ngayon, may daan-daang uri ng tsukemono sa Japan."
     },
     {
       "foodID": 12,
@@ -106,7 +106,7 @@
       "dishImg": "Tonkatsu.png",
       "recipeList": ["Breadcrumbs", "Itlog", "Harina", "Baboy"],
       "ingredientIDs": [5, 11, 12, 20],
-      "dishDescription": "Tonkatsu was created in 1899 at Tokyo’s yōshoku restaurant Rengatei in Ginza by Chef Motokiyo Kida, who transformed the Western cōtelettes de veau into a lighter, Japanese-friendly dish by using tender pork coated in panko breadcrumbs and deep-frying it tempura-style. It quickly became a beloved part of Japanese comfort food, paving the way for popular variations like katsu-sando, katsu curry, and Nagoya’s miso katsu."
+      "dishDescription": "Ang Tonkatsu ay unang niluto noong 1899 sa Tokyo ng isang chef na nagngangalang Motokiyo Kida. Gamit ang baboy, pinahiran niya ito ng panko breadcrumbs at pinirito tulad ng tempura. Dahil dito, naging paborito itong comfort food sa Japan, at nagkaroon pa ng mga bersyong tulad ng katsu curry at katsu sandwich."
     }
   ]
 }
