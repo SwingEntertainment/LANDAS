@@ -38,12 +38,14 @@ public class RecipeHuntGame : MonoBehaviour
     [Header("Cooking Result Panels")]
     public GameObject successPanel;
     public GameObject failedPanel;
-    public TMP_Text dishNameText;     // For showing the dish name on success
-    public Image dishImage;           // Dish image on success panel
-    public TMP_Text failHintText;     // Hint message on failed panel
-    public TMP_Text successHeaderText; // “You Have Created!” text
+    public TMP_Text dishNameText;     
+    public Image dishImage;           
+    public TMP_Text failHintText;     
+    public TMP_Text successHeaderText;
     public TMP_Text failedHeaderText;
     public Image failedDishImage;
+    public AudioSource successCookingSFX;
+    public AudioSource failedCookingSFX;
 
     [System.Serializable]
     public class IngredientData
@@ -53,9 +55,9 @@ public class RecipeHuntGame : MonoBehaviour
         public string ingredientImg;
         public string ingredientContainerImg;
     }    private Coroutine dishAnimationCoroutine;
+    
     private Coroutine panelFadeCoroutine;
     private CanvasGroup successPanelCanvasGroup;
-
     public string recipeJsonFileName = "RecipeList.json";
     private string streamingRecipePath;
     private string persistentRecipePath;
@@ -102,15 +104,12 @@ public class RecipeHuntGame : MonoBehaviour
         // load ingredients immediately (ingredients live in StreamingAssets and we read them with platform-safe code)
         StartCoroutine(LoadIngredientsFromStreamingAssets());
 
-        // remove any direct call to LoadDishesFromStreamingAssets() here — EnsureRecipeFileExists will call LoadDishesFromFile()
-
         cookButton.onClick.AddListener(CookDish);
         cookButton.interactable = false;
 
         if (cookedDishImage != null)
             cookedDishImage.gameObject.SetActive(false);
 
-        // ensure successPanel has a CanvasGroup we can control
         successPanelCanvasGroup = successPanel.GetComponent<CanvasGroup>();
         if (successPanelCanvasGroup == null)
             successPanelCanvasGroup = successPanel.AddComponent<CanvasGroup>();
@@ -129,32 +128,26 @@ public class RecipeHuntGame : MonoBehaviour
             yield break;
         }
 
-        Debug.Log("📦 No persistent RecipeList.json found — creating one from StreamingAssets...");
-
 #if UNITY_ANDROID && !UNITY_EDITOR
     UnityWebRequest request = UnityWebRequest.Get(streamingRecipePath);
     yield return request.SendWebRequest();
 
     if (request.result != UnityWebRequest.Result.Success)
     {
-        Debug.LogError($"❌ Failed to read StreamingAssets RecipeList.json: {request.error}");
         yield break;
     }
 
     try
     {
         File.WriteAllText(persistentRecipePath, request.downloadHandler.text);
-        Debug.Log($"✅ Copied RecipeList.json to persistent path: {persistentRecipePath}");
     }
     catch (System.Exception ex)
     {
-        Debug.LogError($"❌ Failed to write recipe JSON to persistent path: {ex.Message}");
         yield break;
     }
 #else
         if (!File.Exists(streamingRecipePath))
         {
-            Debug.LogError($"❌ Streaming recipe JSON not found at: {streamingRecipePath}");
             yield break;
         }
 
@@ -165,18 +158,15 @@ public class RecipeHuntGame : MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            Debug.LogError($"❌ Failed to read streaming recipe JSON: {ex.Message}");
             yield break;
         }
 
         try
         {
             File.WriteAllText(persistentRecipePath, streamingJson);
-            Debug.Log($"✅ Copied RecipeList.json to persistent path: {persistentRecipePath}");
         }
         catch (System.Exception ex)
         {
-            Debug.LogError($"❌ Failed to write recipe JSON to persistent path: {ex.Message}");
             yield break;
         }
 
@@ -190,7 +180,6 @@ public class RecipeHuntGame : MonoBehaviour
     {
         if (!File.Exists(persistentRecipePath))
         {
-            Debug.LogError($"❌ Recipe JSON not found at path: {persistentRecipePath}");
             yield break;
         }
 
@@ -199,12 +188,10 @@ public class RecipeHuntGame : MonoBehaviour
 
         if (wrapper == null || wrapper.dishes == null)
         {
-            Debug.LogError("⚠ Failed to parse recipe JSON!");
             yield break;
         }
 
         allDishes = wrapper.dishes;
-        Debug.Log($"✅ Loaded {allDishes.Count} dishes successfully!");
     }
 
     IEnumerator LoadIngredientsFromStreamingAssets()
@@ -217,14 +204,12 @@ public class RecipeHuntGame : MonoBehaviour
         yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogError($"Failed to load JSON: {request.error}");
             yield break;
         }
         json = request.downloadHandler.text;
 #else
         if (!File.Exists(path))
         {
-            Debug.LogError($"JSON not found at path: {path}");
             yield break;
         }
         json = File.ReadAllText(path);
@@ -233,13 +218,10 @@ public class RecipeHuntGame : MonoBehaviour
         IngredientListWrapper wrapper = JsonUtility.FromJson<IngredientListWrapper>(json);
         if (wrapper == null || wrapper.ingredients == null)
         {
-            Debug.LogError("Failed to parse ingredients JSON!");
             yield break;
         }
 
         allIngredients = wrapper.ingredients;
-        Debug.Log($"Loaded {allIngredients.Count} ingredients!");
-
         totalPages = Mathf.CeilToInt((float)allIngredients.Count / itemsPerPage);
         UpdatePage();
 
@@ -254,12 +236,10 @@ public class RecipeHuntGame : MonoBehaviour
 
         if (File.Exists(persistentPath))
         {
-            Debug.Log("📂 Loading dish progress from persistent data path...");
             json = File.ReadAllText(persistentPath);
         }
         else
         {
-            Debug.Log("📦 No progress found. Loading default RecipeList.json from StreamingAssets...");
             string streamingPath = Path.Combine(Application.streamingAssetsPath, "RecipeList.json");
 
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -267,14 +247,12 @@ public class RecipeHuntGame : MonoBehaviour
         yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogError("Failed to load recipe JSON: " + request.error);
             yield break;
         }
         json = request.downloadHandler.text;
 #else
             if (!File.Exists(streamingPath))
             {
-                Debug.LogError("Recipe JSON not found at path: " + streamingPath);
                 yield break;
             }
             json = File.ReadAllText(streamingPath);
@@ -284,12 +262,10 @@ public class RecipeHuntGame : MonoBehaviour
         DishListWrapper wrapper = JsonUtility.FromJson<DishListWrapper>(json);
         if (wrapper == null || wrapper.dishes == null)
         {
-            Debug.LogError("Failed to parse recipe JSON!");
             yield break;
         }
 
         allDishes = wrapper.dishes;
-        Debug.Log($"Loaded {allDishes.Count} dishes successfully!");
     }
 
 
@@ -375,7 +351,6 @@ public class RecipeHuntGame : MonoBehaviour
     {
         if (selectedIngredients.Count >= traySlots.Count)
         {
-            Debug.Log("Tray is full!");
             return;
         }
 
@@ -484,7 +459,6 @@ public class RecipeHuntGame : MonoBehaviour
         {
             matchedDish.isCooked = true;
             SaveDishProgress();
-            Debug.Log($"Dish created: {matchedDish.dishName}!");
             SetAddButtonsInteractable(false);
 
             if (sizzleAudio != null)
@@ -494,7 +468,6 @@ public class RecipeHuntGame : MonoBehaviour
                 StartCoroutine(FadeOutSizzle(5f));
             }
 
-            // No ShowSuccessPanel() here — the coroutine will handle visibility
             if (dishAnimationCoroutine != null)
             {
                 StopCoroutine(dishAnimationCoroutine);
@@ -505,7 +478,6 @@ public class RecipeHuntGame : MonoBehaviour
         }
         else
         {
-            Debug.Log("Cooking failed! No matching dish found!");
             SetAddButtonsInteractable(false);
 
             if (sizzleAudio != null)
@@ -536,7 +508,6 @@ public class RecipeHuntGame : MonoBehaviour
 
         if (dishSprite == null)
         {
-            Debug.LogError("Dish image not found: " + path);
             yield break;
         }
 
@@ -595,6 +566,11 @@ public class RecipeHuntGame : MonoBehaviour
 
         // STEP 2: Wait another 1.5 seconds before fading in dish image & name
         yield return new WaitForSeconds(1.5f);
+
+        if (successCookingSFX != null)
+        {
+            successCookingSFX.Play();
+        }
 
         // STEP 3: Fade in dish image and name together
         float elapsed = 0f;
@@ -745,6 +721,11 @@ public class RecipeHuntGame : MonoBehaviour
         // Delay of 1.5 seconds before showing everything
         yield return new WaitForSeconds(1.5f);
 
+        if (failedCookingSFX != null)
+        {
+            failedCookingSFX.Play();
+        }
+
         // Instantly show all UI elements (no fade-in)
         if (failedHeaderText != null)
         {
@@ -859,7 +840,6 @@ public class RecipeHuntGame : MonoBehaviour
             string json = JsonUtility.ToJson(wrapper, true);
 
             File.WriteAllText(persistentRecipePath, json);
-            Debug.Log($"💾 Recipe progress saved to: {persistentRecipePath}");
         }
         catch (System.Exception ex)
         {
