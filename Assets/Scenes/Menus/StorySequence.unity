@@ -420,7 +420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lumang bagay lang po ''yan, sir. Wala nang halaga ngayon.
+  m_text: 'Lumang bagay nalang po ''yan e, sir. Wala nang halaga ngayon.
 
 '
   m_isRightToLeft: 0

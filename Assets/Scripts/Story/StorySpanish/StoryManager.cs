@@ -833,7 +833,12 @@ public class StoryManager : MonoBehaviour
     }
     #endregion
 
+
     #region TTS (Android only, offline)
+
+    private bool ttsInitialized = false;
+    private bool isInitializingTTS = false;
+
     void InitTTSIfAndroid()
     {
         StartCoroutine(InitTTSRoutine());
@@ -841,83 +846,110 @@ public class StoryManager : MonoBehaviour
 
     IEnumerator InitTTSRoutine()
     {
+        if (isInitializingTTS) yield break;
+        isInitializingTTS = true;
+
         if (voiceSpinner != null) voiceSpinner.SetActive(true);
         if (voiceToggle != null) voiceToggle.interactable = false;
 
 #if UNITY_ANDROID && !UNITY_EDITOR
-        const int LANG_MISSING_DATA = -1;
-        const int LANG_NOT_SUPPORTED = -2;
-
-        bool connected = false;
         try
         {
             AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             unityActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-            ttsObj = new AndroidJavaObject("android.speech.tts.TextToSpeech", unityActivity, new TTSListenerProxy());
             
-            AndroidJavaObject locale = new AndroidJavaObject("java.util.Locale", "fil", "PH");
-            
-            int result = ttsObj.Call<int>("setLanguage", locale);
-
-            if (result == LANG_MISSING_DATA)
-            {
-                Debug.LogWarning("TTS: Filipino language data missing. Prompting for install.");
-                
-                AndroidJavaObject intent = new AndroidJavaObject("android.content.Intent");
-                
-                AndroidJavaClass engineClass = new AndroidJavaClass("android.speech.tts.TextToSpeech$Engine");
-                string installAction = engineClass.GetStatic<string>("ACTION_INSTALL_TTS_DATA");
-                
-                intent.Call<AndroidJavaObject>("setAction", installAction);
-                unityActivity.Call("startActivity", intent);
-                
-                connected = false;
-                ttsObj = null; 
-            }
-            else if (result == LANG_NOT_SUPPORTED)
-            {
-                connected = false;
-                ttsObj = null;
-            }
-            else
-            {
-                connected = true;
-            }
+            ttsObj = new AndroidJavaObject("android.speech.tts.TextToSpeech", unityActivity, new TTSInitListener(this, unityActivity));
         }
         catch (Exception e)
         {
-            ttsObj = null;
-            connected = false;
+            isInitializingTTS = false;
+            if (voiceSpinner != null) voiceSpinner.SetActive(false);
+            if (voiceToggle != null)
+            {
+                voiceToggle.isOn = false;
+                voiceToggle.interactable = false;
+            }
         }
 #else
         yield return new WaitForSeconds(0.5f);
-        bool connected = true;
-#endif
-
-        yield return new WaitForSeconds(1f); 
-
+        ttsInitialized = true;
+        isInitializingTTS = false;
         if (voiceSpinner != null) voiceSpinner.SetActive(false);
         if (voiceToggle != null)
         {
-            voiceToggle.interactable = connected;
+            voiceToggle.interactable = true;
         }
-        if (!connected && voiceToggle != null)
-        {
-            voiceToggle.isOn = false;
-            voiceEnabled = false;
-        }
-        else
-        {
-            voiceEnabled = voiceToggle.isOn;
-        }
+        voiceEnabled = voiceToggle.isOn;
+#endif
+        yield return null;
     }
 
+#if UNITY_ANDROID && !UNITY_EDITOR
+    private class TTSInitListener : AndroidJavaProxy
+    {
+        private readonly StoryManager parent;
+        private readonly AndroidJavaObject context;
+
+        public TTSInitListener(StoryManager parent, AndroidJavaObject context)
+            : base("android.speech.tts.TextToSpeech$OnInitListener")
+        {
+            this.parent = parent;
+            this.context = context;
+        }
+
+        void onInit(int status)
+        {
+            parent.isInitializingTTS = false; 
+
+            if (status == 0) 
+            {
+                var locale = new AndroidJavaObject("java.util.Locale", "fil", "PH");
+                
+                int result = parent.ttsObj.Call<int>("setLanguage", locale);
+
+                if (result == -1 || result == -2)
+                {                    
+                    AndroidJavaObject installIntent = new AndroidJavaObject(
+                        "android.content.Intent", "android.speech.tts.engine.INSTALL_TTS_DATA");
+                    
+                    context.Call("startActivity", installIntent);
+                    
+                    if (parent.voiceSpinner != null) parent.voiceSpinner.SetActive(false);
+                    if (parent.voiceToggle != null)
+                    {
+                        parent.voiceToggle.isOn = false;
+                        parent.voiceToggle.interactable = false;
+                    }
+                }
+                else
+                {
+                    parent.ttsInitialized = true;
+
+                    if (parent.voiceSpinner != null) parent.voiceSpinner.SetActive(false);
+                    if (parent.voiceToggle != null)
+                    {
+                        parent.voiceToggle.interactable = true;
+                        parent.voiceEnabled = parent.voiceToggle.isOn;
+                    }
+                }
+            }
+            else
+            {
+                if (parent.voiceSpinner != null) parent.voiceSpinner.SetActive(false);
+                if (parent.voiceToggle != null)
+                {
+                    parent.voiceToggle.isOn = false;
+                    parent.voiceToggle.interactable = false;
+                }
+            }
+        }
+    }
+#endif
 
     void Speak(string text)
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-        if (ttsObj == null) return;
-        try
+        if (ttsObj == null || !ttsInitialized) return; 
         {
             ttsObj.Call<int>("speak", text, 0, null as AndroidJavaObject, null);
         }
@@ -928,27 +960,38 @@ public class StoryManager : MonoBehaviour
 #endif
     }
 
-#if UNITY_ANDROID && !UNITY_EDITOR
-    class TTSListenerProxy : AndroidJavaProxy
-    {
-        public TTSListenerProxy() : base("android.speech.tts.TextToSpeech$OnInitListener") { }
-        public void onInit(int status) { }
-    }
-#endif
-
     void StopSpeak()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-    if (ttsObj == null) return;
-    try
-    {
-        ttsObj.Call<int>("stop");
-    }
-    catch (Exception e)
-    {
-    }
+        if (ttsObj == null) return;
+        try
+        {
+            ttsObj.Call<int>("stop");
+        }
+        catch (Exception e)
+        {
+        }
 #endif
     }
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+    private void OnDestroy()
+    {
+        if (ttsObj != null)
+        {
+            try
+            {
+                ttsObj.Call("stop");
+                ttsObj.Call("shutdown");
+                ttsObj.Dispose();
+                ttsObj = null;
+            }
+            catch (Exception e)
+            {
+            }
+        }
+    }
+#endif
 
     #endregion
 }
