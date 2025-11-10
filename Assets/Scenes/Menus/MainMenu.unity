@@ -3931,13 +3931,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Sinasundan ng kuwento ang isang estudyanteng hirap na laging bumabagsak
     sa kanyang asignaturang Philippine History. Umaasang bumawi, nagpalipas siya
-    ng mahabang oras sa aklatan, kung saan ginigising ng katahimikan ang mga alaala
+    ng mahabang oras sa aklatan, kung saan ginising ng katahimikan ang mga alaala
     ng kanyang pagkabata sa probinsya sa pangangalaga ng kanyang Lola. Habang lumalalim
-    ang mga alaalang ito, isang pagbabago ang nangyayari, na nagbibigay sa kanya
-    ng pagkakataong bumalik sa kanyang bayan. Doon, mainit siyang tinatanggap ng
-    kanyang Lola, at nagsisimula ang kanyang paglalakbay: isang daan ng pagtuklas
-    muli sa kanyang ugat, pakikipag-ugnayang muli sa kultura, at pagtanggap sa mga
-    kuwento ng lupang humubog sa kanya.'
+    ang mga alaalang ito, isang pagbabago ang nangyari, na magbibigay sa kanya ng
+    pagkakataong bumalik sa kanyang bayan. Doon, mainit siyang tinanggap ng kanyang
+    Lola, at magsimula ang kanyang paglalakbay: isang daan ng pagtuklas muli sa kanyang
+    ugat, pakikipag-ugnayang muli sa kultura, at pagtanggap sa mga kuwento ng lupang
+    humubog sa kanya.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
   m_sharedMaterial: {fileID: 8359380927227677158, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
@@ -6030,8 +6030,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 191.20097, y: 249.4}
-  m_SizeDelta: {x: 200, y: 90}
+  m_AnchoredPosition: {x: 189.7, y: 243.51}
+  m_SizeDelta: {x: 220, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589252037
 MonoBehaviour:
@@ -9971,7 +9971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 893960bb24c79c24e93b361cd7765c2c, type: 3}
+  clickSound: {fileID: 8300000, guid: 622198e8c3afd624d9687c02dfe31203, type: 3}
 --- !u!114 &1039071953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11010,7 +11010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 337, y: 140.066}
+  m_AnchoredPosition: {x: 350.69, y: 137.79}
   m_SizeDelta: {x: 114.46997, y: 274.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208642047
@@ -13089,8 +13089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: 0}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchoredPosition: {x: -7.8, y: -0.0000061989}
+  m_SizeDelta: {x: 182.9278, y: 79.4258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585460218
 MonoBehaviour:
@@ -13177,7 +13177,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 10.34021, y: 9.047668, z: 22.834656, w: 21.542084}
+  m_margin: {x: 10.34021, y: 9.047668, z: 2.977539, w: 21.542084}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -17089,15 +17089,15 @@ MonoBehaviour:
   objects:
   - clickableImage: {fileID: 1133629095}
     comments:
-    - "Hmm\u2026 Mukhang ito ang pinaglalabanan ng guro.\r\n"
-    - 'Ilang chalk doodles kaya ang napunta rito.
+    - "Hmm\u2026 Mukhang ito ang battlefield lagi ng mga guro.\r\n"
+    - 'Ilang chalk doodles na kaya ang napunta rito.
 
 '
     - "Klasik\u2026 hindi kumpleto ang silid-aralan kung wala ito.\r\n"
     lastIndex: -1
   - clickableImage: {fileID: 230701178}
     comments:
-    - "Mataas at tuwid, gaya ng nararapat sa isang flagpole.\r"
+    - "Mataas at tuwid, gaya ng nararapat sa isang watawat.\r"
     - "Medyo malungkot tingnan nang walang watawat na kumakaway.\r"
     - 'Palagi nating nakikita, pero siguro mas malalim ang kahulugan nito kaysa sa
       iniisip ko.
@@ -17113,17 +17113,17 @@ MonoBehaviour:
       Lunes.
 
 '
-    - 'Nakakatuwa kung paano pinagsasama ng simpleng tagahawak na ito ang lahat.
+    - 'Nakakatuwa kung pano pinagsasama ng simpleng bagay na ito ang ating kasarinlan.
 
 '
     lastIndex: -1
   - clickableImage: {fileID: 575198044}
     comments:
-    - "Ugh\u2026 ito lang ang laging tinititigan ng mga estudyante.\r\n"
-    - 'Tick tock, oras na ng kalayaan.
+    - "Ugh\u2026 ito lang ang lagi kong tinititigan e\re"
+    - 'Tick tock, kailan ba ang oras ng kalayaan.
 
 '
-    - 'Parang bumabagal ang ikot tuwing may klase.
+    - 'Parang bumabagal ang ikot nito tuwing may klase.
 
 '
     - 'Minsan, sumusumpa ako na hindi gumagalaw ang mga kamay nito.
@@ -17133,7 +17133,7 @@ MonoBehaviour:
     lastIndex: -1
   - clickableImage: {fileID: 1634736409}
     comments:
-    - "Ang mga taong ito\u2026 sila talaga ang nagdala ng koponan.\r\n"
+    - "Ang mga taong ito\u2026 sila talaga ang nagdala ng koponan. Mga idolo!\r\n"
     - 'Parang nakatingin sila sa akin habang nag-i-scroll ako dito
 
 '
@@ -17142,7 +17142,8 @@ MonoBehaviour:
 
 '
     - "Isipin mo, ipininta ang mukha mo at isinabit sa loob ng daang-taon\u2026 astig.\r\n"
-    - "Lahat sila mukhang nakatutok\u2026 parang alam na nila ang sagot sa exam.\r\n"
+    - "Lahat sila mukhang nakabantay lagi dito\u2026 tingin ko alam na nila ang sagot
+      sa mga exam.\r\n"
     - 'Kung buhay sila ngayon, anong kaya ang iisipin nila sa TikTok.
 
 '
@@ -17150,31 +17151,32 @@ MonoBehaviour:
   - clickableImage: {fileID: 1837104954}
     comments:
     - "Medyo mabigat\u2026 sa timbang at sa impormasyon.\r\n"
-    - "Amoy\u2026 takdang-aralin na naghihintay gawin.\r\n"
-    - 'Kaalaman mula pa sa lumang paaralan, narito.
+    - "Amoy\u2026 takdang-aralin na naman ang naghihintay gawin.\r\n"
+    - 'Kaalaman mula pa sa lumang paaralan, yan ay nandirito
 
 '
     - "Hindi kailangan ng Wi-Fi ng mga aklat\u2026 pero wala rin silang notifications.\r\n"
     - 'Sana may scroll bar ang mga aklat ng matapos ako agad.
 
 '
-    - 'Mas mabigat ang pakiramdam kapag aklat sa Math, mas magaan kapag comics.
+    - 'Mas mabigat ang pakiramdam kapag aklat sa Math ito, mas magaan kapag comics
+      naman.
 
 '
     lastIndex: -1
   - clickableImage: {fileID: 1039071950}
     comments:
-    - 'Handa na yata ang sila sa pagsusulat.
+    - 'Handa na yata sila sa pagsusulat.
 
 '
     - 'Ang lalagyan na iyan ay parang isang mini tower defense para sa mga lapis.
 
 '
-    - 'Matagal nang pinapatalas ng mga ito ang ating  mga ideya.
+    - 'Matagal nang pinapatalas ng mga ito ang ating mga ideya.
 
 '
     - "Nakakatuwa kung pano minsan, ang pinakamaliit na gamit pa ang nagawa ng pinakamalaking
-      trabaho.\r"
+      trabaho. Wow!\r"
     lastIndex: -1
   - clickableImage: {fileID: 1208642047}
     comments:
@@ -17186,12 +17188,13 @@ MonoBehaviour:
     - 'Nandito ako, pero ang utak ko ay nasa ibang lugar.
 
 '
-    - 'Mas madali mag-scroll kaysa mag-isip minsan.
+    - 'Mas madali mag-scroll kaysa mag-isip minsan. Legit lang!
 
 '
-    - "Medyo gutom\u2026 may pagkain kaya mamaya.\r\n"
-    - "Walang iniisip\u2026 pero may iniisip pa rin, tama ba?\r\n"
-    - 'Minsan, ang walang ginagawa ay parang maraming nagawa.
+    - "Medyo gutom\u2026 may pagkain kaya mamaya. Hmmm!\r\n"
+    - "Walang iniisip\u2026 pero may iniisip pa rin na walang maisip. So, nagiisip
+      parin ba ako?\r\n"
+    - 'Minsan, ang walang ginagawa ay matatawag paring may ginagawa
 
 '
     lastIndex: -1

@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 66bd52eda584150439adff606d545cfd, type: 3}
+  clickSound: {fileID: 8300000, guid: 686d31544b5a3b14ebbefb28131c8313, type: 3}
 --- !u!114 &161319605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5201,7 +5201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 931d85805b5d71444a518314f1a2a961, type: 3}
+  clickSound: {fileID: 8300000, guid: 9dec3fdc7cbf1a3428f110fe6e99632f, type: 3}
 --- !u!114 &1442447021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6465,7 +6465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 66bd52eda584150439adff606d545cfd, type: 3}
+  clickSound: {fileID: 8300000, guid: 622198e8c3afd624d9687c02dfe31203, type: 3}
 --- !u!114 &1903387296
 MonoBehaviour:
   m_ObjectHideFlags: 0

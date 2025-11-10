@@ -6899,6 +6899,8 @@ MonoBehaviour:
   quizTheme: {fileID: 8300000, guid: 020b735e1489e094a9f29a94a809e77b, type: 3}
   correctSFX: {fileID: 8300000, guid: a94ca6f5c6cc52f4188f050c9e478f8c, type: 3}
   wrongSFX: {fileID: 8300000, guid: a135db2575d733f43a99fb9c37d5bb1a, type: 3}
+  successSFX: {fileID: 8300000, guid: 973194cc8788e294cb4a19c2392ac0f6, type: 3}
+  failureSFX: {fileID: 8300000, guid: eac85abbe1d544a409935cf97fcc48d7, type: 3}
   confettiEffect: {fileID: 1652926930}
   backButton: {fileID: 507569287}
   gameMenuScene: GameMenu

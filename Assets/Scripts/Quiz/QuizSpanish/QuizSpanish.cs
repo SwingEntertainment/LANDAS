@@ -58,6 +58,8 @@ public class QuizSpanish : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip correctSFX;
     public AudioClip wrongSFX;
+    public AudioClip successSFX;
+    public AudioClip failureSFX;
 
     [Header("Confetti Effect")]
     public ConfettiAnimation confettiEffect;
@@ -495,12 +497,20 @@ public class QuizSpanish : MonoBehaviour
             chosenMessage = successMessages[Random.Range(0, successMessages.Count)];
             if (unlockPopupPanel != null && unlockPopupText != null)
                 StartCoroutine(ShowUnlockPopup("Story and Quiz for American Chapter Unlocked!"));
+            if (AudioManager.Instance != null && successSFX != null)
+            {
+                AudioManager.Instance.PlaySFX(successSFX);
+            }
         }
         else
         {
             chosenMessage = (retryMessages.Count > 0)
                 ? retryMessages[Random.Range(0, retryMessages.Count)]
                 : "Keep trying!";
+            if (AudioManager.Instance != null && failureSFX != null)
+            {
+                AudioManager.Instance.PlaySFX(failureSFX);
+            }
         }
 
         if (currentScore >= 15)
