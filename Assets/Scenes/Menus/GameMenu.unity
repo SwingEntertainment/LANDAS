@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 99.23773, y: -58.138184}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 86.246704, y: -58.138184}
+  m_SizeDelta: {x: 630.6611, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14480118
 MonoBehaviour:
@@ -176,8 +176,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If you're curious about more Filipino words, touch the book. I'll help
-    you learn their meanings.
+  m_text: 'Kung gusto mong matuto ng iba pang salitang Filipino, hawakan mo ang aklat.
+    Tutulungan ka nitong alamin ang mga kahulugan nito.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -215,7 +217,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -340,8 +342,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -351,7 +353,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 12
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -927,7 +929,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51.9, y: 80}
+  m_AnchoredPosition: {x: 51.9, y: 50}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122608394
@@ -950,7 +952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Do you wish to quit the game?
+  m_text: Gusto mo bang huminto sa paglalaro?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -985,7 +987,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3405,8 +3407,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 99.23773, y: -58.138184}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 87.22101, y: -58.138184}
+  m_SizeDelta: {x: 632.6097, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335992548
 MonoBehaviour:
@@ -3428,7 +3430,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Now, welcome back again, my apo!
+  m_text: 'Oh, apo, maligayang pagbabalik!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -3466,7 +3470,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -5744,8 +5748,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 98.23773, y: 68.61182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 84.99988, y: 68.61182}
+  m_SizeDelta: {x: 630.1673, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &693037814
 MonoBehaviour:
@@ -5767,8 +5771,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: That's all my grandson. Keep exploring, learning, and holding on to our
-    roots. That way, you'll always carry our stories with you.
+  m_text: 'Iyan lang, apo ko. Patuloy ka lang sa pagtuklas, pag-aaral, at panghawakan
+    ang ating pinagmulan. Sa ganoong paraan, palagi mong madadala ang ating mga kuwento.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -5806,7 +5812,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -6079,7 +6085,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Explore the story of spanish era from subchapter 1 - 3  first
+  m_text: Saliksikin muna ang kwento ng panahon ng Espanyol mula sa subchapter 1 
+    - 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -6864,7 +6871,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Want to test your knowledge?
+  m_text: Gusto mo bang subukin ang iyong kaalaman?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -8507,48 +8514,90 @@ MonoBehaviour:
   objects:
   - clickableImage: {fileID: 1043496306}
     comments:
-    - The past is like a tree's roots. You don't always see them, but they keep us
-      standing.
-    - History is not just in books. It's in the way we live, the food we eat, even
-      the songs we sing.
-    - "The heroes you see in paintings\u2026 they were once ordinary people, too.
-      But they chose courage."
-    - Life in the province is slow, but slow living lets you see what really matters.
-    - Every grain of rice you eat has a story. Respect it, for it came from hard
-      work.
-    - Do not rush to grow up. Time already moves faster than we notice.
-    - Books are patient teachers. Even if you close them, they wait for you to return.
-    - The window you stare at? It shows the world changing, but also staying the
-      same.
-    - Heroes are not only those in paintings. Sometimes, heroes are mothers and fathers
-      who work for their families.
-    - The clock may tick fast in the city, but here in the province, it follows the
-      heart's pace.
-    - "Ah, these walls\u2026 they have heard prayers, laughter, and even tears. That
-      is why the house feels alive."
-    - Food is more than flavor. Each dish is memory, passed from one hand to another,
-      one generation to the next.
-    - Do not underestimate silence. It teaches lessons that noise cannot.
-    - "He who does not look back at where he came from\u2026will always get lost
-      going forward."
-    - "The Philippine flag\u2026 when raised upside down, it means war. That's how
-      important its position is."
-    - Rizal wrote Noli Me Tangere in Europe, far from home, but every page carried
-      his love for the Philippines.
-    - When you drink kapeng barako, remember, it comes from Batangas. Strong coffee
-      for strong hearts.
-    - Our ancestors played larong Pinoy not only for fun, but to teach teamwork and
-      discipline.
-    - Every weaving pattern in a mat or cloth has meaning. Some patterns are for
-      protection, others for blessings.
-    - Lapu-Lapu's victory was not just about weapons. It was about pride, the will
-      to say 'this land is ours.'
-    - Okonomiyaki always reminds me of how the Japanese mix flour and eggs into something
-      savory, not sweet.
-    - I love how Okonomiyaki uses pork and bean sprouts, it's like a pancake that
-      turned into a full meal.
-    - When I smell Okonomiyaki cooking on a hot plate, I can almost hear the sizzle
-      of batter and vegetables.
+    - "Ang nakaraan ay parang mga ugat ng puno. Hindi mo man laging nakikita, pero
+      ito ang nagpapatatag sa atin.\r"
+    - 'Ang kasaysayan ay wala lang sa mga libro. Nasa paraan ito ng ating pamumuhay,
+      sa pagkaing kinakain natin, pati na sa mga kantang inaawit natin.
+
+'
+    - "Ang mga bayaning nakikita mo sa mga pinta... dati rin silang ordinaryong tao.
+      Pero pinili nila ang katapangan.\r\n\t"
+    - 'Mabagal ang buhay sa probinsya, pero ang mabagal na pamumuhay ang nagpapakita
+      sa''yo kung ano talaga ang mahalaga.
+
+'
+    - 'Bawat butil ng kanin na kinakain mo ay may kwento. Respetuhin mo ito, dahil
+      galing ''yan sa pagod at hirap.
+
+'
+    - 'Huwag kang magmadaling tumanda. Ang oras ay mas mabilis nang lumilipas kaysa
+      sa napapansin natin.
+
+'
+    - 'Ang mga libro ay matiyagang guro. Kahit isara mo pa sila, maghihintay silang
+      bumalik ka.
+
+'
+    - 'Ang bintanang tinititigan mo? Ipinapakita nito ang mundong nagbabago, pero
+      nananatili ring pareho.
+
+'
+    - 'Ang mga bayani ay hindi lang ''yung nasa mga painting. Minsan, ang mga bayani
+      ay ang mga ina at ama na nagtatrabaho para sa kanilang pamilya.
+
+'
+    - "Mabilis man ang ikot ng orasan sa siyudad, dito sa probinsya, sumusunod ito
+      sa tibok ng puso.\r"
+    - 'Ah, ang mga pader na ito... nakarinig na ''to ng mga dasal, tawanan, at pati
+      mga luha. Kaya parang buhay na buhay ang bahay.
+
+'
+    - 'Ang pagkain ay higit pa sa lasa. Bawat putahe ay alaala, na ipinapasa mula
+      sa isang kamay patungo sa iba, mula sa isang henerasyon hanggang sa susunod.
+
+'
+    - 'Huwag mong maliitin ang katahimikan. Nagtuturo ito ng mga aral na hindi kayang
+      ituro ng ingay.
+
+'
+    - 'Ang hindi marunong lumingon sa pinanggalingan... ay palaging maliligaw sa
+      kanyang paroroonan.
+
+'
+    - 'Ang watawat ng Pilipinas... kapag binaliktad, ibig sabihin ay giyera. Ganoon
+      kahalaga ang posisyon nito.
+
+'
+    - 'Isinulat ni Rizal ang Noli Me Tangere sa Europa, malayo sa kanyang tahanan,
+      pero bawat pahina ay dala ang pagmamahal niya sa Pilipinas.
+
+'
+    - Kapag umiinom ka ng kapeng barako, tandaan mo, galing 'yan sa Batangas. Matapang
+      na kape para sa matatapang na puso.
+    - 'Naglaro ang ating mga ninuno ng larong Pinoy hindi lang para sa saya, kundi
+      para magturo ng pagkakaisa at disiplina.
+
+'
+    - 'Bawat disenyo ng pagkakahabi sa banig o tela ay may kahulugan. Ang ibang disenyo
+      ay para sa proteksyon, ang iba naman ay para sa biyaya.
+
+'
+    - 'Ang tagumpay ni Lapu-Lapu ay hindi lang tungkol sa armas. Ito ay tungkol sa
+      dangal, ang lakas ng loob na sabihing ''ang lupang ito ay amin.''
+
+'
+    - 'Ang Okonomiyaki ay palaging nagpapaalala sa akin kung paano hinahalo ng mga
+      Hapon ang harina at itlog para maging malasa (savory), hindi matamis.
+
+'
+    - 'Gusto ko kung paano ginagamit sa Okonomiyaki ang baboy at toge, parang pancake
+      na naging isang buong pagkain na.
+
+'
+    - 'Kapag naaamoy ko ang Okonomiyaki na niluluto sa isang mainit na plantsa, parang
+      naririnig ko ang pag-gisitsit ng batter at mga gulay.
+
+'
     lastIndex: 0
   popupContainer: {fileID: 167975031}
   popupText: {fileID: 1238174740}
@@ -10155,8 +10204,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10453,8 +10502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 98.23773, y: 68.61182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 87.460144, y: 68.61182}
+  m_SizeDelta: {x: 635.088, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1262898511
 MonoBehaviour:
@@ -10476,8 +10525,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: And if you want to play our traditional games, just go outside. Nene and
-    Juan are there, ready to play with you!
+  m_text: 'At kung gusto mong maglaro ng ating mga tradisyonal na laro, lumabas ka
+    lang. Nandiyan sina Nene at Juan, handa silang makipaglaro sa iyo!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -10515,7 +10566,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -10590,8 +10641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 99.23773, y: -58.138184}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 85.59717, y: -58.138184}
+  m_SizeDelta: {x: 629.362, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289389231
 MonoBehaviour:
@@ -10613,8 +10664,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Apo, listen closely, if you want to test what you know or learn new things
-    about our history, culture, and daily life, just give a tap on me.
+  m_text: 'Apo, makinig ka, kung gusto mong subukin ang iyong kaalaman o matuto ng
+    mga bagong bagay tungkol sa ating kasaysayan, kultura, at pang-araw-araw na buhay,
+    tapikin mo lang ako.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -10652,7 +10706,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -10750,10 +10804,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"A family's old recipe scribbled in fading ink:\n\nSimmer chicken in
-    soy sauce and vinegar, with garlic crushed fine.\nDrop in bay leaves, never skip
-    that, they're the heart of the aroma.\n\nThey say patience makes the sauce thicker\u2026
-    and the memories deeper.\""
+  m_text: "\"Lumang resipe ng pamilya na isinulat sa kumukupas na tinta: \n\nPakuluan
+    ang manok sa toyo at suka, kasama ang pinitpit na bawang. Huwag na huwag kalimutang
+    ilagay ang mga dahon ng bay leaf, dahil sila ang puso ng aroma. \n\nSabi nila,
+    ang pasensya ang nagpapakapal sa sarsa, at nagpapalalim naman ito sa inyong mga
+    alaala.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -10791,7 +10846,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -12004,67 +12059,180 @@ MonoBehaviour:
   objects:
   - clickableImage: {fileID: 1447220467}
     comments:
-    - "Lola always knows what to say\u2026 even if I don't get it right away."
-    - "She's been through so much\u2026 it's kinda inspiring."
-    - "Her stories sound like they're straight out of a history book\u2026 but with
-      more heart."
-    - Sometimes she talks about the past like it happened yesterday.
-    - Her food? Legendary. No contest.
-    - When Lola laughs, the whole house feels lighter.
-    - "Feels weird being back here\u2026 but good weird."
-    - The city feels so far away right now.
-    - I wonder if this is what people mean by slowing down.
-    - "So many memories hiding in this house\u2026 some mine, some way older."
-    - The air's different here. Softer, maybe?
-    - Funny how being here makes me think about who I really am.
-    - Nothing beats a hot kapeng barako in the morning.
-    - This cup feels like a warm hug from Lola.
-    - Simple, strong, no fancy cafe needed.
-    - "Steam rising, crickets chirping outside\u2026 this is peak probinsya vibes."
-    - Kinda bitter, but in a good way.
-    - All I hear are birds, leaves, and maybe a tricycle far away.
-    - The sky looks bigger out here.
-    - "It smells like soil after rain\u2026 fresh."
-    - "So many stars at night\u2026 can't see that in the city."
-    - The neighbors actually say hi here. Weird, but nice.
-    - "Simple but tough\u2026 like it's seen decades of muddy slippers."
-    - I remember wiping my feet here as a kid.
-    - Looks handmade. Bet it has its own little history.
-    - Feels like part of the house's personality.
-    - Kinda funny seeing lechon and adobo painted like art.
-    - Cool how they mix games and food in the same wall.
-    - These paintings aren't just pretty, they're like little culture lessons.
-    - Every brush stroke feels like it's telling a story I half-remember.
-    - It's history, but with colors and flavors.
-    - The view from here is like a painting that keeps moving.
-    - When the breeze comes through, it feels like the house is breathing.
-    - I used to peek out here as a kid, waiting for ice cream carts.
-    - "This window frames the world outside\u2026 makes it look calmer."
-    - I can hear kids playing just by leaning closer.
-    - Sunlight pouring in makes the whole room glow.
-    - It's like the window keeps secrets, what it's seen over the years.
-    - Lola, why does your food taste better than five-star restaurants? Oh right,
-      it's free.
-    - 'Deep thought of the day: am I hungry, or just bored?'
-    - If mosquitoes had a leaderboard, I'd be number one target.
-    - One sip and I'm awake. Two sips and I'm questioning my life choices.
-    - If I drink three cups, will I see the future?
-    - Why does coffee here taste like wisdom and regrets?
-    - "Is that a carabao\u2026 or just a very buff cow?"
-    - The air's so fresh, I almost feel guilty breathing too much of it.
-    - Every insect outside thinks I'm a buffet.
-    - Step here, and suddenly you're a good houseguest.
-    - I think this mat deserves a vacation too.
-    - Imagine being a mat. Everyone steps on you, but you never complain.
-    - Why do the food paintings look like they're judging my diet?
-    - This window has better resolution than my phone screen.
-    - "Standing here makes me look deep and mysterious\u2026 until I sneeze."
-    - Tonkatsu always feels like a reward, crispy pork wrapped in breadcrumbs and
-      dipped in egg before frying.
-    - I never skip rice when I have Tonkatsu; that golden crust and tender meat need
-      it.
-    - Tonkatsu might seem simple,  just pork, flour, and breadcrumbs, but the crunch
-      says otherwise.
+    - 'laging alam ni Lola ang kanyang sasabihin... kahit ''di ko maintindihan agad.
+
+'
+    - 'Ang dami ng pinagdaanan ni Lola... nakaka-inspire.
+
+'
+    - '''Yung mga kwento ni Lola, parang galing sa history book... pero mas may puso.
+
+'
+    - 'Minsan, ''pag nagkwento si Lola tungkol sa nakaraan, parang kahapon lang nangyari.
+
+'
+    - 'Ang luto ni Lola? Grabe. Walang tatalo.
+
+'
+    - '''Pag tumatawa si Lola, gumagaan ang pakiramdam sa buong bahay.
+
+'
+    - 'Ang weird ng pakiramdam na nandito ulit... pero ''yung weird na masarap sa
+      pakiramdam.
+
+'
+    - 'Parang ang layo-layo ng siyudad ngayon.
+
+'
+    - Ito na yata 'yung sinasabi nilang "slowing down".
+    - 'Ang daming alaala sa bahay na ''to... ''yung iba sa akin, ''yung iba mas luma
+      pa.
+
+'
+    - 'Iba ang hangin dito. Mas banayad, siguro?
+
+'
+    - 'Nakakatuwa, ''pag nandito ako, napapaisip ako kung sino ba talaga ako.
+
+'
+    - 'Walang tatalo sa mainit na kapeng barako sa umaga.
+
+'
+    - 'Ang kape dito ay parang mainit na yakap galing kay Lola.
+
+'
+    - 'Ang kape dito ay simple, matapang, hindi kailangan ng magarbong cafe.
+
+'
+    - 'sariwang hangin, may mga kuliglig sa labas... ito ''yung totoong probinsya
+      vibes.
+
+'
+    - 'Medyo mapait ang kape dito, pero ''yung masarap na pait.
+
+'
+    - 'Ang naririnig ko lang ay ibon, dahon, at siguro isang tricycle sa malayo.
+
+'
+    - 'Parang mas malawak ang langit dito.
+
+'
+    - 'Ang amoy ng lupang nabasa ng ulan dito... ang sariwa.
+
+'
+    - Ang daming bituin sa gabi dito... 'di mo makikita 'yan sa siyudad.
+    - '''Yung mga kapitbahay dito, bumabati talaga. Nakakapanibago, pero masarap
+      sa pakiramdam.
+
+'
+    - 'Parang nakakita na ng ilang dekada ng maputik na tsinelas ang floor mat dito
+
+'
+    - 'Naalala ko, dito ako sa mat nagpupunas ng paa noong bata ako.
+
+'
+    - Mukhang gawa sa kamay ang mat na ito. Sigurado may sarili 'tong kwento.
+    - 'Ang mga litrato dito ay parang bahagi na ng personalidad ng bahay.
+
+'
+    - "Medyo nakakatuwa na makita 'yung lechon at adobo na naka-pinta dito\r"
+    - 'Ang galing na pinaghalo nila ''yung mga laro at pagkain sa iisang pader.
+
+'
+    - 'Hindi lang maganda ''yung mga painting, parang mga munting aralin rin sila
+      sa kultura.
+
+'
+    - 'Bawat hagod ng pintura, parang may kinukwentong ''di ko maalala nang buo.
+
+'
+    - 'Kasaysayan ang mga litrato dito, pero may mga kulay at lasa.
+
+'
+    - 'Ang tanawin mula dito ay parang isang painting na gumagalaw.
+
+'
+    - '''Pag pumapasok ''yung hangin, parang humihinga ''yung bahay.
+
+'
+    - 'Dito ako sumisilip dati noong bata ako, panahong nag-aabang pako ng naglalako
+      ng ice cream.
+
+'
+    - '''Yung bintana, parang frame ng mundo sa labas... ginagawa nitong mas kalmado
+      tingnan.
+
+'
+    - 'Naririnig ko ''yung mga batang naglalaro ''pag dumungaw ako.
+
+'
+    - 'Yung pasok ng araw ang nagpapaliwanag sa buong kwarto dito
+
+'
+    - 'Parang may mga sikretong tinatago ang bintana dito. kung ano-ano na nakita
+      nito sa paglipas ng panahon.
+
+'
+    - 'Lola, bakit mas masarap pa luto n''yo kaysa sa five-star restaurant? Ay oo
+      nga pala, libre.
+
+'
+    - 'Malalim na tanong ngayong araw: gutom ba ako, o bored lang?
+
+'
+    - 'Kung may leaderboard ang mga lamok, ako siguro ''yung number one target.
+
+'
+    - 'Isang higop, gising na ako. Dalawang higop, kinukwestyon ko na ang mga desisyon
+      ko sa buhay.
+
+'
+    - '''Pag tatlong tasa ng kape ininom ko, makikita ko na ba ang future?
+
+'
+    - 'Bakit ''yung kape dito, parang may lasang karunungan at pagsisisi?
+
+'
+    - 'Kalabaw ba ''yun... o isang bakang sobrang maskulado lang?
+
+'
+    - 'Sobrang sariwa ng hangin, parang nakaka-guilty huminga nang malalim.
+
+'
+    - 'Lahat ng insekto sa labas, akala ata buffet ako.
+
+'
+    - 'Tumapak ka dito, at bigla, isa ka nang mabuting bisita.
+
+'
+    - 'Sa tingin ko, deserving din ''tong doormat ng bakasyon.
+
+'
+    - 'Isipin mo kung doormat ka. Lahat tumatapak sa''yo, pero ''di ka nagrereklamo.
+
+'
+    - 'Bakit parang hinuhusgahan ng mga painting ng pagkain ''yung diet ko?
+
+'
+    - 'Mas mataas pa resolution ng bintanang ''to kaysa sa screen ng phone ko.
+
+'
+    - '''Pag nakatayo ako dito, mukha akong malalim at misteryoso... hanggang sa
+      bumahing ako.
+
+'
+    - 'Ang Tonkatsu, parang laging reward. Malutong na baboy na binalot sa breadcrumbs
+      at sinawsaw sa itlog bago iprito.
+
+'
+    - 'Hindi pwedeng walang kanin ''pag may Tonkatsu; kailangan ''yun ng ginintuang
+      lutong at malambot na karne.
+
+'
+    - 'Mukhang simple lang ang Tonkatsu, baboy, harina, at breadcrumbs lang, pero
+      iba ang sinasabi ng lutong niya.
+
+'
     lastIndex: 0
   popupContainer: {fileID: 263593513}
   popupText: {fileID: 18283869}
@@ -12675,7 +12843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What do you want to explore?
+  m_text: Ano ang gusto mong tuklasin?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -14631,18 +14799,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Lola''s handwriting dances across the page:
-
-
-    Mix condensed milk,
-    regular milk, and sugar until it shines like sunlight.
-
-    Add eggs, only the
-    yolks, and a touch of vanilla extract for warmth.
-
-
-    Steam it slowly, and
-    you''ll taste the sweetness of the past."'
+  m_text: "\"Ang sulat-kamay ni Lola ay sumasayaw sa pahina:\n\nHaluin ang condensed
+    milk, regular na gatas, at asukal hanggang sa kumislap ito na parang sinag ng
+    araw. Magdagdag ng mga itlog, yolk lang, at kaunting vanilla extract para sa
+    init. \n\nDahan-dahan itong i-steam, at malalasahan mo ang tamis ng nakaraan.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -14680,7 +14840,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -15878,9 +16038,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If you'd like to learn more about our traditional dishes, just tap the
-    kitchen sign. Venture here to explore what ingredients you need, how to prepare
-    them and get more details about the dishes.
+  m_text: 'Kung gusto mong matuto sa mga tradisyonal na ulam, tapikin mo ang karatula
+    ng kusina. Pumasok ka rito upang tuklasin ang mga sangkap, kung paano ihanda,
+    at makakuha ng detalye tungkol sa mga ulam.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -15918,7 +16080,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -15974,13 +16136,14 @@ GameObject:
   - component: {fileID: 1968079292}
   - component: {fileID: 1968079291}
   - component: {fileID: 1968079290}
+  - component: {fileID: 1968079293}
   m_Layer: 0
   m_Name: TutorialUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1968079286
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16059,7 +16222,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1968079290}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -16081,6 +16244,7 @@ MonoBehaviour:
   - {fileID: 663487879}
   - {fileID: 1463796489}
   - {fileID: 622302405}
+  - {fileID: 149928484}
   - {fileID: 149928484}
   nextButton: {fileID: 1968079288}
 --- !u!114 &1968079290
@@ -16133,6 +16297,18 @@ MonoBehaviour:
   m_Script: {fileID: 19105, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &1968079293
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968079285}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1997300679
 GameObject:
   m_ObjectHideFlags: 0

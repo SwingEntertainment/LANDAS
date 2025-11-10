@@ -53,8 +53,7 @@ public class ConfettiAnimation : MonoBehaviour
     {
         GameObject confettiObj = new GameObject("Confetti", typeof(Image));
         confettiObj.transform.SetParent(canvasRect, false);
-        activeConfetti.Add(confettiObj); // 🔹 Track this
-
+        activeConfetti.Add(confettiObj); 
         RectTransform rt = confettiObj.GetComponent<RectTransform>();
         rt.anchoredPosition = new Vector2(xPos, yPos);
 

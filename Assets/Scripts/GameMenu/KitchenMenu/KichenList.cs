@@ -54,12 +54,10 @@ public class RecipeList : MonoBehaviour
 
         if (File.Exists(persistentRecipePath))
         {
-            Debug.Log($"Loading recipes from persistent path: {persistentRecipePath}");
             jsonData = File.ReadAllText(persistentRecipePath);
         }
         else
         {
-            Debug.Log("No saved recipe file found. Loading default from StreamingAssets...");
 
 #if UNITY_ANDROID && !UNITY_EDITOR
             UnityWebRequest request = UnityWebRequest.Get(recipeJsonPath);
@@ -67,7 +65,6 @@ public class RecipeList : MonoBehaviour
 
             if (request.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogWarning($"Failed to load Recipe JSON from StreamingAssets: {request.error}");
                 yield break;
             }
 
@@ -75,7 +72,6 @@ public class RecipeList : MonoBehaviour
 #else
             if (!File.Exists(recipeJsonPath))
             {
-                Debug.LogWarning($"Recipe JSON not found in StreamingAssets: {recipeJsonPath}");
                 yield break;
             }
 
@@ -83,22 +79,18 @@ public class RecipeList : MonoBehaviour
 #endif
 
             File.WriteAllText(persistentRecipePath, jsonData);
-            Debug.Log($"Copied Recipe JSON to: {persistentRecipePath}");
         }
 
         RecipeData data = JsonUtility.FromJson<RecipeData>(jsonData);
 
         if (data == null || data.dishes == null)
         {
-            Debug.LogWarning("Recipe JSON parsed but no dishes found.");
             dishes = new List<DishEntry>();
             yield break;
         }
 
         dishes = new List<DishEntry>(data.dishes);
         dishes.Sort((a, b) => a.foodID.CompareTo(b.foodID));
-
-        Debug.Log($"Loaded {dishes.Count} recipes successfully.");
     }
 
     // ===== SAVE JSON TO PERSISTENT PATH =====
@@ -107,7 +99,6 @@ public class RecipeList : MonoBehaviour
         RecipeData data = new RecipeData { dishes = dishes.ToArray() };
         string jsonOutput = JsonUtility.ToJson(data, true);
         File.WriteAllText(persistentRecipePath, jsonOutput);
-        Debug.Log($"Recipe JSON saved to: {persistentRecipePath}");
     }
 
     // ===== RESET ALL RECIPES =====
@@ -117,7 +108,6 @@ public class RecipeList : MonoBehaviour
             dish.isCooked = false;
 
         SaveRecipesToPersistentPath();
-        Debug.Log("All recipes reset to uncooked.");
         ShowRecipeDetail(currentRecipeIndex);
     }
 
@@ -167,7 +157,6 @@ public class RecipeList : MonoBehaviour
         {
             dish.isCooked = true;
             SaveRecipesToPersistentPath();
-            Debug.Log($"Dish '{dish.dishName}' marked as cooked!");
         }
     }
 
@@ -193,7 +182,6 @@ public class RecipeList : MonoBehaviour
     }
 
     // ===== SHOW RECIPE DETAILS =====
-    // ===== SHOW RECIPE DETAILS =====
     void ShowRecipeDetail(int index)
     {
         if (index < 0 || index >= dishes.Count) return;
@@ -211,9 +199,6 @@ public class RecipeList : MonoBehaviour
         {
             string resourcePath = $"Images/KitchenFood/{Path.GetFileNameWithoutExtension(dish.dishImg)}";
             spriteToUse = Resources.Load<Sprite>(resourcePath);
-
-            if (spriteToUse == null)
-                Debug.LogWarning($"Image not found in Resources at: {resourcePath}");
         }
 
         if (dishImage != null)
@@ -226,7 +211,6 @@ public class RecipeList : MonoBehaviour
             dishImage.color = dish.isCooked ? Color.white : new Color(0.05f, 0.05f, 0.05f, 0.9f);
         }
 
-        // Description & Ingredients
         if (dish.isCooked)
         {
             dishDescriptionText.text = string.IsNullOrEmpty(dish.dishDescription)

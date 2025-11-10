@@ -37,7 +37,6 @@ public class LoadingScene : MonoBehaviour
 
         if (Instance.currentRoutine != null)
         {
-            Debug.LogWarning("SceneLoader: Already loading a scene, ignoring duplicate call.");
             return;
         }
 

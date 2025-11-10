@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 931d85805b5d71444a518314f1a2a961, type: 3}
+  clickSound: {fileID: 8300000, guid: 66bd52eda584150439adff606d545cfd, type: 3}
 --- !u!114 &41371300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,8 +499,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 931d85805b5d71444a518314f1a2a961, type: 3}
+  clickSound: {fileID: 8300000, guid: 66bd52eda584150439adff606d545cfd, type: 3}
 --- !u!114 &161319605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,8 +994,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 86.39209, y: 147.86182}
+  m_SizeDelta: {x: 630.9518, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367041912
 MonoBehaviour:
@@ -1017,8 +1017,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Just tap on them, and you'll learn how each game is played like sipa, palo
-    sebo, and more.
+  m_text: 'I-tap mo lang ang mga ito, at matututunan mo kung paano laruin ang bawat
+    laro tulad ng sipa, palo sebo, at marami pa.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -1446,13 +1448,14 @@ GameObject:
   - component: {fileID: 683005647}
   - component: {fileID: 683005649}
   - component: {fileID: 683005648}
+  - component: {fileID: 683005650}
   m_Layer: 0
   m_Name: TutorialUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &683005643
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1556,6 +1559,7 @@ MonoBehaviour:
   - {fileID: 651895340}
   - {fileID: 1830300909}
   - {fileID: 1115517660}
+  - {fileID: 1115517660}
   nextButton: {fileID: 683005646}
 --- !u!114 &683005648
 MonoBehaviour:
@@ -1595,6 +1599,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683005642}
   m_CullTransparentMesh: 1
+--- !u!225 &683005650
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683005642}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &715486427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,17 +1668,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"A stained note with smudges of red sauce:
-
-
-    Stir in pork and liver.
-
-    Add
-    diced potatoes, bell peppers, and a generous pour of tomato sauce.
-
-
-    The
-    result? A hearty dish that colors every fiesta."'
+  m_text: "\"Isang bahid ng red sauce ang nasa notang ito: \n\nHaluin ang baboy at
+    atay. Magdagdag ng diced na patatas, bell peppers, at isang saganang buhos ng
+    tomato sauce. \n\nAng resulta? Isang masaganang ulam na nagbibigay-kulay sa bawat
+    fiesta.\"\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -2409,8 +2418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 85.563354, y: 147.86182}
+  m_SizeDelta: {x: 629.2944, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975196973
 MonoBehaviour:
@@ -2432,8 +2441,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Meet Nene and Juan, your playmates here. They love our traditional games
-    just like I did when I was your age.
+  m_text: 'Kilalanin mo sina Nene at Juan. Gustung-gusto nila ang ating mga tradisyonal
+    na laro tulad ng Lola mo noong kaedad mo ako.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -3271,8 +3282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 86.923096, y: 147.86182}
+  m_SizeDelta: {x: 632.0101, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124161896
 MonoBehaviour:
@@ -3294,8 +3305,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enjoy your time, apo. Play, learn, and don't forget, these games are part
-    of who we are. Treasure them, just like we did back in our day.
+  m_text: Magsaya ka, apo. Maglaro ka, matuto ka, at huwag mong kalimutan, ang mga
+    larong ito ay bahagi ng kung sino tayo. Yun lang!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -3563,18 +3574,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"An old lunchbox recipe tucked inside a newspaper clipping:
-
-
-    Blend
-    ground pork with breadcrumbs, eggs, and slices of hotdog.
-
-    Sweeten with raisins
-    before rolling it tight in foil.
-
-
-    Steam until firm, a dish shaped by both
-    thrift and love."'
+  m_text: "\"Lumang resipe ng lunchbox na nakatago sa clipping ng pahayagan: \n\nPaghaluin
+    ang giniling na baboy sa breadcrumbs, itlog, at hiwang hotdog. Patamisin ito
+    ng pasas bago rolyuhin nang mahigpit sa foil. \n\nI-steam hanggang sa tumigas;
+    isang ulam na hinubog ng pagtitipid at pagmamahal.\"\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -4027,8 +4030,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 86.39209, y: 147.86182}
+  m_SizeDelta: {x: 630.9519, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1305159016
 MonoBehaviour:
@@ -4050,8 +4053,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Apo, this is our backyard, where we used to play all sorts of games when
-    we were young.
+  m_text: 'Apo, ito ang ating likod-bahay, kung saan tayo naglalaro ng iba''t ibang
+    laro noong bata kapa.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -4379,7 +4384,7 @@ MonoBehaviour:
   SipaButton: {fileID: 41371300}
   JolensButton: {fileID: 161319605}
   BackButton: {fileID: 388888438}
-  defaultTheme: {fileID: 8300000, guid: 0c5d5c976b7d62e48ab4665d28beef15, type: 3}
+  defaultTheme: {fileID: 8300000, guid: efe103ee3e0cf1c408ce88630c3b6068, type: 3}
   SipaTheme: {fileID: 0}
   GameMenuTheme: {fileID: 0}
   PaloSeboTheme: {fileID: 0}
@@ -4556,8 +4561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 87.22089, y: 147.86182}
+  m_SizeDelta: {x: 632.6094, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407237674
 MonoBehaviour:
@@ -4579,8 +4584,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Look around carefully, apo. Some of the objects you see will lead you to
-    our Larong Pinoy.
+  m_text: 'Tumingin ka nang mabuti sa paligid, apo. Ang ilan sa mga bagay na nakikita
+    mo ay magdadala sa iyo sa ating Larong Pinoy.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -5084,41 +5091,100 @@ MonoBehaviour:
   objects:
   - clickableImage: {fileID: 1442447022}
     comments:
-    - "Home-cooked food for sale\u2026 just the smell makes me hungry."
-    - We can totally imagine running a stall like this. Especially during fiestas,
-      it would be so lively.
-    - Even a simple food cart feels rich, there's always something good inside.
-    - Whoa, Juan. That's super slippery. Good luck climbing it!
-    - "The classic fiesta game! \u2026but also a guaranteed way to fall flat."
-    - "That pole's so tall\u2026 kinda like your dreams. Can you reach it?"
-    - Maybe if you had chalk on your hands or glue, it would be easier. Hehe.
-    - It looks so simple, but it gets really addictive.
-    - Whoever invented sipa must have been really good at making boredom fun.
-    - This little feathered ball probably taught more kids balance than any P.E.
-      class.
-    - "The breeze feels nice\u2026 kinda lazy, but in a good way."
-    - Cloudy skies, but it feels like the day's just taking a nap.
-    - The grass here is soft enough to lie down on. Should we try?
-    - If I close my eyes, I could almost hear the stories this place has kept.
-    - If we stay too close to that stall, we'll end up buying everything.
-    - "Kicking it once is fine\u2026 keeping it up five times is basically sorcery."
-    - "Cloudy, breezy\u2026 perfect weather to do absolutely nothing."
-    - The grass looks comfy. If we lie down, don't wake us up.
-    - This is that 'province vibe' city people post about online.
-    - Tsukemono tastes funny at first, maybe because the papaya and bell peppers
-      soak so long in vinegar.
-    - I didn't expect Tsukemono to be both sweet and sour, with sugar clinging to
-      each crunchy slice.
-    - When Lola serves Tsukemono, the colors of the pickled vegetables make the table
-      look brighter.
+    - 'May nagbebenta ng lutong-bahay dito... amoy pa lang, nakakagutom na.
+
+'
+    - 'Kaya nating isipin na magpatakbo ng kainan. Lalo na ''pag pista, siguradong
+      ang saya.
+
+'
+    - 'Kahit simpleng food cart, ang sarap sa pakiramdam, laging may masarap sa loob.
+
+'
+    - 'Whoa, Juan. Sobrang dulas niyan. Good luck sa pag-akyat!
+
+'
+    - '''Yung klasikong laro sa pista! ...pero sigurado rin ''yung paraan para bumagsak
+      ka nang todo.
+
+'
+    - 'Ang taas ng poste... parang ''yung mga pangarap mo. Abot mo kaya?
+
+'
+    - 'Siguro kung may chalk ka sa kamay o pandikit, mas madali. Hehe.
+
+'
+    - 'Mukha lang siyang simpleng bola, pero nakaka-adik ''pag nasimulan.
+
+'
+    - "Kung sino man 'yung nag-imbento ng sipa, siguradong magaling siyang gumawa
+      ng paraan para 'di ma-bore.\r\n\t"
+    - 'Itong maliit na bolang may balahibo, siguro mas marami pang tinuruan ''to
+      ng balanse kaysa sa anumang P.E. class.
+
+'
+    - 'Ang sarap ng hangin... parang nakakatamad, pero ''yung tamad na masarap sa
+      pakiramdam.
+
+'
+    - 'Maulap, pero parang uma-idlip lang ''yung araw.
+
+'
+    - '''Yung damo dito, ang lambot, pwedeng higaan. Subukan kaya natin?
+
+'
+    - 'Kung pipikit ako, parang maririnig ko ''yung mga kwentong tinatago ng lugar
+      na ''to.
+
+'
+    - '''Pag masyado tayong lumapit sa pwestong ''yun, baka maubos pera natin kabibili.
+
+'
+    - '''Yung sipain ng isang beses, ayos lang... ''yung panatilihin sa ere ng limang
+      beses, parang mahika na ''yun.
+
+'
+    - 'Maulap, mahangin... perpektong panahon para walang gawin.
+
+'
+    - 'Mukhang kumportable ''yung damo. ''Pag humiga kami, ''wag n''yo kaming gigisingin.
+
+'
+    - 'Ito ''yung ''province vibe'' na pino-post ng mga taga-siyudad online.
+
+'
+    - 'Kakaiba ang lasa ng Tsukemono sa una, siguro dahil matagal na ibinabad ''yung
+      papaya at bell pepper sa suka.
+
+'
+    - 'Hindi ko inaasahan na ''yung Tsukemono ay parehong matamis at maasim, na may
+      asukal na kumakapit sa bawat malutong na hiwa.
+
+'
+    - '''Pag naghain si Lola ng Tsukemono, ''yung mga kulay ng atsara, nagpapatingkad
+      ng mesa.
+
+'
     lastIndex: 0
   - clickableImage: {fileID: 161319606}
     comments:
-    - "Marbles! But\u2026 hmm, looks like we can't play them just yet"
-    - The ground's not ready for a proper game of jolens. Guess we wait a bit.
-    - It's like the marbles are teasing us, 'soon, but not yet.'
-    - Patience first. Good games need good timing.
-    - They're all lined up, but nope, not playable in this field right now.
+    - 'Holen! Pero... hmm, mukhang hindi pa tayo pwedeng maglaro.
+
+'
+    - 'Hindi pa handa ''yung lupa para sa isang maayos na laro ng jolens. Maghintay
+      muna siguro tayo.
+
+'
+    - 'Parang nang-aasar ''yung mga holen, ''malapit na, pero ''di pa ngayon.''
+
+'
+    - 'Pasensya muna. Ang magagandang laro ay kailangan ng tamang tiyempo.
+
+'
+    - 'Nakahilera silang lahat, pero hindi pa talaga pwedeng laruin sa ganitong lugar
+      ngayon.
+
+'
     lastIndex: 0
   popupContainer: {fileID: 1847390069}
   popupText: {fileID: 120132273}
@@ -5595,8 +5661,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 85.14905, y: 147.86182}
+  m_SizeDelta: {x: 628.4658, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1718703229
 MonoBehaviour:
@@ -5618,7 +5684,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Whenever you're ready, you can join them to play and have fun.
+  m_text: 'Kapag handa ka na, maaari ka nang sumali sa kanila para maglaro at magsaya.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -6397,7 +6465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 931d85805b5d71444a518314f1a2a961, type: 3}
+  clickSound: {fileID: 8300000, guid: 66bd52eda584150439adff606d545cfd, type: 3}
 --- !u!114 &1903387296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6548,8 +6616,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 85.97772, y: 147.86182}
+  m_SizeDelta: {x: 630.1231, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1999170424
 MonoBehaviour:
@@ -6571,7 +6639,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The fresh air, the open space\u2026 this is where memories are made."
+  m_text: "Ang sariwang hangin, ang malawak na espasyo\u2026 dito ginagawa ang mga
+    alaala.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}

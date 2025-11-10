@@ -44,7 +44,10 @@ public class GameMenu : MonoBehaviour
         Time.timeScale = 1f;
 
         if (AudioManager.Instance != null && defaultTheme != null)
-            AudioManager.Instance.PlayMusic(defaultTheme, loop: true);
+            if (!AudioManager.Instance.IsMusicPlaying(defaultTheme))
+            {
+                AudioManager.Instance.PlayMusic(defaultTheme, loop: true);
+            }
 
         bool tutorialPlayed = PlayerPrefs.GetInt(TutorialPlayedKey, 0) == 1;
 
@@ -158,22 +161,18 @@ public class GameMenu : MonoBehaviour
             if (request.result == UnityWebRequest.Result.Success)
             {
                 File.WriteAllText(persistentPath, request.downloadHandler.text);
-                Debug.Log("Copied spanishChapters.json to persistentDataPath.");
             }
             else
             {
-                Debug.LogWarning("Failed to copy spanishChapters.json on Android: " + request.error);
                 yield break;
             }
 #else
             if (File.Exists(streamingPath))
             {
                 File.Copy(streamingPath, persistentPath);
-                Debug.Log("Copied spanishChapters.json to persistentDataPath.");
             }
             else
             {
-                Debug.LogWarning("spanishChapters.json not found at " + streamingPath);
                 yield break;
             }
 #endif
@@ -185,7 +184,6 @@ public class GameMenu : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.LogError("Failed to read spanishChapters.json: " + e.Message);
             yield break;
         }
 
@@ -193,7 +191,6 @@ public class GameMenu : MonoBehaviour
 
         if (data == null || data.subchapters == null || data.subchapters.Length == 0)
         {
-            Debug.LogWarning("Invalid or empty spanishChapters.json structure.");
             yield break;
         }
 
@@ -219,7 +216,6 @@ public class GameMenu : MonoBehaviour
         {
             if (lockedPanel != null)
                 lockedPanel.SetActive(true);
-            Debug.Log("Quiz locked: Not all subchapters have been read.");
         }
 
     }

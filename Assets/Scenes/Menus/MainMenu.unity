@@ -316,11 +316,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LANDAS is an interactive 2D mobile game that immerses Filipino youth in
-    the richness of their cultural heritage through compelling storytelling, traditional
-    games, and educational challenges. Designed with gamified learning in mind, LANDAS
-    transforms the study of Philippine history, culture, and language into an engaging
-    and meaningful adventure.
+  m_text: Ang LANDAS ay isang interactive na 2D mobile game na naglulubog sa mga
+    kabataang Filipino sa yaman ng kanilang pamana sa kultura sa pamamagitan ng kaakit-akit
+    na pagkukuwento, mga tradisyonal na laro, at mga hamong pang-edukasyon. Dinisenyo
+    para sa gamified learning, binabago ng LANDAS ang pag-aaral ng kasaysayan, kultura,
+    at wika ng Pilipinas sa isang kapanapanabik at makabuluhang pakikipagsapalaran.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
   m_sharedMaterial: {fileID: 8359380927227677158, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
@@ -347,18 +347,18 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 12
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -1709,7 +1709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Do you wish to replay the story?
+  m_text: "Gusto mo bang \ni-replay ang kuwento?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -3929,13 +3929,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The story follows a struggling student who continually fails his Philippine
-    History subject. Hoping to improve, he spends long hours in the library, where
-    silence stirs memories of his childhood in the province under the care of his
-    Lola. As these memories deepen, a transition unfolds, granting him the chance
-    to return to his hometown. There, his Lola warmly welcomes him, and his journey
-    begins: a path of rediscovering his roots, reconnecting with culture, and embracing
-    the stories of the land that shaped him.'
+  m_text: 'Sinasundan ng kuwento ang isang estudyanteng hirap na laging bumabagsak
+    sa kanyang asignaturang Philippine History. Umaasang bumawi, nagpalipas siya
+    ng mahabang oras sa aklatan, kung saan ginigising ng katahimikan ang mga alaala
+    ng kanyang pagkabata sa probinsya sa pangangalaga ng kanyang Lola. Habang lumalalim
+    ang mga alaalang ito, isang pagbabago ang nangyayari, na nagbibigay sa kanya
+    ng pagkakataong bumalik sa kanyang bayan. Doon, mainit siyang tinatanggap ng
+    kanyang Lola, at nagsisimula ang kanyang paglalakbay: isang daan ng pagtuklas
+    muli sa kanyang ugat, pakikipag-ugnayang muli sa kultura, at pagtanggap sa mga
+    kuwento ng lupang humubog sa kanya.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
   m_sharedMaterial: {fileID: 8359380927227677158, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
@@ -3962,18 +3964,18 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 12
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -5946,7 +5948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: c8d281a8a019a014d8761da519e1e42d, type: 3}
+  clickSound: {fileID: 8300000, guid: 0f557b344455a2741b11b475d0de55d6, type: 3}
 --- !u!114 &575198048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9199,11 +9201,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This marks the beginning of a heartfelt and educational journey. Under
-    Lola\u2019s guidance, the protagonist relives the vibrant traditions of the Filipino
-    countryside: playing Larong Pinoy, learning cultural practices, exploring local
-    recipes, understanding historical narratives, and deepening his knowledge of
-    Filipino language through interactive storytelling, quizzes, and more."
+  m_text: 'Ito ang simula ng isang taos-puso at edukasyonal na paglalakbay. Sa gabay
+    ng Lola, isinasabuhay ng bida ang mga makulay na tradisyon ng Pilipinong kanayunan:
+    paglalaro ng Larong Pinoy, pag-aaral ng mga gawaing pangkultura, pagtuklas ng
+    mga lokal na resipe, pag-unawa sa mga salaysay sa kasaysayan, at pagpapalalim
+    ng kaalaman sa wikang Filipino sa pamamagitan ng interactive storytelling, mga
+    quiz, at marami pa.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
   m_sharedMaterial: {fileID: 8359380927227677158, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
@@ -9230,18 +9233,18 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 12
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -9968,7 +9971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: c8d281a8a019a014d8761da519e1e42d, type: 3}
+  clickSound: {fileID: 8300000, guid: 893960bb24c79c24e93b361cd7765c2c, type: 3}
 --- !u!114 &1039071953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10245,11 +10248,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Blending nostalgia, cultural immersion, and modern gamification, LANDAS
-    offers a dynamic learning experience that reconnects young Filipinos with their
-    identity and values. It aims to not only help students appreciate their heritage,
-    but also inspire pride in being Filipino, making the past not just a lesson,
-    but a meaningful adventure for the future.
+  m_text: Pinagsasama ang nostalgia, cultural immersion, at modernong gamification,
+    nag-aalok ang LANDAS ng isang dynamic na karanasan sa pag-aaral na muling nag-uugnay
+    sa mga kabataang Filipino sa kanilang pagkakakilanlan at pagpapahalaga. Ang layunin
+    nito ay hindi lamang tulungan ang mga mag-aaral na pahalagahan ang kanilang pamana,
+    kundi upang magbigay-inspirasyon din ng pagmamalaki sa pagiging Filipino, na
+    ginagawang ang nakaraan ay hindi lamang isang aralin, kundi isang makabuluhang
+    pakikipagsapalaran para sa kinabukasan.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
   m_sharedMaterial: {fileID: 8359380927227677158, guid: c3a4a435baa510b46892cf1359281af7, type: 2}
@@ -10276,18 +10281,18 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 12
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -10689,7 +10694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: c8d281a8a019a014d8761da519e1e42d, type: 3}
+  clickSound: {fileID: 8300000, guid: 1144427790c015b44b92fbedcccf6355, type: 3}
 --- !u!114 &1133629098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12030,7 +12035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 90}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381774190
@@ -12053,7 +12058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Do you wish to quit the game?
+  m_text: Gusto mo bang huminto sa paglalaro?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -15917,7 +15922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: c8d281a8a019a014d8761da519e1e42d, type: 3}
+  clickSound: {fileID: 8300000, guid: e7658b7a9993cdc42809d62096f2b366, type: 3}
 --- !u!114 &1837104957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17084,66 +17089,111 @@ MonoBehaviour:
   objects:
   - clickableImage: {fileID: 1133629095}
     comments:
-    - "Hmm\u2026 looks like the teacher's battlefield."
-    - I wonder how many chalk doodles ended up here.
-    - "Classic\u2026 can't have a classroom without it."
+    - "Hmm\u2026 Mukhang ito ang pinaglalabanan ng guro.\r\n"
+    - 'Ilang chalk doodles kaya ang napunta rito.
+
+'
+    - "Klasik\u2026 hindi kumpleto ang silid-aralan kung wala ito.\r\n"
     lastIndex: -1
   - clickableImage: {fileID: 230701178}
     comments:
-    - Tall and straight, just like every flagpole should be.
-    - Kinda feels empty without the flag waving.
-    - We always see it, but I guess it means a lot more than I think.
+    - "Mataas at tuwid, gaya ng nararapat sa isang flagpole.\r"
+    - "Medyo malungkot tingnan nang walang watawat na kumakaway.\r"
+    - 'Palagi nating nakikita, pero siguro mas malalim ang kahulugan nito kaysa sa
+      iniisip ko.
+
+'
     lastIndex: -1
   - clickableImage: {fileID: 819752008}
     comments:
-    - Not flashy, but without it the flag's got nowhere to stand.
-    - It just waits quietly, until it's time to shine on Mondays.
-    - Funny how this simple holder keeps the whole thing together.
+    - 'Hindi bongga, pero kung wala ito, walang tayuan ang watawat.
+
+'
+    - 'Naghihintay lang ito nang tahimik, hanggang sa oras na magningning tuwing
+      Lunes.
+
+'
+    - 'Nakakatuwa kung paano pinagsasama ng simpleng tagahawak na ito ang lahat.
+
+'
     lastIndex: -1
   - clickableImage: {fileID: 575198044}
     comments:
-    - "Ugh\u2026 the one thing students keep staring at."
-    - Tick tock, freedom o'clock.
-    - Feels like it moves slower during class.
-    - Sometimes I swear the hands don't move at all.
-    - "When you're busy, it flies. When you're in class\u2026 it crawls."
+    - "Ugh\u2026 ito lang ang laging tinititigan ng mga estudyante.\r\n"
+    - 'Tick tock, oras na ng kalayaan.
+
+'
+    - 'Parang bumabagal ang ikot tuwing may klase.
+
+'
+    - 'Minsan, sumusumpa ako na hindi gumagalaw ang mga kamay nito.
+
+'
+    - "Kapag busy ka, mabilis. Kapag nasa klase ka\u2026 gumagapang.\r\n"
     lastIndex: -1
   - clickableImage: {fileID: 1634736409}
     comments:
-    - "These guys\u2026 they really carried the team."
-    - Kinda feels like they're watching me scroll my phone.
-    - I see these faces in textbooks, but they hit different on a wall.
-    - "Imagine having your face painted and hung up for centuries\u2026 wild."
-    - "They all look focused\u2026 like they already know the exam answers."
-    - If they were alive today, I wonder what they'd think of TikTok.
+    - "Ang mga taong ito\u2026 sila talaga ang nagdala ng koponan.\r\n"
+    - 'Parang nakatingin sila sa akin habang nag-i-scroll ako dito
+
+'
+    - 'Nakikita ko ang mga mukha na ito sa textbook, pero iba ang dating nila sa
+      dingding.
+
+'
+    - "Isipin mo, ipininta ang mukha mo at isinabit sa loob ng daang-taon\u2026 astig.\r\n"
+    - "Lahat sila mukhang nakatutok\u2026 parang alam na nila ang sagot sa exam.\r\n"
+    - 'Kung buhay sila ngayon, anong kaya ang iisipin nila sa TikTok.
+
+'
     lastIndex: -1
   - clickableImage: {fileID: 1837104954}
     comments:
-    - "Kinda heavy\u2026 both in weight and info."
-    - "Smells like\u2026 homework waiting to happen."
-    - Old school knowledge right here.
-    - "Books don't need Wi-Fi\u2026 but they also don't give notifications."
-    - If only books came with a scroll bar, I'd be done faster.
-    - Feels heavier when it's a math book, lighter when it's comics.
+    - "Medyo mabigat\u2026 sa timbang at sa impormasyon.\r\n"
+    - "Amoy\u2026 takdang-aralin na naghihintay gawin.\r\n"
+    - 'Kaalaman mula pa sa lumang paaralan, narito.
+
+'
+    - "Hindi kailangan ng Wi-Fi ng mga aklat\u2026 pero wala rin silang notifications.\r\n"
+    - 'Sana may scroll bar ang mga aklat ng matapos ako agad.
+
+'
+    - 'Mas mabigat ang pakiramdam kapag aklat sa Math, mas magaan kapag comics.
+
+'
     lastIndex: -1
   - clickableImage: {fileID: 1039071950}
     comments:
-    - Guess someone's ready for note-taking.
-    - That holder's like a mini tower defense for pencils.
-    - This guy's been sharpening ideas for years.
-    - Funny how the smallest tools sometimes do the biggest work.
+    - 'Handa na yata ang sila sa pagsusulat.
+
+'
+    - 'Ang lalagyan na iyan ay parang isang mini tower defense para sa mga lapis.
+
+'
+    - 'Matagal nang pinapatalas ng mga ito ang ating  mga ideya.
+
+'
+    - "Nakakatuwa kung pano minsan, ang pinakamaliit na gamit pa ang nagawa ng pinakamalaking
+      trabaho.\r"
     lastIndex: -1
   - clickableImage: {fileID: 1208642047}
     comments:
-    - "Yup\u2026 that's me, just trying to get through the day."
-    - Looks like I've got my 'thinking but not really thinking' face on.
-    - "Weird seeing myself\u2026 like looking at a game character or something."
-    - I wonder if people expect me to do something heroic. Sorry in advance.
-    - I'm here, but my brain's somewhere else.
-    - Scrolling feels easier than thinking sometimes.
-    - "Kinda hungry\u2026 wonder if there's food later."
-    - "Thinking about nothing\u2026 which is still something, right?"
-    - Sometimes doing nothing feels like doing a lot.
+    - "Yup\u2026 ako 'yan, sinusubukan lang lampasan ang araw.\r\n"
+    - 'Nagtataka ako kung may inaasahan ang mga tao na gagawin kong heroic. Paumanhin
+      nang maaga.
+
+'
+    - 'Nandito ako, pero ang utak ko ay nasa ibang lugar.
+
+'
+    - 'Mas madali mag-scroll kaysa mag-isip minsan.
+
+'
+    - "Medyo gutom\u2026 may pagkain kaya mamaya.\r\n"
+    - "Walang iniisip\u2026 pero may iniisip pa rin, tama ba?\r\n"
+    - 'Minsan, ang walang ginagawa ay parang maraming nagawa.
+
+'
     lastIndex: -1
   popupContainer: {fileID: 589252035}
   popupText: {fileID: 1585460218}
