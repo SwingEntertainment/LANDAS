@@ -437,8 +437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 85.660736, y: 147.86182}
+  m_SizeDelta: {x: 629.4892, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88322413
 MonoBehaviour:
@@ -460,7 +460,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hello my grandson, welcome! This is our special dictionary corner
+  m_text: 'Kumusta, apo ko, Ito ang ating natatanging sulok ng diksyonaryo.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -498,7 +500,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -919,6 +921,7 @@ GameObject:
   - component: {fileID: 145282783}
   - component: {fileID: 145282785}
   - component: {fileID: 145282784}
+  - component: {fileID: 145282786}
   m_Layer: 0
   m_Name: TutorialUI
   m_TagString: Untagged
@@ -1063,6 +1066,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145282778}
   m_CullTransparentMesh: 1
+--- !u!225 &145282786
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145282778}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &156811851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,8 +1533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 87.0533, y: 147.86182}
+  m_SizeDelta: {x: 632.2742, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413437690
 MonoBehaviour:
@@ -1541,7 +1556,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enjoy your learning, and may you grow wiser every day!
+  m_text: 'Ipagpatuloy mo ang iyong pag-aaral, at nawa''y lumaki kang mas matalino
+    araw-araw!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -1579,7 +1597,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -2459,17 +2477,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"The note smells faintly of oil:
-
-
-    Coat chicken in flour, dip in beaten
-    eggs, then fry in hot cooking oil.
-
-    When it turns golden brown, you''ll hear
-    the crunch before you taste it.
-
-
-    Simple, but always satisfying."'
+  m_text: "\"Ang tala ay mahinang umaamoy ng mantika: \n\nBalutan ang manok ng harina,
+    isawsaw sa binating itlog, at pagkatapos ay iprito sa mainit na mantika. Kapag
+    nagkulay golden brown na ito, maririnig mo ang kagat (crunch) bago mo ito malasahan.
+    \n\nSimple, ngunit palaging nakakabusog.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -2507,7 +2518,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -2735,8 +2746,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 85.660736, y: 147.86182}
+  m_SizeDelta: {x: 629.4892, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784557756
 MonoBehaviour:
@@ -2758,7 +2769,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Just explore one word at a time here to see its full meaning and details
+  m_text: 'Mag-explore ka lang ng isang salita sa bawat pagkakataon upang makita
+    ang buong kahulugan at mga detalye nito.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -2796,7 +2810,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -2969,8 +2983,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.23773, y: 147.86182}
-  m_SizeDelta: {x: 656.6431, y: 66.2764}
+  m_AnchoredPosition: {x: 86.70519, y: 147.86182}
+  m_SizeDelta: {x: 631.5781, y: 66.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968543099
 MonoBehaviour:
@@ -2992,7 +3006,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Here you'll find a list of Tagalog and English words to explore.
+  m_text: 'Dito makikita mo ang listahan ng mga salitang Tagalog at Ingles upang
+    tuklasin.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
   m_sharedMaterial: {fileID: -3912701870324889922, guid: 63e86bfcd2913ed40bbabfa03747da14, type: 2}
@@ -3030,7 +3047,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 15
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -5415,7 +5432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -75.9, y: 11.2668}
+  m_AnchoredPosition: {x: -75.9, y: 11.266785}
   m_SizeDelta: {x: 37.4619, y: 22.5346}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656856938

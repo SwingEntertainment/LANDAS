@@ -37,6 +37,8 @@ public class QuizSpanish : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject quitModalPanel;
     public GameObject unlockPopupPanel;
+    public GameObject tutorialUI;
+
 
     [Header("UI Elements")]
     public TMP_Text countdownText;
@@ -56,7 +58,6 @@ public class QuizSpanish : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip correctSFX;
     public AudioClip wrongSFX;
-
 
     [Header("Confetti Effect")]
     public ConfettiAnimation confettiEffect;
@@ -105,6 +106,7 @@ public class QuizSpanish : MonoBehaviour
     private const string PREF_TOTAL_QUESTIONS = "TotalQuestions";
     private const string PREF_IS_AMERICA_UNLOCKED = "isAmericaQuizUnlocked";
     private const string LolaMenuActiveKey = "LolaMenuActive";
+    private const string QuizTutorialPlayedKey = "QuizMenuTutorial";
 
     private void OnApplicationQuit()
     {
@@ -129,6 +131,23 @@ public class QuizSpanish : MonoBehaviour
             AudioManager.Instance.PlayMusic(quizTheme, loop: true);
         }
 
+        bool tutorialPlayed = PlayerPrefs.GetInt(QuizTutorialPlayedKey, 0) == 1;
+
+        if (!tutorialPlayed)
+        {
+            if (tutorialUI != null)
+            {
+                tutorialUI.SetActive(true);
+                CanvasGroup cg = tutorialUI.GetComponent<CanvasGroup>() ?? tutorialUI.AddComponent<CanvasGroup>();
+                cg.interactable = true;
+                cg.blocksRaycasts = true;
+            }
+        }
+        else
+        {
+            if (tutorialUI != null)
+                tutorialUI.SetActive(false);
+        }
         StartCoroutine(LoadQuizData());
 
         quizPanel.SetActive(false);
@@ -139,6 +158,15 @@ public class QuizSpanish : MonoBehaviour
         if (unlockPopupPanel != null) unlockPopupPanel.SetActive(false);
     }
 
+    public void TutorialQuizFinished()
+    {
+        PlayerPrefs.SetInt(QuizTutorialPlayedKey, 1);
+        PlayerPrefs.Save();
+
+        if (tutorialUI != null)
+            tutorialUI.SetActive(false);
+    }
+    
     private void EnsureMessageDefaults()
     {
         if (correctResponses == null || correctResponses.Count == 0)
@@ -195,13 +223,18 @@ public class QuizSpanish : MonoBehaviour
     private IEnumerator StartCountdown()
     {
         countdownPanel.SetActive(true);
-        int countdown = 3;
-        while (countdown > 0)
-        {
-            countdownText.text = countdown.ToString();
-            yield return new WaitForSeconds(1f);
-            countdown--;
-        }
+
+        countdownText.text = "3";
+        yield return new WaitForSeconds(1f);
+
+        countdownText.text = "2";
+        yield return new WaitForSeconds(1f);
+
+        countdownText.text = "1";
+        yield return new WaitForSeconds(1f);
+
+        countdownText.text = "Go!";
+        yield return new WaitForSeconds(1f);
 
         countdownPanel.SetActive(false);
         quizPanel.SetActive(true);
@@ -222,7 +255,6 @@ public class QuizSpanish : MonoBehaviour
 
             if (PlayerPrefs.GetInt(PREF_ENCOUNTERED_COUNT, -1) <= 0)
             {
-                Debug.Log("PlayerPrefs cleared — resetting question flags (answered + encountered).");
                 ResetAllQuestionFlags();
             }
 
@@ -249,7 +281,6 @@ public class QuizSpanish : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Failed to load JSON: " + request.error);
             }
         }
 #else
@@ -265,7 +296,6 @@ public class QuizSpanish : MonoBehaviour
         }
         else
         {
-            Debug.LogError("JSON file not found at " + path);
         }
 #endif
     }
@@ -481,7 +511,6 @@ public class QuizSpanish : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("ConfettiAnimation reference missing in Inspector!");
             }
         }
 
@@ -534,6 +563,9 @@ public class QuizSpanish : MonoBehaviour
         foreach (var q in questions)
             q.isAnswered = false;
 
+        foreach (var btn in choiceButtons)
+            btn.onClick.RemoveAllListeners();
+
         startPanel.SetActive(true);
     }
 
@@ -576,7 +608,6 @@ public class QuizSpanish : MonoBehaviour
         PlayerPrefs.SetInt(PREF_CURRENT_SCORE, 0);
         PlayerPrefs.Save();
 
-        Debug.Log("Cache cleared or missing — all question flags reset.");
     }
     #endregion
 }

@@ -117,6 +117,7 @@ public class StoryManager : MonoBehaviour
     [Header("Locked Overlay")]
     public GameObject lockOverlayPanel;
     public TMP_Text lockOverlayText;
+    public Image lockOverlayImage;
 
     [Header("Misc")]
     public float textFadeDuration = 0.45f;
@@ -181,7 +182,6 @@ public class StoryManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogError("Failed to copy JSON from StreamingAssets: " + uwr.error);
                 }
             }
 #else
@@ -191,7 +191,6 @@ public class StoryManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Streaming JSON not found at " + StreamingPath);
             }
             yield return null;
 #endif
@@ -203,7 +202,6 @@ public class StoryManager : MonoBehaviour
     {
         if (!File.Exists(PersistentPath))
         {
-            Debug.LogError("Persistent JSON not found at " + PersistentPath);
             yield break;
         }
 
@@ -216,12 +214,10 @@ public class StoryManager : MonoBehaviour
         collection = JsonUtility.FromJson<SubchapterCollection>(json);
         if (collection == null || collection.subchapters == null)
         {
-            Debug.LogError("Failed to parse JSON or no subchapters found.");
             yield break;
         }
 
         subchapters = new List<Subchapter>(collection.subchapters);
-        Debug.Log($"Loaded {subchapters.Count} subchapters.");
 
         UpdateChapterProgress();
         yield return null;
@@ -235,11 +231,9 @@ public class StoryManager : MonoBehaviour
         try
         {
             File.WriteAllText(PersistentPath, json);
-            Debug.Log("Saved subchapters to " + PersistentPath);
         }
         catch (Exception e)
         {
-            Debug.LogError("Failed to save JSON: " + e);
         }
     }
     #endregion
@@ -250,77 +244,77 @@ public class StoryManager : MonoBehaviour
         UpdateChapterProgress();
     }
 
-   void UpdateChapterProgress()
-{
-    if (subchapters == null || subchapters.Count == 0)
-        return;
-
-    if (currentListingIndex == 0)
+    void UpdateChapterProgress()
     {
-        readButton.interactable = true;
-    }
-    else
-    {
-        bool previousRead = subchapters[currentListingIndex - 1].isRead;
-        readButton.interactable = previousRead;
-    }
+        if (subchapters == null || subchapters.Count == 0)
+            return;
 
-    bool allRead = subchapters.All(s => s.isRead);
-
-    if (gameOverButton != null)
-    {
-        TMP_Text btnText = gameOverButton.GetComponentInChildren<TMP_Text>();
-        Button btn = gameOverButton.GetComponent<Button>();
-        btn.onClick.RemoveAllListeners();
-
-        if (allRead)
+        if (currentListingIndex == 0)
         {
-            btnText.text = "Go to Quiz";
-            gameOverButton.SetActive(true);
-
-            btn.onClick.AddListener(() =>
-            {
-                Debug.Log("All chapters read! Showing game over screen.");  
-            });
+            readButton.interactable = true;
         }
         else
         {
-            btnText.text = "Read Next Chapter";
-            gameOverButton.SetActive(true);
-
-            btn.onClick.AddListener(() =>
-            {
-                int nextLockedIndex = subchapters.FindIndex(s => !s.isRead);
-                if (nextLockedIndex != -1)
-                {
-                    currentListingIndex = nextLockedIndex;
-                    UpdateListingUI();
-                    confirmReadModal.SetActive(true);
-                    listingThumbnail.enabled = false;
-                }
-            });
+            bool previousRead = subchapters[currentListingIndex - 1].isRead;
+            readButton.interactable = previousRead;
         }
+
+        bool allRead = subchapters.All(s => s.isRead);
+
+        if (gameOverButton != null)
+        {
+            TMP_Text btnText = gameOverButton.GetComponentInChildren<TMP_Text>();
+            Button btn = gameOverButton.GetComponent<Button>();
+
+            btn.interactable = true;
+            gameOverButton.SetActive(true);
+            btn.onClick.RemoveAllListeners();
+
+            if (allRead)
+            {
+                btnText.text = "Go to Quiz";
+                btn.onClick.AddListener(() =>
+                {
+                });
+            }
+            else
+            {
+                btnText.text = "Read Next Chapter";
+                btn.onClick.AddListener(() =>
+                {
+                    int nextLockedIndex = subchapters.FindIndex(s => !s.isRead);
+                    if (nextLockedIndex != -1)
+                    {
+                        currentListingIndex = nextLockedIndex;
+                        UpdateListingUI();
+
+                        prevButton.interactable = currentListingIndex > 0;
+                        nextButton.interactable = currentListingIndex < subchapters.Count - 1;
+                    }
+                });
+            }
+        }
+
+        if (prevButton != null)
+            prevButton.interactable = currentListingIndex > 0;
+
+        if (nextButton != null)
+            nextButton.interactable = currentListingIndex < subchapters.Count - 1;
     }
-}
-
-
 
     #region Listing UI
     void UpdateListingUI()
     {
         if (subchapters == null || subchapters.Count == 0) return;
+
         currentListingIndex = Mathf.Clamp(currentListingIndex, 0, subchapters.Count - 1);
         var s = subchapters[currentListingIndex];
 
         listingTitle.text = s.title;
         listingCheckmark.gameObject.SetActive(s.isRead);
 
-        Debug.Log($"[StoryManager] Loading thumbnail: {s.thumbnail}");
-
         if (listingThumbnail != null)
-        {
             listingThumbnail.gameObject.SetActive(false);
-        }
 
         if (!string.IsNullOrEmpty(s.thumbnail))
         {
@@ -331,11 +325,9 @@ public class StoryManager : MonoBehaviour
                     listingThumbnail.sprite = sp;
                     listingThumbnail.color = Color.white;
                     listingThumbnail.gameObject.SetActive(true);
-                    Debug.Log("[StoryManager] Thumbnail loaded successfully!");
                 }
                 else
                 {
-                    Debug.LogWarning("[StoryManager] Thumbnail sprite was null!");
                     listingThumbnail.sprite = null;
                     listingThumbnail.gameObject.SetActive(false);
                 }
@@ -343,15 +335,9 @@ public class StoryManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[StoryManager] No thumbnail path in JSON!");
             listingThumbnail.sprite = null;
             listingThumbnail.gameObject.SetActive(false);
         }
-
-        prevButton.interactable = currentListingIndex > 0;
-        nextButton.interactable = currentListingIndex < subchapters.Count - 1;
-
-        UpdateChapterProgress();
 
         if (lockOverlayPanel != null)
         {
@@ -365,10 +351,13 @@ public class StoryManager : MonoBehaviour
                 lockOverlayPanel.SetActive(!prevRead);
 
                 if (lockOverlayText != null)
-                    lockOverlayText.text = "Read the previous chapter first to unlock";
+                    lockOverlayText.text = "Basahin muna ang naunang kabanata para ma-unlock ito";
+                if (lockOverlayImage != null)
+                    lockOverlayImage.enabled = true;
             }
         }
 
+        UpdateChapterProgress();
     }
 
 
@@ -448,7 +437,6 @@ public class StoryManager : MonoBehaviour
     {
         if (currentSubchapter == null || currentSubchapter.slides == null || currentSubchapter.slides.Length == 0)
         {
-            Debug.LogError("Subchapter has no slides!");
             yield break;
         }
 
@@ -467,7 +455,6 @@ public class StoryManager : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("[StoryManager] Failed to load first slide image!");
                 loaded = true;
             }
         }));
@@ -511,19 +498,16 @@ public class StoryManager : MonoBehaviour
                 {
                     slideImage.sprite = sp;
                     slideImage.color = Color.white;
-                    Debug.Log("[StoryManager] Slide image loaded successfully: " + slide.slideImg);
                 }
                 else
                 {
                     slideImage.sprite = null;
-                    Debug.LogWarning("[StoryManager] Failed to load slide image: " + slide.slideImg);
                 }
             }));
         }
         else
         {
             slideImage.sprite = null;
-            Debug.LogWarning("slideImage is null or slide.slideImg is empty!");
         }
     }
 
@@ -545,19 +529,16 @@ public class StoryManager : MonoBehaviour
 
         if (currentSubchapter == null)
         {
-            Debug.LogError("Current subchapter is NULL in OnSlideNextClicked!");
             return;
         }
 
         if (currentSubchapter.slides == null || currentSubchapter.slides.Length == 0)
         {
-            Debug.LogError("Slides array is NULL or EMPTY in currentSubchapter!");
             return;
         }
 
         if (currentSlideZeroIndex < 0 || currentSlideZeroIndex >= currentSubchapter.slides.Length)
         {
-            Debug.LogError($"Invalid slide index: {currentSlideZeroIndex}. Slides length: {currentSubchapter.slides.Length}");
             return;
         }
 
@@ -681,7 +662,7 @@ public class StoryManager : MonoBehaviour
 
         if (preQuizPanel != null)
         {
-            preQuizText.text = "Before we proceed, let's have a recall of what we've learned so far.\n(Mistakes are accepted until the correct answer is chosen.)";
+            preQuizText.text = "Bago tayo magpatuloy, magbalik-tanaw muna tayo sa ating mga napag-aralan.\n(Tinatanggap ang mga pagkakamali hangga't hindi natutukoy ang tamang sagot.)";
             preQuizPanel.SetActive(true);
 
             startQuizButton.onClick.RemoveAllListeners();
@@ -815,13 +796,11 @@ public class StoryManager : MonoBehaviour
                 }
                 catch (Exception e)
                 {
-                    Debug.LogWarning("Failed creating sprite: " + e.Message);
                     onComplete?.Invoke(null);
                 }
             }
             else
             {
-                Debug.LogWarning("Image load failed: " + uwr.error + " path:" + usePath);
                 onComplete?.Invoke(null);
             }
         }
@@ -866,31 +845,71 @@ public class StoryManager : MonoBehaviour
         if (voiceToggle != null) voiceToggle.interactable = false;
 
 #if UNITY_ANDROID && !UNITY_EDITOR
-    bool connected = false;
-    try
-    {
-        AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-        unityActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-        ttsObj = new AndroidJavaObject("android.speech.tts.TextToSpeech", unityActivity, new TTSListenerProxy());
-        AndroidJavaObject locale = new AndroidJavaObject("java.util.Locale", "en", "US");
-        int result = ttsObj.Call<int>("setLanguage", locale);
-        connected = true;
-        Debug.Log("TTS init done, setLanguage result: " + result);
-    }
-    catch (Exception e)
-    {
-        Debug.LogWarning("TTS init failed: " + e.Message);
-        ttsObj = null;
-        connected = false;
-    }
+        const int LANG_MISSING_DATA = -1;
+        const int LANG_NOT_SUPPORTED = -2;
+
+        bool connected = false;
+        try
+        {
+            AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            unityActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+            ttsObj = new AndroidJavaObject("android.speech.tts.TextToSpeech", unityActivity, new TTSListenerProxy());
+            
+            AndroidJavaObject locale = new AndroidJavaObject("java.util.Locale", "fil", "PH");
+            
+            int result = ttsObj.Call<int>("setLanguage", locale);
+
+            if (result == LANG_MISSING_DATA)
+            {
+                Debug.LogWarning("TTS: Filipino language data missing. Prompting for install.");
+                
+                AndroidJavaObject intent = new AndroidJavaObject("android.content.Intent");
+                
+                AndroidJavaClass engineClass = new AndroidJavaClass("android.speech.tts.TextToSpeech$Engine");
+                string installAction = engineClass.GetStatic<string>("ACTION_INSTALL_TTS_DATA");
+                
+                intent.Call<AndroidJavaObject>("setAction", installAction);
+                unityActivity.Call("startActivity", intent);
+                
+                connected = false;
+                ttsObj = null; 
+            }
+            else if (result == LANG_NOT_SUPPORTED)
+            {
+                connected = false;
+                ttsObj = null;
+            }
+            else
+            {
+                connected = true;
+            }
+        }
+        catch (Exception e)
+        {
+            ttsObj = null;
+            connected = false;
+        }
+#else
+        yield return new WaitForSeconds(0.5f);
+        bool connected = true;
 #endif
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f); 
 
         if (voiceSpinner != null) voiceSpinner.SetActive(false);
-        if (voiceToggle != null) voiceToggle.interactable = true;
-
-        voiceEnabled = voiceToggle.isOn;
+        if (voiceToggle != null)
+        {
+            voiceToggle.interactable = connected;
+        }
+        if (!connected && voiceToggle != null)
+        {
+            voiceToggle.isOn = false;
+            voiceEnabled = false;
+        }
+        else
+        {
+            voiceEnabled = voiceToggle.isOn;
+        }
     }
 
 
@@ -904,10 +923,8 @@ public class StoryManager : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.LogWarning("TTS speak error: " + e.Message);
         }
 #else
-        Debug.Log("[TTS] " + text);
 #endif
     }
 
@@ -929,7 +946,6 @@ public class StoryManager : MonoBehaviour
     }
     catch (Exception e)
     {
-        Debug.LogWarning("TTS stop error: " + e.Message);
     }
 #endif
     }
