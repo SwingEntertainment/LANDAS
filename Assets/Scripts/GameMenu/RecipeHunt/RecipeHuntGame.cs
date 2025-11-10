@@ -26,7 +26,6 @@ public class RecipeHuntGame : MonoBehaviour
 
     [Header("Pagination Settings")]
     public int itemsPerPage = 6;
-
     private List<IngredientData> allIngredients = new List<IngredientData>();
     private List<DishData> allDishes = new List<DishData>();
     private int currentPage = 0;
@@ -54,8 +53,8 @@ public class RecipeHuntGame : MonoBehaviour
         public string ingredientName;
         public string ingredientImg;
         public string ingredientContainerImg;
-    }    private Coroutine dishAnimationCoroutine;
-    
+    }    
+    private Coroutine dishAnimationCoroutine;
     private Coroutine panelFadeCoroutine;
     private CanvasGroup successPanelCanvasGroup;
     public string recipeJsonFileName = "RecipeList.json";
@@ -123,7 +122,6 @@ public class RecipeHuntGame : MonoBehaviour
     {
         if (File.Exists(persistentRecipePath))
         {
-            Debug.Log($"✅ Persistent recipe exists at: {persistentRecipePath}");
             StartCoroutine(LoadDishesFromFile());
             yield break;
         }
