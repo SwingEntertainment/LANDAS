@@ -950,6 +950,7 @@ public class StoryManager : MonoBehaviour
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
         if (ttsObj == null || !ttsInitialized) return; 
+        try
         {
             ttsObj.Call<int>("speak", text, 0, null as AndroidJavaObject, null);
         }
