@@ -2,19 +2,19 @@
   "ingredients": [
     {
       "ingredientID": 1,
-      "ingredientName": "Bay Leaves",
+      "ingredientName": "Dahon ng Laurel",
       "ingredientImg": "Bay_Leaves.png",
       "ingredientContainerImg": "Bay_Leaves_Container.png"
     },
     {
       "ingredientID": 2,
-      "ingredientName": "Bean Sprouts",
+      "ingredientName": "Toge",
       "ingredientImg": "Bean_Sprouts.png",
       "ingredientContainerImg": "Bean_Sprouts_Container.png"
     },
     {
       "ingredientID": 3,
-      "ingredientName": "Beef",
+      "ingredientName": "Baka",
       "ingredientImg": "Beef.png",
       "ingredientContainerImg": "Beef_Container.png"
     },
@@ -32,19 +32,19 @@
     },
     {
       "ingredientID": 6,
-      "ingredientName": "Cabbage",
+      "ingredientName": "Repolyo",
       "ingredientImg": "Cabbage.png",
       "ingredientContainerImg": "Cabbage_Container.png"
     },
     {
       "ingredientID": 7,
-      "ingredientName": "Calamansi",
+      "ingredientName": "Kalamansi",
       "ingredientImg": "Calamansi.png",
       "ingredientContainerImg": "Calamansi_Container.png"
     },
     {
       "ingredientID": 8,
-      "ingredientName": "Chicken",
+      "ingredientName": "Manok",
       "ingredientImg": "Chicken.png",
       "ingredientContainerImg": "Chicken_Container.png"
     },
@@ -56,55 +56,55 @@
     },
     {
       "ingredientID": 10,
-      "ingredientName": "Cooking Oil",
+      "ingredientName": "Mantika",
       "ingredientImg": "Cooking_Oil.png",
       "ingredientContainerImg": "Cooking_Oil_Container.png"
     },
     {
       "ingredientID": 11,
-      "ingredientName": "Eggs",
+      "ingredientName": "Itlog",
       "ingredientImg": "Eggs.png",
       "ingredientContainerImg": "Eggs_Container.png"
     },
     {
       "ingredientID": 12,
-      "ingredientName": "Flour",
+      "ingredientName": "Harina",
       "ingredientImg": "Flour.png",
       "ingredientContainerImg": "Flour_Container.png"
     },
     {
       "ingredientID": 13,
-      "ingredientName": "Garlic",
+      "ingredientName": "Bawang",
       "ingredientImg": "Garlic.png",
       "ingredientContainerImg": "Garlic_Container.png"
     },
     {
       "ingredientID": 14,
-      "ingredientName": "Hotdogs",
+      "ingredientName": "Hotdog",
       "ingredientImg": "Hotdogs.png",
       "ingredientContainerImg": "Hotdogs_Container.png"
     },
     {
       "ingredientID": 15,
-      "ingredientName": "Liver",
+      "ingredientName": "Atay",
       "ingredientImg": "Liver.png",
       "ingredientContainerImg": "Liver_Container.png"
     },
     {
       "ingredientID": 16,
-      "ingredientName": "Milk",
+      "ingredientName": "Gatas",
       "ingredientImg": "Milk.png",
       "ingredientContainerImg": "Milk_Container.png"
     },
     {
       "ingredientID": 17,
-      "ingredientName": "Mushrooms",
+      "ingredientName": "Kabute",
       "ingredientImg": "Mushrooms.png",
       "ingredientContainerImg": "Mushrooms_Container.png"
     },
     {
       "ingredientID": 18,
-      "ingredientName": "Onion",
+      "ingredientName": "Sibuyas",
       "ingredientImg": "Onion.png",
       "ingredientContainerImg": "Onion_Container.png"
     },
@@ -116,31 +116,31 @@
     },
     {
       "ingredientID": 20,
-      "ingredientName": "Pork",
+      "ingredientName": "Baboy",
       "ingredientImg": "Pork.png",
       "ingredientContainerImg": "Pork_Container.png"
     },
     {
       "ingredientID": 21,
-      "ingredientName": "Potato",
+      "ingredientName": "Patatas",
       "ingredientImg": "Potato.png",
       "ingredientContainerImg": "Potato_Container.png"
     },
     {
       "ingredientID": 22,
-      "ingredientName": "Raisins",
+      "ingredientName": "Pasas",
       "ingredientImg": "Raisins.png",
       "ingredientContainerImg": "Raisins_Container.png"
     },
     {
       "ingredientID": 23,
-      "ingredientName": "Rice",
+      "ingredientName": "Bigas",
       "ingredientImg": "Rice.png",
       "ingredientContainerImg": "Rice_Container.png"
     },
     {
       "ingredientID": 24,
-      "ingredientName": "Soy sauce",
+      "ingredientName": "Toyo",
       "ingredientImg": "Soy_sauce.png",
       "ingredientContainerImg": "Soy_sauce_Container.png"
     },
@@ -152,13 +152,13 @@
     },
     {
       "ingredientID": 26,
-      "ingredientName": "Sugar",
+      "ingredientName": "Asukal",
       "ingredientImg": "Sugar.png",
       "ingredientContainerImg": "Sugar_Container.png"
     },
     {
       "ingredientID": 27,
-      "ingredientName": "Tomato",
+      "ingredientName": "Kamatis",
       "ingredientImg": "Tomato.png",
       "ingredientContainerImg": "Tomato_Container.png"
     },
@@ -176,7 +176,7 @@
     },
     {
       "ingredientID": 30,
-      "ingredientName": "Vinegar",
+      "ingredientName": "Suka",
       "ingredientImg": "Vinegar.png",
       "ingredientContainerImg": "Vinegar_Container.png"
     }
