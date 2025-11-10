@@ -29,8 +29,7 @@ public class Ball : MonoBehaviour
     {
         cam = Camera.main;
 
-        if (scoreManager == null)
-            scoreManager = FindObjectOfType<ScoreManager>();
+        scoreManager = ScoreManager.Instance;
 
         if (backgroundPanel == null)
             backgroundPanel = FindObjectOfType<RectTransform>();
@@ -94,6 +93,7 @@ public class Ball : MonoBehaviour
 
             if (viewportPos.x <= 0f || viewportPos.x >= 1f)
             {
+                AddPoint(); 
                 Destroy(ball);
                 yield return new WaitForSeconds(0.3f);
                 SpawnBall();
@@ -131,15 +131,15 @@ public class Ball : MonoBehaviour
         if (playerObj != null)
             playerObj.SetActive(false);
 
-        if (scoreManager != null)
+        if (ScoreManager.Instance != null)
         {
-            int currentScore = scoreManager.GetCurrentScore();
-            int highScore = scoreManager.GetHighScore();
+            int currentScore = ScoreManager.Instance.GetCurrentScore();
+            int highScore = ScoreManager.Instance.GetHighScore();
 
             if (currentScore > highScore)
                 PlayerPrefs.SetInt("SipaHighScore", currentScore);
 
-            scoreManager.ResetScore();
+            ScoreManager.Instance.ResetScore();
         }
 
         if (highScoreText != null)
@@ -151,7 +151,6 @@ public class Ball : MonoBehaviour
         if (ball != null)
             Destroy(ball);
 
-        // 🎵 NEW: Tell SipaGame to play Game Over music
         SipaGame sipaGame = FindObjectOfType<SipaGame>();
         if (sipaGame != null)
             sipaGame.OnGameOver();
@@ -171,5 +170,14 @@ public class Ball : MonoBehaviour
         isFirstBall = true;
 
         SpawnBall();
+    }
+
+    public void AddPoint(int points = 1)
+    {
+        if (scoreManager != null)
+        {
+            scoreManager.AddScore(points);
+            Debug.Log("Score added: " + points + " | Current: " + scoreManager.GetCurrentScore());
+        }
     }
 }

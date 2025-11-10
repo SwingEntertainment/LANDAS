@@ -11,6 +11,9 @@ TagManager:
   - Langgam
   - Flag
   - Bamboo
+  - CurrentScoreText
+  - MainMenuHighScoreText
+  - GameOverHighScoreText
   layers:
   - Default
   - TransparentFX

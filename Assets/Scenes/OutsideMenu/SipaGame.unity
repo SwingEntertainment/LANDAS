@@ -452,7 +452,7 @@ Transform:
   m_GameObject: {fileID: 60361972}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.10357298, y: -6.366572, z: 14.188667}
+  m_LocalPosition: {x: -0.043382123, y: -5.584118, z: 14.188667}
   m_LocalScale: {x: 0.31880227, y: 0.2620887, z: 0.75162107}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -763,7 +763,7 @@ Transform:
   m_GameObject: {fileID: 157574483}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 256.49478, y: 278.61523, z: 0}
+  m_LocalPosition: {x: 505.49478, y: 239.61523, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -800,7 +800,7 @@ MonoBehaviour:
   countdownClip: {fileID: 8300000, guid: fc809d7cff712884f99b7b222377cd1d, type: 3}
   sfxSource: {fileID: 157574487}
   staticGameBG: {fileID: 1269767468}
-  buttonClickClip: {fileID: 8300000, guid: 0e6fa5d50ad03f74bb9d6ca94c8a19fe, type: 3}
+  buttonClickClip: {fileID: 8300000, guid: 893da0310045fd3459248ded8eeefdc7, type: 3}
 --- !u!82 &157574487
 AudioSource:
   m_ObjectHideFlags: 0
@@ -822,8 +822,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 8.690674
-  MaxDistance: 620.89124
+  MinDistance: 15.53241
+  MaxDistance: 486.84256
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1688,7 +1688,7 @@ Transform:
   m_GameObject: {fileID: 271444519}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2360253, y: -75.93746, z: -806.7185}
+  m_LocalPosition: {x: -1.2360253, y: -67.324005, z: -806.7185}
   m_LocalScale: {x: 3.8019109, y: 3.125567, z: 8.963539}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2116,8 +2116,8 @@ GameObject:
   - component: {fileID: 437735733}
   - component: {fileID: 437735732}
   m_Layer: 5
-  m_Name: HighScore
-  m_TagString: Untagged
+  m_Name: MainMenuHighScoreText
+  m_TagString: MainMenuHighScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2411,7 +2411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.3478962, y: -51.699753}
+  m_AnchoredPosition: {x: 1.3478962, y: -51.699707}
   m_SizeDelta: {x: 919.6958, y: 103.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501641627
@@ -2710,7 +2710,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 220.77219, y: 19.673447, z: 33.23169, w: 411.28787}
+  m_margin: {x: 220.77219, y: 19.673447, z: 59.64676, w: 411.28787}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3048,7 +3048,7 @@ MonoBehaviour:
   ballPrefab: {fileID: 1489025931}
   backgroundPanel: {fileID: 109620975}
   scoreManager: {fileID: 1892796897}
-  highScoreText: {fileID: 1145918710}
+  highScoreText: {fileID: 0}
   minFallSpeed: 25
   maxFallSpeed: 50
   horizontalMargin: 0.5
@@ -3300,7 +3300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &730817273
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3554,7 +3554,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerKick: {fileID: 271444528}
   ballManager: {fileID: 675158886}
-  scoreManager: {fileID: 1892796897}
   bounceForce: 25
   topRespawnY: 6
   respawnDelay: 0.5
@@ -4011,7 +4010,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 38.727875, y: 17.112045, z: 220.06754, w: 398.43402}
+  m_margin: {x: 51.306396, y: 17.112045, z: 213.77814, w: 398.43402}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4289,8 +4288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000011920929, y: -17.526928}
-  m_SizeDelta: {x: 23.9884, y: 3.9618}
+  m_AnchoredPosition: {x: 1.4999547, y: -17.283562}
+  m_SizeDelta: {x: 42.2196, y: 1.4020004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071402760
 MonoBehaviour:
@@ -4339,8 +4338,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1
-  m_fontSizeBase: 1
+  m_fontSize: 2
+  m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4377,7 +4376,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.080560714, w: 0}
+  m_margin: {x: 0, y: -0.0047847643, z: 0.26445007, w: -0.03726995}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4403,8 +4402,8 @@ GameObject:
   - component: {fileID: 1145918711}
   - component: {fileID: 1145918710}
   m_Layer: 5
-  m_Name: highscoreText
-  m_TagString: Untagged
+  m_Name: GameOverHighScoreText
+  m_TagString: GameOverHighScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4706,7 +4705,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 21.337122}
+  m_margin: {x: 0.2483635, y: 14.65341, z: -0.1241722, w: 14.7555065}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4736,8 +4735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000009086121, y: 0.000029563904}
-  m_SizeDelta: {x: 76.89, y: 39.016}
+  m_AnchoredPosition: {x: 0, y: 11.868729}
+  m_SizeDelta: {x: 76.89, y: 15.005402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1186149783
 GameObject:
@@ -5220,7 +5219,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 220.77219, y: 9.333023, z: 22.247192, w: 386.0241}
+  m_margin: {x: 220.77219, y: 9.333023, z: 59.982788, w: 386.0241}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5325,8 +5324,8 @@ GameObject:
   - component: {fileID: 1455698894}
   - component: {fileID: 1455698892}
   m_Layer: 5
-  m_Name: ScoreText
-  m_TagString: Untagged
+  m_Name: CurrentScoreText
+  m_TagString: CurrentScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5821,7 +5820,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerKick: {fileID: 0}
   ballManager: {fileID: 675158886}
-  scoreManager: {fileID: 1892796897}
   bounceForce: 25
   topRespawnY: 6
   respawnDelay: 0.5
@@ -5995,7 +5993,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 38.727875, y: 17.071335, z: 220.06754, w: 398.43402}
+  m_margin: {x: 53.822052, y: 17.071335, z: 220.06754, w: 398.43402}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6601,7 +6599,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 223.20929, y: 16.931534, z: 33.23169, w: 411.28787}
+  m_margin: {x: 223.20929, y: 16.931534, z: 59.646484, w: 411.28787}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6908,7 +6906,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 220.77219, y: 17.321915, z: 33.23169, w: 411.28787}
+  m_margin: {x: 220.77219, y: 17.321915, z: 59.646484, w: 411.28787}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6939,7 +6937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1790605333
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6952,17 +6950,17 @@ RectTransform:
   m_LocalScale: {x: 11.925609, y: 11.925609, z: 11.925609}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1071402759}
+  - {fileID: 1162367929}
   - {fileID: 60361973}
   - {fileID: 1011066836}
   - {fileID: 258596776}
-  - {fileID: 1071402759}
-  - {fileID: 1162367929}
   m_Father: {fileID: 109620975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0008544922, y: -0.012207031}
-  m_SizeDelta: {x: -840.11, y: -415.89}
+  m_AnchoredPosition: {x: 0, y: 0.012817383}
+  m_SizeDelta: {x: -840.11, y: -493.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790605334
 MonoBehaviour:
@@ -6977,7 +6975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7369,8 +7367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScoreText: {fileID: 1455698892}
-  finalScoreText: {fileID: 1455698892}
-  highScoreText: {fileID: 437735732}
+  gameOverHighScoreText: {fileID: 1145918710}
+  mainMenuHighScoreText: {fileID: 437735732}
 --- !u!4 &1892796898
 Transform:
   m_ObjectHideFlags: 0
@@ -8364,7 +8362,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 38.727875, y: 19.661789, z: 220.06754, w: 398.43402}
+  m_margin: {x: 53.822052, y: 19.661789, z: 220.06754, w: 398.43402}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
