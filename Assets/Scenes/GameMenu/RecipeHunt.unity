@@ -4921,7 +4921,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4281838291
   m_fontColor: {r: 0.82641506, g: 0.66632473, b: 0.21673898, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -5912,8 +5912,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: acddf9880f7341746a6372a5c04984b2, type: 3}
-  m_Resource: {fileID: 8300000, guid: acddf9880f7341746a6372a5c04984b2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4079fdaa97858864ba5e8293eb4bfd5e, type: 3}
+  m_Resource: {fileID: 8300000, guid: 4079fdaa97858864ba5e8293eb4bfd5e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
