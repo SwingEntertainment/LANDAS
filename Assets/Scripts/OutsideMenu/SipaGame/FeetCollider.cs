@@ -6,7 +6,7 @@ public class FeetCollider : MonoBehaviour
     [Header("References")]
     public PlayerKickAnimation playerKick;
     public Ball ballManager;
-    public ScoreManager scoreManager;
+    private ScoreManager scoreManager; 
 
     [Header("Bounce Settings")]
     public float bounceForce = 14f;    
@@ -16,6 +16,11 @@ public class FeetCollider : MonoBehaviour
 
     private bool hasKicked = false;
     private bool isGameOver = false;
+
+    private void Awake()
+    {
+        scoreManager = ScoreManager.Instance;
+    }
 
     private void OnEnable()
     {
@@ -36,26 +41,23 @@ public class FeetCollider : MonoBehaviour
     private IEnumerator KickBall(GameObject ball)
     {
         if (ball == null) yield break;
-
         hasKicked = true;
 
         if (playerKick != null)
             yield return StartCoroutine(playerKick.PlayKickAnimation());
 
-        if (scoreManager != null)
-            scoreManager.AddScore(1);
+        if (ScoreManager.Instance != null)
+            ScoreManager.Instance.AddScore(1);
 
         Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
-
             float randomX = Random.Range(-1.5f, 1.5f);
             rb.AddForce(new Vector2(randomX, bounceForce), ForceMode2D.Impulse);
         }
 
         float startTime = Time.time;
-
         yield return new WaitUntil(() =>
             ball == null || 
             ball.transform == null || 
@@ -67,8 +69,7 @@ public class FeetCollider : MonoBehaviour
         {
             Destroy(ball);
             yield return new WaitForSeconds(respawnDelay);
-            if (ballManager != null) 
-                ballManager.SpawnBall();
+            ballManager.SpawnBall();
         }
 
         hasKicked = false;

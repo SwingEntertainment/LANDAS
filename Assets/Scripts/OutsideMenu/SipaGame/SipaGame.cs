@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Playables; 
+using UnityEngine.Playables;
 using TMPro;
 using System.Collections;
 
@@ -10,7 +10,7 @@ public class SipaGame : MonoBehaviour
     public GameObject player;
     public GameObject gameOverPanel;
     public Animator bgAnimator;
-    public PlayableDirector BgTimeline; 
+    public PlayableDirector BgTimeline;
     public Ball ballManager;
     public ScoreManager scoreManager;
     public SpriteRenderer playerSprite;
@@ -37,7 +37,7 @@ public class SipaGame : MonoBehaviour
     public AudioSource sfxSource;
 
     [Header("Static Game Background")]
-    public GameObject staticGameBG; 
+    public GameObject staticGameBG;
 
     [Header("UI Sound Effects")]
     public AudioClip buttonClickClip;
@@ -125,8 +125,15 @@ public class SipaGame : MonoBehaviour
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
 
-        if (scoreManager != null)
-            scoreManager.ResetScore();
+        yield return new WaitForEndOfFrame();
+        RebindScoreManagerUI();
+
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.ResetScore();
+            ScoreManager.Instance.UpdateUI(); 
+            Debug.Log("Score reset and UI updated at restart.");
+        }
 
         if (countdownPanel != null)
             countdownPanel.SetActive(true);
@@ -141,7 +148,6 @@ public class SipaGame : MonoBehaviour
             bgAnimator.enabled = false;
             yield return null;
             bgAnimator.enabled = true;
-
             bgAnimator.Rebind();
             bgAnimator.Update(0f);
             bgAnimator.Play("Bg", 0, 0f);
@@ -268,7 +274,7 @@ public class SipaGame : MonoBehaviour
         {
             BgTimeline.gameObject.SetActive(true);
             BgTimeline.time = 0;
-            BgTimeline.Evaluate(); 
+            BgTimeline.Evaluate();
             BgTimeline.Play();
         }
 
@@ -294,7 +300,7 @@ public class SipaGame : MonoBehaviour
         {
             BgTimeline.gameObject.SetActive(true);
             BgTimeline.time = 0;
-            BgTimeline.Evaluate(); 
+            BgTimeline.Evaluate();
             BgTimeline.Play();
             Debug.Log("BG Timeline reset and playing.");
         }
@@ -307,5 +313,19 @@ public class SipaGame : MonoBehaviour
             sfxSource.PlayOneShot(buttonClickClip);
             Debug.Log("Button click sound played.");
         }
+    }
+
+    private void RebindScoreManagerUI()
+    {
+        if (ScoreManager.Instance == null) return;
+
+        ScoreManager.Instance.currentScoreText =
+            GameObject.FindWithTag("CurrentScoreText")?.GetComponent<TMP_Text>();
+        ScoreManager.Instance.gameOverHighScoreText =
+            GameObject.FindWithTag("GameOverHighScoreText")?.GetComponent<TMP_Text>();
+        ScoreManager.Instance.mainMenuHighScoreText =
+            GameObject.FindWithTag("MainMenuHighScoreText")?.GetComponent<TMP_Text>();
+
+        ScoreManager.Instance.UpdateUI(); 
     }
 }
