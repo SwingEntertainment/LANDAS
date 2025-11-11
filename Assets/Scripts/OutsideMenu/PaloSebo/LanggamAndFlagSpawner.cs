@@ -9,15 +9,15 @@ public class LanggamAndFlagSpawner : MonoBehaviour
     public GameObject FlagRightPrefab;
 
     [Header("⚙️ Spawn Settings")]
-    public float spawnInterval = 3f;
-    public float minLanggamCooldown = 8f;
-    public float maxLanggamCooldown = 12f;
-    public float minFallSpeed = 10f;
-    public float maxFallSpeed = 25f;
+    public float spawnInterval = 1.5f; // DECREASED from 3f: Tries to spawn objects twice as often.
+    public float minLanggamCooldown = 3f; // DECREASED from 8f: Ants spawn sooner.
+    public float maxLanggamCooldown = 5f; // DECREASED from 12f: Ants spawn sooner.
+    public float minFallSpeed = 60f; // INCREASED from 10f: Minimum fall speed is much higher.
+    public float maxFallSpeed = 100f; // INCREASED from 25f: Maximum fall speed is much higher.
 
     [Header("📍 Spawn Positions")]
-    public Vector2 leftSpawnPos = new Vector2(489.8f, 429.5f);
-    public Vector2 rightSpawnPos = new Vector2(594.8f, 423.6f);
+    public Vector2 leftSpawnPos = new Vector2(500.4f, 423.8f);
+    public Vector2 rightSpawnPos = new Vector2(800.3f, 422.2f);
 
     [Header("📏 Object Size Settings")]
     public Vector3 langgamScale = new Vector3(3.5f, 2.8f, 1f);
@@ -52,7 +52,9 @@ public class LanggamAndFlagSpawner : MonoBehaviour
     void TrySpawnObjectOnSide(bool spawnLeft)
     {
         int activeLanggams = GameObject.FindGameObjectsWithTag("Langgam").Length;
-        bool spawnFlag = Random.Range(0, 40) == 0;
+        // ADJUSTED FOR TESTING: This makes the flag spawn 8 times more often (1/5 chance).
+        // Change back to Random.Range(0, 40) for a rare flag.
+        bool spawnFlag = Random.Range(0, 5) == 0; 
         bool canSpawnLanggam = (Time.time - lastLanggamSpawnTime >= currentLanggamCooldown);
 
         if (!spawnFlag && (!canSpawnLanggam || activeLanggams >= 3))
@@ -79,7 +81,7 @@ public class LanggamAndFlagSpawner : MonoBehaviour
                 sr.sortingOrder = sortingOrder;
             }
 
-            // Random fall speed
+            // Random fall speed is now significantly faster
             float randomFallSpeed = Random.Range(minFallSpeed, maxFallSpeed);
             FallingObject fall = obj.GetComponent<FallingObject>();
             if (fall != null)
