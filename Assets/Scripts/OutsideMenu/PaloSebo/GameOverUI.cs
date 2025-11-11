@@ -32,6 +32,6 @@ public class GameOverUI : MonoBehaviour
     public void OnMainMenu()
     {
         // Load the OutsideMenu scene
-        SceneManager.LoadScene("OutsideMenu");
+        SceneManager.LoadScene("PaloSebo");
     }
 }
