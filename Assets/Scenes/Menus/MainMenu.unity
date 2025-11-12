@@ -17119,7 +17119,6 @@ MonoBehaviour:
     lastIndex: -1
   - clickableImage: {fileID: 575198044}
     comments:
-    - "Ugh\u2026 ito lang ang lagi kong tinititigan e\re"
     - 'Tick tock, kailan ba ang oras ng kalayaan.
 
 '
@@ -17130,6 +17129,7 @@ MonoBehaviour:
 
 '
     - "Kapag busy ka, mabilis. Kapag nasa klase ka\u2026 gumagapang.\r\n"
+    - "Ugh\u2026 ito lang ang lagi kong tinititigan e"
     lastIndex: -1
   - clickableImage: {fileID: 1634736409}
     comments:
