@@ -25,7 +25,7 @@
       "dishImg": "Menudo.png",
       "recipeList": ["Bell Pepper", "Atay", "Baboy", "Patatas", "Tomato sauce"],
       "ingredientIDs": [4, 15, 20, 21, 28],
-      "dishDescription": "Ang Menudo ay isang sikat na pagkaing Pilipino na may halong impluwensiya ng mga Espanyol. Nagsimula ito sa putaheng tinatawag na cocido sa Espanya. Sa Pilipinas, ginawang espesyal ang Menudo gamit ang baboy, atay, at mga gulay, kaya’t madalas itong ihain sa mga handaan at espesyal na okasyon."
+      "dishDescription": "Ang Menudo ay isang sikat na pagkaing Pilipino na may halong impluwensiya ng mga Espanyol. Nagsimula ito sa putaheng tinatawag na cocido sa Espanya. Sa Pilipinas, ginawang espesyal ang Menudo gamit ang baboy, atay, at mga gulay, kaya madalas itong ihain sa mga handaan at espesyal na okasyon."
     },
     {
       "foodID": 4,
@@ -50,9 +50,9 @@
       "isCooked": false,
       "dishName": "Sweet Spaghetti",
       "dishImg": "Spaghetti.png",
-      "recipeList": ["Baka", "Hotdog", "Spaghetti Noodles", "Asukal", "Tomato sauce"],
+      "recipeList": ["Baka", "Hotdog", "Spaghetti Pasta", "Asukal", "Tomato sauce"],
       "ingredientIDs": [3, 14, 25, 26, 28],
-      "dishDescription": "Sa mga komunidad ng Aprikano-Amerikano, ang spaghetti ay higit pa sa pagkain—itó ay simbolo ng pagkamalikhain at pagkakaisa. Madalas itong nilalagyan ng konting asukal, processed meat, at iba pang pampalasa para maging mas malasa. Sa Pilipinas, nakilala rin ito bilang sweet-style spaghetti na paborito ng mga bata."
+      "dishDescription": "Sa mga komunidad ng Aprikano-Amerikano, ang spaghetti ay higit pa sa pagkain, ito ay simbolo ng pagkamalikhain at pagkakaisa. Madalas itong nilalagyan ng konting asukal, processed meat, at iba pang pampalasa para maging mas malasa. Sa Pilipinas, nakilala rin ito bilang sweet-style spaghetti na paborito ng mga bata."
     },
     {
       "foodID": 7,
@@ -61,7 +61,7 @@
       "dishImg": "CornedBeef.png",
       "recipeList": ["Baka", "Bawang", "Sibuyas", "Patatas"],
       "ingredientIDs": [3, 13, 18, 21],
-      "dishDescription": "Ang corned beef ay karne ng baka na pinatagal ang buhay gamit ang asin. Ang salitang “corned” ay galing sa malalaking butil ng asin na tinatawag na corns. Minsan nilalagyan din ito ng nitrate para mapanatiling kulay pink at ligtas kainin. Karaniwang niluluto ito sa umaga bilang ulam sa kanin o pandesal."
+      "dishDescription": "Ang corned beef ay karne ng baka na pinatagal ang buhay gamit ang asin. Ang salitang corned ay galing sa malalaking butil ng asin na tinatawag na corns. Minsan nilalagyan din ito ng nitrate para mapanatiling kulay pink at ligtas kainin. Karaniwang niluluto ito sa umaga bilang ulam sa kanin o pandesal."
     },
     {
       "foodID": 8,
@@ -88,7 +88,7 @@
       "dishImg": "Yakitori.png",
       "recipeList": ["Kalamansi", "Manok", "Bawang", "Toyo", "Asukal"],
       "ingredientIDs": [7, 8, 13, 24, 26],
-      "dishDescription": "Ang Yakitori ay nangangahulugang “grilled chicken” sa wikang Hapon. Naging tanyag ito matapos ang digmaan sa Japan, kung kailan mas naging abot-kaya ang manok. Karaniwang iniihaw sa uling at nilalagyan ng matamis-alat na sarsa. Katulad ito ng Filipino BBQ, pero nasa skewer o tuhog."
+      "dishDescription": "Ang Yakitori ay nangangahulugang “grilled chicken” sa wikang Hapon. Naging tanyag ito matapos ang digmaan sa Japan, kung kailan mas naging abot-kaya ang manok. Karaniwang iniihaw sa uling at nilalagyan ng matamis-alat na sarsa. Katulad ito ng Filipino BBQ, pero nakatuhog."
     },
     {
       "foodID": 11,

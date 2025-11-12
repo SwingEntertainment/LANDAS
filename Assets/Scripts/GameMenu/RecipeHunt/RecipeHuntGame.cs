@@ -37,9 +37,9 @@ public class RecipeHuntGame : MonoBehaviour
     [Header("Cooking Result Panels")]
     public GameObject successPanel;
     public GameObject failedPanel;
-    public TMP_Text dishNameText;     
-    public Image dishImage;           
-    public TMP_Text failHintText;     
+    public TMP_Text dishNameText;
+    public Image dishImage;
+    public TMP_Text failHintText;
     public TMP_Text successHeaderText;
     public TMP_Text failedHeaderText;
     public Image failedDishImage;
@@ -53,7 +53,7 @@ public class RecipeHuntGame : MonoBehaviour
         public string ingredientName;
         public string ingredientImg;
         public string ingredientContainerImg;
-    }    
+    }
     private Coroutine dishAnimationCoroutine;
     private Coroutine panelFadeCoroutine;
     private CanvasGroup successPanelCanvasGroup;
@@ -430,6 +430,8 @@ public class RecipeHuntGame : MonoBehaviour
 
     void CookDish()
     {
+        cookButton.interactable = false;
+        SetAllRemoveButtonsInteractable(false);
         List<int> trayIngredientIDs = selectedIngredients.Select(i => i.ingredientID).ToList();
         trayIngredientIDs.Sort();
 
@@ -614,8 +616,8 @@ public class RecipeHuntGame : MonoBehaviour
             dishNameText.color = nameColor;
         }
 
-        // --- STEP 4: Keep visible for 3 seconds ---
-        yield return new WaitForSeconds(3f);
+        // --- STEP 4: Keep visible for 2 seconds ---
+        yield return new WaitForSeconds(2f);
 
         // --- STEP 5: Fade out entire panel ---
         yield return StartCoroutine(FadeOutPanel(successPanel, 1.5f));
@@ -628,6 +630,7 @@ public class RecipeHuntGame : MonoBehaviour
         UpdateFoodTray();
         SetAddButtonsInteractable(true);
         cookButton.interactable = (selectedIngredients.Count >= 4 && selectedIngredients.Count <= 5);
+        SetAllRemoveButtonsInteractable(true);
         dishAnimationCoroutine = null;
     }
 
@@ -759,6 +762,7 @@ public class RecipeHuntGame : MonoBehaviour
         UpdateFoodTray();
         SetAddButtonsInteractable(true);
         cookButton.interactable = (selectedIngredients.Count >= 4 && selectedIngredients.Count <= 5);
+        SetAllRemoveButtonsInteractable(true);
         dishAnimationCoroutine = null;
     }
 
@@ -830,6 +834,18 @@ public class RecipeHuntGame : MonoBehaviour
         panelFadeCoroutine = null;
     }
 
+    void SetAllRemoveButtonsInteractable(bool interactable)
+    {
+        // Find all RemoveButtons in the current tray
+        foreach (Transform slot in foodTrayParent)
+        {
+            Button removeBtn = slot.GetComponentInChildren<Button>(true);
+            if (removeBtn != null && removeBtn.name == "RemoveButton")
+            {
+                removeBtn.interactable = interactable;
+            }
+        }
+    }
     void SaveDishProgress()
     {
         try
