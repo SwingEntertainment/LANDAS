@@ -427,6 +427,7 @@ MonoBehaviour:
   switchSFX: {fileID: 8300000, guid: d979a03f7a6d2a54d89cc05a977ff793, type: 3}
   correctSFX: {fileID: 8300000, guid: a94ca6f5c6cc52f4188f050c9e478f8c, type: 3}
   wrongSFX: {fileID: 8300000, guid: a135db2575d733f43a99fb9c37d5bb1a, type: 3}
+  successSFX: {fileID: 8300000, guid: 627ea3ded0662c045811ee42a2351344, type: 3}
   lockOverlayPanel: {fileID: 1521524061}
   lockOverlayText: {fileID: 1179259591}
   lockOverlayImage: {fileID: 1612561557}
@@ -2340,7 +2341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 931d85805b5d71444a518314f1a2a961, type: 3}
+  clickSound: {fileID: 8300000, guid: fd2f281924624c24f8bef3981b3c05bb, type: 3}
 --- !u!114 &361158214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7059,6 +7060,7 @@ GameObject:
   - component: {fileID: 1362444979}
   - component: {fileID: 1362444978}
   - component: {fileID: 1362444977}
+  - component: {fileID: 1362444980}
   m_Layer: 0
   m_Name: Note
   m_TagString: Untagged
@@ -7179,6 +7181,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362444975}
   m_CullTransparentMesh: 1
+--- !u!114 &1362444980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362444975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9796fb57b6a8f46988ab813d30ace9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 559fe6893558b324f90b20f4dfe185c1, type: 3}
 --- !u!1 &1362839963
 GameObject:
   m_ObjectHideFlags: 0

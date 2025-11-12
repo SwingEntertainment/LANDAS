@@ -113,6 +113,7 @@ public class StoryManager : MonoBehaviour
     public AudioClip switchSFX;
     public AudioClip correctSFX;
     public AudioClip wrongSFX;
+    public AudioClip successSFX;
 
     [Header("Locked Overlay")]
     public GameObject lockOverlayPanel;
@@ -621,7 +622,10 @@ public class StoryManager : MonoBehaviour
         currentSubchapter.isRead = true;
         SaveJson();
         finishPanel.SetActive(true);
-
+        if (AudioManager.Instance != null && successSFX != null)
+        {
+            AudioManager.Instance.PlaySFX(successSFX);
+        }
         var confetti = FindObjectOfType<ConfettiAnimation>();
         if (confetti != null) confetti.PlayConfetti();
 
