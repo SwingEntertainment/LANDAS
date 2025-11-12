@@ -200,37 +200,39 @@ public class Dictionary : MonoBehaviour
         {
             parent.isPreparingVoice = false; 
 
+            parent.HidePreparingVoiceIndicator(); 
+
+            if (parent.loadingSpinner != null)
+                parent.loadingSpinner.SetActive(false);
+
+            if (parent.voiceButton != null)
+                parent.voiceButton.gameObject.SetActive(true);
+
             if (status == 0)
             {
                 var locale = new AndroidJavaObject("java.util.Locale", "fil", "PH");
                 int result = parent.ttsObject.Call<int>("setLanguage", locale);
 
-                if (result == -1 || result == -2)
+                if (result == -1 || result == -2) 
                 {
-                    Debug.Log("Tagalog voice data not installed. Opening installer...");
+                    Debug.LogWarning("Tagalog voice data not installed. Opening installer...");
+                    parent.ttsInitialized = false;
+
                     AndroidJavaObject installIntent = new AndroidJavaObject(
                         "android.content.Intent", "android.speech.tts.engine.INSTALL_TTS_DATA");
                     context.Call("startActivity", installIntent);
                 }
-                else
+                else 
                 {
                     Debug.Log("TTS initialized successfully in Tagalog.");
                     parent.ttsInitialized = true;
-
-                    parent.HidePreparingVoiceIndicator();
-
-                    if (parent.loadingSpinner != null)
-                        parent.loadingSpinner.SetActive(false);
-                    if (parent.voiceButton != null)
-                        parent.voiceButton.gameObject.SetActive(true);
-
                     parent.PlayVoice();
                 }
             }
-            else
+            else 
             {
                 Debug.LogWarning("TTS failed to initialize.");
-                parent.HidePreparingVoiceIndicator(); 
+                parent.ttsInitialized = false;
             }
         }
     }
