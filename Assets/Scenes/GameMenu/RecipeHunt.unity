@@ -3502,8 +3502,8 @@ MonoBehaviour:
   bubbleFadeDuration: 0.5
   cookButton: {fileID: 2071872174}
   cookedDishImage: {fileID: 1689455871}
-  dishFadeInDuration: 2
-  dishFadeOutDuration: 2
+  dishFadeInDuration: 1.5
+  dishFadeOutDuration: 1.5
   sizzleAudio: {fileID: 905344222}
   itemsPerPage: 6
   successPanel: {fileID: 617082083}
