@@ -159,7 +159,6 @@ public class Dictionary : MonoBehaviour
         }
         else
         {
-            Debug.Log("Still preparing voice...");
         }
     }
     else
@@ -215,7 +214,6 @@ public class Dictionary : MonoBehaviour
 
                 if (result == -1 || result == -2) 
                 {
-                    Debug.LogWarning("Tagalog voice data not installed. Opening installer...");
                     parent.ttsInitialized = false;
 
                     AndroidJavaObject installIntent = new AndroidJavaObject(
@@ -224,14 +222,12 @@ public class Dictionary : MonoBehaviour
                 }
                 else 
                 {
-                    Debug.Log("TTS initialized successfully in Tagalog.");
                     parent.ttsInitialized = true;
                     parent.PlayVoice();
                 }
             }
             else 
             {
-                Debug.LogWarning("TTS failed to initialize.");
                 parent.ttsInitialized = false;
             }
         }
@@ -244,7 +240,6 @@ public class Dictionary : MonoBehaviour
         if (preparingVoicePanel != null)
         {
             preparingVoicePanel.SetActive(true);
-            Debug.Log("Preparing Tagalog voice... Please wait.");
         }
     }
 
@@ -253,7 +248,6 @@ public class Dictionary : MonoBehaviour
         if (preparingVoicePanel != null)
         {
             preparingVoicePanel.SetActive(false);
-            Debug.Log("Tagalog voice ready!");
         }
     }
 
@@ -277,7 +271,6 @@ public class Dictionary : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Dictionary JSON not found in Resources!");
             dictionaryWords = new List<WordEntry>();
         }
     }
@@ -339,17 +332,22 @@ public class Dictionary : MonoBehaviour
         string wordToSpeak = dictionaryWords[selectedWordIndex].tagalog;
 
 #if UNITY_ANDROID && !UNITY_EDITOR
-        if (ttsObject != null && ttsInitialized)
+       if (ttsObject != null && ttsInitialized)
         {
-            ttsObject.Call<int>("speak", wordToSpeak, 0, null, null);
+            try
+            {
+                string utteranceId = System.Guid.NewGuid().ToString();
+                ttsObject.Call<int>("speak", wordToSpeak, 0, null, utteranceId);
+            }
+            catch (System.Exception e)
+            {
+            }
         }
         else
         {
-            Debug.LogWarning("TTS not initialized yet. Initializing now...");
             InitializeAndroidTTS();
         }
 #else
-        Debug.Log($"[TTS] Would speak (Tagalog): {wordToSpeak}");
 #endif
     }
 
@@ -385,17 +383,21 @@ public class Dictionary : MonoBehaviour
     {
         StopVoice();
     }
-    
+
     private void StopVoice()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-    if (ttsObject != null)
+    if (ttsObject != null && ttsInitialized)
     {
-        ttsObject.Call("stop");
-        Debug.Log("TTS stopped.");
+        try
+        {
+            ttsObject.Call("stop");
+        }
+        catch (System.Exception e)
+        {
+        }
     }
 #else
-        Debug.Log("[TTS] StopVoice() called (simulation in Editor).");
 #endif
     }
 
