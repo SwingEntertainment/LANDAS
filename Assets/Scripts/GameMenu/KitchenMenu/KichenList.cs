@@ -33,10 +33,20 @@ public class RecipeList : MonoBehaviour
 
     [Header("Audio Clips")]
     public AudioClip[] switchSFXList;
+    public AudioClip rewardReadySFX;
+
+    [Header("Hidden Reward Panel")]
+    public GameObject rewardPanel;
+    public Image rewardImage;
+    public TMP_Text rewardMessageText;
+
+    private bool hasShownRewardPanel = false;
+    private const string RewardShownKey = "RewardShown";
 
 
     void Start()
     {
+        hasShownRewardPanel = PlayerPrefs.GetInt(RewardShownKey, 0) == 1;
         recipeJsonPath = Path.Combine(Application.streamingAssetsPath, recipeJsonFileName);
         persistentRecipePath = Path.Combine(Application.persistentDataPath, recipeJsonFileName);
 
@@ -91,6 +101,18 @@ public class RecipeList : MonoBehaviour
 
         dishes = new List<DishEntry>(data.dishes);
         dishes.Sort((a, b) => a.foodID.CompareTo(b.foodID));
+
+        int cookedCount = 0;
+        foreach (var d in dishes)
+        {
+            if (d.isCooked) cookedCount++;
+        }
+
+        if (cookedCount >= 3 && !hasShownRewardPanel)
+        {
+            StartCoroutine(ShowRewardPanelRoutine());
+        }
+
     }
 
     // ===== SAVE JSON TO PERSISTENT PATH =====
@@ -144,7 +166,7 @@ public class RecipeList : MonoBehaviour
                 }
             });
         }
-        
+
         if (clearDataButton != null)
             clearDataButton.onClick.AddListener(ResetAllRecipes);
     }
@@ -230,6 +252,34 @@ public class RecipeList : MonoBehaviour
 
         prevButton.interactable = (currentRecipeIndex > 0);
         nextButton.interactable = (currentRecipeIndex < dishes.Count - 1);
+    }
+
+    IEnumerator ShowRewardPanelRoutine()
+    {
+        if (rewardPanel == null)
+            yield break;
+        hasShownRewardPanel = true;
+        PlayerPrefs.SetInt(RewardShownKey, 1);  
+        PlayerPrefs.Save();
+
+        rewardPanel.SetActive(true);
+
+        if (AudioManager.Instance != null && rewardReadySFX != null)
+            AudioManager.Instance.PlaySFX(rewardReadySFX);
+
+        Button btn = rewardPanel.GetComponent<Button>();
+        if (btn != null)
+            btn.onClick.RemoveAllListeners();
+
+        yield return new WaitForSeconds(3f);
+
+        if (btn != null)
+        {
+            btn.onClick.AddListener(() =>
+            {
+                rewardPanel.SetActive(false);
+            });
+        }
     }
 
 

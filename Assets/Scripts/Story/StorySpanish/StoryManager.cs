@@ -129,7 +129,6 @@ public class StoryManager : MonoBehaviour
     List<Subchapter> subchapters = new List<Subchapter>();
     int currentListingIndex = 0;
 
-    // slide playback state:
     Subchapter currentSubchapter;
     int currentSlideZeroIndex = 0;
     int currentTextChunkIndex = 0;
@@ -137,13 +136,21 @@ public class StoryManager : MonoBehaviour
     bool voiceEnabled = true;
     bool quizActive = false;
 
-    // TTS objects (Android)
     AndroidJavaObject ttsObj = null;
     AndroidJavaObject unityActivity = null;
 
-    // persistent JSON path
     string PersistentPath => Path.Combine(Application.persistentDataPath, jsonFileName);
     string StreamingPath => Path.Combine(Application.streamingAssetsPath, jsonFileName);
+
+    [Header("Completion Reward Panels")]
+    public GameObject subchapter1Panel;
+    public GameObject subchapter2Panel;
+    public GameObject subchapter3Panel;
+
+    private bool hasShownPanel1 = false;
+    private bool hasShownPanel2 = false;
+    private bool hasShownPanel3 = false;
+
 
     void Awake()
     {
@@ -238,12 +245,6 @@ public class StoryManager : MonoBehaviour
         }
     }
     #endregion
-
-    void RegisterReadButtons(List<Button> buttons)
-    {
-        dynamicReadButtons = buttons;
-        UpdateChapterProgress();
-    }
 
     void UpdateChapterProgress()
     {
@@ -622,6 +623,26 @@ public class StoryManager : MonoBehaviour
         currentSubchapter.isRead = true;
         SaveJson();
         finishPanel.SetActive(true);
+
+        int index = currentListingIndex;
+
+        if (index == 0 && !IsPanelShown(1))
+        {
+            SavePanelShown(1);
+            StartCoroutine(ShowHiddenPanelRoutine(subchapter1Panel));
+        }
+        else if (index == 1 && !IsPanelShown(2))
+        {
+            SavePanelShown(2);
+            StartCoroutine(ShowHiddenPanelRoutine(subchapter2Panel));
+        }
+        else if (index == 2 && !IsPanelShown(3))
+        {
+            SavePanelShown(3);
+            StartCoroutine(ShowHiddenPanelRoutine(subchapter3Panel));
+        }
+
+
         if (AudioManager.Instance != null && successSFX != null)
         {
             AudioManager.Instance.PlaySFX(successSFX);
@@ -638,6 +659,38 @@ public class StoryManager : MonoBehaviour
         UpdateChapterProgress();
     }
 
+    private void SavePanelShown(int index)
+    {
+        PlayerPrefs.SetInt($"SubchapterPanelShown_{index}", 1);
+        PlayerPrefs.Save();
+    }
+
+    private bool IsPanelShown(int index)
+    {
+        return PlayerPrefs.GetInt($"SubchapterPanelShown_{index}", 0) == 1;
+    }
+
+
+    IEnumerator ShowHiddenPanelRoutine(GameObject panel)
+    {
+        if (panel == null) yield break;
+
+        panel.SetActive(true);
+
+        Button btn = panel.GetComponent<Button>();
+        if (btn != null)
+            btn.onClick.RemoveAllListeners();
+
+        yield return new WaitForSeconds(3f);
+
+        if (btn != null)
+        {
+            btn.onClick.AddListener(() =>
+            {
+                panel.SetActive(false);
+            });
+        }
+    }
     void OnFinishBackToList()
     {
         if (currentSubchapter != null)
