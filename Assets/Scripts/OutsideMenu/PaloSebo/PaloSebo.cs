@@ -8,4 +8,5 @@ public class PaloSebo : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("OutsideMenu");
     }
+
 }
