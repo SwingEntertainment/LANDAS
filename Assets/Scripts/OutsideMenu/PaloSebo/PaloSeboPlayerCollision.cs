@@ -101,6 +101,8 @@ public class PaloSeboPlayerCollision : MonoBehaviour
 
     void Update()
     {
+        if (!PaloSeboGameManager.GameStarted)
+        return;
         if (isTouchingBamboo)
         {
             bambooTimer += Time.deltaTime;

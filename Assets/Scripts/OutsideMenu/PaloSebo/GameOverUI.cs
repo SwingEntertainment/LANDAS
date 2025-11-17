@@ -14,19 +14,16 @@ public class GameOverUI : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        gameOverPanel.SetActive(false); // Hide at start
+        gameOverPanel.SetActive(false);
     }
 
     public void ShowGameOver(int finalScore)
     {
-        // Show Game Over panel
         gameOverPanel.SetActive(true);
 
-        // Display Final Score
         if (finalScoreText != null)
             finalScoreText.text = "Score: " + finalScore;
 
-        // ⭐ High Score System
         int savedHighScore = PlayerPrefs.GetInt("HighScore", 0);
 
         if (finalScore > savedHighScore)
@@ -36,24 +33,33 @@ public class GameOverUI : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        // Show High Score in UI
         if (highScoreText != null)
             highScoreText.text = "High Score: " + savedHighScore;
     }
 
-    public void OnPlayAgain()
+    public void OnBack()
     {
-        // Reset score
-        PaloSeboScoreManager.Instance.ResetScore();
+        PaloSeboGameManager.StopGame();
+        if (PaloSeboScoreManager.Instance != null)
+            PaloSeboScoreManager.Instance.ResetScore();
 
-        // Reload the PaloSebo scene to reset enemies, flags, and player
-        Time.timeScale = 1f; // Make sure game time is running
+        if (PaloSeboLivesManager.Instance != null)
+            PaloSeboLivesManager.Instance.ResetLives();
         SceneManager.LoadScene("PaloSebo");
     }
 
-    public void OnMainMenu()
+    public void OnRestart()
     {
+        PaloSeboGameManager.StartGame();
         Time.timeScale = 1f;
-        SceneManager.LoadScene("OutsideMenu"); // Assuming this is main menu
+        if (PaloSeboScoreManager.Instance != null)
+            PaloSeboScoreManager.Instance.ResetScore();
+
+        if (PaloSeboLivesManager.Instance != null)
+            PaloSeboLivesManager.Instance.ResetLives();
+
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+
     }
 }

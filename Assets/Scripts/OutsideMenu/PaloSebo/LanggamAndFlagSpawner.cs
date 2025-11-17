@@ -39,6 +39,8 @@ public class LanggamAndFlagSpawner : MonoBehaviour
 
     void Update()
     {
+        if (!PaloSeboGameManager.GameStarted)
+            return;
         timer += Time.deltaTime;
 
         if (timer >= spawnInterval)
@@ -49,12 +51,20 @@ public class LanggamAndFlagSpawner : MonoBehaviour
         }
     }
 
+    public void ResetSpawner()
+    {
+        timer = 0f;
+        lastLanggamSpawnTime = -999f;
+        currentLanggamCooldown = Random.Range(minLanggamCooldown, maxLanggamCooldown);
+    }
+
     void TrySpawnObjectOnSide(bool spawnLeft)
     {
         int activeLanggams = GameObject.FindGameObjectsWithTag("Langgam").Length;
         // ADJUSTED FOR TESTING: This makes the flag spawn 8 times more often (1/5 chance).
         // Change back to Random.Range(0, 40) for a rare flag.
-        bool spawnFlag = Random.Range(0, 5) == 0; 
+        bool spawnFlag = Random.Range(0, 15) == 0;
+
         bool canSpawnLanggam = (Time.time - lastLanggamSpawnTime >= currentLanggamCooldown);
 
         if (!spawnFlag && (!canSpawnLanggam || activeLanggams >= 3))
