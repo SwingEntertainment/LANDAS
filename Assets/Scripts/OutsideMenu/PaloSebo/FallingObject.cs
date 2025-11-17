@@ -8,9 +8,13 @@ public class FallingObject : MonoBehaviour
     {
         transform.Translate(Vector2.down * fallSpeed * Time.deltaTime);
 
-        // Optional: destroy after going off-screen
-        if (transform.position.y < -100f)
+        if (transform.position.y < -50f)
         {
+            if (CompareTag("Langgam"))
+            {
+                if (PaloSeboScoreManager.Instance != null)
+                    PaloSeboScoreManager.Instance.AddScore(2);
+            }
             Destroy(gameObject);
         }
     }

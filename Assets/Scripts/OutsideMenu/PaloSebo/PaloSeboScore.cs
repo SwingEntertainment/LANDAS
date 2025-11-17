@@ -55,12 +55,6 @@ public class PaloSeboScoreManager : MonoBehaviour
         if (score < 0) score = 0;
 
         UpdateScoreUI();
-
-        // Optional: trigger Game Over if score drops to 0
-        if (score == 0)
-        {
-            TriggerGameOver();
-        }
     }
 
     private void UpdateScoreUI()

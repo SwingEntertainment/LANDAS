@@ -35,6 +35,8 @@ public class PaloSeboLivesManager : MonoBehaviour
 
             if (GameOverUI.Instance != null)
                 GameOverUI.Instance.ShowGameOver(finalScore);
+
+                PaloSeboGameManager.StopGame();
         }
 
     }

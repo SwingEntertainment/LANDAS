@@ -1,18 +1,16 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class PaloSeboGameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    public AudioClip PaloSeboTheme;
+    public static bool GameStarted = false;
 
-    void Awake()
+    public static void StartGame()
     {
-        if (AudioManager.Instance != null && PaloSeboTheme != null)
-        AudioManager.Instance.PlayMusic(PaloSeboTheme, loop: true);
-
-        if (instance == null) instance = this;
-        else Destroy(gameObject);
+        GameStarted = true;
     }
 
+    public static void StopGame()
+    {
+        GameStarted = false;
+    }
 }
