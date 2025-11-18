@@ -382,11 +382,6 @@ public class GameMenu : MonoBehaviour
                 if (goToQuizSpanishButton != null)
                 {
                     goToQuizSpanishButton.onClick.RemoveAllListeners();
-                    goToQuizSpanishButton.onClick.AddListener(() =>
-                    {
-                        ChangeTheme(kitchenTheme);
-                        LoadingScene.LoadSceneWithLoading(kitchenScene);
-                    });
                 }
 
                 if (closeHiddenOutsidePanelButton != null)

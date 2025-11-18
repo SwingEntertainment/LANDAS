@@ -281,7 +281,7 @@ public class StoryManager : MonoBehaviour
             }
             else
             {
-                btnText.text = "Read Next Chapter";
+                btnText.text = "Basahin ang sunod na kabanata";
                 btn.onClick.AddListener(() =>
                 {
                     int nextLockedIndex = subchapters.FindIndex(s => !s.isRead);
